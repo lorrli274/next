@@ -16,6 +16,7 @@ Please list yourself if you'd like to create the course and / or tag any other G
 ## Course Contents
 
 Please fill out a more in-depth list of course topics that you think should be covered, e.g.:
-* Running Python code
-* Fixing bugs in code
-* Input / output
+* What Python is (text)
+* Running Python code (exercise)
+* Fixing bugs in code (exercise)
+* Input / output (exercise)
