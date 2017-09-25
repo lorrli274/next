@@ -16,6 +16,17 @@ This repository will be used to track all Nexxt courses, enabling us to share co
 
 Our hope is that together we can decide what courses are most valuable and work together to make sure those courses cover the right subject matter.
 
+## Lesson Types
+Throughout the issues, you will see several lesson types referenced. They are listed below:
+
+* Exercise: Hands-on lab created with [Codevolve](https://www.codevolve.com)
+* Quiz: A quiz to test students retained knowledge
+* Discussion: A point for students to discuss what they've learned recently
+* Slides: A deck of slides for students to flip through
+* Text, video, audio, etc: Exactly what they sound like
+
+All courses should include at least several hands-on exercises.
+
 ## I Want To...
 
 * **See a specific course built:** Open an issue for the course with as much detail as possible.
