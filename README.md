@@ -1,7 +1,7 @@
-# Nexxt
+# Next
 
 ## Summary
-[Nexxt](https://www.nexxt.xyz) is a collection of interactive, hands-on courses for tech skills.
+[Nexxt](https://www.next.xyz) is a collection of interactive, hands-on courses for tech skills.
 
 We launched this project for two reasons:
 
@@ -12,7 +12,7 @@ Our goal is to release a number of courses in the coming months by working with 
 
 ## How This Works
 
-This repository will be used to track all Nexxt courses, enabling us to share course development progress (via Issues) and get feedback from the community on what each course should contain (via a course Issue).
+This repository will be used to track all Next courses, enabling us to share course development progress (via Issues) and get feedback from the community on what each course should contain (via a course Issue).
 
 Our hope is that together we can decide what courses are most valuable and work together to make sure those courses cover the right subject matter.
 
@@ -32,8 +32,8 @@ All courses should include at least several hands-on exercises.
 * **See a specific course built:** Open an issue for the course with as much detail as possible.
 * **Build a course:** Open an issue and assign yourself to it.
 * **Contribute to a course:** Check out the open Issues to find courses related to your area of expertise.
-* **See the courses you have built already:** Check out [the website](https://www.nexxt.xyz).
-* **Just learn more about this:** You can get in touch with us [here](mailto:nexxt@codevolve.com).
+* **See the courses you have built already:** Check out [the website](https://www.next.xyz).
+* **Just learn more about this:** You can get in touch with us [here](mailto:next@codevolve.com).
 
 
 
