@@ -1,7 +1,7 @@
 # Next
 
 ## Summary
-[Nexxt](https://www.next.xyz) is a collection of interactive, hands-on courses for tech skills.
+[Next](https://www.next.xyz) is a collection of interactive, hands-on courses for tech skills.
 
 We launched this project for two reasons:
 
