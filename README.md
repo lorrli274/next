@@ -19,13 +19,15 @@ Our hope is that together we can decide what courses are most valuable and work 
 ## Lesson Types
 Throughout the issues, you will see several lesson types referenced. They are listed below:
 
-* Exercise: Hands-on lab created with [Codevolve](https://www.codevolve.com)
+* Exercise: Hands-on lab designed to teach new material
+* Project: Opportunity for students to work on their own
+* Assessment: A technical challenge with live tests
 * Quiz: A quiz to test students retained knowledge
 * Discussion: A point for students to discuss what they've learned recently
 * Slides: A deck of slides for students to flip through
 * Text, video, audio, etc: Exactly what they sound like
 
-All courses should include at least several hands-on exercises.
+All courses should include at least several hands-on exercises, projects, and / or assessments. These materials are powered by [Codevolve](https://www.codevolve.com).
 
 ## I Want To...
 
