@@ -51,4 +51,31 @@ A list of (potentially) open source courses that may make a good Next.xyz course
 ### Docker
 * https://scotch.io/tutorials/getting-started-with-docker
 
+### jQuery
+* https://learn.jquery.com/about-jquery/how-jquery-works/
+* http://jqfundamentals.com/chapter/javascript-basics
 
+### Angular
+* https://docs.angularjs.org/tutorial
+
+### Coffeescript
+* http://code.tutsplus.com/tutorials/rocking-out-with-coffeescript--net-17027
+
+### NPM
+* http://tutorialzine.com/2015/03/npm-driven-website/
+
+### Bower
+* http://code.tutsplus.com/tutorials/how-to-setup-bower-in-your-next-project--cms-20526
+* https://scotch.io/tutorials/manage-front-end-resources-with-bower
+
+### Underscore
+* http://sixrevisions.com/tutorials/bower/
+* http://underscorejs.org/
+
+### Lodash
+* https://lodash.com/
+* https://lodash.com/docs
+
+### Scala
+* http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html
+* http://docs.scala-lang.org/tutorials/tour/tour-of-scala
