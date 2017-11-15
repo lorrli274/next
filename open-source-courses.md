@@ -176,9 +176,6 @@ A list of (potentially) open source courses that may make a good Next.xyz course
 ### Sass
 * http://sass-lang.com/guide
 
-### C#
-* http://www.introprogramming.info/wp-content/uploads/2013/07/Books/CSharpEn/Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf
-
 ### Cassandra
 * https://www.gitbook.com/book/teddyma/learncassandra/details
 
