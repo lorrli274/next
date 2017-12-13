@@ -22,10 +22,9 @@ Throughout the issues, you will see several lesson types referenced. They are li
 * Exercise: Hands-on lab designed to teach new material
 * Project: Opportunity for students to work on their own
 * Assessment: A technical challenge with live tests
+* Walkthrough: Live coding snippets to practice with
 * Quiz: A quiz to test students retained knowledge
-* Discussion: A point for students to discuss what they've learned recently
-* Slides: A deck of slides for students to flip through
-* Text, video, audio, etc: Exactly what they sound like
+* Reading: Some static content, written in Markdown
 
 All courses should include at least several hands-on exercises, projects, and / or assessments. These materials are powered by [Codevolve](https://www.codevolve.com).
 
