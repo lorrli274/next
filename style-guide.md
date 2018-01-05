@@ -22,7 +22,7 @@ Filenames should be italicized.
 #### Single Value
 Single values should be *bolded* inline.
 * Bad: Enter 100 as input.
-* Good: Enter *100* as input.
+* Good: Enter **100** as input.
 
 #### Multiple Values
 Multiple input values should be placed in an unstyled code block:
