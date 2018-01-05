@@ -13,6 +13,18 @@ All text-based content is written using Github-flavored markdown. In general:
 * Spellcheck and use proper grammar
 * Read it like a learner to make sure it makes sense
 
+### Headers
+The following logic should be used for formatting headers:
+* \# (H1): Major of the instructions. Do not overuse (it's often better to start a new step instead).
+* \#\# (H2): Main section of the instructions.
+* \#\#\# (H3): Subsection of the instructions.
+* \#\#\#\# (H4-H6): Minor section of the instructions.
+
+The resulting styles are shown below:
+
+![](https://github.com/codevolve/next/blob/master/assets/headers.png)
+
+
 ### Filenames
 Filenames should be italicized.
 * Bad: main.py
@@ -45,3 +57,14 @@ Block code should be syntax highlighted:
     def add(x, y):
         return x + y
     ```
+
+### Callouts
+The following callouts are supported:
+
+|Markdown|Type|
+|--------|----|
+|`>`|A default (gray) callout|
+|`success>`|A success (green) callout|
+|`info>`|An information (blue) callout|
+|`warning>`|A warning (yellow) callout|
+|`danger>`|A danger (red) callout|
