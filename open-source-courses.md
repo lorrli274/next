@@ -1,4 +1,4 @@
-# Open Source Courses
+# Courses
 
 A list of (potentially) open source courses that may make a good Next.xyz course.
 
