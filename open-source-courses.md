@@ -51,6 +51,9 @@ A list of (potentially) open source courses that may make a good Next.xyz course
 ### Docker
 * https://scotch.io/tutorials/getting-started-with-docker
 
+### JavaScript
+* https://developer.mozilla.org/en-US/docs/Web/Tutorials
+
 ### jQuery
 * https://learn.jquery.com/about-jquery/how-jquery-works/
 * http://jqfundamentals.com/chapter/javascript-basics
