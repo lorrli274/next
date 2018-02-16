@@ -19,14 +19,14 @@ Our hope is that together we can decide what courses are most valuable and work 
 ## Lesson Types
 Throughout the issues, you will see several lesson types referenced. They are listed below:
 
-* Exercise: Hands-on lab designed to teach new material
-* Project: Opportunity for students to work on their own
-* Assessment: A technical challenge with live tests
-* Walkthrough: Live coding snippets to practice with
-* Quiz: A quiz to test students retained knowledge
+* Lesson: Live environment with instruction content for new materials
+* Exercise: Hands-on, guided implementation of concepts
+* Project: Open-ended opportunities for students to work on their own
+* Assessment: Technical challenge with live tests
+* Quiz: Multiple/single choice quiz to test students retained knowledge
 * Reading: Some static content, written in Markdown
 
-All courses should include at least several hands-on exercises, projects, and / or assessments. These materials are powered by [Codevolve](https://www.codevolve.com).
+All courses will ideally include at least several hands-on exercises, projects, and/or assessments. These material types are powered by [Codevolve](https://www.codevolve.com).
 
 ## I Want To...
 
@@ -35,6 +35,3 @@ All courses should include at least several hands-on exercises, projects, and / 
 * **Contribute to a course:** Check out the open Issues to find courses related to your area of expertise.
 * **See the courses you have built already:** Check out [the website](https://www.next.xyz).
 * **Just learn more about this:** You can get in touch with us [here](mailto:next@codevolve.com).
-
-
-
