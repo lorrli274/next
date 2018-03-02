@@ -1,0 +1,3 @@
+The license for the content in this directory and its subdirectories is located here:
+
+https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses

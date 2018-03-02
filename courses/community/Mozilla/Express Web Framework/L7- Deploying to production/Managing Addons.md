@@ -1,0 +1,1 @@
+Heroku uses independent add-ons to provide backing services to apps — for example email or database services. We don't use any addons in this website, but they are an important part of working with Heroku, so you may want to check out the topic Managing Add-ons (Heroku docs).

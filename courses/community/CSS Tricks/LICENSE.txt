@@ -1,0 +1,3 @@
+The license for the content in this directory and its subdirectories is located here:
+
+https://css-tricks.com/license/

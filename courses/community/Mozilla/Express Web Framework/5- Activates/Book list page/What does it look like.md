@@ -1,0 +1,1 @@
+Run the application (see [Testing the routes][1] for the relevant commands) and open your browser to . Then select the _All books _link. If everything is set up correctly, your site should look something like the following screenshot.

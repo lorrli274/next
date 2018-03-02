@@ -1,0 +1,1 @@
+We've now created all the routes for our site, along with dummy controller functions that we can populate with a full implementation in later articles. Along the way we've learned a lot of fundamental information about Express routes, and some approaches for structuring our routes and controllers.
