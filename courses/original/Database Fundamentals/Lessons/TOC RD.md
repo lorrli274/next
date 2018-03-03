@@ -1,0 +1,97 @@
+# Snippets / Lessons
+
+## What is SQL
+* What is SQL?
+* Where SQL is Used
+* Why Learn SQL?
+
+NB: Writing w/ quiz at end
+
+## Working with Databases
+* What is a Database?
+* Creating a Database
+* Deleting a Database
+* Wrapping Up
+
+## Working with Tables
+* What is a Table?
+* Creating a Table
+* Deleting a Table
+
+## Relational Data
+* PKs
+* FKs
+* Data integrity
+
+NB: Writing w/ quiz at end
+
+## Working with Columns
+* What are columns?
+* Creating a Column
+* Changing a Column
+* Deleting a Column
+* Special Columns
+
+## Basic SELECT Statements
+* Basic `SELECT` Statements
+* `WHERE` Clauses
+* `HAVING` Clauses
+* Conditionals:
+   * `AND`
+   * `OR`
+   * `AND`
+   * `LIKE`
+   * `IN`
+   * `NOT`
+   * `IS NULL`
+   * `IS NOT NULL`
+   * `BETWEEN`
+   * `EXISTS`
+* `ORDER BY`
+* `LIMIT`
+
+## Intermediate SELECT Statements
+* `JOIN`s
+    * `INNER`
+    * `LEFT OUTER`
+    * `RIGHT OUTER`
+* Aggregating data
+   * `COUNT`
+   * `SUM`
+   * `MIN`
+   * `MAX`
+   * `AVG`
+   * `DISTINCT`
+* `GROUP BY`
+
+## Advances SELECT Statements
+* Advanced `JOIN`s
+* Subqueries
+
+## Inserting Data
+* When you would want to use an `INSERT` statement
+* How to `INSERT` multiple records at once
+* How to `INSERT` from a `SELECT` statement
+
+## Updating Data
+* `UPDATE` a single record
+* `UPDATE` multiple records at once
+* `UPDATE` via a `JOIN`
+
+## Deleting Data
+* `DELETE` a single record
+* `DELETE` multiple records at once
+* `DELETE` via a `JOIN`
+
+## UNIONs and INTERSECTIONs
+* `UNION`
+* `UNION ALL`
+* `INTERSECT`
+
+## Advanced Database Concepts
+* Indexes
+* Database Transactions
+* Database Users
+
+## What's Next?
+NB: Writing
