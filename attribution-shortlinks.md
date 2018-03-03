@@ -10,4 +10,4 @@ Thank you!
 
 ## Shortlinks
 
-TODO
+* Database Fundamentals: https://c.next.xyz/database-fundamentals
