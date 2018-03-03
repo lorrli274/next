@@ -1,1145 +1,480 @@
-create table projects (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(300) NOT NULL,
-  start_date TIMESTAMP NOT NULL,
-  end_date TIMESTAMP NOT NULL
-);
+-- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
+--
+-- Host: localhost    Database: construction_co
+-- ------------------------------------------------------
+-- Server version 5.7.21-0ubuntu0.16.04.1
 
-create table employees (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(300) NOT NULL
-);
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-create table project_employees (
-  employee_id INT(6) NOT NULL,
-  project_id INT(6) NOT NULL
-);
+--
+-- Current Database: `construction_co`
+--
 
-create table job_orders (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  employee_id INT(6) NOT NULL,
-  project_id INT(6) NOT NULL,
-  description VARCHAR(300) NOT NULL,
-  order_date TIMESTAMP NOT NULL,
-  quantity INT(6) UNSIGNED NOT NULL,
-  price FLOAT NOT NULL
-);
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `construction_co` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
+USE `construction_co`;
 
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (1, 'Spartan Stores', '2013-02-26', '2013-10-20');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (40, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (52, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (7, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (44, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (28, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (52, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 1);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 1);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 14, 'Skil 7-1/4 24-tooth Carbide Tipped Saw Blade, 75724w', 25, 727.85, '2013-03-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 15, 'Black & Decker 20v Max Lithium Ion Drill/driver, Ldx120c', 29, 2453.37, '2013-08-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 38, 'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi', 18, 2237.20, '2013-11-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 40, 'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb', 27, 3368.62, '2013-03-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 42, 'Black & Decker 12-volt Cordless Air Station Inflator', 4, 3192.36, '2013-08-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 7, 'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326', 39, 715.70, '2013-04-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 4, 'Multi-temp Hybrid Cordless Glue Gun', 10, 3099.68, '2013-10-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 30, 'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose', 29, 5190.16, '2013-03-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 38, 'Ultra Steel 3.0 Amp Jig Saw', 47, 1657.57, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 34, 'Crawford 38 In. Adjustable Steel Sawhorse', 39, 7129.79, '2013-08-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 49, 'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator', 13, 6331.93, '2013-05-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 2, 'Bosch 1006vsr 3/8 Corded Drill', 16, 3313.32, '2013-10-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 8, 'Sold & Shipped By Wayfair.com', 10, 3073.45, '2013-12-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 22, 'Rubbermaid Wall Washer Replacement Pads, White Rcps299', 13, 4234.46, '2013-03-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 35, 'Dremel 7300-n/8 4.8-volt Cordless Dremel Minimite Two Speed Rotary Tool', 32, 4766.47, '2013-08-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 44, 'Dremel 8300-01 12v Cordless Multi-max Oscillating Kit, Refurbished', 34, 2032.74, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 19, 'Cps Products Ccvpc4su 4 Cfm Single Stage Vacuum Pump', 31, 7785.78, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 4, 'Black & Decker 109-piece Basic Project Set, 71-0109', 39, 7630.52, '2013-03-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 48, 'Ingersoll Rand Impact 1/2', 9, 5617.35, '2013-07-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 38, 'Buffalo Tools Electric 110v 3/8 Vsr Drill', 15, 9460.07, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 48, 'Electric Glue Skillet 7', 30, 5031.47, '2013-05-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 31, 'Black & Decker 7750a 4-1/2-inch Small Angle Grinder', 13, 9338.32, '2013-07-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 18, 'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w', 46, 3464.02, '2013-08-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 34, 'Pentagon Professional Aluminum Drywall Bench', 47, 2191.97, '2013-05-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 45, 'Wen 5.2 Amp Electric Pole Saw', 38, 8139.17, '2013-07-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 46, 'Ingersoll Rand Hammer Pin', 28, 7218.09, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 30, 'Dremel Saw-max Tool Kit, Sm20-03', 9, 503.01, '2013-10-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 17, 'Black & Decker 18-volt Cordless Drill, Gco18c', 35, 755.70, '2013-04-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 21, 'Black & Decker Vs Jig Saw, Js515', 44, 4522.07, '2013-05-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 51, 'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit', 20, 6699.21, '2013-09-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 9, 'Fpc Corporation Surebonder Dual Melt High/low Temperature Glue Gun Fprdt270', 39, 5949.01, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 34, 'Eclipse Dp-366d Desoldering Pump', 47, 1917.22, '2013-05-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 1, 'Jflint Products 306 Mr Hard Water- Power Tool System', 11, 874.36, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 23, 'Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor', 10, 996.32, '2013-06-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 4, 'Radnor #7326 1/4 Id Brass Hose Ferrule', 30, 7848.88, '2013-04-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 15, 'Mk Diamond Mk-370exp 7-inch Wet Cutting Tile Saw', 24, 4963.29, '2013-09-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 40, 'Stalwart 8-in-1 Multipurpose Lighted Magnetic Driver With Bits', 48, 5497.17, '2013-03-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 19, 'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose', 17, 8586.18, '2013-09-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 28, 'Lincoln Industrial 18 Volt Cordless Grease Gun W/ 2 Batteries', 4, 6294.72, '2013-08-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 49, 'Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder', 25, 5911.05, '2013-12-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 50, 'Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)', 36, 5285.47, '2013-03-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 18, 'Skil 735-0118v Octo Multi-finishing Sander', 10, 4682.25, '2013-11-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 47, 'Stanley Fatmax 3/8 Corded Drill, Fme105', 42, 385.34, '2013-10-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 26, 'Ultra Steel 4-piece 18v Cordless Power Tool Kit', 42, 2256.50, '2013-05-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 27, 'Qep Tile Tools 60089 7 Portable Tile Saw', 34, 2303.20, '2013-07-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 49, 'Campbell Hausfeld Exteme Duty 3/8 Air Ratchet', 38, 6871.71, '2013-08-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 36, 'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw', 41, 5489.01, '2013-08-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 36, 'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr', 14, 8846.35, '2013-08-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 1, 'Black & Decker 5.2a 3.25 Planer Kit, 7698k', 15, 3760.67, '2013-06-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 31, 'Dremel Sm600 3 Multi-purpose Flush Cut Carbide Wheel', 25, 773.10, '2013-12-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 31, 'Powryte 3/8 Air Impact Wrench, 100101a', 43, 9805.34, '2013-12-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 42, 'Gyros 45-20265 High Speed Steel Wire Gauge Drill Bit No.65 Set Of 2', 9, 1046.86, '2013-03-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 23, 'Ingersoll Rand 705-93 Trigger', 5, 4585.46, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 27, 'Wagner 0283022c Ht775 Heat Gun', 33, 7432.57, '2013-06-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 11, 'Powermate 6 Gallon Proforce Pancake Air Compressor With Extra Value Kit', 15, 2408.52, '2013-12-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 25, 'Numax 18 Gauge 2 In 1 Brad Nailer & Stapler', 2, 287.89, '2013-09-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 17, 'Hitachi 35 Piece Hi-torq Impact Rated Torsion Bit Set', 37, 8245.84, '2013-05-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 8, 'Campbell Hausfeld Lever Safety Blowgun Kit', 6, 4400.96, '2013-07-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 6, 'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334', 39, 7080.49, '2013-06-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 5, 'Black And Decker Dragster 3 X 21 Belt Sander, Ds321', 18, 1380.42, '2013-09-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 24, 'Crawford 38 In. Adjustable Steel Sawhorse', 17, 8944.39, '2013-04-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 26, 'Mini Glue Sticks 4 25/pkg-gold/silver', 28, 2925.15, '2013-06-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 15, 'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator', 24, 1608.44, '2013-06-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 9, 'Porter Cable 352vs 3 X 21 Variable Speed Belt Sander', 27, 1641.95, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 28, 'Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052', 42, 2748.52, '2013-12-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 19, 'Skil 4570-01 18-volt Jigsaw', 48, 8142.62, '2013-05-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 12, 'Mountain Blow Gun 24 Deluxe W/90 Deg Angled Nozzle', 8, 7628.18, '2013-08-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 17, 'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set', 28, 9215.18, '2013-03-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 44, 'Black And Decker 3-position Rechargeable Screwdriver, Li2000', 40, 1764.28, '2013-04-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 24, 'Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)', 34, 5790.48, '2013-06-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 23, 'Gmc Power Equipment 4.6 Gallon Gmc Syclone 4620a Ultra Quiet And Oil Free Air Compressor', 44, 6642.47, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 42, 'Hitachi 1 1/2 18-gauge Narrow Crown Finish Stapler', 5, 7633.07, '2013-10-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 37, 'Aaa 300psi Air Compressor', 34, 990.42, '2013-10-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 36, 'Eclipse 900-015 Helping Hands Soldering Aid', 13, 3127.26, '2013-03-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 25, 'Wagner Ht1000 Heat Tool', 42, 9931.58, '2013-11-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 39, 'Skil 1400-02 Multi-tasker 2.0a Oscillating Tool Kit', 8, 9965.49, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 37, 'Bostitch .5 Vsr 2-speed Hammerdrill/drill, Bte140k', 5, 910.37, '2013-05-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 29, 'Powryte 3/8 Air Impact Wrench, 100101a', 16, 8418.95, '2013-05-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 11, 'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr', 24, 9702.12, '2013-09-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 29, 'Fpc Glue Sticks, 4, 15/pkg, Glow-in-the-dark', 23, 4281.49, '2013-03-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 42, 'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w', 33, 5391.70, '2013-05-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 25, 'Master Magnetics 7269 36-inch Retrieval Magnet', 18, 8959.46, '2013-09-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 13, 'Bosch 2240-01 12 Volt Cordless Drill And Driver', 26, 2389.57, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 34, 'Drill America Flame Carbide Burr 1/4 Shank', 45, 274.84, '2013-10-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 47, 'Cgw Abrasives Z-thru Flap Discs - 4 1/2 X 7/8 Z-80 T27 Z-thru Flap Disc', 36, 7864.78, '2013-07-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 52, 'Black & Decker Vs Jig Saw, Js515', 38, 7179.77, '2013-03-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 36, 'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb', 10, 740.19, '2013-11-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 31, 'Vermont American 10 40 Tpi 10x Titanium Carbide Circular Saw Blades 27831', 5, 230.33, '2013-03-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 30, 'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor', 38, 2545.06, '2013-08-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 33, 'Hyundai Hpc3010 Air Compressor Kit', 18, 7850.19, '2013-04-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 16, 'Great Neck Saw 80134 36-piece Rotary Tool Set', 12, 8348.43, '2013-07-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 32, 'Ad Tech Hi-temp Full Size Glue Gun', 46, 1253.36, '2013-09-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 25, 'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch', 42, 1747.22, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 22, 'Hitachi 18 V Post Li-ion Driver Drill', 38, 1795.38, '2013-08-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 4, 'Master Magnetics 07047 Neodymium Disc Magnets - 3-pack', 8, 1917.49, '2013-12-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 2, 'Hitachi 2 Hp 4-gal Compressor', 14, 846.25, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 42, 'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry', 43, 4113.15, '2013-04-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 51, 'Black & Decker 18v Cordless Drill Set, Gco18sfb', 20, 7523.33, '2013-11-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 38, 'Bosch Ros10 5 Palm-grip Random Orbit Sander', 38, 3142.37, '2013-07-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (1, 24, 'Bostitch Air Regulator And Gauge, Threaded, #mregulator', 7, 8591.29, '2013-03-02');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (2, 'Kellogg Company', '2013-01-25', '2013-09-07');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (25, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (15, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (45, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (29, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (4, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (34, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (24, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (25, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (45, 2);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (40, 2);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 30, 'Eclipse 900-250 Solder Aid Tool Set W/reverse Tweezers And Heat Sink', 21, 5309.42, '2013-09-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 37, 'Black & Decker 15a 7.25 Fatmax Circular Saw', 31, 3099.71, '2013-07-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 17, 'Dmt 8 Inch Duosharp Plus Benchstone Fine Coarse Wm8fc-wb', 12, 5239.36, '2013-07-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 25, 'Apex Tool Group, Llc-tools 8125n Soldering Gun Tip', 10, 9488.25, '2013-12-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 11, 'Dremel Ez Lock Starter Kit', 31, 5087.69, '2013-11-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 42, 'Powermate Proforce 10 Gallon Portable Air Tank', 44, 5356.21, '2013-08-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 43, 'Jflint Products 306 Mr Hard Water- Power Tool System', 14, 837.98, '2013-04-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 44, 'Crawford Adjustable Height Roller Stand', 31, 6509.76, '2013-09-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 3, 'Hitachi 35 Piece Hi-torq Impact Rated Torsion Bit Set', 20, 2001.10, '2013-05-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 23, 'Campbell Hausfeld 3.5 Round-head Framing Nailer Kit (21 Degree)', 43, 9250.80, '2013-06-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 8, 'Western Enterprises 1/4 Npt X 3 Long Male Brass Regulator Nipple Cga 540', 32, 4503.04, '2013-03-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 3, 'Wolo Manufacturing 800compressor Model 800 Tiger 2. 5 Liter Tank And Air Compressor', 8, 2479.30, '2013-10-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 20, 'Stanley Black & Decker Dw304pk Dw 10 Amp Reciprocating Saw Kit', 32, 1000.45, '2013-08-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 15, 'Skil 5995-01 18-volt 5-3/8 Circular Saw', 22, 4897.24, '2013-11-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 6, 'Skil 4-1/2 Angle Grinders - 4 1/2 Angle Grinder With Metal Front 6 Amp', 29, 6710.72, '2013-04-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 17, 'Hitachi Power Tools Fdv16vb2 5/8 Hammer Drill Vsr', 38, 9475.79, '2013-10-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 43, 'Lincoln Industrial Grease Gun Pistol 16 0z W/18whip Hose &rigid Pipe', 39, 2734.55, '2013-05-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 18, 'Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)', 16, 2069.84, '2013-11-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 34, 'Black & Decker Vs Jig Saw, Js515', 28, 6383.23, '2013-08-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 16, 'Stanley Fatmax 20-volt Lithium Battery, Fmc680l', 50, 1992.25, '2013-09-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 2, 'Qep Tile Tools 60089 7 Portable Tile Saw', 38, 9325.86, '2013-11-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 50, 'Hitachi 18 V Ni-cad Cordless Driver Drill', 45, 4026.43, '2013-09-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 50, 'Stalwart Mouse Sander Set, Blue, 28pc', 39, 4023.48, '2013-10-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 8, 'Black & Decker Heat Gun', 23, 7485.91, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 35, 'Atd Tools Atd-10836 3. 6-volt Cordless Rechargeable Screwdriver Kit', 39, 2634.40, '2013-05-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 50, 'Dremel 4200 Rotary Tool With Ez Change, 4200-6/40', 16, 1920.41, '2013-07-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 3, 'Hitachi 18v Lithium-ion 1/2 Cordless Hammer Drill', 5, 5278.53, '2013-03-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 11, 'Skil 2364-02 7.2-volt Lithium-ion 2-speed Drill/driver', 14, 2361.48, '2013-10-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 49, 'Lumberjack Tools Hsk3 Home Series 3-piece Master Kit', 2, 6945.25, '2013-10-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 49, 'Wagan 3-in-1 275 Psi Air Compressor', 15, 5060.09, '2013-09-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 3, 'Hitachi Power Tools Db3dl2 3.6-volt Lithium Ion Dual Position Handle Screwdriver', 8, 9180.96, '2013-10-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 48, 'Great Neck Saw Ra38 3/8 Drive Forward And Reverse Ratchet', 2, 8350.17, '2013-07-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 40, 'Hitachi 18v Lithium-ion Cordless Impact Driver W/120-pc Drill/drive Set', 6, 7596.51, '2013-08-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 43, 'Lumberjack Tools Trh2000 2in Home Series Tenon Cutter', 31, 505.19, '2013-08-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 46, 'Dewalt Power Tools Dck290l2 20 Volt Max Lithium Ion Hammerdrill-impact Driver Co', 37, 5793.67, '2013-10-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 10, 'Dewalt 115-dw059b 18v 1-2 Inch High Torque Impact Wrench Bare Tool', 3, 5212.28, '2013-07-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 43, 'Black & Decker 20-volt Matrix Drill, Bdcdmt120', 15, 310.77, '2013-03-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 49, 'Dixon Valve Air Chief Industrial Quick Connect Fittings - Dc25 Septls238dc25', 25, 4463.46, '2013-11-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 29, 'Bosch Power Tools 29 Piece High Speed Steel Drill Set With Metal Case 96029', 40, 6175.77, '2013-12-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 10, 'Black & Decker Smart Select Linefinder Orbital Jigsaw, Js670v', 21, 1146.10, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 48, 'Black & Decker 20v Max Lithium Drill/driver, Ldx220sb', 10, 1006.07, '2013-06-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 12, 'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334', 15, 7963.04, '2013-11-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 20, 'Hitachi 200-piece Mini Grinder Accessory Set', 31, 4194.76, '2013-03-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 46, 'Masterflow 12v 3-in-1 Turbo-boost Air Compressor / Inflator / Deflator', 3, 832.13, '2013-08-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 27, 'Skil 1810 1/4 Fixed Base Router', 2, 6940.09, '2013-12-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 49, 'Hitachi 18v Lithium-ion 4 1/2 Angle Grinder (tool Body Only)', 5, 6430.33, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 49, 'Wolo Manufacturing 800compressor Model 800 Tiger 2. 5 Liter Tank And Air Compressor', 42, 9833.86, '2013-07-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 24, 'Bostitch Prozhoze, 1/4 X 100, Hopb14100', 25, 9178.07, '2013-12-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 36, 'Skil 9296-01 4.5in Paddle Switch Angle Grinder', 12, 3885.05, '2013-09-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 23, 'Ultra Steel 1.5 Amp Palm Sander', 30, 1597.45, '2013-05-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 21, 'Crawford Adjustable Height Roller Stand', 38, 6281.95, '2013-10-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 24, 'Black & Decker 20-volt Matrix Drill, Bdcdmt120', 43, 2757.55, '2013-03-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 27, 'Wagan Hi Speed Air Compressor', 35, 2239.92, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 25, 'Great Neck 4.8v Cordless Screwdriver, 4 Bits, 200rpm', 46, 3198.35, '2013-10-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 44, 'Eclipse 900-259 Mini Soldering Station', 40, 6748.52, '2013-09-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 17, 'Bostitch 6.5 Amp 3/8 Drill, Bte100k And Bonus Drill Bit Bundle', 22, 453.04, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 15, 'Stanley Tr45 Light Duty Staple Gun', 41, 5061.82, '2013-06-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 50, 'Proxxon Engraving Tool', 9, 3588.49, '2013-12-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 50, 'Fry Technologies Cookson Elect Am32406 General Purpose Acid Core Solder', 8, 4915.85, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 40, 'Jflint Products 306 Mr Hard Water- Power Tool System', 39, 9622.21, '2013-11-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 43, 'Hitachi 18v Lithium-ion Impact Wrench (tool Body Only)', 44, 538.45, '2013-08-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 45, 'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch', 44, 7139.23, '2013-05-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 30, 'Dixon Valve Air Chief Industrial Quick Connect Fittings - Dc25 Septls238dc25', 45, 327.01, '2013-09-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 22, 'Hyundai Hpc11090 11-gal Air Compressor Kit', 18, 1206.09, '2013-07-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 33, 'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi', 45, 5730.22, '2013-06-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 25, 'Bostitch Gravity Feed Spray Air Gun, 1/4 Npt, Btmt72393', 15, 2714.95, '2013-03-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 25, 'Dual-temp Mini Glue Gun Kit, Red', 5, 1309.04, '2013-05-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 48, 'Black & Decker 18v Cordless Drill', 33, 8386.87, '2013-07-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 24, 'Edsal Heavy-duty Workbench, Ub400', 34, 6081.81, '2013-04-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 45, 'Rockwell Shopseries 7 Amp 1/2 Hammer Drill', 32, 4338.49, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 6, 'Skil Fixed Base Routers - 1 3/4 Hp Fixed Base Router 9 Amp Motor', 49, 2748.55, '2013-11-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 39, 'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator', 43, 8083.87, '2013-06-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 48, 'Black & Decker 41-piece Project Kit With 3.6v Lithium Screwdriver, Ldx120pk', 3, 9440.92, '2013-09-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 27, 'Bosch Power Tools 2 Amp 1/4 Sheet Palm Sander 7292-01', 41, 1888.91, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 30, 'Eclipse Ss-206e Temperature Controlled Soldering Station With Analog Display', 35, 8168.95, '2013-03-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 20, 'Black & Decker 20-volt Matrix Drill And Flashlight Combo Kit, Bdcdmt120fl', 13, 6847.06, '2013-12-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 7, 'Campbell Hausfeld 1-1/4 Brad Nailer Kit', 49, 7824.60, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 22, 'Crawford Storehorse Folding Sawhorse', 29, 8753.97, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 9, 'Bernzomatic 019335/ns3 Nickel Silver Brazing Rods', 47, 7207.47, '2013-07-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 37, 'Black & Decker 20v Smart Select Cordless Drill', 19, 9869.06, '2013-03-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 36, 'Acme Automotive Typhoon Pro Blow Gun', 35, 8842.39, '2013-07-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 17, 'Makita Mklxt311fh 18 Volt Drill And Impact Kit', 15, 579.52, '2013-03-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (2, 45, 'Black & Decker 58-piece Project Kit With 12v Lithium Drill/driver, Ldx172pk', 44, 4953.57, '2013-03-04');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (3, 'Abercrombie & Fitch Co', '2013-05-26', '2013-10-04');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (52, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (34, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (38, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (48, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (44, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (32, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (5, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (24, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (32, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (45, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (43, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (24, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (26, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (30, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (29, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (19, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (1, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (32, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (20, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (23, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (50, 3);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 3);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 47, 'Black & Decker 18-volt Cordless Drill, Gco18c', 47, 7635.78, '2013-09-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 4, 'Warp Brothers Fcp-12 Flex-o-glaze Cleaner And Polisher - 12 Oz.', 24, 9512.03, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 43, 'Bosch Ros10 5 Palm-grip Random Orbit Sander', 43, 9351.74, '2013-10-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 33, 'Makita Btl061 Lxt 18 Volt Angle Drill Kit', 38, 3259.94, '2013-06-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 18, 'Hitachi 18 V Ni-cad Cordless Driver Drill', 32, 214.95, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 38, 'Campbell Hausfeld 62 Piece Air Tool Kit', 41, 907.33, '2013-08-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 26, 'Dremel Ez407sa-01 Ez Drum Mandrel', 35, 462.55, '2013-03-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 36, 'Bostitch Gravity Feed Spray Air Gun, 1/4 Npt, Btmt72393', 9, 5215.56, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 29, 'Buffalo Tools 4.8v Cordless Screwdriver', 3, 1986.38, '2013-09-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 51, 'Bon-aire 12 Volt All In One Compressor In A Bag, Yellow', 49, 2771.50, '2013-03-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 10, 'Lumberjack Tools Tta2000 2in Industrail Series Tenon Cutter', 34, 4965.90, '2013-04-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 25, 'Contractors Tornado Double Blade Dual Saw', 24, 1461.19, '2013-06-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 23, 'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor', 11, 6124.05, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 19, 'Hitachi 18v Lithium Ion 6 1/2 Circular Saw (tool Body Only)', 48, 3585.24, '2013-09-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 42, 'Dewalt Speed Tip 14 Piece Titanium Drill Bit Set Dw1341', 30, 9413.08, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 9, 'Black & Decker 7-1/4 15-amp Circular Saw, Cs1015', 47, 105.69, '2013-11-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 36, 'North American Tool 51872 80-piece Mini Rotary Tool Kit', 17, 6144.88, '2013-11-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 39, 'Eclipse 900-206 Helping Hands With Solder Iron Holder - 2.5x', 19, 3821.35, '2013-08-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 6, 'Ingersoll Rand 705-93 Trigger', 25, 4574.74, '2013-05-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 50, 'Hitachi 2 1/4 Horsepower 11 Amp Plunge And Fixed Base Variable Speed Router Kit', 32, 390.62, '2013-12-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 30, 'Lumberjack Tools Hsk2 Home Series 2-piece Starter Kit', 26, 2254.14, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 20, 'Bosch 6335-01 7 Amp 1/2 Corded Drill', 27, 6859.97, '2013-07-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 27, 'Bostitch 37-piece Quick Load Screwdriving Set, Bsa237qlm', 31, 8362.44, '2013-04-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 10, 'Black & Decker 12-volt Cordless Air Station Inflator', 13, 6800.73, '2013-11-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 38, 'Pro-lift W-1010a 10-gallon Air Tank', 5, 6001.68, '2013-10-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 49, 'Bostitch 1/4 Universal Air Coupler, Btfp72321', 27, 3649.79, '2013-09-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 14, 'Gmc Power Equipment 1.6 Gallon Gmc Syclone 1650a Ultra Quiet And Oil-free Air Compressor', 48, 1683.06, '2013-11-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 34, 'California Air Tools 1.6 Gallon Ultra Quiet And Oil-free 1/2 Hp Aluminum Tank Air Compressor', 36, 4369.35, '2013-07-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 42, 'Hitachi 4 Gallon Twin Stack Air Compressor', 36, 3505.84, '2013-04-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 40, 'Great Neck Saw Ra38 3/8 Drive Forward And Reverse Ratchet', 3, 3471.57, '2013-03-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 7, 'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set', 2, 1636.05, '2013-06-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 27, 'Dremel Multi-max Mm40 Tool Kit, Mm40-01', 21, 9163.66, '2013-06-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 5, 'Stalwart Mouse Sander Set, Blue, 28pc', 39, 6856.21, '2013-12-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 34, 'Kd Tools Engraver Electric Vibro', 6, 7284.13, '2013-05-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 27, 'Stanley Fatmax 12v Cordless Drill, Fmc010lb', 41, 3600.39, '2013-04-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 24, 'Skil 120v 1-3/4 Hp Fixed Base Router, 1817', 38, 5878.58, '2013-12-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 26, '10-count 10 Glue Sticks', 19, 2300.34, '2013-06-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 2, 'Aaa 250psi 6-in-1 Air Compressor', 34, 7971.53, '2013-03-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 28, 'Primefit 25-piece Air Compressor Accessory Kit', 17, 785.27, '2013-05-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 15, 'Ad Tech Hi-temp Mini Size Glue Gun', 21, 7277.27, '2013-06-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 45, 'Wen Apex Pro 12v 3/8 Lithium Ion Cordless Drill/driver', 32, 255.00, '2013-04-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 22, 'Stanley Black & Decker Dw304pk Dw 10 Amp Reciprocating Saw Kit', 16, 9664.95, '2013-12-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 21, 'Black & Decker Random Orbit Sander, Ro100', 42, 4236.51, '2013-06-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 21, 'Dremel Cleaning/polishing Mini Accessory Kit, 684-02', 21, 4191.06, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 34, 'Wagan Cordless Spotlight Compressor', 49, 1257.87, '2013-09-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 40, 'Gmc Power Equipment 1.6 Gallon Gmc Syclone 1675a Ultra Quiet And Oil-free Air Compressor', 25, 2983.04, '2013-07-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 41, 'Black & Decker Matrix Router Head Attachment, Bdcmtr', 48, 7298.90, '2013-06-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 4, 'Campbell-hausfeld Mp5142 Air Chuck With Gauge', 9, 1932.29, '2013-11-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 13, 'Fpc Dual-temp Glue Gun Kit', 15, 8592.27, '2013-04-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 30, 'Black & Decker 20v Smart Select Cordless Drill', 8, 2620.19, '2013-06-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 28, 'Bernzomatic Aluminum Soldering Rods 019325/al3', 23, 7734.23, '2013-04-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 18, 'Black & Decker 30-piece Bullet Screwdriving And Drilling Set, 71-130', 8, 5979.60, '2013-05-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 44, 'Arrow Fastener Powershot Heavy Duty Forward Action Stapler', 16, 4974.03, '2013-12-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 9, 'Dremel 200-n/15 120v 2-speed Rotary Tool', 28, 4713.72, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 30, '50 Air Hose Reel', 24, 3284.15, '2013-08-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 16, 'Hitachi 83-piece Drill And Driver Bit Set', 2, 3766.99, '2013-04-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 36, 'Dremel Multi-max Mm40 Tool Kit, Mm40-01', 36, 7887.51, '2013-06-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 21, 'Black & Decker 12-volt Matrix Drill, Bdcdmt112', 47, 4238.17, '2013-10-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 32, 'Dremel 7300-n/8 4.8-volt Cordless Dremel Minimite Two Speed Rotary Tool', 14, 5447.48, '2013-03-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 39, 'Dremel Cleaning/polishing Mini Accessory Kit, 684-02', 11, 7245.35, '2013-06-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 20, 'Home Series 3 Pc Master Kit', 2, 5195.89, '2013-09-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 19, 'Stalwart 74-piece Combo 12-volt Cordless Drill And 3.6-volt Drivers Set', 44, 7607.34, '2013-03-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 45, 'Powryte 3/8 X 50 Hybrid Air Hose', 49, 7312.77, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 33, 'Bostitch 15 Amp 7 1/4 Heavy Duty Circular Saw, Bte300k', 25, 3288.39, '2013-08-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 1, 'Hitachi 3/8 6 Amp Drill With Keyless Chuck', 14, 6829.38, '2013-11-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 9, 'Skil 6277-02 3/8 Corded Drill', 3, 5413.36, '2013-06-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 47, 'Powryte 3/8 Air Impact Wrench, 100101a', 27, 9248.10, '2013-08-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 27, 'Acme Automotive Inline Adj Air Regulator', 19, 7883.19, '2013-10-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 7, 'Campbell Hausfeld 1/2 Pneumatic Socket Set', 47, 6074.91, '2013-12-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 18, 'Lumberjack Tools Tta2000 2in Industrail Series Tenon Cutter', 24, 6095.79, '2013-10-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 23, 'All Purpose Stik Mini Glue Sticks, .27 X 4, 100/pkg', 42, 7602.98, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 49, 'Black & Decker Matrix Sanding Head Attachment, Bdcmts', 44, 8780.16, '2013-09-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 43, 'Hitachi 4 1/2 6 Amp Angle Grinder With 5 Abrasive Wheels', 2, 8250.53, '2013-11-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 26, 'Hyundai Hpt505 Portable 5-gal Air Tank', 8, 8013.56, '2013-06-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 31, 'Hitachi 4 1/2 5 Amp Angle Grinder', 11, 9019.36, '2013-11-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (3, 34, 'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry', 10, 3777.08, '2013-09-02');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (4, 'Zale Corporation', '2013-04-13', '2013-07-23');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (52, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (29, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (40, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (25, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (14, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (4, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (38, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (48, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (30, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (26, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (32, 4);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (10, 4);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 15, 'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw', 30, 2792.73, '2013-06-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 50, 'Atd Tools 8294 Arbor For Cutoff Discs Mandrel', 44, 5377.24, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 25, 'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor', 10, 6304.02, '2013-06-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 8, 'Rockwell Shopseries 4-1/2 Angle Grinder', 29, 8356.51, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 8, 'Surebonder Cordless High Temperature Glue Gun', 3, 8162.01, '2013-07-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 22, 'Dewalt Dcf610s2r Drills / Drivers , Power Tools, N/a', 18, 5436.58, '2013-06-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 50, 'Masterflow 12v Portable Air Compressor / Inflator', 26, 1946.75, '2013-12-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 33, 'Black & Decker 68-piece Project Kit With 20v Lithium Drill/driver, Li2000pk', 24, 5473.82, '2013-11-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 8, 'Dewalt Power Tools Dck290l2 20 Volt Max Lithium Ion Hammerdrill-impact Driver Co', 48, 4610.29, '2013-04-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 6, 'Campbell Hausfeld 13 Gallon Electric Oil Free Horizontal Air Compressor', 27, 1639.76, '2013-04-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 27, 'Hitachi 12v Peak 2 Tool Li-ion Drill Combo Kit With Carrying Bag', 14, 1550.35, '2013-08-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 42, 'Dremel Ez Lock Starter Kit', 30, 2666.80, '2013-09-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 39, 'Campbell Hausfeld 1/2 Pneumatic Socket Set', 11, 2413.19, '2013-08-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 10, 'Black & Decker 9.6v-18v Multi Voltage Fast Charger, Fsmvc', 9, 9905.91, '2013-12-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 3, 'Eclipse 902-133 Solder Tip For 900-066n Solder Station 1.0 Mm Dia Pencil Tip', 2, 6690.26, '2013-03-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 32, 'Dremel 6800-01 120v Trio Rotary Tool Kit, Refurbished', 37, 127.25, '2013-04-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 45, 'Gmc Power Equipment 1.6 Gallon Gmc Syclone 1610a Ultra Quiet And Oil-free Air Compressor', 37, 5614.60, '2013-10-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 8, 'Pentagon Professional Aluminum Drywall Bench', 43, 7862.13, '2013-09-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 35, 'Dremel Universal Multi-knife Blade, Mm430', 16, 2681.39, '2013-09-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 51, 'Stalwart 25-piece 4.8-volt Cordless Screwdriver With Led', 18, 7728.62, '2013-05-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 50, 'Skil 9295-01 4-1/2 Angle Grinder', 29, 4310.59, '2013-08-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 2, 'Bostitch Air Chisel Hammer With 3 Chisels, Btmt72394', 27, 4810.16, '2013-11-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 51, 'Campbell Hausfeld 1-1/4 Brad Nailer Kit', 16, 9296.24, '2013-04-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 10, 'Hanson #8 Torx Bit', 39, 3967.81, '2013-06-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 13, 'Stalwart Mouse Sander Set, Blue, 28pc', 40, 3435.58, '2013-07-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 34, 'Gorilla Rack 4 Ft. Heavy-duty Workbench', 27, 5933.80, '2013-07-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 42, 'Kawasaki 14.4v 20 Piece Cordless Drill Kit In Black', 13, 1699.86, '2013-04-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 18, 'Bostitch 18v Lithium .25 Hex Chuck Impact Driver Kit, Btc440lb', 6, 3675.01, '2013-04-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 20, 'Eclipse Ss-206e Temperature Controlled Soldering Station With Analog Display', 7, 7477.72, '2013-12-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 27, 'Black And Decker 1/2 7-amp Variable Speed Drill, Dr560', 38, 5965.46, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 3, 'Bosch 7292-02 2 Amp 1/4 Sheet Palm Sander', 23, 4329.34, '2013-07-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 23, 'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose', 45, 3201.96, '2013-08-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 29, 'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi', 24, 7906.31, '2013-10-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 33, 'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry', 43, 8437.03, '2013-10-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 39, 'Stalwart Mouse Sander Set, Blue, 28pc', 28, 597.55, '2013-09-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 27, 'Rockwell Shopseries 8 Amp Variable Speed Reciprocating Saw Kit', 5, 3039.02, '2013-08-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 28, 'Ultra Steel 4-piece 18v Cordless Power Tool Kit', 49, 1116.25, '2013-11-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 18, 'Forney 72727 Wire Wheel Brush Coarse Crimped With 1/4-inch Hex Shank 2-inch-by-.012-inch', 17, 1487.98, '2013-03-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 31, 'Rikon 1.2 Amp 120 V 16 Scroll Saw', 45, 4867.44, '2013-07-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 51, 'Black & Decker 17-piece Workbench Drill Bit Set, 15097', 40, 6141.37, '2013-05-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 47, 'Skil 2860-10 18-volt Drill And Circular Saw Combo Kit', 17, 8281.46, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 2, 'Wagan Quick Flow Compact Air Compressor', 25, 8191.65, '2013-03-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 9, 'Kawasaki 10 Circular Saw Blade - 60t', 20, 7426.18, '2013-06-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 20, 'Skil 3410-02 10 In. Table Saw With Floor Stand', 37, 4066.17, '2013-12-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 8, 'Buffalo Tools 4.8v Cordless Screwdriver', 23, 4362.72, '2013-04-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 46, 'Black & Decker Lithium Saw, Lps7000', 36, 6189.43, '2013-12-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 48, 'Bostitch Air Regulator And Gauge, Npt, #iregulator', 5, 3186.83, '2013-07-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 46, 'Powryte Dual Action Air Sander, 100112a', 45, 7233.76, '2013-12-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 27, 'Great Neck Saw Ra14 1/4 Drive Forward And Reverse Ratchet', 14, 7433.56, '2013-08-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 5, 'Hitachi Power Tools Db3dl2 3.6-volt Lithium Ion Dual Position Handle Screwdriver', 43, 4692.32, '2013-06-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 14, 'Jgb Enterprises 001-0121-050i Eagle Air 300 No. Red Jackhammer Hose Cpld Chicago Fittings Crimped', 48, 258.98, '2013-06-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 43, 'Hitachi 4 1/2 6 Amp Angle Grinder With 5 Abrasive Wheels', 27, 1728.33, '2013-09-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 48, 'Weller Sp40l Lightweight Soldering Iron', 35, 4872.52, '2013-04-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 28, 'Black And Decker Dwdck280c2 20v Max Li-ion Compact Drill And Impact Combo Kit', 31, 5518.94, '2013-09-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 49, 'Campbell Hausfeld 1/2 Pneumatic Socket Set', 6, 2959.44, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 35, 'Lumberjack Tools Hsbk1 Home Series Beginners Kit', 21, 6146.36, '2013-12-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 47, 'Hitachi 2 18-gauge Finish Brad Nailer', 50, 8519.70, '2013-12-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 4, 'Pro-lift W-1010a 10-gallon Air Tank', 21, 8090.06, '2013-07-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 28, 'Eclipse 900-015 Helping Hands Soldering Aid', 29, 9979.57, '2013-12-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 45, 'Dual-temp Mini Glue Gun Kit, Red', 30, 9684.83, '2013-11-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 15, 'Tennsco Corp. Plastic Laminate Top Workbench With Shelf, Rails & Riser', 25, 211.23, '2013-05-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 46, 'Skil 4-position Orbital Jigsaw With Laser Guide, 4495-02', 47, 2791.00, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 21, 'Crawford Storehorse 36 Sawhorse W/top Protector', 24, 2886.10, '2013-08-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 39, 'Plews 05-025 4-inch Needle Nose Grease Gun Adapter', 32, 1734.81, '2013-11-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 17, 'Mini Glue Sticks 4 25/pkg-gold/silver', 19, 486.33, '2013-12-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 21, 'Campbell Hausfeld 17-piece Pneumatic Accessory Kit', 27, 3045.03, '2013-11-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 17, 'Rockwell Shopseries 12-volt Cordless Drill/driver Kit', 40, 109.36, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 4, 'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw', 30, 9311.42, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 20, 'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334', 10, 6508.49, '2013-10-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 16, 'Bostitch 6 Amp Orbital Jig Saw, Bte340k', 28, 9713.64, '2013-12-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 15, 'Astro Pneumatic 9707 1/4-inch Drive Mini Gearless Ratchet', 3, 2264.58, '2013-12-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 9, 'Dremel Ez407sa-01 Ez Drum Mandrel', 50, 2006.03, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 34, 'Dremel Cleaning/polishing Mini Accessory Kit, 684-02', 7, 1154.62, '2013-09-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 38, 'Crawford Adjustable Height Roller Stand', 37, 5752.59, '2013-04-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 34, 'Skil 7-1/4 150-tooth Steel Circular Saw Blade, 74715', 47, 6459.68, '2013-07-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 44, 'Bostitch 8.5 Amp Orbital Reciprocating Saw And Bonus Saw Blade Set Bundle', 35, 1792.77, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 51, 'Fpc Dual-temp Glue Gun Kit', 8, 304.23, '2013-03-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 19, 'Hitachi 7 Disc Grinder', 17, 906.56, '2013-11-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 23, 'Hitachi 12v Cordless Drill/driver Kit', 48, 2466.36, '2013-09-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 6, 'Rockwell Rk3440k Versacut Circular Saw Kit', 25, 4558.10, '2013-03-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 4, 'Irwin 5-3/8 24t Marathon Cordless Circular Saw Blade', 37, 1303.98, '2013-08-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 42, 'Lumberjack Tools Hsk3 Home Series 3-piece Master Kit', 29, 3419.58, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (4, 42, 'Stanley Fatmax 20-volt Lithium Battery, Fmc680l', 37, 1970.27, '2013-05-15');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (5, 'Dr Pepper Snapple Group', '2013-02-09', '2013-07-28');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (15, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (10, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (4, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (3, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (43, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (15, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (19, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (45, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (47, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (34, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (26, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (39, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (20, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (26, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (2, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (19, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (47, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (10, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (23, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (4, 5);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 5);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 21, 'Professional Woodworker 7390 Multifunction Tool With 4 Accessories', 24, 3072.03, '2013-10-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 22, 'Bon-aire 12 Volt All In One Compressor In A Bag, Yellow', 26, 9988.97, '2013-09-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 44, 'Skil 735-0118v Octo Multi-finishing Sander', 37, 9358.48, '2013-09-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 34, 'Bostitch Low-profile Paper Tape Framing Nailer, Lpf33pt', 23, 2169.60, '2013-12-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 23, 'Kawasaki 6 Bench Grinder', 11, 5016.06, '2013-11-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 39, 'Dremel Mm20-03 Multi-max Tool Kit', 48, 1612.55, '2013-05-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 37, 'Dremel 4000-1/26 120v Variable Speed Rotary Tool', 28, 8118.52, '2013-11-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 50, 'Hitachi 12v Peak Li-ion 2 Speed Drill/driver', 42, 8668.67, '2013-09-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 26, 'Buffalo Tools Pro Series 12 Piece Router Bit Set', 46, 8187.94, '2013-12-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 49, 'Tennsco Corp. Plastic Laminate Top Workbench With Shelf, Rails & Riser', 9, 251.48, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 8, 'High-temp Cordless Glue Gun, White', 25, 183.97, '2013-07-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 49, 'Hopkins-f3 Brands 90158 Workbench Kit', 29, 4651.97, '2013-12-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 12, 'Lumberjack Tools Tac1500 1-1/2-inch Commercial Series Tenon Cutter', 24, 6768.27, '2013-07-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 26, 'Eclipse 900-066n 50w Soldering Station', 25, 5291.19, '2013-04-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 30, 'Multi-temp Hybrid Cordless Glue Gun', 41, 4051.29, '2013-11-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 29, 'Audiopipe Thsy3075c Pipeman Train Horn Air Compressor', 18, 2613.61, '2013-11-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 51, 'Dewalt 115-dw059b 18v 1-2 Inch High Torque Impact Wrench Bare Tool', 34, 9624.82, '2013-08-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 17, 'Black And Decker Power Tools Gco.12sfb 12-volt Cordless Drill With Stud Sensor And St', 31, 2722.39, '2013-04-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 24, 'Bostitch 7 Amp 4.5 Angle Grinder, Bte820k', 25, 9000.83, '2013-08-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 34, 'Black & Decker 12-volt Cordless Air Station Inflator', 2, 5220.88, '2013-09-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 13, 'Bosch 2250-01 14.4 Volt Single Speed Cordless Drill And Driver', 30, 3247.22, '2013-05-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 19, 'Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor', 13, 4430.82, '2013-05-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 32, 'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit', 19, 2498.69, '2013-06-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 38, 'Hanson #8 Torx Bit', 16, 1951.58, '2013-10-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 13, 'Powryte Air Reciprocating Saw, 100107a', 46, 1299.11, '2013-12-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 51, 'Acme Automotive Inline Adj Air Regulator', 20, 3101.18, '2013-03-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 23, 'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor', 36, 3755.11, '2013-08-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 40, 'Stanley Black & Decker Dw304pk Dw 10 Amp Reciprocating Saw Kit', 11, 4947.88, '2013-06-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 14, 'Hitachi Power Tools Db3dl2 3.6-volt Lithium Ion Dual Position Handle Screwdriver', 12, 5762.94, '2013-09-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 39, 'Lincoln Lubrication Ac2440 120-volt Corded Grease Gun', 37, 5511.95, '2013-05-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 23, 'Skil 5995-01 18-volt 5-3/8 Circular Saw', 34, 5357.75, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 42, 'Campbell Hausfeld 17-piece Pneumatic Accessory Kit', 1, 5665.83, '2013-09-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 51, 'Campbell Hausfeld Exteme Duty 3/8 Air Ratchet', 22, 7580.00, '2013-12-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 3, 'Home Series 3 Pc Master Kit', 26, 8112.83, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 39, 'Campbell Hausfeld 62 Piece Air Tool Kit', 32, 5394.69, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 24, 'Buffalo Tools Ps07215 18-volt Cordless Drill Kit', 20, 7822.29, '2013-04-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 11, 'Dremel 560 Drywall Cutting Bit', 24, 9329.39, '2013-11-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 17, 'Dual-temp Mini Glue Gun Kit, Red Dual-temp Mini Glue Gun Kit, Red', 38, 4281.72, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 23, 'Dewalt Power Tools . 38inch Heavy-duty Vsr Pistol Grip Drill With Keyless Chuck Dwd', 42, 1144.47, '2013-08-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 29, 'Black And Decker 1/2 7-amp Variable Speed Drill, Dr560', 18, 6404.10, '2013-09-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 11, 'Hitachi 18 V Ni-cad Cordless Driver Drill', 37, 3348.23, '2013-12-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 32, 'Wen Apex Pro 12v 3/8 Lithium Ion Cordless Drill/driver', 35, 1254.23, '2013-04-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 28, 'Stanley Fatmax 20-volt Lithium Battery, Fmc680l', 22, 1238.65, '2013-09-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 36, 'Bostitch 18v Lithium Drill/impact Combo Kit, Btck410l2', 14, 6308.35, '2013-09-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 13, 'Dremel Ez Lock Starter Kit', 18, 4568.06, '2013-11-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 10, 'Black & Decker 2.4v Direct Plug Screwdriver, Dp240', 4, 2105.40, '2013-11-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 32, 'Skil 7-1/4 150-tooth Steel Circular Saw Blade, 74715', 35, 4195.70, '2013-10-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 47, 'Vermont American 10 40 Tpi 10x Titanium Carbide Circular Saw Blades 27831', 17, 6626.71, '2013-11-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 1, 'Skil 74102 10in 200 Tooth Steel Circular Saw Blade', 47, 4431.72, '2013-05-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 27, 'Black And Decker Inc Dcf895d2 20v Max Brushless . 25 Inch Hex 3-speed . 25 Inch Impact Driver', 42, 4040.38, '2013-05-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 17, 'Rockwell Shopseries Variable Speed Jigsaw', 3, 2184.78, '2013-09-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 10, 'Imaginisce I-bond Mini Glue Sticks, Clear', 27, 772.22, '2013-09-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 21, 'Wen 7 Sander And Polisher', 8, 1259.64, '2013-07-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 2, 'Bostitch .5 Vsr 2-speed Hammerdrill/drill, Bte140k', 18, 1418.84, '2013-10-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 22, 'Black & Decker Matrix Combo Kit, 20v Drill And Trim Saw, Bdcdmt120ts', 39, 3802.34, '2013-07-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 6, 'Proxxon Engraving Tool', 27, 3172.34, '2013-09-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 52, 'Imaginisce I-bond Mini Glue Sticks, Clear', 17, 4154.26, '2013-07-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 27, 'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set', 10, 7896.35, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 45, 'Buffalo Tools 4.8v Cordless Screwdriver', 15, 6735.46, '2013-10-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 16, 'Mini Glue Sticks 4 25/pkg-gold/silver', 30, 9118.37, '2013-09-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 32, 'Professional Woodworker Pneumatic Brad Nailer And Air Stapler Combo Tool Kit', 32, 2867.68, '2013-08-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 48, 'Fpc Corporation Hot Melt Glue Sticks Fprdt20', 14, 9014.98, '2013-11-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 19, 'Wen 6 Waxer/polisher', 37, 8241.64, '2013-07-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 45, 'Stanley Fatmax 20-volt Lithium Cordless Hammer Drill, Fmc620la', 47, 1768.64, '2013-09-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 16, 'Black & Decker 7.25 12.0a Circular Saw, Cs1014', 40, 8408.73, '2013-04-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 47, 'Dremel 7300-n/5 4.8v Minimite Cordless Rotary Tool', 21, 9615.38, '2013-10-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 11, 'Dremel Mm501 1/16 Grout Removal Blade', 16, 3596.89, '2013-08-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 45, 'Wagan Quick Flow Compact Air Compressor', 18, 5649.79, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 18, 'Wen Apex Pro 12v 3/8 Lithium Ion Cordless Drill/driver', 24, 2532.88, '2013-11-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 5, 'Hitachi 18v Lithium-ion Impact Wrench (tool Body Only)', 39, 9072.57, '2013-05-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 33, 'Legacy Mfg Mega Power 12v Battery Powered Grease Gun', 32, 4850.93, '2013-06-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 26, 'Arrow Fastener Powershot Heavy Duty Forward Action Stapler', 14, 6689.43, '2013-07-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 21, 'Black And Decker Power Tools Gco.12sfb 12-volt Cordless Drill With Stud Sensor And St', 26, 8341.08, '2013-07-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 9, 'Crawford Storehorse 36 Sawhorse W/top Protector', 13, 9579.10, '2013-08-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 30, 'Buffalo Tools Electric 110v 3/8 Vsr Drill', 30, 8481.80, '2013-10-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (5, 7, 'Vermont American 5 15 Tpi Multi Purpose Pinned End Scroll Jig Saw Blade 30408', 49, 7841.47, '2013-06-17');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (6, 'Ferrellgas Partners', '2013-03-02', '2013-09-17');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (38, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (7, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (14, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (23, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (50, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (14, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (24, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (44, 6);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (11, 6);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 39, 'Dremel Mm501 1/16 Grout Removal Blade', 4, 4778.80, '2013-11-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 30, 'Black & Decker Vs Jig Saw, Js515', 21, 7146.23, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 29, 'Black And Decker Inc Dcf895d2 20v Max Brushless . 25 Inch Hex 3-speed . 25 Inch Impact Driver', 49, 5332.18, '2013-11-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 46, 'Fs-curtis Ct5 5-hp 60-gallon Vertical Two-stage Air Compressor With Thermal Overload In Place Of Sta', 32, 9475.58, '2013-11-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 37, 'Dremel Sm510 3 Metal Cut-off Wheel', 7, 8076.89, '2013-06-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 3, 'Irwin Industrial Tool 372956p5 5-count 9 6 Tpi Nail Embedded Reciprocating Saw', 4, 3377.20, '2013-09-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 24, 'Wagner Heat Gun Kit, Ht1100', 31, 2770.68, '2013-06-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 24, 'Rockwell Shopseries 1.5 Amp Corner Sander Kit', 2, 8882.85, '2013-08-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 49, 'Rubbermaid Wall Washer Replacement Pads, White Rcps299', 45, 5204.47, '2013-04-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 13, 'Black And Decker Dragster 3 X 21 Belt Sander, Ds321', 37, 6331.05, '2013-09-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 4, 'Hitachi 18 V Ni-cad Cordless Driver Drill', 33, 1013.32, '2013-05-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 47, 'Alton 2 Gallon Pancake Air Compressor', 33, 4715.69, '2013-06-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 45, 'Lumberjack Tools Trh2000 2in Home Series Tenon Cutter', 16, 2712.73, '2013-10-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 32, 'Hitachi 2 1/2 Coil Siding Nailer', 30, 1009.83, '2013-06-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 44, 'Lincoln Industrial Grease Gun Cordless With Case', 24, 3586.68, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 8, 'Vermont American 5 15 Tpi Multi Purpose Pinned End Scroll Jig Saw Blade 30408', 49, 6776.19, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 43, 'Black & Decker 109-piece Basic Project Set, 71-0109', 4, 2767.88, '2013-10-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 6, 'Black & Decker Matrix Sanding Head Attachment, Bdcmts', 18, 1530.84, '2013-10-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 34, 'Eclipse 900-099 Soldering Stand W/reel Holder', 27, 900.14, '2013-04-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 34, 'Mountain Blow Gun 24 Deluxe W/90 Deg Angled Nozzle', 15, 9344.91, '2013-11-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 11, 'Black & Decker Workmate 425 550-pound Capacity Portable Work Bench, Wm425', 16, 7090.46, '2013-12-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 17, 'Ad Tech Hi-temp Mini Size Glue Gun', 26, 1021.80, '2013-05-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 8, 'Wagner Ht1000 Heat Tool', 38, 2247.71, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 43, 'Titan Professional Workbench', 12, 7153.63, '2013-06-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 12, 'Surebonder Wide Crown Pneumatic Stapler', 48, 6013.61, '2013-09-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 4, 'Dremel 7700-1/15 7.2v Multipro Cordless Kit', 35, 4201.34, '2013-09-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 32, 'Surebonder Full Size Low Temperature Glue Gun', 9, 5688.36, '2013-05-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 43, 'Skil 10 Count U Shank Jigsaw Blade Set 94910', 13, 7378.39, '2013-11-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 46, 'Lincoln Industrial Grease Gun Cordless With Case, Two Batteries', 32, 8103.38, '2013-09-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 30, 'Wagan Quick Flow Compact Air Compressor', 16, 3899.46, '2013-08-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 38, 'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334', 2, 2728.64, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 51, 'Rockwell Shopseries 4-1/2 Angle Grinder', 18, 4544.47, '2013-05-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 44, 'Dremel 4200 Rotary Tool With Ez Change, 4200-6/40', 19, 2405.08, '2013-11-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 22, 'Vim Products 10mm Triple Square Bit', 3, 5525.59, '2013-05-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 25, 'Campbell Hausfeld 62 Piece Air Tool Kit', 30, 9359.72, '2013-04-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 25, 'Schrader Bridgeport Valve, Stem Extension 1-1/4', 16, 9033.50, '2013-04-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 29, 'Hanson #8 Torx Bit', 10, 7391.44, '2013-04-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 36, 'Dremel 8300-01 12v Cordless Multi-max Oscillating Kit, Refurbished', 29, 2910.73, '2013-07-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 20, 'Dewalt Speed Tip 14 Piece Titanium Drill Bit Set Dw1341', 7, 4370.65, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 29, 'Bostitch Low-profile Paper Tape Framing Nailer, Lpf33pt', 24, 4296.58, '2013-08-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 38, 'Campbell Hausfeld 50 Retractable Hose Reel', 38, 8590.51, '2013-05-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 47, 'Kawasaki 0.5 12v/15amp Corded Impact Wrench Kit', 16, 6534.21, '2013-11-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 9, 'Bostitch Industrial Air Tool Plug, 1/4 Npt, Btfp72318', 48, 5269.65, '2013-07-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 40, 'Black & Decker 16 3.4 Amp Powered Handsaw With Storage Bag, Phs550b', 34, 4307.20, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 30, 'Astro Pneumatic 9707 1/4-inch Drive Mini Gearless Ratchet', 27, 6664.06, '2013-12-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 48, 'Skil 1810 1/4 Fixed Base Router', 30, 9095.64, '2013-11-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 21, 'Allied Tools 72-piece Rotary Tool Set', 11, 4895.93, '2013-03-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 14, 'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator', 36, 3232.78, '2013-12-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 51, 'Drill America Flame Carbide Burr 1/4 Shank', 20, 5390.91, '2013-08-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 9, '10-count 10 Glue Sticks', 34, 5008.13, '2013-05-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 11, 'Retractable Screw-holder With Magnetic Tip', 37, 8895.81, '2013-08-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 38, 'Bostitch 1/2 Air Impact Wrench, Btmt72391', 35, 9064.36, '2013-07-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 39, 'Hitachi 18 V Ni-cad Cordless Driver Drill', 12, 9983.52, '2013-04-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 6, 'Surebonder Ultra-full Size Dual Temperature Glue Gun', 43, 8269.95, '2013-04-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 22, 'Hitachi 7 Disc Grinder', 40, 5368.79, '2013-09-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 17, 'Stack-on 66 Steel Workbench', 41, 7420.85, '2013-05-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 16, 'Skil 3410-02 10 Table Saw', 14, 331.01, '2013-07-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 24, 'Wen 7 Sander And Polisher', 15, 1618.71, '2013-10-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 36, 'Stanley Black & Decker Dw304pk Dw 10 Amp Reciprocating Saw Kit', 15, 6562.08, '2013-08-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 8, 'Eclipse 900-230 Flux Bottle Pack - 2-pack', 3, 6835.87, '2013-12-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 41, 'Bostitch 100 Ft Air Compressor Hose Prozhoze, 3/8 X 100, Pro-38100', 28, 4917.29, '2013-04-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 2, 'Great Neck Saw 17612 Soldering Iron', 20, 7784.32, '2013-07-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 28, 'Shark Sr062-10 Ammco Style 10 Pack Negative Rake Bits', 12, 1904.80, '2013-05-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 22, 'Powermate 6 Gallon Proforce Pancake Air Compressor With Extra Value Kit', 30, 5343.27, '2013-10-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 30, 'Hitachi 18v 1/2 Cordless Drill/driver Kit W/35-pc Hi-torq Impact Rated Torsion Bit Set', 2, 7608.69, '2013-08-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 31, 'Eclipse 900-015 Helping Hands Soldering Aid', 1, 1135.37, '2013-10-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 23, 'Ridgid Tube Cutter Wheels - F158 10-15-20 Thin Whl (set Of 12)', 37, 9227.32, '2013-05-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 2, 'Black & Decker 18v Cordless Drill', 2, 7800.48, '2013-04-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 41, 'Skil 7-1/4 24-tooth Carbide Tipped Saw Blade, 75724w', 25, 5742.35, '2013-12-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 33, 'Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052', 21, 6556.71, '2013-08-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 18, 'Hitachi 3/8 6 Amp Drill With Keyless Chuck', 6, 905.33, '2013-06-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 46, 'Black & Decker 15a 7.25 Fatmax Circular Saw', 30, 5328.21, '2013-05-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 50, 'Irwin Industrial Tool 372956p5 5-count 9 6 Tpi Nail Embedded Reciprocating Saw', 9, 5173.78, '2013-04-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 49, 'Mini Glue Sticks 4 25/pkg-gold/silver', 44, 6805.90, '2013-09-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 51, 'Jflint Products 306 Mr Hard Water- Power Tool System', 22, 6803.49, '2013-03-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 24, 'Ad-tech: High-temp Glue Sticks, 7/16 X 4, 50pk', 41, 3398.98, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 35, 'Century Drill And Tool Reciprocating Saw Blade (set Of 4)', 7, 6759.78, '2013-08-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 42, 'Bosch/rotozip/skil 2354-01 4-volt Lithium Ion Cordless Screwdriver', 32, 1570.52, '2013-11-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 4, 'Surebonder Cordless High Temperature Glue Gun', 38, 7969.08, '2013-12-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 35, 'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi', 1, 1077.99, '2013-05-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 23, 'Bostitch Air Regulator And Gauge, Npt, #iregulator', 25, 361.71, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 26, 'Black & Decker Random Orbit Sander, Ro100', 37, 8489.34, '2013-08-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 17, 'Great Neck Saw 80134 36-piece Rotary Tool Set', 26, 7042.43, '2013-07-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 33, 'Stanley Tr45 Light Duty Staple Gun', 24, 3404.77, '2013-04-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 17, 'Dewalt Dck413s2 12-volt Li-ion 4-tool Combo Kit', 28, 3152.74, '2013-09-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (6, 5, 'Bostitch 50 Ft Air Compressor Hose Prozhoze, 3/8 X 50, Pro-3850', 22, 7906.08, '2013-05-02');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (7, 'B/e Aerospace', '2013-05-06', '2013-10-30');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (3, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (52, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (20, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (25, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (38, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (10, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (46, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (42, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (50, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (26, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (14, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (25, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 7);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 7);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 8, 'Hoover Ch82010 Ground Command Super Heavy-duty Air Mover, 12 A, 30 Lbs, Black', 19, 2611.97, '2013-05-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 13, 'Dremel 200-n/15 120v 2-speed Rotary Tool', 44, 9044.04, '2013-06-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 3, 'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit', 32, 1944.07, '2013-03-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 45, 'Eclipse 900-250 Solder Aid Tool Set W/reverse Tweezers And Heat Sink', 38, 5311.75, '2013-08-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 29, 'Masterflow 12v Portable Air Compressor / Inflator', 25, 9503.33, '2013-06-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 9, 'California Air Tools 5 Gallon Pressure Pot With Hvlp Spray Gun And Hose', 35, 4815.58, '2013-12-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 15, 'Primefit Garage Inflator With Air Accessory Kit And Storage Case', 6, 8449.42, '2013-03-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 19, 'Hyundai Hpt505 Portable 5-gal Air Tank', 42, 5155.73, '2013-11-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 29, 'Kawasaki 0.5 12v/15amp Corded Impact Wrench Kit', 3, 3837.95, '2013-03-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 48, 'Bostitch 6 Amp Orbital Jig Saw And Bonus Jig Saw Blade Bundle', 31, 5957.79, '2013-04-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 22, 'Dremel 7700-1/15 7.2-volt Multipro Cordless Rotary Kit With 15 Accessories', 44, 2747.45, '2013-08-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 7, 'Dual-temp Mini Glue Gun Kit, Red Dual-temp Mini Glue Gun Kit, Red', 46, 2056.75, '2013-06-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 47, 'Bostitch Industrial Air Tool Swivel Plug, 1/4 Npt, Btfp72333', 10, 6821.57, '2013-03-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 44, 'Kawasaki 6 Bench Grinder', 7, 8837.40, '2013-03-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 13, 'Dremel Cleaning/polishing Mini Accessory Kit, 684-02', 10, 3713.69, '2013-12-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 21, 'Wen 6 Waxer/polisher', 45, 5469.79, '2013-07-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 14, 'Bostitch Gravity Feed Spray Air Gun, 1/4 Npt, Btmt72393', 3, 1629.42, '2013-03-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 43, 'Wagan Emergency Impact Wrench Kit', 43, 4308.16, '2013-04-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 40, 'Speare Tools Adjustable Speaker-cutter Hole Saw, Ab 1610', 38, 5326.11, '2013-09-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 24, 'Ingersoll Rand Hammer Pin', 31, 7979.92, '2013-03-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 10, 'Jewelers Chasing Hammer - 1 Inch Head - Metal Smithing', 8, 5902.69, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 34, 'Ad Tech 2-temp Full Size Cordless Glue Gun', 16, 2985.81, '2013-08-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 19, 'Ingersoll Rand 244a 1/2-inch Drive Super Duty Impact Wrench', 27, 9450.09, '2013-03-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 46, 'Campbell Hausfeld Pistol Grip Blowgun', 17, 9201.75, '2013-06-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 52, 'Black & Decker 20v Smart Select Cordless Drill', 26, 553.50, '2013-03-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 35, 'Crafter Gift Pack-12 Pieces', 6, 8165.64, '2013-05-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 32, 'Dremel Carving/engraving Mini Accessory Kit, 689-03', 37, 1609.94, '2013-12-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 15, 'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch', 40, 7678.56, '2013-12-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 22, 'Ingersoll Rand 285b-6 Heavy-duty 1-inch Impact Wrench With 6-inch Anvil', 27, 1535.82, '2013-05-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 40, 'Black & Decker 5.2 Amp 3/8 Drill And Driver With Storage Bag, Dr260bozr', 29, 737.29, '2013-03-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 46, 'Black & Decker Workmate 425 550-pound Capacity Portable Work Bench, Wm425', 15, 271.48, '2013-07-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 27, 'Hitachi 4 5 Amp Angle Grinder', 8, 9265.53, '2013-12-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 29, 'Edsal Heavy-duty Workbench, Ub400', 21, 1396.56, '2013-04-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 11, 'Black And Decker 3-position Rechargeable Screwdriver, Li2000', 43, 8852.64, '2013-07-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 36, 'Skil Fixed Base Routers - 1 3/4 Hp Fixed Base Router 9 Amp Motor', 48, 3849.94, '2013-10-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 28, 'Powryte High Speed Cut-off Air Tool, 100106a', 14, 7253.49, '2013-03-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 35, 'Campbell Hausfeld 8gal Oil Free Air Compressor', 22, 1618.74, '2013-05-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 46, 'Western Enterprises 1/4 Npt X 3 Long Male Brass Regulator Nipple Cga 540', 32, 4120.01, '2013-05-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 13, 'Jgb Enterprises 001-0121-050i Eagle Air 300 No. Red Jackhammer Hose Cpld Chicago Fittings Crimped', 5, 6437.80, '2013-12-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 47, 'Boa Grabit Screw Extractor', 6, 6326.90, '2013-03-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 44, 'Kawasaki Heavy Duty 0.5 6.6a Hammer Drill', 45, 4206.84, '2013-07-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 8, 'Hitachi 83-piece Drill And Driver Bit Set', 10, 2530.34, '2013-03-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 17, 'Legacy Mfg Mega Power 12v Battery Powered Grease Gun', 46, 5718.29, '2013-04-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 2, 'Porter Cable-piece15cslk 7-1/4 15-amp Circular Saw', 43, 4252.86, '2013-11-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 7, 'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334', 38, 7743.20, '2013-06-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 43, 'Campbell Hausfeld Pistol Grip Blowgun', 7, 5869.68, '2013-03-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 18, 'Black & Decker 1/4-sheet Sander With Filtered Dust Collection', 3, 5391.72, '2013-11-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 48, 'Qep Tile Tools 60089 7 Portable Tile Saw', 40, 5966.54, '2013-12-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 22, 'Black And Decker Pivot Screwdriver, Pd400lg', 31, 6863.68, '2013-03-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 6, 'Ingersoll Rand 285b-6 Heavy-duty 1-inch Impact Wrench With 6-inch Anvil', 46, 735.81, '2013-04-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 43, 'Ad Tech 2-temp Full Size Cordless Glue Gun', 44, 3894.19, '2013-07-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 18, 'Hitachi 2 1/4 Horsepower 11 Amp Plunge And Fixed Base Variable Speed Router Kit', 41, 752.71, '2013-06-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 20, 'Black & Decker 17-piece Workbench Drill Bit Set, 15097', 5, 1961.14, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 13, 'Crawford 38 In. Adjustable Steel Sawhorse', 19, 8957.00, '2013-10-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 12, 'Pentagon Professional Aluminum Drywall Bench', 42, 9731.10, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 7, 'Bostitch 8.5 Amp Orbital Reciprocating Saw, Bte360k', 9, 8223.05, '2013-12-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 17, 'Great Neck Saw 80134 36-piece Rotary Tool Set', 31, 8725.52, '2013-09-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 32, 'Proxxon Engraving Tool', 37, 6605.62, '2013-11-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 9, 'Astro Pneumatic 9707 1/4-inch Drive Mini Gearless Ratchet', 8, 3681.21, '2013-08-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 41, 'Skil 735-0118v Octo Multi-finishing Sander', 6, 754.25, '2013-12-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 34, 'Kawasaki 10 Piece Screw Extractor And Drill Bit Set', 30, 4971.19, '2013-04-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 43, 'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326', 29, 2810.38, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 26, 'Bostitch 15 Amp 7 1/4 Heavy Duty Circular Saw, Bte300k', 41, 4151.44, '2013-11-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 12, 'Astro Pneumatic 223k Air Belt Sander', 25, 6183.28, '2013-05-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 39, 'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator', 18, 1683.54, '2013-03-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 39, 'Wagner Ht3500 Heat Gun', 32, 1297.47, '2013-04-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 38, 'Bostitch 6 Amp Orbital Jig Saw And Bonus Jig Saw Blade Bundle', 36, 3976.92, '2013-12-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 30, 'Ingersoll Rand Start Up Kit # 32305880', 37, 4852.89, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 46, 'Prevost Isc 061201 Safety Coupler 1/4 In M Style', 26, 6139.95, '2013-07-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 36, 'Wilmar Electric Impact Gun Set 1/2 Dr', 29, 6332.89, '2013-10-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 1, 'Dewalt Power Tools Dws780 12 Inch Double Bevel Sliding Compound Miter Saw', 2, 166.62, '2013-08-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 22, 'Hitachi 4 Gallon Twin Stack Air Compressor', 28, 2862.66, '2013-08-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 3, 'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w', 23, 2722.93, '2013-07-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 21, 'Stanley Fatmax 7a Hammer Drill, Fme140', 1, 7395.91, '2013-06-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 34, 'Hitachi 2 16 Gauge Standard 7/16 Crown Construction Stapler', 39, 8890.49, '2013-10-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 49, 'Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder', 17, 7709.29, '2013-04-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 46, 'Hyundai Hpc11090 11-gal Air Compressor Kit', 15, 3847.47, '2013-09-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 51, 'Black & Decker 6.0 Amp Accu-trak Saw With Smartselect, Scs600', 33, 3187.19, '2013-12-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 10, 'Gmc Power Equipment 6.3 Gallon Gmc Syclone 6310 Ultra Quiet And Oil-free Air Compressor', 27, 4690.98, '2013-09-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (7, 51, 'Bostitch 1/4 Universal Air Coupler, Btfp72321', 48, 8593.11, '2013-08-23');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (8, 'J.b. Hunt Transport', '2013-02-28', '2013-07-22');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (31, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (9, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (15, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (6, 8);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 8);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 17, 'Ingersoll Rand 0.5 Port Ptfe Diaphragm Pump With Polypropylene Seat', 16, 8256.13, '2013-06-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 35, 'Bostitch 18v Lithium Drill/impact Combo Kit, Btck410l2', 40, 5131.36, '2013-08-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 15, 'Eclipse Pz2x1-15/16 Bit Pozidrive Size 2 1-15/16in Long 1/4in Hex', 17, 9077.06, '2013-11-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 46, 'Wagner Ht1000 Heat Tool', 26, 7116.92, '2013-07-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 30, 'Bostitch 6.5 Amp 3/8 Drill, Bte100k And Bonus Drill Bit Bundle', 28, 4136.99, '2013-07-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 29, 'Ez Kote A016-0046-0300 Airless Paint Spray 3300 Psi Coupled Femalexfemale', 46, 4438.03, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 10, 'Black & Decker 20v Smart Select Cordless Drill', 49, 1824.13, '2013-06-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 43, 'Dewalt Dwt-dck212s2 12v Max Drill, Driver, Recip Combo Kit', 10, 3672.16, '2013-07-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 51, 'Pro-lift W-1010a 10-gallon Air Tank', 5, 1303.95, '2013-07-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 49, 'Hitachi 18v 1/2 Cordless Drill/driver Kit', 47, 5585.73, '2013-09-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 45, 'Astro Pneumatic 9707 1/4-inch Drive Mini Gearless Ratchet', 49, 9741.21, '2013-05-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 21, 'Powryte High Speed Cut-off Air Tool, 100106a', 6, 4521.74, '2013-06-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 44, 'Great Neck Saw 17612 Soldering Iron', 21, 1432.68, '2013-04-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 22, 'Kawasaki Heavy Duty 0.5 6.6a Hammer Drill', 24, 9194.55, '2013-11-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 39, 'Wagner Heat Gun Kit, Ht1100', 21, 6155.86, '2013-10-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 16, 'Lumberjack Tools Tta2000 2in Industrail Series Tenon Cutter', 35, 402.96, '2013-06-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 42, 'Dremel Sm520 3 Masonry Cut-off Wheel', 4, 4121.77, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 29, 'Kawasaki 6 Bench Grinder', 24, 7782.95, '2013-04-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 32, 'Lincoln Industrial Grease Gun Pistol 16 0z W/18whip Hose &rigid Pipe', 40, 5919.83, '2013-11-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 26, 'Dremel Sm520 3 Masonry Cut-off Wheel', 15, 3622.67, '2013-08-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 50, 'Powryte Air Reciprocating Saw, 100107a', 23, 2716.81, '2013-06-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 31, 'Dremel Sm500 3 Multi-purpose Carbide Wheel', 31, 6962.21, '2013-09-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 13, 'Vim Products 10mm Triple Square Bit', 33, 1769.96, '2013-11-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 44, 'Stack-on 66 Steel Workbench', 44, 8137.91, '2013-04-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 16, 'Bostitch 8.5 Amp Orbital Reciprocating Saw, Bte360k', 18, 7159.93, '2013-10-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 9, 'Wagan Heavy-duty Air Compressor', 27, 7054.61, '2013-12-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 29, 'Vim Products Hbr3 Double Ended 1/4-inch Hex Bit Ratchet', 9, 1708.20, '2013-12-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 22, 'Stanley Fatmax Value Bundle', 28, 9307.79, '2013-09-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 52, 'Bostitch 18v Lithium 1/2 Drill/driver Kit, Btc400lb', 40, 3703.49, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 16, 'Black & Decker 7.2-volt Lithium Drill/driver, Ldx172c', 8, 3921.06, '2013-09-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 38, 'Black & Decker 18-volt Cordless Drill, Gco18c', 41, 306.61, '2013-10-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 34, 'Alpha Fry Am13460 Rosin Core Solder And Dispenser', 5, 7432.51, '2013-07-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 23, 'Ad Tech Hi-temp Project Pro Mini Size Glue Gun', 2, 3383.45, '2013-03-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 1, 'Ad Tech Hi-temp Project Pro Mini Size Glue Gun', 3, 6885.45, '2013-07-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 26, 'Bostitch Prozhoze, 1/4 X 100, Hopb14100', 18, 4532.77, '2013-03-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 18, 'Hitachi 2 16 Gauge Standard 7/16 Crown Construction Stapler', 13, 4167.01, '2013-11-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 5, 'Professional Woodworker 7390 Multifunction Tool With 4 Accessories', 43, 3645.64, '2013-03-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 5, 'Black & Decker Matrix Oscillating Head Attachment, Bdcmto', 47, 7960.06, '2013-04-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 15, 'Bostitch 18v Lithium .25 Hex Chuck Impact Driver Kit, Btc440lb', 34, 7271.47, '2013-12-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 32, 'Skil Fixed Base Routers - 1 3/4 Hp Fixed Base Router 9 Amp Motor', 28, 8834.33, '2013-03-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 17, 'Hitachi 18v Lithium-ion 1/2 Hammer Drill (tool Body Only)', 11, 8156.11, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 37, 'Powryte 3/8 Air Drill, 100114a', 36, 7709.03, '2013-10-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 40, 'Bosch 4395-01 Orbital Action Jigsaw', 6, 9589.72, '2013-09-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 19, 'Wagan Quick Flow Compact Air Compressor', 14, 2566.64, '2013-10-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 39, 'Warp Brothers Fcp-12 Flex-o-glaze Cleaner And Polisher - 12 Oz.', 43, 905.77, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 26, 'Powryte Dual Action Air Sander, 100112a', 40, 5135.44, '2013-10-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 42, 'Astro Pneumatic 223k Air Belt Sander', 44, 4353.46, '2013-09-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 36, 'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry', 4, 8570.59, '2013-08-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 27, '10-count 10 Glue Sticks', 31, 1638.88, '2013-08-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 11, 'Morris Products 2 Carbide Tipped High Speed Steel Hole Saw Cutters', 12, 4741.10, '2013-12-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 11, 'Dremel Sm600 3 Multi-purpose Flush Cut Carbide Wheel', 49, 1456.73, '2013-12-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 21, 'Paasche Air Brush Dual Action Airbrush Set', 25, 5548.05, '2013-11-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 2, 'Bostitch 7 Amp 4.5 Angle Grinder, Bte820k', 27, 894.98, '2013-03-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 15, 'Black & Decker 20v Max Lithium Drill/driver, Ldx220sb', 9, 9188.21, '2013-06-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 32, 'Arrow Fastener Heavy Duty Plier Type Stapler', 11, 5667.02, '2013-09-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 37, 'Dremel Two Speed Rotary Tool Kit With 15 Accessories 200-1-15', 18, 2202.95, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 50, 'Tennsco Corp. Plastic Laminate Top Workbench With Shelf, Rails & Riser', 21, 1254.51, '2013-12-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 39, 'Irwin 13-piece Drive Kit, 1885552', 2, 7187.03, '2013-08-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 19, 'Striker Adjustable Garage Parking Sensor', 36, 5323.83, '2013-08-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 5, 'Ultra Steel 3.0 Amp Jig Saw', 6, 5630.63, '2013-03-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 18, 'Black & Decker Workmate 425 550-pound Capacity Portable Work Bench, Wm425', 7, 2619.85, '2013-07-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 41, 'Worx Semi Automatic Sd Driver, Wx254l', 31, 4644.39, '2013-10-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 32, 'Black & Decker Matrix Impact Driver Head Attachment, Bdcmti', 10, 8751.78, '2013-08-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 47, 'Dremel Minimite Rotary Tool W/bonus Tools Set & Bag', 40, 3617.34, '2013-09-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 43, 'Positec Usa Inc Rk7867 6 1/2 Hp Pro Series Bench Grinder', 33, 8945.21, '2013-08-24');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 7, 'Bosch 6335-01 7 Amp 1/2 Corded Drill', 5, 4534.72, '2013-05-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 6, 'Lumberjack Tools Hsbk1 Home Series Beginners Kit', 44, 4964.07, '2013-12-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 9, 'Skil 74102 10in 200 Tooth Steel Circular Saw Blade', 17, 4974.01, '2013-08-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 37, 'Irwin 5-3/8 24t Marathon Cordless Circular Saw Blade', 38, 1851.54, '2013-08-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 11, 'Stalwart Cordless Screwdriver With 11 Bits', 44, 2497.02, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 17, 'Wagan Emergency Impact Wrench Kit', 20, 237.99, '2013-09-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 52, 'Dremel 560 Drywall Cutting Bit', 45, 9291.19, '2013-12-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 24, 'Stack-on Steel Diy Workbench So-382b', 20, 6125.62, '2013-12-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 47, 'Rikon 1.2 Amp 120 V 16 Scroll Saw', 43, 6119.10, '2013-05-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 45, 'Dremel Workstation, 220-01', 2, 2439.47, '2013-12-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 44, 'Masterflow 12v High Volume Air Compressor / Inflator', 1, 2929.73, '2013-08-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 36, 'Western Enterprises 1/4 Npt X 3 Long Male Brass Regulator Nipple Cga 540', 2, 1906.65, '2013-10-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 30, 'Campbell Hausfeld 1 Gallon Air Compressor', 15, 4243.64, '2013-04-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 11, '26-piece Drill And Drive Set', 33, 360.87, '2013-06-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 8, 'Dremel Cleaning/polishing Mini Accessory Kit, 684-02', 14, 8655.74, '2013-09-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 47, 'Primefit 17-piece Air Compressor Accessory Kit', 15, 3407.62, '2013-07-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 5, 'Campbell Hausfeld Air Compressor Oil - 16 Ounce', 28, 5419.76, '2013-10-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 47, 'Dremel Sanding/grinding Mini Accessory Kit, 686-02', 16, 2013.26, '2013-11-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 6, 'Black & Decker 18v Cordless Drill Set, Gco18sfb', 23, 587.35, '2013-12-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 8, 'Campbell Hausfeld 3-gallon Compressor', 45, 5704.20, '2013-11-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 32, 'Homeright Heat Pro Plus Heat Tool', 50, 9128.12, '2013-12-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 48, 'Bostitch 29-piece Screwdriving Set, Bsa229sdm', 43, 4282.06, '2013-11-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 6, 'Hitachi 5/8 Hammer Drill', 28, 5246.00, '2013-04-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 19, 'Lumberjack Tools Trh1000 1-inch Home Series Tenon Cutter', 32, 6149.34, '2013-06-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 6, 'Superior Tool 2 Pvc Pipe Cutter', 42, 227.99, '2013-07-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 9, 'Bostitch Gravity Feed Spray Air Gun, 1/4 Npt, Btmt72393', 48, 213.93, '2013-05-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 1, 'Stanley Tr45 Light Duty Staple Gun', 17, 3095.16, '2013-12-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 51, 'Eclipse Dp-366d Desoldering Pump', 49, 4838.23, '2013-05-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 11, 'Vim Products 12mm Triple Square Bit', 27, 3910.63, '2013-07-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 36, 'Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)', 41, 7351.39, '2013-12-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (8, 27, 'Black & Decker 4-amp Corded Drill/driver', 13, 5905.94, '2013-12-09');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (9, 'Cbre Group', '2013-03-23', '2013-09-14');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (10, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (51, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (23, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (33, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (49, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (22, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (16, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (50, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (19, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (32, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (30, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (38, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (36, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (13, 9);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (37, 9);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 43, 'Dremel Multi-max Mm40 Tool Kit, Mm40-01', 44, 9027.95, '2013-10-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 11, 'Dmt 8 Inch Duosharp Plus Benchstone Fine Coarse Wm8fc-wb', 50, 8343.80, '2013-03-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 50, 'Hitachi 3/8 Drill', 13, 7223.79, '2013-03-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 37, 'Wen Wen 10 15 Amp Sliding Compound Miter Saw', 29, 9609.59, '2013-05-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 50, 'Hitachi 18 V Post Li-ion Driver Drill', 16, 202.86, '2013-06-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 48, 'Stalwart Grease Gun With Accessories', 27, 2874.95, '2013-07-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 19, 'Bostitch Air Compressor Ball Drain Valve, Btfp72327', 6, 4468.58, '2013-03-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 46, 'Primefit 30-piece Air Compressor Accessory Kit', 40, 9788.65, '2013-03-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'Masterflow 12v Portable Air Compressor / Inflator', 27, 452.99, '2013-07-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 45, 'Wagner Heat Gun Kit, Ht1100', 21, 9218.08, '2013-08-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 21, 'Black & Decker 7-1/4 15-amp Circular Saw, Cs1015', 15, 9657.43, '2013-04-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 26, 'Dremel Mm501 1/16 Grout Removal Blade', 19, 3462.78, '2013-06-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 16, 'Dremel 225-01 Flex Shaft', 26, 6083.07, '2013-09-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 32, 'Home Series 3 Pc Master Kit', 2, 8884.62, '2013-11-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 32, 'Wagan Quick Flow Compact Air Compressor', 11, 4666.90, '2013-03-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 25, 'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326', 11, 7940.29, '2013-10-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'Surebonder Mini Dual Temperature Glue Gun', 32, 4261.30, '2013-03-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 32, 'Surebonder Full Size Low Temperature Glue Gun', 24, 684.22, '2013-07-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 22, 'Lumberjack Tools Hsbk1 Home Series Beginners Kit', 50, 739.11, '2013-05-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 8, 'Dremel Sm520 3 Masonry Cut-off Wheel', 47, 4953.78, '2013-07-17');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 18, 'Stanley Fatmax 12v Cordless Drill, Fmc010lb', 4, 3034.79, '2013-09-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 35, 'Fry Technologies Cookson Elect Am33505 50/50 Solder Solid Wire', 23, 8616.49, '2013-09-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 47, 'Irwin 7-piece Drive Set, 1885553', 3, 401.43, '2013-07-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 4, 'Bostitch Air Compressor Ball Drain Valve, Btfp72327', 11, 6647.46, '2013-08-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 45, 'Black & Decker 17-piece Workbench Drill Bit Set, 15097', 20, 2003.55, '2013-06-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'All Purpose Stik Mini Glue Sticks, .27 X 4, 100/pkg', 43, 117.98, '2013-06-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 41, 'Black And Decker Dwdcd780c2 20v Max Lithium Ion Compact Drill Driver Kit', 25, 3748.02, '2013-05-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 45, 'Weller Bp645mp Battery Powered Soldering Iron Kit', 17, 2399.51, '2013-03-31');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 22, 'Buffalo Tools Pro Series Angle Grinding Kit', 27, 2074.94, '2013-11-29');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 3, 'Powerbuilt Soldering Gun Kit', 42, 7666.13, '2013-08-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 32, 'Imaginisce I-bond Mini Glue Sticks, Clear', 48, 4775.50, '2013-12-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 28, 'Hitachi 4.5 X 5.5 Sv12sg Perforfeltpad', 9, 189.60, '2013-08-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'Dsr Schumacher Psj-2212 Pro Series 2200 Amp Jump Starter', 15, 634.02, '2013-07-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 27, 'Bostitch 6 Amp Orbital Jig Saw, Bte340k', 40, 9550.09, '2013-10-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 25, 'Dremel Ez407sa-01 Ez Drum Mandrel', 36, 5111.02, '2013-06-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 41, 'Powryte Dual Action Air Sander, 100112a', 8, 2699.71, '2013-10-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 41, 'Bostitch 8.5 Amp Orbital Reciprocating Saw And Bonus Saw Blade Set Bundle', 39, 8618.55, '2013-06-25');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 22, 'Rubbermaid Wall Washer Replacement Pads, White Rcps299', 4, 9241.33, '2013-07-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 15, 'Ad Tech Multi-temp Full Size 4 Glue Sticks, 30 Ct.', 13, 5307.65, '2013-07-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'Black And Decker Reciprocating Saw, Rs600k', 14, 780.12, '2013-06-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 38, 'Cps Products Ccvpc4su 4 Cfm Single Stage Vacuum Pump', 38, 2982.35, '2013-08-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 49, 'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator', 23, 136.09, '2013-10-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 2, 'Primefit 25-piece Air Compressor Accessory Kit', 10, 5009.34, '2013-09-10');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 41, 'Bernzomatic Aluminum Soldering Rods 019325/al3', 23, 4621.67, '2013-12-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 49, 'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch', 38, 5665.40, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 9, 'Alton 2 Gallon Pancake Air Compressor', 5, 4296.39, '2013-12-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 45, 'Dremel Saw-max Tool Kit, Sm20-03', 48, 5205.32, '2013-09-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 46, 'Cherry Gel Pumice Hand Cleaner, Cherry, 1 Gal', 26, 3550.27, '2013-05-28');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 36, 'Ingersoll Rand 705-93 Trigger', 47, 164.91, '2013-03-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 19, 'Titan Master Drill & Bit 204pc Set W/4fold Cs', 9, 1686.15, '2013-03-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 19, 'Swisher 28 Ton 8.75 Gross Torque Log Splitter, Lsrb875281350', 43, 7002.68, '2013-11-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 22, 'Campbell Hausfeld Air Compressor Oil - 16 Ounce', 7, 4200.18, '2013-03-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (9, 14, 'Hitachi 12v Cordless Drill/driver Kit', 11, 517.92, '2013-10-27');
-INSERT INTO projects (`id`, `name`, `start_date`, `end_date`) VALUES (10, 'Key Bank', '2013-01-17', '2013-08-08');
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (24, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (3, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (17, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (15, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (35, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (11, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (18, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (12, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (5, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (28, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (21, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (27, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (41, 10);
-INSERT INTO project_employees (`employee_id`, `project_id`) VALUES (8, 10);
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 10, 'Lumberjack Tools Hsk3 Home Series 3-piece Master Kit', 4, 5607.72, '2013-09-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 11, 'Bosch 1006vsr 3/8 Corded Drill', 46, 4744.74, '2013-09-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 35, 'Black & Decker 109-piece Basic Project Set, 71-0109', 14, 1832.74, '2013-09-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 16, 'Bosch Pr20evsk Colt Variable Speed Palm Router Kit', 45, 5763.95, '2013-04-09');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 15, 'Superior Tool 2 Pvc Pipe Cutter', 47, 3860.55, '2013-05-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 43, 'Dremel Ez Lock Starter Kit', 26, 2568.37, '2013-12-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 35, 'Skil 2860-10 18-volt Drill And Circular Saw Combo Kit', 40, 2357.02, '2013-08-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 47, 'Black & Decker 12-volt Cordless Air Station Inflator', 41, 9413.56, '2013-04-16');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 43, 'Black & Decker 6.5a .5 Vsr 2-speed Hammer Drill, Dr670', 6, 3424.94, '2013-04-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 35, 'Irwin 13-piece Drive Kit, 1885552', 46, 7679.47, '2013-06-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 18, 'Kawasaki 4.5 7.5a Vs Angle Grinder', 43, 2795.70, '2013-06-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 14, 'Vim Products Xzn100 Xzn Set - 8-piece', 21, 6655.75, '2013-03-18');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 31, 'Hitachi 12v Peak 2 Tool Li-ion Drill Combo Kit With Carrying Bag', 41, 9279.75, '2013-07-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 50, 'Buffalo Tools Ps07499 24-piece Router Bit Set', 15, 2477.29, '2013-04-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 46, 'Bosch 7292-02 2 Amp 1/4 Sheet Palm Sander', 3, 4231.53, '2013-09-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 38, 'Powerbuilt Soldering Gun Kit', 43, 444.01, '2013-03-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 21, 'Black And Decker Pivot Screwdriver, Pd400lg', 27, 3716.66, '2013-05-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 24, 'Hitachi 1/4 X 100 Polyurethane Air Hose With Automotive Plug And Coupler', 17, 6218.96, '2013-08-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 38, 'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326', 39, 1866.64, '2013-04-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 38, 'Bosch 4395-01 Orbital Action Jigsaw', 21, 5812.73, '2013-08-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 40, 'Bostitch 1/2 Air Impact Wrench, Btmt72391', 47, 5633.61, '2013-09-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 47, 'Legacy Mfg Mega Power 12v Battery Powered Grease Gun', 33, 5578.01, '2013-05-12');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 19, 'Hitachi 12v Peak 2 Tool Li-ion Drill Combo Kit With Carrying Bag', 25, 888.43, '2013-04-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 52, 'Fry Technologies Cookson Elect Am33505 50/50 Solder Solid Wire', 20, 1747.16, '2013-04-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 22, 'Hitachi 18v Lithium Ion 6 1/2 Circular Saw (tool Body Only)', 19, 5293.24, '2013-12-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 51, 'Black & Decker 4-amp Corded Drill/driver', 45, 7660.74, '2013-06-30');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 30, 'Titan Master Drill & Bit 204pc Set W/4fold Cs', 4, 4739.72, '2013-04-14');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 19, 'Great Neck Saw 80134 36-piece Rotary Tool Set', 9, 1063.67, '2013-06-23');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 21, 'Lumberjack Tools Hsk3 Home Series 3-piece Master Kit', 23, 5020.78, '2013-11-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 7, 'Kawasaki 0.5 12v/15amp Corded Impact Wrench Kit', 27, 4865.65, '2013-11-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 44, 'Rockwell Rk3440k Versacut Circular Saw Kit', 28, 6551.77, '2013-10-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 42, 'Primefit 25-piece Air Compressor Accessory Kit', 44, 9998.18, '2013-07-11');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 15, 'Bostitch 18v Lithium 1/2 Drill/driver Kit, Btc400lb', 48, 3612.62, '2013-03-21');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 37, 'Bostitch 6 Amp Orbital Jig Saw, Bte340k', 25, 3993.93, '2013-05-02');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 22, 'Buffalo Tools 4.8v Cordless Screwdriver', 50, 7740.43, '2013-04-19');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 43, 'Ultra Steel 1.5 Amp Palm Sander', 35, 3405.93, '2013-06-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 7, 'Powryte High Speed Cut-off Air Tool, 100106a', 47, 5289.05, '2013-07-04');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 22, 'Hitachi Power Tools Db3dl2 3.6-volt Lithium Ion Dual Position Handle Screwdriver', 5, 6082.30, '2013-05-03');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 13, 'Hitachi 1 3/8 23 Gauge Pin Nailer', 23, 8923.68, '2013-05-26');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 38, 'Great Neck Saw Ra14 1/4 Drive Forward And Reverse Ratchet', 40, 9271.96, '2013-04-27');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 36, 'Powermate Proforce 10 Gallon Portable Air Tank', 29, 3052.92, '2013-04-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 42, 'Black & Decker 18v Cordless Drill', 46, 7633.02, '2013-09-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 47, 'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor', 7, 4991.91, '2013-07-05');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 48, 'Ingersoll Rand 285b-6 Heavy-duty 1-inch Impact Wrench With 6-inch Anvil', 45, 7318.06, '2013-11-15');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 7, 'Buffalo Tools Pro Series Angle Grinding Kit', 44, 5009.30, '2013-04-13');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 35, 'Dremel 160-piece Accessory Kit, 710-05', 15, 5560.55, '2013-03-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 7, 'Fpc Corporation Surebonder Dual Melt High/low Temperature Glue Gun Fprdt270', 39, 1051.49, '2013-07-08');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 9, 'Professional Woodworker Pneumatic Brad Nailer And Air Stapler Combo Tool Kit', 2, 6669.25, '2013-05-01');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 49, 'Primefit 30-piece Air Compressor Accessory Kit', 43, 5960.87, '2013-08-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 4, 'Numax 3-in-1 Flooring Nailer', 6, 3459.26, '2013-08-06');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 34, 'Dremel 160-piece Accessory Kit, 710-05', 27, 8466.76, '2013-08-07');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 17, 'Black And Decker 3/8 5-amp Variable Speed Drill With Keyless Chuck, Dr260b', 46, 810.91, '2013-07-20');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 37, 'Eclipse 900-099 Soldering Stand W/reel Holder', 10, 8818.34, '2013-09-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 7, 'Drill America 3/16-1/2x16ths Step Drill Bit', 19, 7022.38, '2013-09-22');
-INSERT INTO job_orders (`project_id`, `employee_id`, `description`, `quantity`, `price`, `order_date`) VALUES (10, 2, 'Ultra Steel 4-piece 18v Cordless Power Tool Kit', 50, 9045.36, '2013-05-24');
-INSERT INTO employees (`id`, `name`) VALUES (1, 'Caydence Kelley');
-INSERT INTO employees (`id`, `name`) VALUES (2, 'Emmitt Steele');
-INSERT INTO employees (`id`, `name`) VALUES (3, 'Dennis Luna');
-INSERT INTO employees (`id`, `name`) VALUES (4, 'Kinsey Ellison');
-INSERT INTO employees (`id`, `name`) VALUES (5, 'Kaylee Reilly');
-INSERT INTO employees (`id`, `name`) VALUES (6, 'Shawn Shelton');
-INSERT INTO employees (`id`, `name`) VALUES (7, 'Vaughn Mcmillan');
-INSERT INTO employees (`id`, `name`) VALUES (8, 'Aliza Molina');
-INSERT INTO employees (`id`, `name`) VALUES (9, 'Barbara Kidd');
-INSERT INTO employees (`id`, `name`) VALUES (10, 'Arturo Berg');
-INSERT INTO employees (`id`, `name`) VALUES (11, 'Kaleigh Trevino');
-INSERT INTO employees (`id`, `name`) VALUES (12, 'Cassidy Foreman');
-INSERT INTO employees (`id`, `name`) VALUES (13, 'Scarlett Holloway');
-INSERT INTO employees (`id`, `name`) VALUES (14, 'Johan Keith');
-INSERT INTO employees (`id`, `name`) VALUES (15, 'Kameron Davis');
-INSERT INTO employees (`id`, `name`) VALUES (16, 'Chandler Clarke');
-INSERT INTO employees (`id`, `name`) VALUES (17, 'Millie Crane');
-INSERT INTO employees (`id`, `name`) VALUES (18, 'Leia Stevens');
-INSERT INTO employees (`id`, `name`) VALUES (19, 'Carson Mcneil');
-INSERT INTO employees (`id`, `name`) VALUES (20, 'Zachariah Reed');
-INSERT INTO employees (`id`, `name`) VALUES (21, 'Gideon Thomas');
-INSERT INTO employees (`id`, `name`) VALUES (22, 'Erin Robbins');
-INSERT INTO employees (`id`, `name`) VALUES (23, 'Beckett Medina');
-INSERT INTO employees (`id`, `name`) VALUES (24, 'Giancarlo Burris');
-INSERT INTO employees (`id`, `name`) VALUES (25, 'Cristiano Quinn');
-INSERT INTO employees (`id`, `name`) VALUES (26, 'Kale Reed');
-INSERT INTO employees (`id`, `name`) VALUES (27, 'Jasmine Yates');
-INSERT INTO employees (`id`, `name`) VALUES (28, 'Bridget Lane');
-INSERT INTO employees (`id`, `name`) VALUES (29, 'Amirah Wilcox');
-INSERT INTO employees (`id`, `name`) VALUES (30, 'Jerome Jackson');
-INSERT INTO employees (`id`, `name`) VALUES (31, 'Charli Rogers');
-INSERT INTO employees (`id`, `name`) VALUES (32, 'Rhys Keller');
-INSERT INTO employees (`id`, `name`) VALUES (33, 'Rebekah Reyes');
-INSERT INTO employees (`id`, `name`) VALUES (34, 'Gael Heath');
-INSERT INTO employees (`id`, `name`) VALUES (35, 'Gunner Harris');
-INSERT INTO employees (`id`, `name`) VALUES (36, 'Juniper Gilbert');
-INSERT INTO employees (`id`, `name`) VALUES (37, 'Julian Dalton');
-INSERT INTO employees (`id`, `name`) VALUES (38, 'Harley Mcgowan');
-INSERT INTO employees (`id`, `name`) VALUES (39, 'Danika Osborn');
-INSERT INTO employees (`id`, `name`) VALUES (40, 'Kingston Gonzalez');
-INSERT INTO employees (`id`, `name`) VALUES (41, 'Tamia Todd');
-INSERT INTO employees (`id`, `name`) VALUES (42, 'Annabell Glass');
-INSERT INTO employees (`id`, `name`) VALUES (43, 'Jaydon Henry');
-INSERT INTO employees (`id`, `name`) VALUES (44, 'Rachael Brown');
-INSERT INTO employees (`id`, `name`) VALUES (45, 'Keaton Barker');
-INSERT INTO employees (`id`, `name`) VALUES (46, 'Josie Lindsey');
-INSERT INTO employees (`id`, `name`) VALUES (47, 'Kenna Bullock');
-INSERT INTO employees (`id`, `name`) VALUES (48, 'Matteo Hogan');
-INSERT INTO employees (`id`, `name`) VALUES (49, 'Jaden Carter');
-INSERT INTO employees (`id`, `name`) VALUES (50, 'Jerimiah Nielsen');
-INSERT INTO employees (`id`, `name`) VALUES (51, 'Lewis Ford');
-INSERT INTO employees (`id`, `name`) VALUES (52, 'Araceli Hernandez');
+--
+-- Table structure for table `employees`
+--
+
+DROP TABLE IF EXISTS `employees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `employees` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `hourly_wage` float(5,2) NOT NULL,
+  `hire_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employees`
+--
+
+LOCK TABLES `employees` WRITE;
+/*!40000 ALTER TABLE `employees` DISABLE KEYS */;
+INSERT INTO `employees` VALUES (1,'Zechariah','Langosh',56.00,'2016-10-04'),
+(2,'Elmer','Barton',60.00,'2014-11-16'),
+(3,'Macie','Kautzer',59.10,'2016-10-18'),
+(4,'Janice','Mills',54.00,'2012-05-21'),
+(5,'Lillie','Donnelly',48.50,'2012-05-03'),
+(6,'Agnes','Zulauf',56.00,'2017-10-11'),
+(7,'Kellie','Sauer',60.00,'2012-03-08'),
+(8,'Juanita','Swift',36.25,'2015-05-26'),
+(9,'Faye','Renner',33.00,'2010-06-11'),
+(10,'Ernestina','Langworth',34.00,'2010-03-26'),
+(11,'Melissa','Pouros',14.00,'2010-04-12'),
+(12,'Ubaldo','Predovic',13.00,'2011-12-21'),
+(13,'Osvaldo','Funk',26.00,'2009-02-28'),
+(14,'Jamey','Romaguera',37.50,'2017-03-08'),
+(15,'Jackeline','Hilpert',51.00,'2009-01-18'),
+(16,'Santos','Heidenreich',15.00,'2016-03-12'),
+(17,'Jessyca','Leuschke',43.00,'2008-08-05'),
+(18,'Dedric','Hamill',16.00,'2010-06-24'),
+(19,'Pearl','Champlin',50.50,'2013-03-30'),
+(20,'Ophelia','Price',42.00,'2010-01-30'),
+(21,'Tess','Hermiston',59.00,'2015-01-22'),
+(22,'Salvatore','Borer',20.25,'2009-08-02'),
+(23,'Flo','Davis',57.00,'2015-01-16');
+/*!40000 ALTER TABLE `employees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `job_orders`
+--
+
+DROP TABLE IF EXISTS `job_orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `job_orders` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `employee_id` int(6) NOT NULL,
+  `project_id` int(6) NOT NULL,
+  `description` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `order_datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `quantity` int(6) unsigned NOT NULL,
+  `price` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1356 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `job_orders`
+--
+
+LOCK TABLES `job_orders` WRITE;
+/*!40000 ALTER TABLE `job_orders` DISABLE KEYS */;
+INSERT INTO `job_orders` VALUES
+(16,23,2,'Skil 7-1/4 24-tooth Carbide Tipped Saw Blade, 75724w','2015-12-21 06:42:11',108,2260.89),
+(18,7,1,'Black & Decker 20v Max Lithium Ion Drill/driver, Ldx120c','2012-08-28 21:55:28',230,953.14),
+(24,15,3,'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi','2018-02-12 22:59:07',90,662.24),
+(26,12,3,'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb','2016-05-25 19:11:00',213,1036.4),
+(27,15,4,'Black & Decker 12-volt Cordless Air Station Inflator','2017-05-05 12:37:13',249,314.38),
+(39,22,1,'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326','2011-09-13 14:15:31',43,67.99),
+(41,12,2,'Multi-temp Hybrid Cordless Glue Gun','2013-02-09 03:28:47',74,1266.91),
+(59,15,1,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2012-02-05 15:31:44',208,1135.11),
+(62,9,5,'Ultra Steel 3.0 Amp Jig Saw','2018-02-26 16:54:32',61,1089.18),
+(66,9,2,'Crawford 38 In. Adjustable Steel Sawhorse','2013-04-13 16:45:20',222,581.41),
+(74,7,2,'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator','2014-03-29 21:37:21',43,108.67),
+(75,7,2,'Bosch 1006vsr 3/8 Corded Drill','2016-02-18 09:54:08',132,857.33),
+(78,4,3,'Sold & Shipped By Wayfair.com','2014-09-05 04:48:36',19,1681.28),
+(83,4,4,'Rubbermaid Wall Washer Replacement Pads, White Rcps299','2015-08-30 14:39:23',208,567.45),
+(86,17,4,'Dremel 7300-n/8 4.8-volt Cordless Dremel Minimite Two Speed Rotary Tool','2017-12-17 09:38:36',274,2406.61),
+(90,20,2,'Dremel 8300-01 12v Cordless Multi-max Oscillating Kit, Refurbished','2015-07-09 11:01:24',265,306.04),
+(105,9,2,'Cps Products Ccvpc4su 4 Cfm Single Stage Vacuum Pump','2014-07-29 01:35:59',253,724.52),
+(112,18,4,'Black & Decker 109-piece Basic Project Set, 71-0109','2017-05-22 23:01:54',292,1758.81),
+(114,18,2,'Ingersoll Rand Impact 1/2','2016-02-05 17:45:25',260,1410.73),
+(119,17,1,'Buffalo Tools Electric 110v 3/8 Vsr Drill','2010-01-10 23:09:54',71,2419.16),
+(126,17,2,'Electric Glue Skillet 7','2015-08-14 21:32:28',94,1611.17),
+(127,13,3,'Black & Decker 7750a 4-1/2-inch Small Angle Grinder','2017-07-11 05:57:20',181,526.09),
+(140,13,1,'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w','2009-06-18 16:13:32',1,62.55),
+(144,11,3,'Pentagon Professional Aluminum Drywall Bench','2014-07-15 02:43:07',286,2380.76),
+(146,20,2,'Wen 5.2 Amp Electric Pole Saw','2013-09-15 18:49:34',26,1877.01),
+(148,7,4,'Ingersoll Rand Hammer Pin','2016-05-04 15:33:49',165,1333.63),
+(156,20,2,'Dremel Saw-max Tool Kit, Sm20-03','2013-02-13 00:51:20',102,489.63),
+(161,22,1,'Black & Decker 18-volt Cordless Drill, Gco18c','2012-05-04 23:49:55',21,2120.87),
+(162,22,2,'Black & Decker Vs Jig Saw, Js515','2014-02-16 21:42:52',142,1837.79),
+(169,19,5,'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit','2018-01-30 17:46:24',52,1964.29),
+(191,14,3,'Fpc Corporation Surebonder Dual Melt High/low Temperature Glue Gun Fprdt270','2017-10-11 19:47:28',228,937.87),
+(194,17,1,'Eclipse Dp-366d Desoldering Pump','2009-10-11 09:54:58',105,624.4),
+(201,17,3,'Jflint Products 306 Mr Hard Water- Power Tool System','2016-06-01 01:49:39',246,1828.3),
+(202,12,2,'Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor','2014-01-21 14:10:52',173,2160.05),
+(204,21,2,'Radnor #7326 1/4 Id Brass Hose Ferrule','2016-02-12 00:26:18',248,53.48),
+(207,15,5,'Mk Diamond Mk-370exp 7-inch Wet Cutting Tile Saw','2018-02-25 20:40:54',24,1212.21),
+(210,10,3,'Stalwart 8-in-1 Multipurpose Lighted Magnetic Driver With Bits','2017-05-17 08:09:31',227,456.57),
+(212,15,4,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2017-06-12 13:07:40',54,805.19),
+(225,9,3,'Lincoln Industrial 18 Volt Cordless Grease Gun W/ 2 Batteries','2015-02-05 19:04:36',287,1142.35),
+(228,17,1,'Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder','2012-01-14 01:58:59',209,635.58),
+(240,13,1,'Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)','2012-11-09 23:12:33',100,1036.6),
+(242,4,3,'Skil 735-0118v Octo Multi-finishing Sander','2016-01-21 23:02:48',272,1637.06),
+(244,17,4,'Stanley Fatmax 3/8 Corded Drill, Fme105','2015-10-24 00:39:08',294,953.56),
+(245,17,1,'Ultra Steel 4-piece 18v Cordless Power Tool Kit','2009-11-18 08:19:41',99,720.71),
+(247,7,5,'Qep Tile Tools 60089 7 Portable Tile Saw','2018-02-11 22:31:53',235,1506.56),
+(248,7,4,'Campbell Hausfeld Exteme Duty 3/8 Air Ratchet','2017-07-29 14:46:22',245,1527.75),
+(249,16,4,'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw','2018-02-28 10:54:24',232,1628.99),
+(250,15,3,'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr','2016-07-30 06:35:12',151,1176.9),
+(251,11,2,'Black & Decker 5.2a 3.25 Planer Kit, 7698k','2015-06-28 16:04:29',55,225.1),
+(253,12,3,'Dremel Sm600 3 Multi-purpose Flush Cut Carbide Wheel','2018-01-27 01:43:46',194,24.36),
+(254,13,2,'Powryte 3/8 Air Impact Wrench, 100101a','2013-12-06 02:20:34',256,228.42),
+(256,12,1,'Gyros 45-20265 High Speed Steel Wire Gauge Drill Bit No.65 Set Of 2','2012-06-14 03:12:10',270,135.58),
+(261,14,4,'Ingersoll Rand 705-93 Trigger','2017-05-09 20:12:28',101,1705.15),
+(266,18,4,'Wagner 0283022c Ht775 Heat Gun','2015-12-06 17:23:22',31,1295.3),
+(267,13,2,'Powermate 6 Gallon Proforce Pancake Air Compressor With Extra Value Kit','2015-04-10 18:40:51',213,1659.85),
+(269,20,2,'Numax 18 Gauge 2 In 1 Brad Nailer & Stapler','2014-03-30 21:40:00',230,710.58),
+(270,9,3,'Hitachi 35 Piece Hi-torq Impact Rated Torsion Bit Set','2017-10-20 00:12:02',207,430.18),
+(282,20,4,'Campbell Hausfeld Lever Safety Blowgun Kit','2017-10-14 20:13:24',173,2163.29),
+(287,22,1,'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334','2010-12-01 20:38:58',110,2263.97),
+(290,10,2,'Black And Decker Dragster 3 X 21 Belt Sander, Ds321','2015-11-03 18:54:43',174,1911.73),
+(302,9,2,'Crawford 38 In. Adjustable Steel Sawhorse','2015-04-15 03:11:16',145,1318.71),
+(307,18,2,'Mini Glue Sticks 4 25/pkg-gold/silver','2014-06-25 06:06:13',293,2441.85),
+(311,13,2,'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator','2014-03-25 13:39:05',111,91.75),
+(313,13,4,'Porter Cable 352vs 3 X 21 Variable Speed Belt Sander','2016-10-08 20:52:31',23,1485.07),
+(317,18,4,'Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052','2016-07-23 14:53:20',176,1343.68),
+(327,12,3,'Skil 4570-01 18-volt Jigsaw','2016-09-12 23:07:53',187,779.61),
+(333,12,2,'Mountain Blow Gun 24 Deluxe W/90 Deg Angled Nozzle','2015-07-15 17:52:49',234,1042.69),
+(348,7,4,'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set','2017-04-23 02:34:07',97,1610.7),
+(358,4,4,'Black And Decker 3-position Rechargeable Screwdriver, Li2000','2017-09-18 15:16:17',74,594.07),
+(360,10,1,'Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)','2010-12-13 02:28:51',6,629.65),
+(361,12,3,'Gmc Power Equipment 4.6 Gallon Gmc Syclone 4620a Ultra Quiet And Oil Free Air Compressor','2016-07-08 17:35:25',152,699.35),
+(365,15,1,'Hitachi 1 1/2 18-gauge Narrow Crown Finish Stapler','2009-09-09 03:37:03',175,249.92),
+(382,5,4,'Aaa 300psi Air Compressor','2017-02-22 04:12:38',246,129.44),
+(385,15,1,'Eclipse 900-015 Helping Hands Soldering Aid','2011-03-29 19:17:27',184,85.54),
+(392,15,4,'Wagner Ht1000 Heat Tool','2015-09-08 17:23:45',133,165.08),
+(405,12,2,'Skil 1400-02 Multi-tasker 2.0a Oscillating Tool Kit','2015-02-27 00:28:56',64,1137.29),
+(423,9,1,'Bostitch .5 Vsr 2-speed Hammerdrill/drill, Bte140k','2011-07-31 20:26:14',278,2288.85),
+(425,20,1,'Powryte 3/8 Air Impact Wrench, 100101a','2010-10-30 20:04:38',13,1068.26),
+(426,16,4,'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr','2016-10-12 13:38:52',3,1472.89),
+(427,2,4,'Fpc Glue Sticks, 4, 15/pkg, Glow-in-the-dark','2017-06-05 15:47:26',20,481.28),
+(432,2,3,'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w','2016-01-04 07:35:00',35,1376.64),
+(435,15,4,'Master Magnetics 7269 36-inch Retrieval Magnet','2017-11-15 23:53:13',165,233.08),
+(441,21,4,'Bosch 2240-01 12 Volt Cordless Drill And Driver','2018-01-30 17:54:47',296,481.72),
+(446,18,2,'Drill America Flame Carbide Burr 1/4 Shank','2012-07-17 19:21:17',233,2427.05),
+(454,22,2,'Cgw Abrasives Z-thru Flap Discs - 4 1/2 X 7/8 Z-80 T27 Z-thru Flap Disc','2014-09-24 00:25:28',129,1412.19),
+(459,20,1,'Black & Decker Vs Jig Saw, Js515','2011-04-07 02:30:20',64,1866.54),
+(465,7,3,'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb','2016-11-15 05:18:56',268,1237.43),
+(467,14,3,'Vermont American 10 40 Tpi 10x Titanium Carbide Circular Saw Blades 27831','2018-01-21 23:28:30',182,1163.45),
+(468,10,4,'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor','2016-01-05 09:09:58',20,1852.68),
+(474,15,3,'Hyundai Hpc3010 Air Compressor Kit','2014-08-18 17:10:36',287,704.22),
+(476,4,3,'Great Neck Saw 80134 36-piece Rotary Tool Set','2014-02-11 09:16:31',247,1448.65),
+(481,7,4,'Ad Tech Hi-temp Full Size Glue Gun','2017-07-17 19:45:47',72,172.69),
+(484,14,3,'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch','2017-03-21 04:17:48',169,827.38),
+(486,12,4,'Hitachi 18 V Post Li-ion Driver Drill','2017-03-06 20:50:38',297,1071.45),
+(496,18,3,'Master Magnetics 07047 Neodymium Disc Magnets - 3-pack','2017-09-27 04:57:02',65,282.02),
+(506,19,2,'Hitachi 2 Hp 4-gal Compressor','2014-02-05 10:23:42',172,400.24),
+(513,11,3,'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry','2015-09-13 14:53:44',207,2246.44),
+(519,10,3,'Black & Decker 18v Cordless Drill Set, Gco18sfb','2014-04-19 22:53:20',292,2471.87),
+(522,15,2,'Bosch Ros10 5 Palm-grip Random Orbit Sander','2015-10-26 05:52:56',182,1341.41),
+(528,9,2,'Bostitch Air Regulator And Gauge, Threaded, #mregulator','2014-01-20 02:31:29',278,303.62),
+(538,13,1,'Skil 7-1/4 24-tooth Carbide Tipped Saw Blade, 75724w','2012-04-04 08:31:04',229,1529.54),
+(549,22,3,'Black & Decker 20v Max Lithium Ion Drill/driver, Ldx120c','2015-12-09 04:40:28',111,1957.39),
+(559,5,4,'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi','2017-05-21 07:43:35',181,1961.61),
+(560,19,2,'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb','2013-06-26 13:18:33',146,1374.32),
+(561,3,4,'Black & Decker 12-volt Cordless Air Station Inflator','2017-12-31 15:59:38',119,1857.45),
+(568,20,4,'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326','2015-07-28 04:07:24',157,787.14),
+(569,22,3,'Multi-temp Hybrid Cordless Glue Gun','2016-01-03 20:57:12',269,973.1),
+(571,13,4,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2016-11-28 16:26:01',87,355.55),
+(576,19,3,'Ultra Steel 3.0 Amp Jig Saw','2017-09-23 17:28:59',176,1377.49),
+(581,11,3,'Crawford 38 In. Adjustable Steel Sawhorse','2015-11-04 00:48:01',297,680.86),
+(583,19,3,'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator','2016-09-26 13:07:04',257,271.27),
+(587,17,3,'Bosch 1006vsr 3/8 Corded Drill','2017-01-27 14:46:21',170,1328.2),
+(592,4,3,'Sold & Shipped By Wayfair.com','2017-03-22 00:35:21',235,2439.42),
+(609,15,3,'Rubbermaid Wall Washer Replacement Pads, White Rcps299','2014-10-29 17:40:21',140,1675.13),
+(613,13,3,'Dremel 7300-n/8 4.8-volt Cordless Dremel Minimite Two Speed Rotary Tool','2014-12-15 09:32:09',238,1831.1),
+(616,10,1,'Dremel 8300-01 12v Cordless Multi-max Oscillating Kit, Refurbished','2011-09-22 22:41:42',4,1556.54),
+(622,17,3,'Cps Products Ccvpc4su 4 Cfm Single Stage Vacuum Pump','2016-05-08 17:19:19',8,2252.17),
+(623,17,1,'Black & Decker 109-piece Basic Project Set, 71-0109','2012-04-22 04:15:37',257,697.85),
+(626,8,3,'Ingersoll Rand Impact 1/2','2018-02-11 04:54:49',38,1198.71),
+(628,15,4,'Buffalo Tools Electric 110v 3/8 Vsr Drill','2017-07-30 03:00:23',255,1607.88),
+(634,21,4,'Electric Glue Skillet 7','2015-10-14 01:38:07',164,256.99),
+(641,17,3,'Black & Decker 7750a 4-1/2-inch Small Angle Grinder','2017-07-12 02:52:30',86,2145.18),
+(644,11,2,'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w','2013-12-04 10:29:04',6,2358.59),
+(652,12,2,'Pentagon Professional Aluminum Drywall Bench','2015-11-12 06:58:11',99,2488.27),
+(655,7,3,'Wen 5.2 Amp Electric Pole Saw','2017-05-20 21:21:34',222,1611.26),
+(656,5,1,'Ingersoll Rand Hammer Pin','2012-08-29 15:21:22',231,1956.11),
+(661,8,4,'Dremel Saw-max Tool Kit, Sm20-03','2015-12-31 04:16:12',112,1429.7),
+(668,22,1,'Black & Decker 18-volt Cordless Drill, Gco18c','2012-07-31 10:40:43',193,267.11),
+(674,15,2,'Black & Decker Vs Jig Saw, Js515','2016-02-24 21:33:37',178,781.23),
+(677,7,1,'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit','2012-04-23 02:50:01',42,845.66),
+(682,19,3,'Fpc Corporation Surebonder Dual Melt High/low Temperature Glue Gun Fprdt270','2015-09-08 14:32:26',120,1018.32),
+(691,21,3,'Eclipse Dp-366d Desoldering Pump','2015-03-08 19:15:33',31,177.86),
+(699,9,1,'Jflint Products 306 Mr Hard Water- Power Tool System','2010-11-25 07:28:24',6,1323.85),
+(701,4,3,'Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor','2014-08-07 20:17:13',278,462.76),
+(712,20,2,'Radnor #7326 1/4 Id Brass Hose Ferrule','2012-05-07 06:12:59',297,1564.49),
+(713,7,2,'Mk Diamond Mk-370exp 7-inch Wet Cutting Tile Saw','2013-10-06 23:47:06',27,597.96),
+(732,13,2,'Stalwart 8-in-1 Multipurpose Lighted Magnetic Driver With Bits','2015-01-10 07:51:30',17,225.88),
+(737,21,4,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2017-08-07 05:42:48',107,1705.57),
+(739,5,3,'Lincoln Industrial 18 Volt Cordless Grease Gun W/ 2 Batteries','2015-08-21 10:39:23',237,950.49),
+(741,16,4,'Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder','2017-01-31 09:38:15',139,656.53),
+(742,12,3,'Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)','2017-11-17 20:33:43',170,487.93),
+(745,18,3,'Skil 735-0118v Octo Multi-finishing Sander','2015-05-27 16:38:22',244,2019.44),
+(747,7,4,'Stanley Fatmax 3/8 Corded Drill, Fme105','2017-12-07 15:33:22',161,2012.79),
+(748,10,2,'Ultra Steel 4-piece 18v Cordless Power Tool Kit','2015-01-14 23:23:29',180,1830.6),
+(760,7,2,'Qep Tile Tools 60089 7 Portable Tile Saw','2012-03-16 16:53:20',101,2087.26),
+(761,13,3,'Campbell Hausfeld Exteme Duty 3/8 Air Ratchet','2016-10-07 21:46:11',98,65.52),
+(764,4,4,'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw','2017-10-02 23:38:32',30,1956.5),
+(765,12,4,'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr','2016-07-15 20:45:02',105,133.58),
+(770,16,4,'Black & Decker 5.2a 3.25 Planer Kit, 7698k','2017-09-08 21:28:15',25,2376.02),
+(777,20,1,'Dremel Sm600 3 Multi-purpose Flush Cut Carbide Wheel','2010-07-08 13:51:58',285,1039.65),
+(780,18,2,'Powryte 3/8 Air Impact Wrench, 100101a','2013-07-03 19:59:12',23,2268.51),
+(782,19,3,'Gyros 45-20265 High Speed Steel Wire Gauge Drill Bit No.65 Set Of 2','2015-01-26 17:27:58',183,1830.41),
+(787,18,1,'Ingersoll Rand 705-93 Trigger','2012-07-19 07:03:18',146,2178.33),
+(803,2,4,'Wagner 0283022c Ht775 Heat Gun','2016-01-25 07:59:41',283,1067.89),
+(810,20,2,'Powermate 6 Gallon Proforce Pancake Air Compressor With Extra Value Kit','2014-01-30 14:09:52',135,118.51),
+(812,7,4,'Numax 18 Gauge 2 In 1 Brad Nailer & Stapler','2016-11-23 08:22:20',121,499.01),
+(813,23,4,'Hitachi 35 Piece Hi-torq Impact Rated Torsion Bit Set','2015-08-15 15:55:09',108,930.72),
+(817,10,2,'Campbell Hausfeld Lever Safety Blowgun Kit','2012-05-05 04:10:48',86,660.92),
+(819,20,3,'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334','2016-06-03 04:17:43',193,1172.32),
+(821,12,2,'Black And Decker Dragster 3 X 21 Belt Sander, Ds321','2013-12-06 04:19:48',98,2370.93),
+(824,9,4,'Crawford 38 In. Adjustable Steel Sawhorse','2016-09-20 10:11:16',192,320.2),
+(829,4,4,'Mini Glue Sticks 4 25/pkg-gold/silver','2016-09-21 12:06:11',254,445.96),
+(835,9,2,'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator','2015-03-24 01:42:32',258,1281.33),
+(837,13,1,'Porter Cable 352vs 3 X 21 Variable Speed Belt Sander','2011-09-12 14:20:00',63,2167.98),
+(843,19,3,'Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052','2013-12-08 04:34:30',185,2290.18),
+(847,5,4,'Skil 4570-01 18-volt Jigsaw','2016-03-01 07:40:08',59,249.68),
+(848,17,1,'Mountain Blow Gun 24 Deluxe W/90 Deg Angled Nozzle','2012-02-13 12:35:58',203,1744.14),
+(849,12,4,'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set','2017-08-26 14:22:21',299,1692.14),
+(852,17,3,'Black And Decker 3-position Rechargeable Screwdriver, Li2000','2017-07-21 15:52:36',268,1747.17),
+(855,15,4,'Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)','2017-08-19 12:27:20',281,2210.64),
+(856,2,3,'Gmc Power Equipment 4.6 Gallon Gmc Syclone 4620a Ultra Quiet And Oil Free Air Compressor','2017-03-03 05:16:18',110,14.93),
+(869,15,1,'Hitachi 1 1/2 18-gauge Narrow Crown Finish Stapler','2012-02-13 14:13:39',55,1618.34),
+(870,20,2,'Aaa 300psi Air Compressor','2013-04-12 09:12:33',17,2195.76),
+(879,10,3,'Eclipse 900-015 Helping Hands Soldering Aid','2015-06-19 03:04:41',91,1565.85),
+(882,7,4,'Wagner Ht1000 Heat Tool','2015-07-08 04:30:51',157,165.44),
+(887,9,2,'Skil 1400-02 Multi-tasker 2.0a Oscillating Tool Kit','2015-09-14 01:30:43',202,477.66),
+(891,13,2,'Bostitch .5 Vsr 2-speed Hammerdrill/drill, Bte140k','2012-09-09 05:31:10',209,1543.35),
+(896,7,2,'Powryte 3/8 Air Impact Wrench, 100101a','2012-03-31 08:32:07',255,1410.31),
+(897,4,3,'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr','2016-09-14 03:03:15',21,2218.35),
+(898,22,4,'Fpc Glue Sticks, 4, 15/pkg, Glow-in-the-dark','2017-01-10 20:20:28',143,587.69),
+(899,17,3,'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w','2015-07-20 11:19:06',206,2242.02),
+(910,11,2,'Master Magnetics 7269 36-inch Retrieval Magnet','2012-03-12 22:12:26',168,1854.65),
+(918,9,5,'Bosch 2240-01 12 Volt Cordless Drill And Driver','2018-02-21 00:45:25',222,1752.2),
+(923,18,2,'Drill America Flame Carbide Burr 1/4 Shank','2015-02-02 01:08:46',176,2167.05),
+(924,20,3,'Cgw Abrasives Z-thru Flap Discs - 4 1/2 X 7/8 Z-80 T27 Z-thru Flap Disc','2015-07-04 06:34:14',284,291.42),
+(925,17,2,'Black & Decker Vs Jig Saw, Js515','2012-03-25 16:52:02',121,992.44),
+(937,4,1,'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb','2012-07-11 03:31:04',18,1008.65),
+(938,10,5,'Vermont American 10 40 Tpi 10x Titanium Carbide Circular Saw Blades 27831','2018-01-29 01:20:24',88,818.9),
+(939,9,2,'California Air Tools 10 Gallon Ultra Quiet And Oil-free 2.0 Hp Steel Tank Air Compressor','2012-05-16 20:14:31',256,661.44),
+(941,13,2,'Hyundai Hpc3010 Air Compressor Kit','2015-01-23 18:37:33',73,33.14),
+(949,16,3,'Great Neck Saw 80134 36-piece Rotary Tool Set','2017-05-05 14:44:03',50,1917.86),
+(951,18,2,'Ad Tech Hi-temp Full Size Glue Gun','2012-12-09 16:29:26',213,2042.42),
+(956,18,3,'Forney 72732 Wire Cup Brush Fine Crimped With 1/4-inch Hex Shank 3-inch-by-.008-inch','2015-05-09 14:06:07',165,2298.89),
+(957,13,1,'Hitachi 18 V Post Li-ion Driver Drill','2010-01-20 12:17:44',93,1330.45),
+(960,20,3,'Master Magnetics 07047 Neodymium Disc Magnets - 3-pack','2015-09-22 04:24:52',134,871.69),
+(961,20,2,'Hitachi 2 Hp 4-gal Compressor','2015-02-03 22:17:18',89,235.73),
+(965,18,2,'Freeman Pf3p6galck Freeman Ultimate Finishing Kit With 6 Gallon Compressor, 3 Nailers, Canvas Carry','2012-05-01 23:11:57',38,923.22),
+(966,9,3,'Black & Decker 18v Cordless Drill Set, Gco18sfb','2014-07-23 01:51:13',27,647.29),
+(977,5,2,'Bosch Ros10 5 Palm-grip Random Orbit Sander','2012-10-25 12:59:07',91,1316.53),
+(980,4,2,'Bostitch Air Regulator And Gauge, Threaded, #mregulator','2014-03-05 23:11:51',71,563.13),
+(981,18,3,'Skil 7-1/4 24-tooth Carbide Tipped Saw Blade, 75724w','2014-05-27 18:05:53',296,1755.75),
+(985,12,4,'Black & Decker 20v Max Lithium Ion Drill/driver, Ldx120c','2017-10-30 22:15:23',205,2317.68),
+(991,5,2,'Legacy Mfg Straight-on Tapered Chuck Inflator W/ 12 In. Hose, Brass Indicator Bar, 10-90 Psi','2013-06-16 02:06:37',275,947.45),
+(992,4,2,'Dewalt Power Tools 18 Volt Compact Lithium Ion Drill Driver & Impact Driver Comb','2015-08-12 02:49:08',122,2379.84),
+(994,18,2,'Black & Decker 12-volt Cordless Air Station Inflator','2013-01-20 20:02:58',258,1607.6),
+(998,22,3,'Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326','2014-03-25 22:53:36',147,79.53),
+(1004,15,4,'Multi-temp Hybrid Cordless Glue Gun','2015-08-01 06:54:28',207,982.94),
+(1008,5,1,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2012-08-23 08:11:50',121,859.36),
+(1019,13,3,'Ultra Steel 3.0 Amp Jig Saw','2014-12-13 22:29:10',234,1622.57),
+(1033,18,1,'Crawford 38 In. Adjustable Steel Sawhorse','2012-09-01 03:09:27',12,1836.99),
+(1034,15,2,'Got Air Heavy Duty Portable Air Compressor, Pump, Inflator','2012-02-15 04:21:47',132,1387.75),
+(1040,15,4,'Bosch 1006vsr 3/8 Corded Drill','2017-10-19 01:21:22',204,2320.11),
+(1041,13,2,'Sold & Shipped By Wayfair.com','2015-06-17 19:06:33',227,2018.26),
+(1051,12,3,'Rubbermaid Wall Washer Replacement Pads, White Rcps299','2017-09-15 04:50:07',48,1667.15),
+(1056,4,2,'Dremel 7300-n/8 4.8-volt Cordless Dremel Minimite Two Speed Rotary Tool','2012-08-03 23:05:52',46,2125.45),
+(1059,19,2,'Dremel 8300-01 12v Cordless Multi-max Oscillating Kit, Refurbished','2015-10-22 03:01:11',53,846.22),
+(1062,20,4,'Cps Products Ccvpc4su 4 Cfm Single Stage Vacuum Pump','2016-12-28 14:23:20',197,1488.74),
+(1070,13,2,'Black & Decker 109-piece Basic Project Set, 71-0109','2012-08-20 10:53:22',185,1548.44),
+(1073,13,2,'Ingersoll Rand Impact 1/2','2012-11-11 11:08:23',245,119.68),
+(1074,20,2,'Buffalo Tools Electric 110v 3/8 Vsr Drill','2015-10-04 10:09:34',85,2096.69),
+(1079,5,2,'Electric Glue Skillet 7','2013-01-17 22:49:31',130,941.26),
+(1085,21,3,'Black & Decker 7750a 4-1/2-inch Small Angle Grinder','2015-09-06 21:26:55',136,1307.62),
+(1086,21,4,'Skil 7-1/4 40-tooth Carbide Tipped Circular Saw Blade, 75740w','2017-12-23 05:02:51',219,1578.04),
+(1088,12,4,'Pentagon Professional Aluminum Drywall Bench','2015-10-30 04:53:58',53,577.2),
+(1089,20,2,'Wen 5.2 Amp Electric Pole Saw','2014-05-23 12:38:33',177,700.54),
+(1091,5,2,'Ingersoll Rand Hammer Pin','2012-11-29 12:36:57',237,1232.87),
+(1094,5,3,'Dremel Saw-max Tool Kit, Sm20-03','2017-09-29 12:00:33',190,1001.2),
+(1096,18,2,'Black & Decker 18-volt Cordless Drill, Gco18c','2014-07-31 20:12:38',21,1387.24),
+(1101,13,1,'Black & Decker Vs Jig Saw, Js515','2009-03-03 06:46:14',162,24.94),
+(1102,1,4,'Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit','2017-01-23 12:40:00',244,144.02),
+(1107,17,1,'Fpc Corporation Surebonder Dual Melt High/low Temperature Glue Gun Fprdt270','2009-08-13 22:56:37',190,2035.22),
+(1112,23,3,'Eclipse Dp-366d Desoldering Pump','2016-05-18 12:54:53',85,2489.46),
+(1115,5,2,'Jflint Products 306 Mr Hard Water- Power Tool System','2015-11-16 06:00:49',39,873.19),
+(1116,20,4,'Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor','2018-01-10 16:47:20',197,2148.99),
+(1126,13,2,'Radnor #7326 1/4 Id Brass Hose Ferrule','2013-05-22 15:24:50',15,2393.85),
+(1138,9,2,'Mk Diamond Mk-370exp 7-inch Wet Cutting Tile Saw','2015-11-23 10:54:56',71,739.54),
+(1142,2,3,'Stalwart 8-in-1 Multipurpose Lighted Magnetic Driver With Bits','2017-10-15 05:21:56',39,2112.28),
+(1147,15,3,'Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose','2016-07-05 17:14:15',155,384.3),
+(1150,15,3,'Lincoln Industrial 18 Volt Cordless Grease Gun W/ 2 Batteries','2017-01-10 04:40:49',230,662.59),
+(1151,1,4,'Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder','2017-12-27 02:40:04',178,613.33),
+(1153,5,2,'Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)','2015-07-16 05:55:04',21,2486.97),
+(1154,4,3,'Skil 735-0118v Octo Multi-finishing Sander','2017-01-06 13:24:42',13,1818.34),
+(1167,10,3,'Stanley Fatmax 3/8 Corded Drill, Fme105','2016-12-26 05:38:18',262,383.98),
+(1177,20,2,'Ultra Steel 4-piece 18v Cordless Power Tool Kit','2013-07-21 05:02:30',299,901.09),
+(1178,22,2,'Qep Tile Tools 60089 7 Portable Tile Saw','2015-10-13 07:37:09',59,1809.05),
+(1183,9,4,'Campbell Hausfeld Exteme Duty 3/8 Air Ratchet','2016-03-15 07:44:55',264,2059.04),
+(1185,18,4,'Skil 5480-01 7-1/4-inch Skilsaw Circular Saw','2015-10-26 00:41:08',40,488.7),
+(1190,15,4,'Mayhew Tools Mayhew Tools - Catspaw Deck Wrecker Cats Paw Deck Wrecker: 479-41104 - Cats Paw Deck Wr','2016-10-15 19:29:08',58,225.09),
+(1193,2,3,'Black & Decker 5.2a 3.25 Planer Kit, 7698k','2015-11-05 14:26:29',165,149.82),
+(1203,12,3,'Dremel Sm600 3 Multi-purpose Flush Cut Carbide Wheel','2014-09-24 01:33:34',121,69.67),
+(1211,4,3,'Powryte 3/8 Air Impact Wrench, 100101a','2017-11-26 17:56:55',166,800.02),
+(1212,17,2,'Gyros 45-20265 High Speed Steel Wire Gauge Drill Bit No.65 Set Of 2','2012-07-01 23:12:25',93,2443.77),
+(1232,19,4,'Ingersoll Rand 705-93 Trigger','2015-09-10 22:59:04',248,501.02),
+(1235,10,3,'Wagner 0283022c Ht775 Heat Gun','2017-08-21 11:59:08',2,1651.13),
+(1238,22,3,'Powermate 6 Gallon Proforce Pancake Air Compressor With Extra Value Kit','2015-03-14 13:27:46',237,447.39),
+(1242,19,4,'Numax 18 Gauge 2 In 1 Brad Nailer & Stapler','2017-03-28 02:57:02',104,810.82),
+(1244,21,2,'Hitachi 35 Piece Hi-torq Impact Rated Torsion Bit Set','2015-04-11 19:53:51',49,1724.07),
+(1246,19,4,'Campbell Hausfeld Lever Safety Blowgun Kit','2016-08-23 19:22:13',251,1305.08),
+(1247,10,3,'Bostitch 50 Foot Air Hose, 1/4 Npt, Btfp72334','2017-07-05 21:42:43',171,1012.59),
+(1262,15,2,'Black And Decker Dragster 3 X 21 Belt Sander, Ds321','2015-07-08 17:44:29',208,1374.09),
+(1273,4,4,'Crawford 38 In. Adjustable Steel Sawhorse','2015-11-10 16:05:09',273,2360.53),
+(1313,10,3,'Mini Glue Sticks 4 25/pkg-gold/silver','2017-09-28 13:45:05',128,1820.06),
+(1315,19,3,'Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator','2017-06-04 05:10:45',107,1846.61),
+(1316,21,4,'Porter Cable 352vs 3 X 21 Variable Speed Belt Sander','2016-09-13 10:29:13',223,298.11),
+(1327,17,3,'Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052','2015-05-24 02:07:39',267,768.37),
+(1328,13,1,'Skil 4570-01 18-volt Jigsaw','2011-05-07 04:08:41',106,1329.67),
+(1331,15,3,'Mountain Blow Gun 24 Deluxe W/90 Deg Angled Nozzle','2014-04-11 06:17:40',64,1960.2),
+(1335,13,3,'Hitachi 17 Piece Split Point Black Oxide Shield Drill Bit Set','2016-07-22 05:36:42',232,1725.62),
+(1337,13,2,'Black And Decker 3-position Rechargeable Screwdriver, Li2000','2014-04-23 03:00:30',202,908.72),
+(1339,16,4,'Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)','2016-04-08 00:21:36',49,1505.88),
+(1340,5,1,'Gmc Power Equipment 4.6 Gallon Gmc Syclone 4620a Ultra Quiet And Oil Free Air Compressor','2012-10-21 00:37:06',49,152.22),
+(1351,22,1,'Hitachi 1 1/2 18-gauge Narrow Crown Finish Stapler','2012-07-23 13:16:56',231,2257.18);
+/*!40000 ALTER TABLE `job_orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `project_employees`
+--
+
+DROP TABLE IF EXISTS `project_employees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `project_employees` (
+  `employee_id` int(6) NOT NULL,
+  `project_id` int(6) NOT NULL,
+  `hours` float(6,2) NOT NULL DEFAULT '0.00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_employees`
+--
+
+LOCK TABLES `project_employees` WRITE;
+/*!40000 ALTER TABLE `project_employees` DISABLE KEYS */;
+INSERT INTO `project_employees` VALUES (12,5,2.70),
+(11,1,87.10),
+(7,3,215.61),
+(15,5,151.56),
+(11,5,881.56),
+(4,5,849.50),
+(18,1,650.97),
+(22,3,434.30),
+(16,3,553.84),
+(9,1,878.12),
+(14,4,277.54),
+(8,3,689.43),
+(2,3,946.57),
+(21,4,28.92),
+(10,2,686.84),
+(23,4,598.04),
+(22,2,824.13),
+(1,4,442.89),
+(14,5,738.41),
+(4,2,932.87),
+(9,3,155.54),
+(9,5,873.01),
+(4,3,852.13),
+(11,3,473.88),
+(2,2,335.83),
+(20,1,283.62),
+(22,1,417.66),
+(17,1,286.55),
+(4,4,338.70),
+(19,2,725.55),
+(18,4,314.12),
+(19,4,971.61),
+(9,2,879.33),
+(17,3,130.45),
+(15,1,561.97),
+(2,5,121.24),
+(13,3,363.34),
+(17,4,53.38),
+(20,3,652.02),
+(15,2,85.37),
+(9,4,404.84);
+/*!40000 ALTER TABLE `project_employees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `projects`
+--
+
+DROP TABLE IF EXISTS `projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `projects` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `value` float(8,1) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `projects`
+--
+
+LOCK TABLES `projects` WRITE;
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+INSERT INTO `projects` VALUES (1,'East Ave Shermans Diner',250000.0,'2008-03-01','2012-05-15'),
+(2,'Big Money Bank',560000.0,'2012-02-15','2015-09-01'),
+(3,'Central Valley Hospital',54000.0,'2013-12-01','2017-09-15'),
+(4,'Washington Avenue Barber',10000.0,'2015-07-01','2020-08-01'),
+(5,'Hamill, Berge and Adams Office',95500.0,'2018-01-01','2024-12-01');
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-03-01  3:36:47

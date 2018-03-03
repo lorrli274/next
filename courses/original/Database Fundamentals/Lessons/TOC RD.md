@@ -1,38 +1,31 @@
 # Snippets / Lessons
 
 ## What is SQL
+
 * What is SQL?
 * Where SQL is Used
 * Why Learn SQL?
 
 NB: Writing w/ quiz at end
 
-## Working with Databases
+## Databases
 * What is a Database?
 * Creating a Database
 * Deleting a Database
 * Wrapping Up
 
-## Working with Tables
+## Tables
 * What is a Table?
 * Creating a Table
 * Deleting a Table
 
-## Relational Data
-* PKs
-* FKs
-* Data integrity
-
-NB: Writing w/ quiz at end
-
-## Working with Columns
+## Columns
 * What are columns?
 * Creating a Column
 * Changing a Column
 * Deleting a Column
-* Special Columns
 
-## Basic SELECT Statements
+## Basic Queries
 * Basic `SELECT` Statements
 * `WHERE` Clauses
 * `HAVING` Clauses
@@ -50,7 +43,7 @@ NB: Writing w/ quiz at end
 * `ORDER BY`
 * `LIMIT`
 
-## Intermediate SELECT Statements
+## Intermediate Queries
 * `JOIN`s
     * `INNER`
     * `LEFT OUTER`
@@ -64,7 +57,7 @@ NB: Writing w/ quiz at end
    * `DISTINCT`
 * `GROUP BY`
 
-## Advances SELECT Statements
+## Advanced Queries
 * Advanced `JOIN`s
 * Subqueries
 

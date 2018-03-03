@@ -1,5 +1,3 @@
-# Databases
-
 A database management system or **database** is a collection of tables, columns, and rows (or records). Together, these allow you to store various types of information and easily extract it when necessary.
 
 When you interact with a website or app, the software is most likely backed by a database. Databases allow software developers to persist data so that when you return to the website your work, scores, and other interactions are still there.
@@ -13,49 +11,3 @@ The structure or **schema** of a database is extremely important. A messy schema
 The example construction company database would have the following schema:
 
 > DEV: Create diagram of database
-
-# Basic Commands
-
-Run the snippet below to show the name of the database you currently have access to:
-
-```sql
-SHOW DATABASES;
-```
-
-To indicate which database you'd like to use, you would run the command `USE my_database;`. However, we've already setup your environment, so you do not need to do this.
-
-To explore the database's schema, you first list the tables in your database:
-
-```sql
-SHOW TABLES;
-```
-
-Then you can view the structure of a specific table:
-
-```sql
-DESCRIBE employees;
-```
-
-# Creating a Database
-
-The command to create a database named _a\_database_ is:
-
-```sql
-CREATE DATABASE construct_co;
-```
-
-If the database already exists the above command will fail. You can check that the database does not exist before creating it:
-
-```sql
-CREATE DATABASE IF NOT EXISTS construct_co;
-```
-
-# Deleting a Database
-
-Deleting a database is permanent, so you should be _absolutely_ certain you're deleting the right one before you run your command!
-
-You delete a database using the `DROP` keyword:
-
-```sql
-DROP DATABASE construct_co;
-```
