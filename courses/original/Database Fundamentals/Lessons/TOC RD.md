@@ -29,17 +29,6 @@ NB: Writing w/ quiz at end
 * Basic `SELECT` Statements
 * `WHERE` Clauses
 * `HAVING` Clauses
-* Conditionals:
-   * `AND`
-   * `OR`
-   * `AND`
-   * `LIKE`
-   * `IN`
-   * `NOT`
-   * `IS NULL`
-   * `IS NOT NULL`
-   * `BETWEEN`
-   * `EXISTS`
 * `ORDER BY`
 * `LIMIT`
 
@@ -60,6 +49,7 @@ NB: Writing w/ quiz at end
 ## Advanced Queries
 * Advanced `JOIN`s
 * Subqueries
+  * `EXISTS`
 
 ## Inserting Data
 * When you would want to use an `INSERT` statement
