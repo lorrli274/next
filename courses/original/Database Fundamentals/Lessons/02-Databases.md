@@ -16,8 +16,6 @@ The example construction company database would have the following schema:
 
 # Basic Commands
 
->  DEV: Use this content: https://www.codevolve.com/contents/f4e55617-0557-4836-9d0e-706e06aec1e1/edit
-
 Run the snippet below to show the name of the database you currently have access to:
 
 ```sql
