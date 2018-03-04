@@ -1,5 +1,3 @@
-> TODO: All the below need to have code blocks
-
 Columns can have a number of **constraints** placed on them to ensure that the data they contain is predictable. For example, you may want to:
 
 * Ensure that each employee has a name
