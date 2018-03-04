@@ -47,11 +47,6 @@ NB: Writing w/ quiz at end
 * `GROUP BY`
 * `HAVING` Clauses
 
-## Advanced Queries
-* Advanced `JOIN`s
-* Subqueries
-  * `EXISTS`
-
 ## Inserting Data
 * When you would want to use an `INSERT` statement
 * How to `INSERT` multiple records at once
@@ -71,11 +66,6 @@ NB: Writing w/ quiz at end
 * `UNION`
 * `UNION ALL`
 * `INTERSECT`
-
-## Advanced Database Concepts
-* Indexes
-* Database Transactions
-* Database Users
 
 ## What's Next?
 NB: Writing

@@ -1,0 +1,12 @@
+## Advanced Queries
+
+* Advanced `JOIN`s
+  * `CROSS JOIN`
+* Subqueries
+  * `EXISTS`
+
+## Advanced Database Concepts
+
+* Indexes
+* Database Transactions
+* Database Users
