@@ -11,3 +11,4 @@ The type of data stored in each column varies from column to column. Database so
 | `DATE`           | A date formatted as _YYYY-MM-DD_.        | 9999-12-31          |
 | `DATETIME`       | A date and time formatted as _YYYY-MM-DD HH:MM:SS_. | 9999-12-31 23:59:59 |
 
+TODO: Booleans

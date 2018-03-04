@@ -1,0 +1,24 @@
+The **`IN`** clause can be used to check if a value is any number of different values. It's often used to reduce the number of `OR` conditions in a query.
+
+For example, the following query uses an `IN` clause to find all the people with the last names _Hamill_, _Langworth_, and _Sauer_:
+
+### Query
+```sql
+SELECT * FROM employees WHERE last_name IN ('Hamill', 'Langworth', 'Sauer');
+```
+
+### Result
+> DEV: TODO 
+
+`IN` can be used with numeric data as well:
+
+### Query
+
+```sql
+SELECT * FROM employees WHERE hourly_wage IN (33, 34);
+```
+
+### Result
+
+> DEV TODO
+

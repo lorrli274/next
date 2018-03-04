@@ -28,7 +28,6 @@ NB: Writing w/ quiz at end
 ## Basic Queries
 * Basic `SELECT` Statements
 * `WHERE` Clauses
-* `HAVING` Clauses
 * `ORDER BY`
 * `LIMIT`
 
@@ -45,6 +44,7 @@ NB: Writing w/ quiz at end
    * `AVG`
    * `DISTINCT`
 * `GROUP BY`
+* `HAVING` Clauses
 
 ## Advanced Queries
 * Advanced `JOIN`s

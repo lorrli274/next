@@ -9,7 +9,7 @@ In a database used by a construction company, a query might be used to:
 * Find out which projects are running over budget
 * See which items are costing the company the most
 
-At it's most basic form, a query simply returns all the data from a table.
+At it's most basic form, a query simply returns all the data from a table:
 
 ### Query
 
@@ -29,7 +29,7 @@ SELECT * FROM employees;
 
 The `*` indicates that all columns should be returned (in the order they appear in the table).
 
-To limit the columns returned, the column names can be specified.
+To limit the columns returned, the column names can be specified:
 
 ### Query
 
@@ -49,7 +49,7 @@ SELECT id, first_name, last_name FROM employees;
 
 Specifying the column names results in only data only for specific columns being returned.
 
-Columns can also be **aliased** to make the output cleaner or to handle merged data that have the same columns names.
+Columns can also be **aliased** to make the output cleaner or to handle merged data that have the same columns names:
 
 ### Query
 
@@ -67,3 +67,14 @@ SELECT id as "ID Number", first_name as "First Name", last_name as "Last Name" F
 | 4         | Janice     | Mills     |
 | 5         | Lillie     | Donnelly  |
 
+Finally, a query doesn't necessarily need to return data in a table. The following query will return the number 150, the string "Databases are fun!", the current UTC date and time, and the current database user:
+
+### Query
+
+```sql
+SELECT 150, 'Databases are fun!', NOW(), CURRENT_USER;
+```
+
+### Result
+
+> DEV TODO
