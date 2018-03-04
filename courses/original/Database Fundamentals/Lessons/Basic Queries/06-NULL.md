@@ -81,7 +81,6 @@ WHERE  COALESCE(value, 0) < 1000;
 
 This can also be written using a `HAVING` clause:
 
-### Query
 ```sql
 SELECT employee_id,
        project_id,
