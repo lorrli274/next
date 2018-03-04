@@ -32,7 +32,8 @@ NB: Writing w/ quiz at end
 * `LIMIT`
 
 ## Intermediate Queries
-* `JOIN`s
+* `JOIN`ing data
+* More `JOIN`s
     * `INNER`
     * `LEFT OUTER`
     * `RIGHT OUTER`
