@@ -1,4 +1,4 @@
-[//]: # "content/Open Source/Gulp.MD"
+[//]: # "content/Open Source/Gulp.md"
 
 **Gulp** is a tool that helps you out with several tasks when it comes to web development. It's often used to do front end tasks like: 
 
