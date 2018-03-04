@@ -28,7 +28,6 @@ WHERE  employee_id = 1
 
 These conditions can also be combined:
 
-### Query
 ```sql
 SELECT *
 FROM   job_orders
