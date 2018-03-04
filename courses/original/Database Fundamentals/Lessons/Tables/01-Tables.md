@@ -20,4 +20,3 @@ Naming tables is an important part of database development. Oftentimes table nam
 
 A database will typically contain multiple tables, many of which will relate to one another to form the **schema** of the database.
 
-# 
