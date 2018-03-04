@@ -4,29 +4,21 @@ The **`NULL`** value in a database indicates that no data is present for a recor
 
 For example, here's the data currently in the _projects_ table:
 
-### Query
-
 ```sql
-SELECT * FROM projects ORDER BY value;
+SELECT *
+FROM   projects
+ORDER  BY value; 
 ```
-
-
-
-### Result
-
-> DEV: TODO
 
 Note that the record with ID 5 has no value set yet.
 
 As such, a query for all projects with a value below 1,000 will return nothing:
 
-### Query
-
 ```sql
-SELECT * FROM projects WHERE value < 1000;
+SELECT *
+FROM   projects
+WHERE  value < 1000; 
 ```
-
-### Result
 
 ```
 No records
@@ -79,18 +71,20 @@ When it makes sense for `NULL` values to be present at times, the **`COALESCE`**
 
 `COALESCE` can be used in both the `SELECT` column list and the `WHERE` condition list:
 
-### Query
 ```sql
-SELECT employee_id, project_id, COALESCE(value, 0) AS "value" FROM projects WHERE COALESCE(value, 0) < 1000;
+SELECT employee_id,
+       project_id,
+       COALESCE(value, 0) AS "value"
+FROM   projects
+WHERE  COALESCE(value, 0) < 1000; 
 ```
-### Result
-> DEV: TODO
 
 This can also be written using a `HAVING` clause:
 
-### Query
 ```sql
-SELECT employee_id, project_id, COALESCE(value, 0) AS "value" FROM projects HAVING value < 1000;
+SELECT employee_id,
+       project_id,
+       COALESCE(value, 0) AS "value"
+FROM   projects
+HAVING value < 1000; 
 ```
-### Result
-> DEV: TODO

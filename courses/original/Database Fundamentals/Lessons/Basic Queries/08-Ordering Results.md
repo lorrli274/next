@@ -4,53 +4,44 @@ The **`ORDER BY`** statement addresses this. It allows you to force the order th
 
 Here's a query using `ORDER BY` to return the employees by the date they were hired:
 
-### Query
 
 ```sql
-SELECT * FROM employees ORDER BY hire_date;
+SELECT *
+FROM   employees
+ORDER  BY hire_date;
 ```
-
-### Result
-
-> DEV TODO
 
 This returns the oldest hire first and the latest one last. This can be reversed by specifying the **direction** to order the results in:
 
-### Query
-
 ```sql
-SELECT * FROM employees ORDER BY hire_date DESC;
+SELECT *
+FROM   employees
+ORDER  BY hire_date DESC;
 ```
-
-### Result
-
-> DEV TODO
 
 Here, **`DESC`** has been used to sort the results in descending order. The default is ascending (**`ASC`**) order.
 
 Multiple `ORDER BY`s can be provided as well:
 
-### Query
 
 ```sql
-SELECT * FROM employees ORDER BY hire_date DESC, hourly_wage;
+SELECT *
+FROM   employees
+ORDER  BY hire_date DESC,
+          hourly_wage;
 ```
 
-### Result
-
-> DEV TODO
 
 One of the most useful ways to write an `ORDER BY` statement is using an alias. The query below will return the employees ordered by their last name and then first name:
 
-### Query
 
 ```sql
-SELECT last_name, first_name FROM employees ORDER BY 1, 2;
+SELECT last_name,
+       first_name
+FROM   employees
+ORDER  BY 1,
+          2;
 ```
-
-### Result
-
-> DEV TODO
 
 The `1` and `2` correspond to the position of the columns in the `SELECT` portion of the query. In other words:
 
