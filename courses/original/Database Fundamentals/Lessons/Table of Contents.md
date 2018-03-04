@@ -47,20 +47,10 @@ NB: Writing w/ quiz at end
 * `GROUP BY`
 * `HAVING` Clauses
 
-## Inserting Data
-* When you would want to use an `INSERT` statement
-* How to `INSERT` multiple records at once
-* How to `INSERT` from a `SELECT` statement
-
-## Updating Data
-* `UPDATE` a single record
-* `UPDATE` multiple records at once
-* `UPDATE` via a `JOIN`
-
-## Deleting Data
-* `DELETE` a single record
-* `DELETE` multiple records at once
-* `DELETE` via a `JOIN`
+## Modifying Data
+* `INSERT`
+* `UPDATE`
+* `DELETE`
 
 ## UNIONs and INTERSECTIONs
 * `UNION`

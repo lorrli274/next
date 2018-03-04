@@ -1,7 +1,7 @@
 New records can be added to a table using an **`INSERT`** statement, which has the following structure:
 
 ```sql
-INSERT INTO table (column1, column2...) VALUES (value1, value2, ...);
+INSERT INTO table_name (column1, column2...) VALUES (value1, value2, ...);
 ```
 
 Consider the following data for a new record in the _employees_ table:

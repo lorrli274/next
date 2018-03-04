@@ -13,6 +13,13 @@ With a `JOIN` you can answer questions such as:
 
 A `JOIN` relies on the relationship between two tables, namely, their primary and foreign key columns. `JOIN`s can be performed on other columns as well, but this can result in unexpected results if it doesn't fall under the designed use of the database.
 
+This is the basic structure of a query using a `JOIN`:
+
+```sql
+SELECT column1, column2
+FROM table1 JOIN table2 ON table1.id = table2.table1_id;
+```
+
 Here's an example of a simple `JOIN` between the _projects_ and _job_orders_ tables:
 
 ```sql

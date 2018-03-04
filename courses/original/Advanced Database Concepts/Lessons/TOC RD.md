@@ -20,5 +20,9 @@
 
 * INSERT or UPDATE
 * INSERTing from a SELECT
-* DELETEing via a JOIN
 * UPDATEing via a JOIN
+* DELETEing via a JOIN
+* Triggers
+* Views
+* Stored Procedures
+* DBMS?
