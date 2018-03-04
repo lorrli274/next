@@ -4,27 +4,18 @@ A Google search for _mysql_ returns (as of right now) "About 38,200,000 results"
 
 This is achieved using a **`LIMIT`** statement. Here's a query to check if a single employee who makes more than $50 an hour exists:
 
-### Query
-
 ```sql
-SELECT * FROM employees WHERE hourly_wage > 50 LIMIT 1;
+SELECT *
+FROM   employees
+WHERE  hourly_wage > 50
+LIMIT  1; 
 ```
-
-### Result
-
-> DEV TODO
 
 `LIMIT` can be extremely effective when combined with an `ORDER BY` clause, for example to return the 5 highest paid employees in the company:
 
-### Query
-
 ```sql
-SELECT * FROM employees ORDER BY hourly_wage DESC LIMIT 5;
+SELECT *
+FROM   employees
+ORDER  BY hourly_wage DESC
+LIMIT  5;
 ```
-
-### Result
-
-> DEV TODO
-
-
-
