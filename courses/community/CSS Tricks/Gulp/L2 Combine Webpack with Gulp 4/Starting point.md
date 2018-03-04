@@ -12,7 +12,7 @@ The `site` folder holds all your site's assets:
 ╚ package.json
 ```
 
-To tell Gulp where the tasks are located, we need to add flags in our *Package.json*:
+To tell gulp where the tasks are located, we need to add flags in our *Package.json*:
 ​    
 ```node.js    
 "scripts": {
