@@ -3,7 +3,9 @@ The **`BETWEEN`** condition can be used to filter results to values within a ran
 ### Query
 
 ```sql
-SELECT * FROM employees WHERE start_date BETWEEN 'XXXX-XX-XX' AND 'YYYY-YY-YY';
+SELECT *
+FROM   employees
+WHERE  start_date BETWEEN 'XXXX-XX-XX' AND 'YYYY-YY-YY';
 ```
 
 ### Result
