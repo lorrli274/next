@@ -2,7 +2,7 @@
 
 ```sh
 #!/bin/bash
-mysql < "REPLACE INTO projects (id, name, value, start_date, end_date) VALUES (6, 'King Burgers Shop', 80000, '2018-03-15', '2018-12-01')"
+mysql < "REPLACE INTO projects (id, name, value, start_date, end_date) VALUES (6, 'King Burgers Shop', 80000, '2018-03-15', '2018-12-01');"
 ```
 
 All `JOIN`s are not created equal! The differences between each type are illustrated below using the _projects_ and *job_orders* tables.
@@ -13,15 +13,33 @@ All `JOIN`s are not created equal! The differences between each type are illustr
 
 By default, a `JOIN` in a query is an **`INNER JOIN`**. This `JOIN` limits the data returned to records that appear in both tables.
 
+A new project called "King Burgers Shop" has been added to the _projects_ table (`SELECT` to view). The following query is designed to show each project's name and a count of the number of job orders that have been placed for that project:
+
+```sql
+SELECT name, COUNT(jo.id) FROM projects p INNER JOIN job_orders jo ON p.id = jo.project_id GROUP BY 1;
+```
+
+However, the new project is not shown! This is because there are not job orders for it yet. As shown in the diagram above, only the data that appears in both tables will be returned
+
 ## `LEFT JOIN`
 
 > DEV: TODO diagram
+
+To include all the data from the **left** table (_projects_) regardless of whether or not it has records in the **right** table (*job_orders*) a `LEFT JOIN` can be used:
+
+```sql
+SELECT name, COUNT(jo.id) FROM projects p LEFT JOIN job_orders jo ON p.id = jo.project_id GROUP BY 1;
+```
+
+Now, the new project is shown along with its count of job orders.
 
 ##`RIGHT JOIN`
 
 >  DEV: TODO diagram
 
-##`FULL OUTER JOIN` 
+A **`RIGHT JOIN`** is similar to a `LEFT JOIN`, however the right table's data (*job_orders*) is used as the starting point. Here the tables are swapped in the query, but the same result is returned because a `RIGHT JOIN` is used:
 
-> DEV: TODO diagram
+```sql
+SELECT name, COUNT(jo.id) FROM job_orders jo RIGHT JOIN projects p ON p.id = jo.project_id GROUP BY 1;
+```
 
