@@ -39,4 +39,4 @@ All courses will ideally include at least several hands-on exercises, projects, 
 ## License
 Unless otherwise noted, all content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. You are free to use, modify and distribute content in this for non-commerical purposes, provided you link back to this repository using the appropriate URL from [this list](attribution-shortlinks.md) and release it under the same license.
 
-If you would like to use the content in this repository for commercial purposes, please [contact us](mailto:next@codevolve.com).
+If you would like to use the content in this repository for commercial purposes or are not sure if your use would be considered commercial, please [contact us](mailto:next@codevolve.com).
