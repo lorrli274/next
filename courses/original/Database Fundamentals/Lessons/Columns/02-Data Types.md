@@ -10,5 +10,4 @@ The type of data stored in each column varies from column to column. Database so
 | `BLOB` or `TEXT` | A large storage type for text or other data (e.g. JSON). `BLOB`s are case sensitive when extracting data while `TEXT`s are not. | 65535 characters    |
 | `DATE`           | A date formatted as _YYYY-MM-DD_.        | 9999-12-31          |
 | `DATETIME`       | A date and time formatted as _YYYY-MM-DD HH:MM:SS_. | 9999-12-31 23:59:59 |
-
-TODO: Booleans
+| `BOOLEAN` or `BOOL`        | An alias of `TINYINT(1)` used to store boolean (`TRUE`/`FALSE`) values. |1|
