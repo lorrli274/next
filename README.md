@@ -31,12 +31,12 @@ All courses will ideally include at least several hands-on exercises, projects, 
 ## I Want To...
 
 * **See a specific course built:** Open an issue for the course with as much detail as possible.
-* **Build a course:** Open an issue and assign yourself to it.
-* **Contribute to a course:** Check out the open Issues to find courses related to your area of expertise.
+* **Build a course:** Open an issue and assign yourself to it, then fork this repo and get started!
+* **Contribute to a course:** Check out the Issues or browse the courses to find courses related to your area of expertise.
 * **See the courses you have built already:** Check out [the website](https://www.next.xyz).
 * **Just learn more about this:** You can get in touch with us [here](mailto:next@codevolve.com).
 
 ## License
 Unless otherwise noted, all content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. You are free to use, modify and distribute content in this for non-commerical purposes, provided you link back to this repository using the appropriate URL from [this list](attribution-shortlinks.md) and release it under the same license.
 
-If you would like to use the content in this repository for commercial purposes, please [contact us](mailto:hello@codevolve.com).
+If you would like to use the content in this repository for commercial purposes, please [contact us](mailto:next@codevolve.com).
