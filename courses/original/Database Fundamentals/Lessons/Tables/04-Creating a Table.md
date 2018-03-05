@@ -10,12 +10,13 @@ To create a table, you first need to plan its structure. This is best done by an
 The snippet below will create a table based on our example above:
 
 ```sql
-create table projects (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(300) NOT NULL,
-  value FLOAT(10, 2) NOT NULL,
-  start_date TIMESTAMP NOT NULL,
-  end_date TIMESTAMP NOT NULL
-);
+CREATE TABLE projects
+  (
+     id         INT(6) UNSIGNED auto_increment PRIMARY KEY,
+     name       VARCHAR(300) NOT NULL,
+     value      FLOAT(10, 2) NOT NULL,
+     start_date TIMESTAMP NOT NULL,
+     end_date   TIMESTAMP NOT NULL
+  );
 ```
 
