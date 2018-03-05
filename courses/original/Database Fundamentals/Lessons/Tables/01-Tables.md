@@ -24,4 +24,4 @@ Naming tables is an important part of database development. Oftentimes table nam
 
 A database will typically contain multiple tables, many of which will relate to one another to form the **schema** of the database.
 
-info> Fun Fact: A relational database is very structured, but there are also other less structured databases, such as graph databases.
+info> **Fun Fact:** A relational database is very structured, but there are also other less structured databases, such as graph databases, for example [Neo4j](https://neo4j.com/).
