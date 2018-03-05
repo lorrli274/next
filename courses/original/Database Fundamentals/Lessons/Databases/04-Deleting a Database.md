@@ -3,5 +3,5 @@ Deleting a database is permanent, so you should be absolutely certain you're del
 You delete a database using a `DROP DATABAASE` statement:
 
 ```sql
-DROP DATABASE construct_co;
+DROP DATABASE a_database;
 ```
