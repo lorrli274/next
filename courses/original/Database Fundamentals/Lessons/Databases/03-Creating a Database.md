@@ -1,4 +1,4 @@
-The command to create a database named _a\_database_ is:
+The command to create a database named *a_database* is:
 
 ```sql
 CREATE DATABASE construct_co;
