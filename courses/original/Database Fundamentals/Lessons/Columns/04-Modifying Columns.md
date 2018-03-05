@@ -15,8 +15,7 @@ The position of the new column can be changed using the **`AFTER`** keyword:
 
 ```sql
 ALTER TABLE employees
-  ADD COLUMN phone_number VARCHAR(20)
-    AFTER last_name;
+  ADD COLUMN phone_number VARCHAR(20) AFTER last_name;
 ```
 
 This will insert the *phone_number* column directly after the *last_name* column. Instead of `AFTER`, **`FIRST`** can be used to insert the column as the first column in the table.
