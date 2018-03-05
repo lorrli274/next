@@ -1,4 +1,4 @@
-The superpower of databases is in the relationships between unique types of data. Organizing data in a **relational** manner allows complex questions to be answered easily and while providing a clean and fast way to organize different types of data.
+The superpower of databases is in the relationships between different types of data. Organizing data in a **relational** manner allows complex questions to be answered easily and while providing a clean and fast way to organize different types of data.
 
 When describing a database, it's comming to say things like:
 
@@ -7,13 +7,24 @@ When describing a database, it's comming to say things like:
 * "Many job orders belong to one employee."
 * "Many employees have many projects."
 
-In these examples you would be describing a 1-to-many (1:M), 1-to-1 (1:1), many-to-1 (M:1), and many-to-many (M:N) relationships, respectively.
+In these examples you would be describing a **1-to-many (1:M)**, **1-to-1 (1:1)**, **many-to-1 (M:1)**, and **many-to-many (M:N) relationships**, respectively.
 
-These are diagrammed as follows:
+There are examples of some of these in the diagram below:
 
-> DEV: Diagram the above relationships
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Database%20Fundamentals/erd1.png)
 
-info> Note the three prongs at the "many" side of each relationship.
+<div class="caption">The relationships between different tables in a database.</div>
+
+In this diagram, there are 4 relationships:
+
+|Type|Parent Table|Child Table|Explanation
+|---|---|---|---|
+|1:M|_projects_|*job_orders*|One project has many job orders placed for it.|
+|1:M|_employees_|*job_orders*|One employee can place many job orders.|
+|M:M|_projects_|*project_employees*|A project can have many employees.|
+|M:M|_employees_|*project_employees*|An employee can work on many projects.|
+
+The *job_orders* and *project_employees* tables are said to "belong to" the *projects* and *employees* tables (or that they are **child tables**). They each have a 1:M relationship with their parent tables.
 
 Deciding what the relationships are in your database requires you to answer questions about the structure of your application, such as:
 
@@ -36,8 +47,4 @@ A **foreign key** or **FK** references a primary key in another table. When a ta
 
 A table may contain more than one foreign keys, making it the child of more than one other table.
 
-info> In the diagrams above, the keys are marked with _PK_ and _FK_.
-
-> DEV: Make sure that is correct ^
-
-# 
+In the diagrams above, the keys are marked with _PK_ and _FK_.
