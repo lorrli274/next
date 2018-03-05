@@ -31,8 +31,8 @@ These conditions can also be combined:
 ```sql
 SELECT *
 FROM   job_orders
-WHERE  ( employee_id = 1
-          OR project_id = 4 )
+WHERE  (employee_id = 1
+        OR project_id = 4)
        AND price > 500; 
 ```
 
