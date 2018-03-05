@@ -20,10 +20,6 @@ FROM   projects
 WHERE  value < 1000; 
 ```
 
-```
-No records
-```
-
 To address this, there are two things that can be done: add a default value or catch nulls when querying.
 
 ## Default Values
