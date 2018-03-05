@@ -46,16 +46,13 @@ NB: Writing w/ quiz at end
    * `DISTINCT`
 * `GROUP BY`
 * `HAVING` Clauses
+* `UNION`
+* `UNION ALL`
 
 ## Modifying Data
 * `INSERT`
 * `UPDATE`
 * `DELETE`
-
-## UNIONs and INTERSECTIONs
-* `UNION`
-* `UNION ALL`
-* `INTERSECT`
 
 ## What's Next?
 NB: Writing
