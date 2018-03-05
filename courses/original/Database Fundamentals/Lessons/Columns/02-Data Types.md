@@ -1,4 +1,6 @@
-The type of data stored in each column varies from column to column. Database software allow you to pick from a number of different types when designing your database. The commonly used ones are:
+The type of data stored in each column varies from column to column. Databases allow you to pick from a number of different types when designing your database.
+
+The commonly used ones are:
 
 | Type             | Stores                                   | Maximum             |
 | ---------------- | ---------------------------------------- | ------------------- |
