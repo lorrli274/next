@@ -2,7 +2,7 @@ The type of data stored in each column varies from column to column. Database so
 
 | Type             | Stores                                   | Maximum             |
 | ---------------- | ---------------------------------------- | ------------------- |
-| `INT`            | An integer between -2147483648 and  2147483647. | 11 numbers          |
+| `INT`            | An integer between -2147483648 and  2147483647. | <nobr>11 numbers</nobr>          |
 | ``FLOAT(M,D)``   | A floating-point number with *M* total digits and up to *D* decimal places. | 24 decimal places   |
 | ``DOUBLE(M, D)`` | A floating-point number with *M* total digits and up to *D* decimal places (but 2x the size of a `FLOAT`) | 53 decimal places   |
 | `CHAR(M)`        | A fixed-length string _M_ characters long. Uses all _M_ characters, padding the string with ending spaces. | 255 characters      |
