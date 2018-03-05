@@ -16,7 +16,12 @@ By default, a `JOIN` in a query is an **`INNER JOIN`**. This `JOIN` limits the d
 A new project called "King Burgers Shop" has been added to the _projects_ table (`SELECT` to view). The following query is designed to show each project's name and a count of the number of job orders that have been placed for that project:
 
 ```sql
-SELECT name, COUNT(jo.id) FROM projects p INNER JOIN job_orders jo ON p.id = jo.project_id GROUP BY 1;
+SELECT name,
+       Count(jo.id)
+FROM   projects p
+       INNER JOIN job_orders jo
+               ON p.id = jo.project_id
+GROUP  BY 1; 
 ```
 
 However, the new project is not shown! This is because there are not job orders for it yet. As shown in the diagram above, only the data that appears in both tables will be returned
@@ -28,7 +33,12 @@ However, the new project is not shown! This is because there are not job orders 
 To include all the data from the **left** table (_projects_) regardless of whether or not it has records in the **right** table (*job_orders*) a `LEFT JOIN` can be used:
 
 ```sql
-SELECT name, COUNT(jo.id) FROM projects p LEFT JOIN job_orders jo ON p.id = jo.project_id GROUP BY 1;
+SELECT name,
+       Count(jo.id)
+FROM   projects p
+       LEFT JOIN job_orders jo
+              ON p.id = jo.project_id
+GROUP  BY 1; 
 ```
 
 Now, the new project is shown along with its count of job orders.
@@ -40,6 +50,11 @@ Now, the new project is shown along with its count of job orders.
 A **`RIGHT JOIN`** is similar to a `LEFT JOIN`, however the right table's data (*job_orders*) is used as the starting point. Here the tables are swapped in the query, but the same result is returned because a `RIGHT JOIN` is used:
 
 ```sql
-SELECT name, COUNT(jo.id) FROM job_orders jo RIGHT JOIN projects p ON p.id = jo.project_id GROUP BY 1;
+SELECT name,
+       Count(jo.id)
+FROM   job_orders jo
+       RIGHT JOIN projects p
+               ON p.id = jo.project_id
+GROUP  BY 1; 
 ```
 
