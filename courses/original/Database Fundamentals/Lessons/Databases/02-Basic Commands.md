@@ -17,5 +17,3 @@ Then you can view the structure of a specific table:
 ```sql
 DESCRIBE employees;
 ```
-
-# 
