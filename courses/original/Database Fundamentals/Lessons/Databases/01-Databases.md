@@ -26,6 +26,11 @@ That SQL statement (also called a **query**) will display the data stored in the
 |Sierra|Reeves|
 |Christian|Herman|
 
+This query could be run from the command line, such as the `mysql` prompt. However, this lesson environment provides you with a simplified way to interact with your database.
+
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Database%20Fundamentals/simple-erd1.png)
+
+<div class="caption">The relationships between the tables in a database.</div>
 
 Many databases are **relational**, which means that the data in the database relates to one another. For example, a database could contain information for a construction company. It can track the company's projects, employees, and who is working on what project. A relational database is very structured, but there are also other less structured databases, such as graph databases.
 
