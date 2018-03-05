@@ -1,6 +1,6 @@
 Each **column** of a table stores a specific attribute about a row. A table can have as many columns as you'd like, but tables with too many columns are good candidates for splitting into multiple tables.
 
-In a table storing information about employees, _first\_name_ is a potential column:
+In a table storing information about employees, *first_name* is a potential column:
 
 | first_name |
 | ---------- |
@@ -10,7 +10,7 @@ In a table storing information about employees, _first\_name_ is a potential col
 | Ali        |
 | Lathan     |
 
-A column should only ever store data for one attribute. For example, you would never want to sometimes store an employee's last name in a column called _first\_name_.
+A column should only ever store data for one attribute. For example, you would never want to sometimes store an employee's last name in a column called *first_name*.
 
 Deciding what to store in each column is important. You may find yourself asking these questions:
 
