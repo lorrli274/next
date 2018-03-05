@@ -1,6 +1,6 @@
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Database%20Fundamentals/employees-table.png)
 
-<div class="caption">A database table for storing data on employees.<div>
+<div class="caption">A database table for storing data on employees.</div>
 
 Each **table** in a database stores a single type of data. Conceptually, it's a 2D combination of the typical columns and rows you might find in a program like Excel. Here's what a table storing data on employees might look like:
 
