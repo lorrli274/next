@@ -1,10 +1,3 @@
-* `COUNT`
-* `SUM`
-* `MIN`
-* `MAX`
-* `AVG`
-* `DISTINCT`
-
 A powerful facet of querying is the ability to aggregate data on the fly to answer questions without having to manually do the calculations. There are a number of different built-in aggregation functions, a complete list of which can be found [here](https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html). The common ones are explained below!
 
 ## `COUNT`
