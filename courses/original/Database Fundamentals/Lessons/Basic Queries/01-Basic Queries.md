@@ -12,8 +12,7 @@ In a database used by a construction company, a query might be used to:
 At it's most basic form, a query simply returns all the data from a table:
 
 ```sql
-SELECT *
-FROM   employees; 
+SELECT * FROM employees;
 ```
 
 The `*` indicates that all columns should be returned (in the order they appear in the table).
@@ -21,10 +20,7 @@ The `*` indicates that all columns should be returned (in the order they appear 
 To limit the columns returned, the column names can be specified:
 
 ```sql
-SELECT id,
-       first_name,
-       last_name
-FROM   employees; 
+SELECT id, first_name, last_name FROM employees; 
 ```
 
 Specifying the column names results in only data only for specific columns being returned.
@@ -41,8 +37,5 @@ FROM   employees;
 Finally, a query doesn't necessarily need to return data in a table. The following query will return the number 150, the string "Databases are fun!", the current UTC date and time, and the current database user:
 
 ```sql
-SELECT 150,
-       'Databases are fun!',
-       Now(),
-       CURRENT_USER; 
+SELECT 150, 'Databases are fun!', NOW(), CURRENT_USER; 
 ```
