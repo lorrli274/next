@@ -1,4 +1,4 @@
-Mongoose requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
+Mongoose requires a connection to a **MongoDB database**. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
     
  ```js   
 //Import the mongoose module
