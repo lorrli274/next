@@ -1,4 +1,4 @@
-Open **/App.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database url string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from from mLab).
+Open */App.js* (in the root of your project) and copy the following text below where you declare the Express application object (after the line `var app = express();`). Replace the database url string ('insert_your_database_url_here') with the location URL representing your own database (i.e. using the information from from mLab).
     
 ```js    
 //Set up mongoose connection
