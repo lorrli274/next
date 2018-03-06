@@ -18,7 +18,7 @@ You have a working Express application, serving itself to _localhost:3000_.
 
 You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
     
-```js    
+```bash
 >SET DEBUG=express-locallibrary-tutorial:* & npm start
 
 > express-locallibrary-tutorial@0.0.0 start D:express-locallibrary-tutorial
