@@ -1,4 +1,4 @@
-Finally, copy the `BookInstance` schema code shown below and paste it into your *./models/Bookinstance.js* file. The `BookInstance` represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details.
+Finally, copy the **`BookInstance`** schema code shown below and paste it into your *./models/Bookinstance.js* file. The `BookInstance` represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details.
     
 ```js    
 var mongoose = require('mongoose');
