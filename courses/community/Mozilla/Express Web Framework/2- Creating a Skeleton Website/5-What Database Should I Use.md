@@ -1,1 +1,1 @@
-The generated code doesn't use/include any databases. _Express_ apps can use any database mechanism supported by _Node_ (_Express_ itself doesn't define any specific additional behaviour/requirements for database management).
+The generated code doesn't use/include any **databases**. Express apps can use any database mechanism supported by Node (Express itself doesn't define any specific additional behaviour/requirements for database management).
