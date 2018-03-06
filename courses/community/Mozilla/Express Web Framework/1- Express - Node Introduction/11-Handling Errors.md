@@ -11,6 +11,4 @@ These can return any content required, but must be called after all other `app.u
 
 Express comes with a built-in error handler, which takes care of any remaining errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. If you pass an error to `next()` and you do not handle it in an error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace.
 
-The stack trace is not included in the production environment. To run it in production mode you need to set the the environment variable `NODE_ENV` to '`production'`.
-
-HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so.
+info> The stack trace is not included in the production environment. To run it in production mode you need to set the the environment variable `NODE_ENV` to '`production'`. Also, HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so.
