@@ -1,4 +1,4 @@
-Copy the `Book` schema code shown below and paste it into your *./models/Book.js* file. Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
+Copy the **`Book`** schema code shown below and paste it into your *./models/Book.js* file. Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
     
 ```js    
 var mongoose = require('mongoose');
