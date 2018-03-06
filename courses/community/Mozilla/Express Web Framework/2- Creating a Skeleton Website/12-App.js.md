@@ -7,9 +7,9 @@ var app = express();
 module.exports = app;
  ```   
 
-Back in the **www** entry point file above, it is this `module.exports` object that is supplied to the caller when this file is imported.
+Back in the www entry point file above, it is this `module.exports` object that is supplied to the caller when this file is imported.
 
-Lets work through the **App.js** file in detail. First we import some useful node libraries into the file using `require()`, including _express_, _serve-favicon_, _morgan_, _cookie-parser_ and _body-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
+Lets work through the *App.js* file in detail. First we import some useful node libraries into the file using `require()`, including express, serve-favicon, morgan, cookie-parser and body-parser that we previously downloaded for our application using NPM; and path, which is a core Node library for parsing file and directory paths.
     
 ```js    
 var express = require('express');
@@ -27,9 +27,9 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 ```    
 
-At this point we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
+info> At this point we have just imported the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
-Next we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
+Next we create the `app` object using our imported express module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
     
 ```js    
 var app = express();
@@ -39,7 +39,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```    
 
-The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `Express.static` middleware to get _Express_ to serve all the static files in the directory **/public** in the project root.
+The next set of functions call `app.use()` to add the middleware libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `Express.static` middleware to get_Express to serve all the static files in the directory **/public** in the project root.
     
 ```js    
 // uncomment after placing your favicon in /public
@@ -51,14 +51,14 @@ app.use(cookieParser());
 **app.use(express.static(path.join(__dirname, 'public')));**
 ```    
 
-Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
+Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different parts of the site:
     
 ```js    
 app.use('/', index);
 app.use('/users', users);
 ```    
 
-The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
+info> The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported users module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
 
 The last middleware in the file adds handler methods for errors and HTTP 404 responses.
     
@@ -82,7 +82,7 @@ app.use(function(err, req, res, next) {
 });
 ```    
 
-The Express application object (app) is now fully configured. The last step is to add it to the module exports (this is what allows it to be imported by **/bin/www**).
+The Express application object (app) is now fully configured. The last step is to add it to the module exports (this is what allows it to be imported by */bin/www*).
     
 ```js    
 module.exports = app;
