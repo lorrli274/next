@@ -1,6 +1,6 @@
-For the sample _Local Library_ app we're going to build, we'll create a project named _express-locallibrary-tutorial_ using the _Pug_ template library and no CSS stylesheet engine.
+For the sample Local Library app we're going to build, we'll create a project named Express-locallibrary-tutorial using the **Pug** template library and no CSS stylesheet engine.
 
-First navigate to where you want to create the project and then run the _Express Application Generator_ in the command prompt as shown:
+First navigate to where you want to create the project and then run the Express Application Generator in the command prompt as shown:
     
 ```js    
 express express-locallibrary-tutorial --view=pug
@@ -34,4 +34,4 @@ run the app:
  > SET DEBUG=express-locallibrary-tutorial:* & npm start
 ```
 
-At the end of the output the generator provides instructions on how you install the dependencies (as listed in the **Package.json** file) and then how to run the application (the instructions above are for Windows; on Linux/macOS they will be slightly different).
+At the end of the output the generator provides instructions on how you install the dependencies (as listed in the *Package.json* file) and then how to run the application.
