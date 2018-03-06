@@ -1,4 +1,4 @@
-You should already have installed the generator as part of setting up a Node development environment. As a quick reminder, you install the generator tool site-wide using the NPM package manager, as shown:
+You should already have installed the **generator** as part of setting up a Node development environment. As a quick reminder, you install the generator tool site-wide using the NPM package manager, as shown:
     
 ```js    
 npm install express-generator -g
@@ -25,7 +25,7 @@ The generator has a number of options, which you can view on the command line us
     -f, --force          force on non-empty directory
 ```    
 
-You can simply specify `express` to create a project inside the _current_ directory using the _Jade_ view engine and plain CSS (if you specify a directory name then the project will be created in a sub-folder with that name).
+You can simply specify `express` to create a project inside the _Current_ directory using the Jade view engine and plain CSS (if you specify a directory name then the project will be created in a sub-folder with that name).
     
 ```js    
 express
@@ -33,4 +33,4 @@ express
 
 You can also choose a view (template) engine using `\--view` and/or a CSS generation engine using `\--css`.
 
-The other options for choosing template engines (e.g. `\--hogan`, `\--ejs`, `\--hbs` etc.) are deprecated. Use `\--view` (or` -v`)!
+info> The other options for choosing template engines (e.g. `\--hogan`, `\--ejs`, `\--hbs` etc.) are deprecated. Use `\--view` (or` -v`)!
