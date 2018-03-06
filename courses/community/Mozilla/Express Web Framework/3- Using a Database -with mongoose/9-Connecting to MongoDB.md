@@ -1,4 +1,4 @@
-_Mongoose_ requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
+Mongoose requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
     
  ```js   
 //Import the mongoose module
@@ -18,4 +18,4 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
 
-If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+info> If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
