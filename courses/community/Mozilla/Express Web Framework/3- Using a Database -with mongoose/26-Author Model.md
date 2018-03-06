@@ -1,4 +1,4 @@
-Copy the `Author` schema code shown below and paste it into your *./models/Author.js* file. The scheme defines an author has having `String` SchemaTypes for the first and family names, that are required and have a maximum of 100 characters, and `Date` fields for the date of birth and death.
+Copy the **`Author`** schema code shown below and paste it into your *./models/Author.js* file. The scheme defines an author has having `String` SchemaTypes for the first and family names, that are required and have a maximum of 100 characters, and `Date` fields for the date of birth and death.
     
  ```js   
 var mongoose = require('mongoose');
