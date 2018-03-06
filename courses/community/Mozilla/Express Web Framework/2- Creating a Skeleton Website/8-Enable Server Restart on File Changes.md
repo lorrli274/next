@@ -25,6 +25,5 @@ Because the tool isn't installed globally we can't launch it from the command li
 
 We can now start the server in almost exactly the same way as previously, but with the devstart command specified:
 
-Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
-
+info> Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page. 
 We now have to call "`npm run __`" rather than just `npm start`, because "start" is actually an NPM command that is mapped to the named script. We could have replaced the command in the start script but we only want to use nodemon during development, so it makes sense to create a new script command.
