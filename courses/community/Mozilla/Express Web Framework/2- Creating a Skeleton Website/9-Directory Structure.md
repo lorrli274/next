@@ -1,4 +1,4 @@
-The generated project, now that you have installed dependencies, has the following file structure (files are the items **not** prefixed with "/"). The **Package.json** file defines the application dependencies and other information. It also defines a startup script that will call the application entry point, the JavaScript file **/bin/www**. This sets up some of the application error handling and then loads **App.js** to do the rest of the work. The app routes are stored in separate modules under the **routes/** directory. The templates are stored under the /**views** directory.
+The generated project, now that you have installed dependencies, has the following file structure (files are the items not prefixed with "/"). The *Package.json* file defines the application dependencies and other information. It also defines a startup script that will call the application entry point, the JavaScript file */bin/www*. This sets up some of the application error handling and then loads **App.js** to do the rest of the work. The app routes are stored in separate modules under the *routes/* directory. The templates are stored under the */views* directory.
     
 ```js    
 /express-locallibrary-tutorial
@@ -23,4 +23,4 @@ The generated project, now that you have installed dependencies, has the followi
  ```       
     
 
-The following sections describe the files in a little more detail.
+The following steps describe the files in a little more detail.
