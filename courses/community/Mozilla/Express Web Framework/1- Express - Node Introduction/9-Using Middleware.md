@@ -6,7 +6,7 @@ Most apps will use third-party middleware in order to simplify common web develo
 
 To use third party middleware you first need to install it into your app using NPM. For example, to install the [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
     
-```js    
+```bash    
 $ npm install morgan
 ```    
 
