@@ -1,3 +1,5 @@
+danger> Need someone it tech to know if we need this step or not
+
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDb database that we can use to store our library data.
 
 For this tutorial we're going to use mLab's free cloud-hosted "sandbox" database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because mLab is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include Compose, ScaleGrid and MongoDB Atlas).
