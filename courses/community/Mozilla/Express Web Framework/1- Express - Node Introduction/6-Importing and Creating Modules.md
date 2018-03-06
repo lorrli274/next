@@ -9,7 +9,7 @@ var app = express();
 
 You can also create your own modules that can be imported in the same way.
 
-You will want to create your own modules, because this allows you to organise your code into managable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.
+info> You will want to create your own modules, because this allows you to organise your code into managable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.
 
 To make objects available outside of a module you just need to assign them to the `exports` object. For example, the **Square.js** module below is a file that exports `area()` and `perimeter()` methods:
     
@@ -25,7 +25,7 @@ var square = require('./square'); // Here we require() the name of the file with
 console.log('The area of a square with a width of 4 is ' + square.area(4));
 ```
 
-You can also specify an absolute path to the module (or a name, as we did initially).
+info> You can also specify an absolute path to the module (or a name, as we did initially).
 
 If you want to export a complete object in one assignment instead of building it one property at a time, assign it to `module.exports` as shown below (you can also do this to make the root of the exports object a constructor or other function):
     
