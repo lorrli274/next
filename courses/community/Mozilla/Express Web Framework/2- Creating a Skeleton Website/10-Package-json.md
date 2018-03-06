@@ -1,4 +1,4 @@
-The **Package.json** file defines the application dependencies and other information:
+The *Package.json* file defines the application dependencies and other information:
     
 ```js    
 {
@@ -24,7 +24,7 @@ The **Package.json** file defines the application dependencies and other informa
 }
 ```    
 
-The dependencies include the _express_ package and the package for our selected view engine (_pug_). In addition, we have the following packages that are useful in many web applications:
+The dependencies include the express package and the package for our selected view engine (pug). In addition, we have the following packages that are useful in many web applications:
 
 * body-parser: This parses the body portion of an incoming HTTP request and makes it easier to extract different parts of the contained information. For example, you can use this to read `POST` parameters.
 * cookie-parser: Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
@@ -32,7 +32,7 @@ The dependencies include the _express_ package and the package for our selected 
 * morgan: An HTTP request logger middleware for node.
 * serve-favicon: Node middleware for serving a favicon (this is the icon used to represent the site inside the browser tab, bookmarks, etc.).
 
-The scripts section defines a "_start_" script, which is what we are invoking when we call `npm start` to start the server. From the script definition you can see that this actually starts the JavaScript file **./bin/www** with _node_. It also defines a "_devstart_" script, which we invoke when calling `npm run devstart` instead. This starts the same **./bin/www** file, but with _nodemon_ rather than _node_.
+The scripts section defines a "star" script, which is what we are invoking when we call `npm start` to start the server. From the script definition you can see that this actually starts the JavaScript file *./bin/www* with node. It also defines a "devstart" script, which we invoke when calling `npm run devstart` instead. This starts the same *./bin/www* file, but with nodemon rather than node.
     
 ```js    
 "scripts": {
