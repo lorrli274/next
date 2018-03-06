@@ -3,7 +3,7 @@ At this point we have a complete skeleton project. The website doesn't actually 
 1. First install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **Package.json** file). 
 
 ```js
-    cd express-locallibrary-tutorial
+cd express-locallibrary-tutorial
 npm install
 ```
 
