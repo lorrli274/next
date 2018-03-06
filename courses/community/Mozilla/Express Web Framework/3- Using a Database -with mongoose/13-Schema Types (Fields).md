@@ -1,18 +1,18 @@
-A schema can have an arbitrary number of fields — each one represents a field in the documents stored in _MongoDB_. An example schema showing many of the common field types and how they are declared is shown below.
+A **schema** can have an arbitrary number of fields — each one represents a field in the documents stored in MongoDB. An example schema showing many of the common field types and how they are declared is shown below.
     
 ```js    
 var schema = new Schema(
 {
-  name: **String**,
-  binary: **Buffer**,
-  living: **Boolean**,
+  name: String,
+  binary: Buffer,
+  living: Boolean,
   updated: { type: **Date**, default: Date.now },
-  age: { type: **Number**, min: 18, max: 65, required: true },
-  mixed: **Schema.Types.Mixed**,
-  _someId: **Schema.Types.ObjectId**,
-  array: **[]**,
-  ofString: [**String**], // You can also have an array of each of the other types too.
-  nested: { stuff: { type: **String**, lowercase: true, trim: true } }
+  age: { type: Number**, min: 18, max: 65, required: true },
+  mixed: Schema.Types.Mixed,
+  _someId: Schema.Types.ObjectId,
+  array: [],
+  ofString: [String], // You can also have an array of each of the other types too.
+  nested: { stuff: { type: String, lowercase: true, trim: true } }
 })
 ```
 
@@ -24,8 +24,8 @@ Most of the SchemaTypes (the descriptors after "type:" or after field names) are
 
 The code also shows both ways of declaring a field:
 
-* Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary `and `living`).
-* Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like: 
+* Field name and type as a key-value pair (i.e. as done with fields `name`, `binary `and `living`).
+* Field name followed by an object defining the `type`, and any other options for the field. Options include things like: 
     * default values.
     * built-in validators (e.g. max/min values) and custom validation functions.
     * Whether the field is required
