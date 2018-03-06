@@ -1,4 +1,4 @@
-To create a record you can define an instance of the model and then call `save()`. The examples below assume SomeModel is a model (with a single field "name") that we have created from our schema.
+To create a **record** you can define an instance of the model and then call `save()`. The examples below assume SomeModel is a model (with a single field "name") that we have created from our schema.
     
 ```js    
 // Create an instance of model SomeModel
