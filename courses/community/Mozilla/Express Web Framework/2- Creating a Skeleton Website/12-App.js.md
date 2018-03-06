@@ -29,7 +29,7 @@ var users = require('./routes/users');
 
 info> At this point we have just imported the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
-Next we create the `app` object using our imported express module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
+Next we create the `app` object using our imported express module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder */views*). Then we set the '`view engine`' value to specify the template library (in this case "pug").
     
 ```js    
 var app = express();
