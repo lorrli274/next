@@ -13,7 +13,7 @@ npm install
 
 You should see a browser page that looks like this:
 
-[](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/ExpressGeneratorSkeletonWebsite.png)
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/ExpressGeneratorSkeletonWebsite.png)
 
 Browser for default Express app generator website
 
