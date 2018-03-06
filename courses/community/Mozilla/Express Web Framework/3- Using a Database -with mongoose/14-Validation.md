@@ -1,4 +1,4 @@
-Mongoose provides built-in and custom validators, and synchronous and asynchronous validators. It allows you to specify both the acceptable range or values and the error message for validation failure in all cases.
+Mongoose provides built-in and custom **validators**, and synchronous and asynchronous validators. It allows you to specify both the acceptable range or values and the error message for validation failure in all cases.
 
 The built-in validators include:
 
