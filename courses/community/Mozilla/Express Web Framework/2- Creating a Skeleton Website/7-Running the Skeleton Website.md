@@ -8,9 +8,12 @@ npm install
 ```
 
 2. Then run the application. 
-3. Then load  in your browser to access the app.
+
+3. Then load http://localhost:3000/ in your browser to access the app.
 
 You should see a browser page that looks like this:
+
+[](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/ExpressGeneratorSkeletonWebsite.png)
 
 Browser for default Express app generator website
 
