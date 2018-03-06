@@ -15,5 +15,3 @@ The diagram also shows the relationships between the models, including their mul
 info> As discussed in our Mongoose primer below it is often better to have the field that defines the relationship between the documents/models in just one model (you can still find the reverse relationship by searching for the associated `_id` in the other model). Below we have chosen to define the relationship between Book/Genre and Book/Author in the Book schema, and the relationship between the Book/BookInstance in the BookInstance Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/Library%20Website%20-%20Mongoose_Express.png)
-
-The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
