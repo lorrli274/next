@@ -12,6 +12,6 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and _).
 
-The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+info> The URL /book/create will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 
-That's all you need to get started with routes. The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+That's all you need to get started with routes. The following steps show how we'll set up our routes and controllers for the LocalLibrary.
