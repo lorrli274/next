@@ -1,6 +1,6 @@
 You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the `populate()` method in a query to replace the id with the actual data.
 
-For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of `ObjectId`. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.
+For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of `ObjectId`. Each story can have a single author. The "ref" tells the schema which model can be assigned to this field.
     
 ```js    
 var mongoose = require('mongoose')
@@ -8,11 +8,11 @@ var mongoose = require('mongoose')
 
 var authorSchema = Schema({
   name    : String,
-  stories : [{ type: Schema.Types.ObjectId, **ref**: 'Story' }]
+  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
 });
 
 var storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, **ref**: 'Author' },
+  author : { type: Schema.Types.ObjectId, ref: 'Author' },
   title    : String
 });
 
