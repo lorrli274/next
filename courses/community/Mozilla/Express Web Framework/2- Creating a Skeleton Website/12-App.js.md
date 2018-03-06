@@ -39,7 +39,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```    
 
-The next set of functions call `app.use()` to add the middleware libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `Express.static` middleware to get_Express to serve all the static files in the directory **/public** in the project root.
+The next set of functions call `app.use()` to add the middleware libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `Express.static` middleware to get_Express to serve all the static files in the directory */public* in the project root.
     
 ```js    
 // uncomment after placing your favicon in /public
