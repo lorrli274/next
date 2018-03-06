@@ -1,4 +1,6 @@
-Columns can have a number of **constraints** placed on them to ensure that the data they contain is predictable. For example, you may want to:
+Columns can have a number of **constraints** placed on them to ensure that the data they contain is predictable. This helps keep your database normalized. 
+
+For example, you may want to:
 
 * Ensure that each employee has a name
 * Never store two projects with the same name

@@ -5,3 +5,4 @@ You delete a database using a `DROP DATABASE` statement:
 ```sql
 DROP DATABASE a_database;
 ```
+
