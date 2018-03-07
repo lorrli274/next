@@ -30,4 +30,4 @@ And that it automatically runs the `sass` task whenever you save a `.scss` file.
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Gulp/20.gif)
 
-Let's take it a step further and make gulp reload the browser whenever we save a `.scss` file with the help of [Browser Sync][http://www.browsersync.io].
+Let's take it a step further and make gulp reload the browser whenever we save a `.scss` file with the help of [Browser Sync](http://www.browsersync.io).
