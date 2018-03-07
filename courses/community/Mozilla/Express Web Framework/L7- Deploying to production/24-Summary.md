@@ -1,1 +1,1 @@
-That's the end of this tutorial on setting up Express apps in production, and also the series of tutorials on working with Express. We hope you've found them useful. 
+That's the end of this course on setting up Express apps in production. Congratulations! We hope you enjoyed it and would love any feedback you have.
