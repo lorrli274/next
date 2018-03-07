@@ -1,4 +1,4 @@
-The method [`async.parallel`](http://caolan.github.io/async/docs.html#parallel) is used to run multiple asynchronous operations in parallel.
+The method [**async.parallel**](http://caolan.github.io/async/docs.html#parallel) is used to run multiple asynchronous operations in parallel.
 
 The first argument to `async.parallel()` is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a `callback(err, result)` which it must call on completion with an error `err` (which can be `null`) and an optional `results` value.
 
