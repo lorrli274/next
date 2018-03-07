@@ -1,0 +1,3 @@
+In order to use Express you will first have to install Nodejs and the [Node Package Manager (NPM)](https://docs.npmjs.com/) on your operating system. The following steps explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 16.04, macOS, and Windows 10.
+ 
+info> The sections below show the easiest way to install Node and NPM on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org).
