@@ -2,6 +2,8 @@ Once your site is finished (or finished "enough" to start public testing) you're
 
 Up to now you've been working in a development environment, using Express/Node as a web server to share your site to the local browser/network, and running your website with (insecure) development settings that expose debugging and other private information. Before you can host a website externally you're first going to have to:
 
+danger> Tech Editor: We can host it for them?
+
 * Choose an environment for hosting the Express app.
 * Make a few changes to your project settings.
 * Set up a production-level infrastructure for serving your website.
