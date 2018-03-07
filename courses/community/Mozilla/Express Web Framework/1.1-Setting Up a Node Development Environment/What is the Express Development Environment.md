@@ -1,0 +1,3 @@
+The _Express_ development environment includes an installation of _Nodejs_, the _NPM package manager_, and (optionally) the _Express Application Generator_ on your local computer.
+
+_Node_ and the _NPM_ package manager are installed together from preprepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by NPM as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.)
