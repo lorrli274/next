@@ -1,6 +1,6 @@
-Next we create **routes** for all the URLs [needed by the LocalLibrary website], which will call the controller functions we defined in the previous section.
+Next we create **routes** for all the URLs needed by the LocalLibrary website, which will call the controller functions we defined in the previous section.
 
-The skeleton already has a *./routes* folder containing routes for the _index_ and _users_. Create another route file — *Catalog.js* — inside this folder, as shown.
+The skeleton already has a *./routes* folder containing routes for the index and users. Create another route file — *Catalog.js* — inside this folder, as shown.
 
 ```js
 /express-locallibrary-tutorial //the project root
