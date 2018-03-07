@@ -33,7 +33,7 @@ cd express-locallibrary-tutorial
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
+1. Copy your Express application into this folder (excluding */node_modules*, which contains dependency files that you should fetch from NPM as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
 ```js
@@ -66,8 +66,4 @@ git push origin master
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
-This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
-
-The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. Learning Git is well worth the effort, but is beyond the scope of this topic.
-
-The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
+info> This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not. The best way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. Learning Git is well worth the effort, but is beyond the scope of this topic. The easiest way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
