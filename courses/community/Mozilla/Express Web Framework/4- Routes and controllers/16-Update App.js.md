@@ -1,4 +1,4 @@
-Open **App.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two):
+Open *App.js* and require the catalog route below the other routes (add the third line shown below, underneath the other two):
 •    
 ```js    
 var index = require('./routes/index');
