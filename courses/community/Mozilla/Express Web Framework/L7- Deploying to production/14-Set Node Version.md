@@ -2,7 +2,7 @@ The **Package.json** contains everything needed to work out your application dep
 
 The only useful information missing in our current **Package.json** is the version of node. We can find the version of node we're using for development by entering the command:
     
-```js    
+```bash   
 >node --version
 v8.9.1
 ```
