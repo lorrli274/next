@@ -28,7 +28,7 @@ The first thing we need to add is a route:
     root to: 'home#index'
 ```    
 
-We pointed our application's root URL to the `index` action of the `home` controller (see the [routing guide][18] for more information). Now we can create the index action.
+We pointed our application's root URL to the `index` action of the `home` controller (see the [routing guide](http://hanamirb.org/guides/1.0/routing/overview) for more information). Now we can create the index action.
     
 ```    
     # apps/web/controllers/home/index.rb
