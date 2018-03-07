@@ -19,4 +19,4 @@ app.use(helmet());
 ...
 ```
 
-Info>The command above adds the subset of available headers that makes sense for most sites. You can add/disable specific headers as needed by following the instructions on npm.
+Info> The command above adds the subset of available headers that makes sense for most sites. You can add/disable specific headers as needed by following the instructions on npm.
