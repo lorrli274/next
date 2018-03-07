@@ -6,7 +6,7 @@ We are choosing to use Heroku for several reasons:
     * Heroku provides only short-lived storage so user-uploaded files cannot safely be stored on Heroku itself.
     * The free tier will sleep an inactive web app if there are no requests within a half hour period. The site may then take several seconds to respond when it is woken up.
     * The free tier limits the time that your site is running to a certain amount of hours every month (not including the time that the site is "asleep"). This is fine for a low use/demonstration site, but will not be suitable if 100% uptime is required.
-    * Other limitations are listed in Limits (Heroku docs).
+    * Other limitations are listed in [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs).
 * Mostly it just works, and if you end up loving it and want to upgrade, scaling your app is very easy.
 
 While Heroku is perfect for hosting this demonstration it may not be perfect for your real website. Heroku makes things easy to set up and scale, at the cost of being less flexible, and potentially a lot more expensive once you get out of the free tier.
