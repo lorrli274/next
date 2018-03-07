@@ -1,5 +1,3 @@
-Heroku is one of the longest running and popular cloud-based PaaS services. It originally supported only Ruby apps, but now can be used to host apps from many programming environments, including Node (and hence Express)!
-
 We are choosing to use Heroku for several reasons:
 
 * Heroku has a free tier that is really free (albeit with some limitations).
