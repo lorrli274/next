@@ -67,3 +67,5 @@ git push origin master
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
 info> This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not. The best way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. Learning Git is well worth the effort, but is beyond the scope of this topic. The easiest way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
+
+Alright, now it;s time to explains the changes you'll need to make to our LocalLibrary application to get it to work on Heroku.
