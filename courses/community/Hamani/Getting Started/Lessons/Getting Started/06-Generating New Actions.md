@@ -4,7 +4,7 @@ We'll store books in our database and let the user manage them with our project.
 
 Let's write a new feature test describing what we want to achieve:
     
-    
+```    
     # spec/web/features/list_books_spec.rb
     require 'features_helper'
     
@@ -17,6 +17,6 @@ Let's write a new feature test describing what we want to achieve:
         end
       end
     end
-    
+```    
 
 The test is simple enough, and fails because the URL `/books` is not currently recognised in our application. We'll create a new controller action to fix that.
