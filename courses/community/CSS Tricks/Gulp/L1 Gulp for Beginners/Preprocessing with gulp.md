@@ -1,4 +1,4 @@
-We can compile Sass to CSS in gulp with the help of a plugin called **gulp-sass**. You can install gulp-sass into your project by using the `npm install` command like we did for `gulp`. 
+We can compile Sass to CSS in gulp with the help of a plugin called [gulp-sass](https://www.npmjs.com/package/gulp-sass). You can install gulp-sass into your project by using the `npm install` command like we did for `gulp`. 
 
 We'd also want to use the `\--save-dev` flag to ensure that gulp-sass gets added to `devDependencies` in `package.json`. 
 ​    
