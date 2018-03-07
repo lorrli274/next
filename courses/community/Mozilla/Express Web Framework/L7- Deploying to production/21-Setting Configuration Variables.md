@@ -6,7 +6,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
  ```   
 
-We should also use a separate database for production, setting its URI in the **MONGODB_URI**  environment variable. You can set up a new database and database-user exactly as we did originally, and get its URI. You can set the URI as shown (obviously, using your own URI!)
+We should also use a separate database for production, setting its URI in the MONGODB_URI environment variable. You can set up a new database and database-user exactly as we did originally, and get its URI. You can set the URI as shown (obviously, using your own URI!)
     
 ```js    
 >heroku config:set **MONGODB_URI**='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'
@@ -14,7 +14,7 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production
  ```   
 
-You can inspect your configuration variables at any time using the `heroku config` command — try this now:
+You can inspect your **configuration variables** at any time using the `heroku config` command — try this now:
     
 ```js    
 >heroku config
