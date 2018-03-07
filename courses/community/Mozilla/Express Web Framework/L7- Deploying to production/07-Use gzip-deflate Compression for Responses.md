@@ -1,4 +1,4 @@
-Web servers can often compress the HTTP response sent back to a client, significantly reducing the time taken to for the client to get and load the page. The compression method used will depend on what decompression methods the client says that it supports in the request (if no compression methods are supported the response will be sent uncompressed).
+Web servers can often **compress** the HTTP response sent back to a client, significantly reducing the time taken to for the client to get and load the page. The **compression method** used will depend on what decompression methods the client says that it supports in the request (if no compression methods are supported the response will be sent uncompressed).
 
 You can add this to your site using compression middleware. Install this to your project by running the following command at the root of the project.
     
@@ -28,4 +28,4 @@ app.use('/catalog', catalog);  // Add catalog routes to middleware chain.
 ...
 ```    
 
-Info>For a high-traffic website in production you wouldn't use this middleware. Instead you would use a reverse proxy like Nginx.
+Info> For a high-traffic website in production you wouldn't use this middleware. Instead you would use a reverse proxy like Nginx.
