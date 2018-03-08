@@ -1,0 +1,1 @@
+The genre detail page needs to display the information for particular genre instance, identified using its (automatically generated) `_id` field value. The page should display the genre name, and a list of all books in the genre (each linked to the book's detail page).
