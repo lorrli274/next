@@ -12,7 +12,7 @@ npm install moment --save
 var moment = require('moment');
 ```
 
-Add the virtual property `due_back_formatted` just after the url property.
+Add the **virtual property** `due_back_formatted` just after the url property.
     
 ```js    
 BookInstanceSchema
