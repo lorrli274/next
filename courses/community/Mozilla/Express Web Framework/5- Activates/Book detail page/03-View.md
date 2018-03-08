@@ -37,7 +37,7 @@ block content
       p There are no copies of this book in the library.
 ```
 
-Almost everything in this template has been demonstrated in previous sections.
+Almost everything in this template has been demonstrated in previous steps.
 
 info> The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
     
