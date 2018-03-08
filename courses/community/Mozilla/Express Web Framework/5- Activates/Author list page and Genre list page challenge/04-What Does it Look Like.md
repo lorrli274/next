@@ -1,4 +1,6 @@
-Run the application and open your browser to . Then select the _All authors _link. If everything is set up correctly, the page should look something like the following screenshot.
+danger>   http://localhost:3000/.  link needs to work in codevolve?
+
+Run the application and open your browser to http://localhost:3000/. Then select the _All authors _link. If everything is set up correctly, the page should look something like the following screenshot.
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/LocalLibary_Express_Author_List.png)
 
