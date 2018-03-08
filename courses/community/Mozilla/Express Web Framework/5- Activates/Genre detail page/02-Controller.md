@@ -52,4 +52,4 @@ return next(err);
 
 The message will then propagate through to our error handling code (this was set up when we generated the app skeleton).
 
-The rendered view is *genre_detail** and it is passed variables for the `title`, `genre` and the list of books in this genre (`genre_books`).
+The rendered view is *genre_detail* and it is passed variables for the `title`, `genre` and the list of books in this genre (`genre_books`).
