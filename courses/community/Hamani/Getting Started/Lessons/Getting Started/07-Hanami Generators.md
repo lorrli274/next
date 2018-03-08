@@ -1,7 +1,7 @@
 Hanami ships with various **generators** to save on typing some of the code involved in adding new functionality. In our terminal, enter:
     
 ```sh    
-% bundle exec hanami generate action web books#index
+$ bundle exec hanami generate action web books#index
 ```    
 
 This will generate a new action index in the books controller of the web application. It gives us an empty action, view and template; it also adds a default route to *`apps/web/config/routes.rb`*:
