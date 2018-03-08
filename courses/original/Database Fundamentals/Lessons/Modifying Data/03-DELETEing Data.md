@@ -25,22 +25,13 @@ WHERE
 
 This should return no results.
 
-You cannot `DELETE` data that has objects referencing it, so the following will fail:
+To quickly delete all records in a table, you could also use a **`TRUNCATE TABLE`** statement:
 
 ```sql
-DELETE FROM projects;
+TRUNCATE TABLE project_employees;
 ```
 
-To do this, you would use a **`TRUNCATE TABLE`** statement:
-
-```sql
-TRUNCATE TABLE projects;
-```
-
-This will:
-
-* Drop and recreate the _projects_ table (which is faster than a `DELETE` if the table hold)
-* ​
+This will drop and recreate the *project_employees* table (which is faster than a `DELETE` if the table holds many records).
 
 danger> There are almost no everyday use cases for `TRUNCATE TABLE` statements. 
 
