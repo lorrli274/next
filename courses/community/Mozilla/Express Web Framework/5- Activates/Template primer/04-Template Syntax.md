@@ -1,6 +1,6 @@
 The example template file below shows off many of Pug's most useful features.
 
-The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested **elements**. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
+The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
     
 ```js    
 doctype html
@@ -47,7 +47,7 @@ Element attributes are defined in parentheses after their associated element. In
 
 The values of all attributes are **escaped** (e.g. characters like "`>`" are converted to their HTML code equivalents like "`>"`) to prevent injection of JavaScript/cross-site scripting attacks.
 
-If a tag is followed by the equals sign, the following text is treated as a JavaScript **expression**. So for example, in the first line below, the content of the `h1` tag will be **variable** `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the `title` variable. In both cases the default behaviour is to **escape** the line.
+If a tag is followed by the equals sign, the following text is treated as a JavaScript **expression**. So for example, in the first line below, the content of the `h1` tag will be **variable** `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the `title` variable. In both cases the default behaviour is to escape the line.
     
 ```js    
 h1= title 
