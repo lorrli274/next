@@ -25,6 +25,11 @@ NB: Writing w/ quiz at end
 * Changing a Column
 * Deleting a Column
 
+## Modifying Data
+* `INSERT`
+* `UPDATE`
+* `DELETE`
+
 ## Basic Queries
 * Basic `SELECT` Statements
 * `WHERE` Clauses
@@ -48,11 +53,6 @@ NB: Writing w/ quiz at end
 * `HAVING` Clauses
 * `UNION`
 * `UNION ALL`
-
-## Modifying Data
-* `INSERT`
-* `UPDATE`
-* `DELETE`
 
 ## What's Next?
 NB: Writing
