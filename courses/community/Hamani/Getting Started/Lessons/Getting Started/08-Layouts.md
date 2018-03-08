@@ -1,20 +1,17 @@
 To avoid repeating ourselves in every single template, we can use a layout. Open up the file `apps/web/templates/application.html.erb` and edit it to look like this:
     
  ```html   
-    
-    
-      
-        
+ <html>     
+    <head>    
+        <title>Bookshelf</title>              
         <%= favicon %>
-      
-      
-        
-Bookshelf
-
+    </head>  
+    <body>  
+        <h1>Bookshelf</h1>    
         <%= yield %>
+    </body>
+</html>    
 ```      
-    
-    
 
 Now you can remove the duplicate lines from the other templates. Let's run the tests again to check that everything worked fine:
     
