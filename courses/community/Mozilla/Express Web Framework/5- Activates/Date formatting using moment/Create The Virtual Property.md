@@ -1,4 +1,4 @@
-#### Install moment
+### Install moment
 Enter the following command in the root of the project:
     
 ```js    
