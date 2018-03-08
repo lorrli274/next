@@ -24,7 +24,7 @@ Please check .env.test in case you need to tweak the database URL.
 We have to migrate our schema in the test database by running:
     
 ```sh    
-% HANAMI_ENV=test bundle exec hanami db prepare
+$ HANAMI_ENV=test bundle exec hanami db prepare
 ```    
 
 As you can see, we have set `HANAMI_ENV` environment variable to instruct our command about the environment to use.
