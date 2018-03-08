@@ -21,7 +21,7 @@ In this diagram, there are 4 relationships:
 |---|---|---|---|
 |1:M|_projects_|*job_orders*|One project has many job orders placed for it.|
 |1:M|_employees_|*job_orders*|One employee can place many job orders.|
-|M:M|_projects_|*project_employees*|A project can have many employees.|
+|M:M|_projects_|<nobr>*project_employees*<nobr>|A project can have many employees.|
 |M:M|_employees_|*project_employees*|An employee can work on many projects.|
 
 The *job_orders* and *project_employees* tables are said to "belong to" the *projects* and *employees* tables (or that they are **child tables**). They each have a 1:M relationship with their parent tables.
