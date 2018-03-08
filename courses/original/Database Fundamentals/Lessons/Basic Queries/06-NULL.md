@@ -4,11 +4,14 @@ The **`NULL`** value in a database indicates that no data is present for a recor
 
 For example, here's the data currently in the _projects_ table:
 
-```sql
-SELECT *
-FROM   projects
-ORDER  BY value; 
-```
+|id|name|value|start_date|end_date|
+|--- |--- |--- |--- |--- |
+|1|East Ave Shermans Diner|250000.0|2008-03-01|2012-05-15|
+|2|Big Money Bank|560000.0|2012-02-15|2015-09-01|
+|3|Central Valley Hospital|54000.0|2013-12-01|2017-09-15|
+|4|Washington Avenue Barber|10000.0|2015-07-01|2020-08-01|
+|5|Hamill, Berge and Adams Office|NULL|2018-01-01|2024-12-01|
+
 
 Note that the record with ID 5 has no value set yet.
 
@@ -20,17 +23,18 @@ FROM   projects
 WHERE  value < 1000; 
 ```
 
-To address this, there are two things that can be done: add a default value or catch nulls when querying.
+To address this, there are two things that can be done: add a default value or catch `NULL`s when querying.
 
 ## Default Values
 It's common for a default column value will be provided when creating a table. Here's an example of a table creation statement that defaults the _hours_ column to a value of 0.00:
 
 ```sql
-CREATE TABLE `project_employees` (
-  `employee_id` int(6) NOT NULL,
-  `project_id` int(6) NOT NULL,
-  `hours` float(6,2) NOT NULL DEFAULT '0.00'
-)
+CREATE TABLE project_employees
+  (
+     employee_id INT(6) NOT NULL,
+     project_id  INT(6) NOT NULL,
+     hours       FLOAT(6, 2) NOT NULL DEFAULT '0.00'
+  ) 
 ```
 When a new record is created and a value for _hours_ is not provided, it will be set to 0.00 by default.
 
@@ -39,19 +43,22 @@ Note also the use of the `NOT NULL` contraints. If you attempt to insert a recor
 Therefore, the following `INSERT` statement would fail:
 
 ```sql
-INSERT INTO `project_employees` (employee_id, project_id, hours) VALUES (1, 2, NULL);
+INSERT INTO project_employees (employee_id, project_id, hours)
+VALUES (1, 2, NULL);
 ```
 
 As would the following:
 
 ```sql
-INSERT INTO `project_employees` (employee_id, project_id, hours) VALUES (NULL, 3, 1.40);
+INSERT INTO project_employees (employee_id, project_id, hours)
+VALUES (NULL, 3, 1.40);
 ```
 
 However, the following would pass:
 
 ```sql
-INSERT INTO `project_employees` (employee_id, project_id, hours) VALUES (4, 5);
+INSERT INTO project_employees (employee_id, project_id, hours)
+VALUES (4, 5);
 ```
 because the default value of 0.00 would be used. In the first example, `NULL` was provided explicitly, which caused it to fail.
 

@@ -1,6 +1,6 @@
 In a database, a **query** is a set of structured statements designed to extract specific records from a database. They can be used to answer a wide range of questions and power dynamic websites.
 
-Queries will all use a **`SELECT`** statement to indicate that data is to be retrieved and displayed. There are a variaty of ways that the data returned can be filtered, grouped, aggregated, and merged to make the returned data more useful.
+Queries all use a **`SELECT`** statement to indicate that data is to be retrieved and displayed. There are a variaty of ways that the data returned can be **filtered**, **joined**, **grouped**, and **aggregated** to make the returned data more useful.
 
 In a database used by a construction company, a query might be used to:
 
@@ -9,23 +9,32 @@ In a database used by a construction company, a query might be used to:
 * Find out which projects are running over budget
 * See which items are costing the company the most
 
-At it's most basic form, a query simply returns all the data from a table:
+The format for a basic query is:
 
 ```sql
-SELECT * FROM employees;
+SELECT column1, column2
+FROM table_name;
 ```
 
-The `*` indicates that all columns should be returned (in the order they appear in the table).
+To start, here's a query that simply returns all the data from a table:
+
+```sql
+SELECT *
+FROM employees;
+```
+
+The `SELECT` indicates the start of a query, while the `*` is a wildcard which will return data for all columns (in the order they appear in the table).
 
 To limit the columns returned, the column names can be specified:
 
 ```sql
-SELECT id, first_name, last_name FROM employees; 
+SELECT id, first_name, last_name
+FROM employees; 
 ```
 
-Specifying the column names results in only data only for specific columns being returned.
+Specifying the column name(s) results in only data only for specific columns being returned.
 
-Columns can also be **aliased** to make the output cleaner or to handle merged data that have the same columns names:
+Columns can also be **aliased** to make the output cleaner or to handle joined (merged) data that have the same columns names:
 
 ```sql
 SELECT id         AS "ID Number",

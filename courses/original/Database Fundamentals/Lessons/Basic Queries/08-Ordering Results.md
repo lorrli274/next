@@ -32,7 +32,7 @@ ORDER  BY hire_date DESC,
 ```
 
 
-One of the most useful ways to write an `ORDER BY` statement is using an alias. The query below will return the employees ordered by their last name and then first name:
+One of the most useful ways to write an `ORDER BY` statement is using an **alias**. The query below will return the employees ordered by their last name and then first name:
 
 
 ```sql

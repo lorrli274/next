@@ -7,7 +7,7 @@ FROM   projects
 WHERE  name LIKE '%Office%'; 
 ```
 
-The `%` indicates a wildcard that will match any amount of characters. For example, `%Library` would match the following values:
+The `%` is a wildcard that will match any number of characters. For example, `%Library` would match the following values:
 * "Library"
 * "A Library"
 * "East Ave Library"
