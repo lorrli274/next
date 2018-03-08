@@ -1,7 +1,7 @@
 Now we have a test, we can see it fail:
     
 ```sh    
-% bundle exec rake test
+$ bundle exec rake test
 Run options: --seed 44759
 
 # Running:
