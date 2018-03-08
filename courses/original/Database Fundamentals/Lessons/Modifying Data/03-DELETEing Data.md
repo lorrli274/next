@@ -44,4 +44,4 @@ This will:
 
 danger> There are almost no everyday use cases for `TRUNCATE TABLE` statements. 
 
-info> There is no reversing the deletion of data. Instead, many developers choose to follow the "never delete anything" rule of thumb and add a column to a table to indicate that the record is "deleted".<br>For example, they may add a `DATETIME` column (e.g. *deleted_at*) that is `NULL` by default and then set to the current time when the record is deleted. This column can then be filtered on (e.g. `deleted_at IS NULL`) when writing queries.
+info> There is no reversing the deletion of data. Instead, many developers choose to follow the "never delete anything" rule of thumb and add a column to a table to indicate that the record is "deleted".<br><br>For example, they may add a `DATETIME` column (e.g. *deleted_at*) that is `NULL` by default and then set to the current time when the record is deleted. This column can then be filtered on (e.g. `deleted_at IS NULL`) when writing queries.
