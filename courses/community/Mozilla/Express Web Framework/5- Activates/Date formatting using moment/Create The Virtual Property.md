@@ -5,7 +5,7 @@ Enter the following command in the root of the project:
 npm install moment --save
 ```
 
-1. Open **./models/bookinstance.js**.
+1. Open *./models/bookinstance.js*.
 2. At the top of the page, import _moment_. 
 
 ```js
