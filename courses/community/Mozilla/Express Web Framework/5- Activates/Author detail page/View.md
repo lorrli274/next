@@ -5,7 +5,7 @@ extends layout
 
 block content
 
-**  h1 Author: #{author.name}**
+    h1 Author: #{author.name}
   p #{author.date_of_birth} - #{author.date_of_death}
 
   div(style='margin-left:20px;margin-top:20px')
