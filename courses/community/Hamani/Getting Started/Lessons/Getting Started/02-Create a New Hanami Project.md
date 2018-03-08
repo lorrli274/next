@@ -28,15 +28,15 @@ This will create a new directory `bookshelf` in our current location. Let's see 
 
 Here's what we need to know:
 
-* `Gemfile` defines our Rubygems dependencies (using Bundler).
-* `Rakefile` describes our Rake tasks.
-* `apps` contains one or more web applications compatible with Rack. Here we can find the first generated Hanami application called `Web`. It's the place where we find our controllers, views, routes and templates.
-* `config` contains configuration files.
-* `config.ru` is for Rack servers.
-* `db` contains our database schema and migrations.
-* `lib` contains our business logic and domain model, including entities and repositories.
-* `public` will contain compiled static assets.
-* `spec` contains our tests.
+* **`Gemfile`** defines our Rubygems dependencies (using Bundler).
+* **`Rakefile`** describes our Rake tasks.
+* **`apps`** contains one or more web applications compatible with Rack. Here we can find the first generated Hanami application called **`Web`**. It's the place where we find our controllers, views, routes and templates.
+* **`config`** contains configuration files.
+* **`config.ru`** is for Rack servers.
+* **`db`** contains our database schema and migrations.
+* **`lib`** contains our business logic and domain model, including entities and repositories.
+* **`public`** will contain compiled static assets.
+* **`spec`** contains our tests.
 
 Go ahead and install our gem dependency with Bundler; then we can launch a development server:
     
