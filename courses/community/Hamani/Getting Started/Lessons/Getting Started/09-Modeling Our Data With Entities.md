@@ -12,7 +12,7 @@ For this reason we need a repository to persist the data that a `Book` depends o
 Hanami ships with a generator for models, so let's use it to create a `Book` entity and the corresponding repository:
     
 ```sh    
-% bundle exec hanami generate model book
+$ bundle exec hanami generate model book
 create  lib/bookshelf/entities/book.rb
 create  lib/bookshelf/repositories/book_repository.rb
 create  db/migrations/20161115110038_create_books.rb
