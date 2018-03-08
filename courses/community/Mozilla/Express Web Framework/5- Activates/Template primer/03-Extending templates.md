@@ -1,8 +1,8 @@
-Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, _Pug_ allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.
+Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, Pug allows you to declare a **base template** and then **extend** it, replacing just the bits that are different for each specific page.
 
 For example, the base template layout.pug created in our skeleton project looks like this:
     
-```html    
+```js    
 doctype html
 html
   head
