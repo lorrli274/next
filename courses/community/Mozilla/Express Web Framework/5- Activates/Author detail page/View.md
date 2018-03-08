@@ -22,4 +22,4 @@ block content
       p This author has no books.
 ```
 
-Everything in this template has been demonstrated in previous sections.
+Everything in this template has been demonstrated in previous steps.
