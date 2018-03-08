@@ -4,7 +4,7 @@ For example, the following query will not work:
 
 ```sql
 SELECT p.name,
-       Sum(pe.hours) AS project_hours
+       SUM(pe.hours) AS project_hours
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id
@@ -17,7 +17,7 @@ This is because the column _project_hours_ doesn't actually exist until the quer
 
 ```sql
 SELECT p.name,
-       Sum(pe.hours) AS project_hours
+       SUM(pe.hours) AS project_hours
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id
@@ -30,7 +30,7 @@ Here's an example of a query using a `SELECT`, `JOIN`, `WHERE`, `GROUP BY`, `HAV
 
 ```sql
 SELECT p.name,
-       Sum(pe.hours) AS project_hours
+       SUM(pe.hours) AS project_hours
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id

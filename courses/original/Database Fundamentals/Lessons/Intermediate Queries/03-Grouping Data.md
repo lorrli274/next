@@ -1,19 +1,19 @@
-Grouping data in a query allows for aggregations to be run within a specific scope. A **`GROUP BY`** expression can be used to define these scopes.
+Grouping data in a query allows for aggregations to be run within a specific scope. A **`GROUP BY`** expression is used to define these scopes.
 
 For example, determining the total number of hours worked by all employees on a project requires a `GROUP BY`. Without it could result in a query like:
 
 ```sql
-SELECT Sum(pe.hours)
+SELECT SUM(pe.hours)
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id; 
 ```
 
-This returns the number of hours for all projects and doesn't display which project had how many hours. This will:
+That returns the number of hours for all projects and doesn't display which project had how many hours. This will:
 
 ```sql
 SELECT p.name,
-       Sum(pe.hours)
+       SUM(pe.hours)
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id
@@ -24,7 +24,7 @@ Like an `ORDER BY`, a `GROUP BY` can use a column alias instead of a column name
 
 ```sql
 SELECT p.name,
-       Sum(pe.hours)
+       SUM(pe.hours)
 FROM   project_employees pe
        JOIN projects p
          ON p.id = pe.project_id

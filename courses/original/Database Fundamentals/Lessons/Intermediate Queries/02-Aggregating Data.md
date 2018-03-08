@@ -8,13 +8,13 @@ The **`COUNT`** function allows you to, unsurprisingly, count the values provide
 SELECT COUNT(id) FROM job_orders;
 ```
 
-This counts the number of job_orders in total. This returns the correct result because all the values of _id_ are unique, but what if *project_id* was counted instead:
+This counts the number of job orders in total. This returns the correct result because all the values of _id_ are unique, but what if *project_id* was counted instead:
 
 ```sql
 SELECT COUNT(project_id) FROM job_orders;
 ```
 
-The numbers match, which doesn't seem right. This is because each project ID appears multiple times in the *job_orders* table. To count only the number of unique project IDs, the **`DISTINCT`** keyword is used:
+The numbers match, which doesn't seem right, because you would expect that each project would have multiple job orders placed for it. This is because each project ID appears multiple times in the *job_orders* table. To count only the number of unique project IDs, the **`DISTINCT`** keyword is used:
 
 ```sql
 SELECT COUNT(DISTINCT project_id) FROM job_orders;
@@ -22,7 +22,7 @@ SELECT COUNT(DISTINCT project_id) FROM job_orders;
 
 ## `SUM`
 
-The **`SUM`** function adds up any provided value. It works with constants:
+The **`SUM`** function adds up any provided values. It works with constants:
 
 ```sql
 SELECT SUM(1000);

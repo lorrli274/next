@@ -1,4 +1,4 @@
-Existing records in a table can be modified using an **`UPDATE`** statement, which is structured as follows:
+Once records have been added to a table, they can be modified using an **`UPDATE`** statement, which is structured as follows:
 
 ```sql
 UPDATE table_name 
@@ -47,5 +47,5 @@ WHERE
 	description ILIKE '%Tool Kit%';
 ```
 
-And of course, changes to the data in a table cannot be undone!
+info> Changes to the data in a table cannot be undone, so it's good to `SELECT` the data before running an `UPDATE` (using the same conditions) to ensure the records that will be updated are what you expect!
 

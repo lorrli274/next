@@ -1,4 +1,4 @@
-When working with multiple similar datasets it is sometimes useful to combine them temporarily. This can be accomplished with the **`UNION`** operator.
+When working with multiple similar datasets it is sometimes useful to combine them temporarily. This can be accomplished with a **`UNION`** operator.
 
 Take for example two tables: _employees_ and _contractors_. These tables are used to store similar records but need to be separated per the business requirements of the construction company.
 

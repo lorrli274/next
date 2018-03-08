@@ -1,4 +1,10 @@
-New records can be added to a table using an **`INSERT`** statement, which has the following structure:
+Once a database has been designed and implemented, it's time to fill it with data! This can come from a variety of sources, such as:
+
+* A form on a web page, sent via a web server
+* An import from another database or a CSV file
+* Manually entering records directly into the database
+
+To manually add data to a table an **`INSERT`** statement is used, which has the following structure:
 
 ```sql
 INSERT INTO table_name (column1, column2...) VALUES (value1, value2, ...);
@@ -10,14 +16,14 @@ Consider the following data for a new record in the _employees_ table:
 | ---------- | --------- | ----------- | ---------- |
 | Samuel     | Jones     | 21.50       | 2018-01-13 |
 
-To insert this data, the following would be used:
+To insert this data, you would write the following:
 
 ```sql
 INSERT INTO employees (first_name, last_name, hourly_wage, hire_date)
 VALUES      ('Samuel', 'Jones', 21.50, '2018-01-13');
 ```
 
-After inserting this data, try selecting the data from the table to verify it has been added:
+After inserting this data, try `SELECT`ing the data from the table to verify it has been added:
 
 ```sql
 SELECT *
@@ -25,7 +31,7 @@ FROM   employees
 ORDER  BY id DESC;
 ```
 
-Note the value of the _id_ column. This did not need to be provided due to the `auto_increment` facet of the column, which will assign the next number in a sequence to each record as it is inserted.
+Note the value of the _id_ column. This did not need to be provided due to the `auto_increment` property of the column, which will assign the next number in a sequence to each record as it is inserted.
 
 The column order does not matter either:
 
