@@ -2,7 +2,7 @@ Across a site, it is usual for all pages to have a common structure, including s
 
 For example, the base template layout.pug created in our skeleton project looks like this:
     
-```js    
+```html    
 doctype html
 html
   head
