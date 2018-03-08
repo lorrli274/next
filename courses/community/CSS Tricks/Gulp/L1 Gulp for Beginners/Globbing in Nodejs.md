@@ -19,7 +19,7 @@ Since we know about globbing now, we can replace `app/scss/styles.scss` with a `
     })
 ```
 
-Any other Sass file that's found within `app/scss` would automatically be included into the `sass` task with this change. If you add a *print.scss*  file into the project, you'll see that `print.css` will be generated in `app/css`.
+Any other Sass file that's found within `app/scss` would automatically be included into the `sass` task with this change. If you add a *print.scss*  file into the project and run `gulp sass` again, you'll see that `print.css` will be generated in `app/css`.
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Gulp/17.png)
 

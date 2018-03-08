@@ -5,31 +5,38 @@ One problem developers face when automating this process is that it's difficult 
 Say we have included 3 script tags in `index.html`.
 
 ```html
-http://www.google-analytics.com/ga.js"> src="">https://css-tricks.com/js/lib/a-library.js">
-">https://css-tricks.com/js/lib/another-library.js">
-">https://css-tricks.com/js/main.js">
+<body>
+  <!-- other stuff -->
+  <script src="js/lib/a-library.js"></script>
+  <script src="js/lib/another-library.js"></script>
+  <script src="js/main.js"></script>
+</body>
 ```
 
 These scripts are located in two different directories. It'll be difficult to concatenate them with traditional plugins like gulp-concatenate. 
 
 Thankfully, there's a useful gulp plugin, `gulp-useref` that solves this problem. 
 
-`gulp-useref` concatenates any number of CSS and JavaScript files into a single file by looking for a comment that starts with "". Its syntax is: 
-​    
+`gulp-useref` concatenates any number of CSS and JavaScript files into a single file by looking for a comment that starts with `<!--build:` and ends with `<!--endbuild-->`. Its syntax is: 
+    
 ```html   
+<!-- build:<type> <path> -->
 ... HTML Markup, list of script / link tags.
+<!-- endbuild -->
 ```
 
-`` can either be `js`, `css`, or `remove`. It's best to set `type` to the type of file that you're trying to concatenate. If you set `type` to `remove`, Gulp will remove the entire build block without generating a file. 
+`<type>` can either be `js`, `css`, or `remove`. It's best to set `type` to the type of file that you're trying to concatenate. If you set `type` to `remove`, Gulp will remove the entire build block without generating a file.
 
-`` here refers to the target path of the generated file.
+`<path>` here refers to the target path of the generated file.
 
 We'll want the final JavaScript file to be generated in the `js` folder, as *main.min.js*. Hence, the markup would be: 
 
 ```html
-">https://css-tricks.com/js/lib/a-library.js">
-">https://css-tricks.com/js/lib/another-library.js">
-">https://css-tricks.com/js/main.js">
+<!--build:js js/main.min.js -->
+<script src="js/lib/a-library.js"></script>
+<script src="js/lib/another-library.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
 ```
 
 Now let's configure the `gulp-useref` plugin in the *gulpfile*. We'll have to install the plugin and require it in the *gulpfile*.
@@ -54,9 +61,9 @@ gulp.task('useref', function(){
 
 Now if you run this `useref` task, gulp will take run through the 3 script tags and concatenate them into `dist/js/main.min.js`. 
 
->Dev: Add image: https://cdn.css-tricks.com/wp-content/uploads/2015/08/main-min.png
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Gulp/main-min.png)
 
-The file however, isn't minified right now. We'll have to use the [gulp-uglify][https://www.npmjs.com/package/gulp-uglify] plugin to help with minifying JavaScript files. We also need a second plugin called [gulp-if][https://github.com/robrich/gulp-if] to ensure that we only attempt to minify JavaScript files. 
+The file however, isn't minified right now. We'll have to use the [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) plugin to help with minifying JavaScript files. We also need a second plugin called [gulp-if](https://github.com/robrich/gulp-if) to ensure that we only attempt to minify JavaScript files. 
 ​    
 ```bash    
 $ npm install gulp-uglify --save-dev 
@@ -78,7 +85,7 @@ gulp.task('useref', function(){
 
 Gulp should now automatically minify the `main.min.js` file whenever you run the `useref` task. 
 
-One neat thing I've yet to reveal with `gulp-useref` is that it automatically changes all the scripts within "" into one single JavaScript file that points to `js/main.min.js`. 
+One neat thing I've yet to reveal with `gulp-useref` is that it automatically changes all the scripts within `<!--build:` and `<!--endbuild-->` into one single JavaScript file that points to `js/main.min.js`. 
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Gulp/25.png)
 
@@ -87,8 +94,10 @@ Wonderful, isn't it?
 We can use the same method to concatenate any CSS files (if you decided to add more than one) as well. We'll follow the same process and add a `build` comment. 
 ​    
 ```HTML
-">https://css-tricks.com/css/styles.css">
-">https://css-tricks.com/css/another-stylesheet.css">
+<!--build:css css/styles.min.css-->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/another-stylesheet.css">
+<!--endbuild-->
 ```
 
 We can also minify the concatenated CSS file as well. We need to use a package called [gulp-cssnano][31] plugin to help us with minification.

@@ -1,0 +1,2 @@
+Run the application (see [Testing the routes](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) for the relevant commands) and open your browser to . Then select the All books link. If everything is set up correctly, your site should look something like the following screenshot.
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Mozilla/LocalLibary_Express_Book_List.png)

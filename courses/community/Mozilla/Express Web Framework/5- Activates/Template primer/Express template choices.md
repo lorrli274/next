@@ -1,5 +1,0 @@
-Express can be used with many different [template rendering engines][1]. In this tutorial we use [Pug][2] (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml][3]".
-
-Different template languages use different approaches for defining the layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a _representation _of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements. The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read.
-
-**Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.
