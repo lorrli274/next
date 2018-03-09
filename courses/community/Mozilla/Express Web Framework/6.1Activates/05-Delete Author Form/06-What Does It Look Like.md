@@ -1,4 +1,4 @@
-Run the application and open your browser to . Then select the _All authors _link, and then select a particular author. Finally select the _Delete author_ link.
+Run the application and open your browser to http://localhost:3000/.. Then select the _All authors _link, and then select a particular author. Finally select the _Delete author_ link.
 
 If the author has no books, you'll be presented with a page like this. After pressing delete, the server will delete the author and redirect to the author list.
 
