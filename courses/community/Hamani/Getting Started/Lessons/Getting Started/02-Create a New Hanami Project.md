@@ -45,6 +45,8 @@ $ bundle install
 $ bundle exec hanami server
 ```    
 
-And... bask in the glory of your first Hanami project at ! We should see a screen similar to this:
+danger> http://localhost:2300 needs to work in codevolve?
 
-![Hanami welcome page](http://hanamirb.org/images/welcome-page.png)
+And... bask in the glory of your first Hanami project at http://localhost:2300! We should see a screen similar to this:
+
+![](https://storage.googleapis.com/codevolve-assets/internal/courses/Hanami/welcome-page.png)
