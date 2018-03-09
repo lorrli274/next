@@ -20,9 +20,9 @@ Our hope is that together we can decide what courses are most valuable and work 
 Throughout the issues, you will see several lesson types referenced. They are listed below:
 
 * Lesson: Live environment with instruction content for new materials
-* Exercise: Hands-on, guided implementation of concepts
+* Activity: Hands-on, guided implementation of concepts
+* Challenge: Technical challenge with live tests
 * Project: Open-ended opportunities for students to work on their own
-* Assessment: Technical challenge with live tests
 * Quiz: Multiple/single choice quiz to test students retained knowledge
 * Reading: Some static content, written in Markdown
 
