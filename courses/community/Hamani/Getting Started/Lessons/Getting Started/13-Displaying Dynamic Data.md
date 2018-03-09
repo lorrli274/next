@@ -1,33 +1,33 @@
 With our new experience modelling data, we can get to work displaying dynamic data on our book listing page. Let's adjust the feature test we created earlier:
     
-    
-    # spec/web/features/list_books_spec.rb
-    require 'features_helper'
-    
-    describe 'List books' do
-      let(:repository) { BookRepository.new }
-      before do
-        repository.clear
-    
-        repository.create(title: 'PoEAA', author: 'Martin Fowler')
-        repository.create(title: 'TDD',   author: 'Kent Beck')
-      end
-    
-      it 'displays each book on the page' do
-        visit '/books'
-    
-        within '#books' do
-          assert page.has_css?('.book', count: 2), 'Expected to find 2 books'
-        end
-      end
+```rb    
+# spec/web/features/list_books_spec.rb
+require 'features_helper'
+
+describe 'List books' do
+  let(:repository) { BookRepository.new }
+  before do
+    repository.clear
+
+    repository.create(title: 'PoEAA', author: 'Martin Fowler')
+    repository.create(title: 'TDD',   author: 'Kent Beck')
+  end
+
+  it 'displays each book on the page' do
+    visit '/books'
+
+    within '#books' do
+      assert page.has_css?('.book', count: 2), 'Expected to find 2 books'
     end
-    
+  end
+end
+```    
 
 We create the required records in our test and then assert the correct number of book classes on the page. When we run this test it should pass. If it does not pass, a likely reason is that the test database was not migrated.
 
 Now we can go change our template and remove the static HTML. Our view needs to loop over all available records and render them. Let's write a test to force this change in our view:
     
-    
+```rb    
     # spec/web/views/books/index_spec.rb
     require_relative '../../../spec_helper'
     
@@ -69,13 +69,13 @@ There are no books yet.
         end
       end
     end
-    
+```    
 
 We specify that our index page will show a simple placeholder message when there are no books to display; when there are, it lists every one of them. Note how rendering a view with some data is relatively straight-forward. Hanami is designed around simple objects with minimal interfaces that are easy to test in isolation, yet still work great together.
 
 Let's rewrite our template to implement these requirements:
     
-    
+```    
     # apps/web/templates/books/index.html.erb
     
 All books
@@ -105,11 +105,11 @@ There are no books yet.
 
 
     <% end %>
-    
+```    
 
 If we run our feature test now, we'll see it fails — because our controller action does not actually [_expose_][29] the books to our view. We can write a test for that change:
     
-    
+            
     # spec/web/controllers/books/index_spec.rb
     require_relative '../../../spec_helper'
     
