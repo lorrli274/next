@@ -1,4 +1,4 @@
-Open **/views/book_form.pug** and update the section where the author form control is set to have the conditional code shown below.
+Open */views/book_form.pug* and update the section where the author form control is set to have the conditional code shown below.
     
     
         div.form-group
@@ -17,4 +17,4 @@ Open **/views/book_form.pug** and update the section where the author form contr
               else
                 option(value=author._id) #{author.name}
 
-**Note**: This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the `GET` route when creating a form).
+info> This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the `GET` route when creating a form).
