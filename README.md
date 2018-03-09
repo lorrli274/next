@@ -26,7 +26,7 @@ Throughout the issues, you will see several lesson types referenced. They are li
 * Quiz: Multiple/single choice quiz to test students retained knowledge
 * Reading: Some static content, written in Markdown
 
-All courses will ideally include at least several hands-on exercises, projects, and/or assessments. These material types are powered by [Codevolve](https://www.codevolve.com).
+All courses will ideally include at least several hands-on activities, projects, and challenges. These material types are powered by [Codevolve](https://www.codevolve.com).
 
 ## I Want To...
 
