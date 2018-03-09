@@ -1,7 +1,7 @@
 Now we are ready to play around with our repository. We can use Hanami's `console` command to launch IRb with our application pre-loaded, so we can use our objects:
     
-    
-    % bundle exec hanami console
+```sh    
+    $ bundle exec hanami console
     >> repository = BookRepository.new
     => => #
     >> repository.all
@@ -10,7 +10,7 @@ Now we are ready to play around with our repository. We can use Hanami's `consol
     => #1, :title=>"TDD", :author=>"Kent Beck", :created_at=>2016-11-15 11:11:38 UTC, :updated_at=>2016-11-15 11:11:38 UTC}>
     >> repository.find(book.id)
     => #1, :title=>"TDD", :author=>"Kent Beck", :created_at=>2016-11-15 11:11:38 UTC, :updated_at=>2016-11-15 11:11:38 UTC}>
-    
+```    
 
 Hanami repositories have methods to load one or more entities from our database; and to create and update existing records. The repository is also the place where you would define new methods to implement custom queries.
 
