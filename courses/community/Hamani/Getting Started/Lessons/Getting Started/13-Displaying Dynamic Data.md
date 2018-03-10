@@ -75,7 +75,7 @@ We specify that our index page will show a simple placeholder message when there
 
 Let's rewrite our template to implement these requirements:
     
-```    
+```rb    
     # apps/web/templates/books/index.html.erb
     
 All books
@@ -109,61 +109,61 @@ There are no books yet.
 
 If we run our feature test now, we'll see it fails — because our controller action does not actually [_expose_][29] the books to our view. We can write a test for that change:
     
-            
-    # spec/web/controllers/books/index_spec.rb
-    require_relative '../../../spec_helper'
-    
-    describe Web::Controllers::Books::Index do
-      let(:action) { Web::Controllers::Books::Index.new }
-      let(:params) { Hash[] }
-      let(:repository) { BookRepository.new }
-    
-      before do
-        repository.clear
-    
-        @book = repository.create(title: 'TDD', author: 'Kent Beck')
-      end
-    
-      it 'is successful' do
-        response = action.call(params)
-        response[0].must_equal 200
-      end
-    
-      it 'exposes all books' do
-        action.call(params)
-        action.exposures[:books].must_equal [@book]
-      end
-    end
-    
+```rb            
+# spec/web/controllers/books/index_spec.rb
+require_relative '../../../spec_helper'
+
+describe Web::Controllers::Books::Index do
+  let(:action) { Web::Controllers::Books::Index.new }
+  let(:params) { Hash[] }
+  let(:repository) { BookRepository.new }
+
+  before do
+    repository.clear
+
+    @book = repository.create(title: 'TDD', author: 'Kent Beck')
+  end
+
+  it 'is successful' do
+    response = action.call(params)
+    response[0].must_equal 200
+  end
+
+  it 'exposes all books' do
+    action.call(params)
+    action.exposures[:books].must_equal [@book]
+  end
+end
+```    
 
 Writing tests for controller actions is basically two-fold: you either assert on the response object, which is a Rack-compatible array of status, headers and content; or on the action itself, which will contain exposures after we've called it. Now we've specified that the action exposes `:books`, we can implement our action:
     
-    
-    # apps/web/controllers/books/index.rb
-    module Web::Controllers::Books
-      class Index
-        include Web::Action
-    
-        expose :books
-    
-        def call(params)
-          @books = BookRepository.new.all
-        end
-      end
+```rb    
+# apps/web/controllers/books/index.rb
+module Web::Controllers::Books
+  class Index
+    include Web::Action
+
+    expose :books
+
+    def call(params)
+      @books = BookRepository.new.all
     end
-    
+  end
+end
+```    
 
 By using the `expose` method in our action class, we can expose the contents of our `@books` instance variable to the outside world, so that Hanami can pass it to the view. That's enough to make all our tests pass again!
     
-    
-    % bundle exec rake
-    Run options: --seed 59133
-    
-    # Running:
-    
-    .........
-    
-    Finished in 0.042065s, 213.9543 runs/s, 380.3633 assertions/s.
-    
-    9 runs, 16 assertions, 0 failures, 0 errors, 0 skips
-    
+```sh    
+$ bundle exec rake
+Run options: --seed 59133
+
+# Running:
+
+.........
+
+Finished in 0.042065s, 213.9543 runs/s, 380.3633 assertions/s.
+
+9 runs, 16 assertions, 0 failures, 0 errors, 0 skips
+```    
