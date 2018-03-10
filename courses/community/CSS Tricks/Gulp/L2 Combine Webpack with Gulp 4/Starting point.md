@@ -14,7 +14,7 @@ The `site` folder holds all your site's assets:
 
 To tell gulp where the tasks are located, we need to add flags in our *Package.json*:
 ​    
-```jason   
+```package.jason   
 "scripts": {
   "dev": "gulp --require babel-register --gulpfile tasks",
   "build": "NODE_ENV=production gulp build --require babel-register --gulpfile tasks"
