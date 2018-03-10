@@ -1,7 +1,6 @@
-In *Webpack.js*:
-​    
+In *webpack.js*:
 
-```node.js    
+```javascript   
 import path from 'path'
 import webpack from 'webpack'
 
@@ -25,10 +24,9 @@ function scripts() {
         resolve()
     }))
 }
-```
 
 module.exports = { config, scripts }
-
+```
 Notice how we don't export the object directly like many tutorials show but put it into a variable first. This is necessary so we can use the configuration in the Gulp task `scripts` below as well as in the server middleware in the next step.
 
 #### Context
@@ -38,12 +36,12 @@ The `config.context` setup is necessary to set all paths relative to our `site` 
 #### Separate Config and Task
 
 If you have a very long Webpack **config**, you can also split it and the task into two files.
-​    
-```node.js    
+   
+```javascript    
 // webpack.js
 export let config = { /* ... */ }
-
-
+```
+```javascript
 // scripts.js
 import { config } from './webpack'
 export function scripts() { /* ... */ }
