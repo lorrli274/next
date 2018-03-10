@@ -1,6 +1,8 @@
 In *webpack.js*:
 
-```javascript   
+```javascript  
+//webpack.js
+
 import path from 'path'
 import webpack from 'webpack'
 
@@ -39,10 +41,12 @@ If you have a very long Webpack **config**, you can also split it and the task i
    
 ```javascript    
 // webpack.js
+
 export let config = { /* ... */ }
 ```
 ```javascript
 // scripts.js
+
 import { config } from './webpack'
 export function scripts() { /* ... */ }
 ```
