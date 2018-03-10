@@ -2,7 +2,7 @@ Hold your horses! We need some extra measures to build a truly robust form. Imag
 
 We could fill our database with bad data or see an exception for data integrity violations. We clearly need a way of keeping invalid data out of our system!
 
-To express our validations in a test, we need to wonder: what _would_ happen if our validations failed? One option would be to re-render the `books#new` form, so we can give our users another shot at completing it correctly. Let's specify this behaviour as unit tests:
+To express our validations in a test, we need to wonder: what would happen if our validations failed? One option would be to re-render the `books#new` form, so we can give our users another shot at completing it correctly. Let's specify this behaviour as unit tests:
     
 ```rb    
 # spec/web/controllers/books/create_spec.rb
@@ -58,7 +58,7 @@ Now our tests specify two alternative scenarios: our original happy path, and a 
 
 Although you can add validation rules to the entity, Hanami also allows you to define validation rules as close to the source of the input as possible, i.e. the action. Hanami controller actions can use the `params` class method to define acceptable incoming parameters.
 
-This approach both whitelists what params are used (others are discarded to prevent mass-assignment vulnerabilities from untrusted user input) _and_ adds rules to define what values are acceptable — in this case we've specified that the nested attributes for a book's title and author should be present.
+This approach both whitelists what params are used (others are discarded to prevent mass-assignment vulnerabilities from untrusted user input) and adds rules to define what values are acceptable — in this case we've specified that the nested attributes for a book's title and author should be present.
 
 With our validations in place, we can limit our entity creation and redirection to cases where the incoming params are valid:
     
@@ -92,7 +92,7 @@ end
 
 When the params are valid, the Book is created and the action redirects to a different URL. But when the params are not valid, what happens?
 
-First, the HTTP status code is set to [422 (Unprocessable Entity)][38]. Then the control will pass to the corresponding view, which needs to know which template to render. In this case `apps/web/templates/books/new.html.erb` will be used to render the form again.
+First, the HTTP status code is set to [422 (Unprocessable Entity)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#422). Then the control will pass to the corresponding view, which needs to know which template to render. In this case `apps/web/templates/books/new.html.erb` will be used to render the form again.
     
 ```rb    
 # apps/web/views/books/create.rb
