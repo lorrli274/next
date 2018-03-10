@@ -1,6 +1,6 @@
 ## Methods
 
-Methods, or functions as they are often called, are blocks of code that designed to perform a tasks (usually one) in a particular way. Methods help group blocks of code that perform a specific function together. The structure for declaring a method is below. 
+Methods, or functions as they are often called, are blocks of code that designed to perform a tasks (usually one) in a particular way. In Java, the term function is used when referencing intenrally, while method is used when referencing externally (they are commonly interchangable). Methods help group blocks of code that perform a specific function together. The structure for declaring a method is below. 
 
 ```Java
 /** javadoc */
@@ -22,7 +22,7 @@ Method declarations have keywords that tell the compiler what type of method it 
 4. `final` - prevents the modification (Overriding) of a method by a subclass. 
 5. `void` - Indicates that the method does not return a value. This keyword can be replaced by a data type or object to indicate the return type of the method. 
 
-## Name
+## Naming Conventions
 
 These keywords are followed by a method name. Method names in Java typically follow camelCase, and usually indicate the purpose of the function, such as `private void doNothing() {};` This does not always have to be the case and it is a good idea to use <u>javadoc</u> to futher explain the purpose and the details of non-intuitive methods in a program. Often when writing about code it is common to use placeholder names such as *foo* or *bar* for the names of functions or variables. Method names, like variable names, must be keywords. 
 
