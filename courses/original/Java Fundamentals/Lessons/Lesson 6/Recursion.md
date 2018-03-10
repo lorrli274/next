@@ -1,6 +1,6 @@
 ## Recursion
 
-**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform a desired operational block of code. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
+**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform a desired block of code. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
 
 The basic idea behind recursion is that a function can implement an operation on a data set that gets it *N-1* steps closer to the desired state. Instead of manually calling the function *N* times, or throwing the function in a loop, the function can perform the operation on the data set and proceed to make another call to itself on the dataset. 
 
