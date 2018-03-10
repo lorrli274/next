@@ -6,10 +6,10 @@ For this course, we will use the structure of a generic webapp:
 ╔═ app/
 ║   ╠═══ css/
 ║   ╠═══ fonts/
-║   ╠═══ images/ 
-║   ╠═══ index.html
-║   ╠═══ js/ 
-║   ╚═══ scss/
+║   ╠═══ images/
+║   ╠═══ js/
+║   ╠═══ scss/
+║   ╚═══ index.html
 ╠═ dist/
 ╠═ node_modules/
 ╠═ gulpfile.js
