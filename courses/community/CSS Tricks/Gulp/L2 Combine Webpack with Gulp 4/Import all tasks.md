@@ -1,7 +1,8 @@
-The *Index.js* file includes all **tasks**:
-​    
+The *index.js* file includes all **tasks**:  
 
-```node.js    
+```javascript
+//index.js
+
 import gulp from 'gulp'
 
 import { scripts } from './webpack'
@@ -21,4 +22,4 @@ During development, Webpack is run by BrowserSync so putting the scripts task in
 
 #### Running Tasks
 
-To start developing you cannot just run `gulp` or `gulp build` since it will look for a `gulpfile.js` in the project root. We have to run the npm commands `npm run dev` and `npm run build` to make use of the defined flags.
+To start developing you cannot just run `gulp` or `gulp build` since it will look for a *gulpfile.js* in the project root. We have to run the npm commands `npm run dev` and `npm run build` to make use of the defined flags.
