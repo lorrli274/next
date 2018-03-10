@@ -1,4 +1,4 @@
-Let's use [form helpers][33] to build this form in `apps/web/templates/books/new.html.erb`:
+Let's use [form helpers](http://hanamirb.org/guides/1.0/helpers/forms) to build this form in `apps/web/templates/books/new.html.erb`:
     
 ```rb    
 # apps/web/templates/books/new.html.erb
@@ -27,4 +27,4 @@ Add book
 ```    
 
 We've added `` tags for our form fields, and wrapped each field in a container `
-` using Hanami's [HTML builder helper][34].
+` using Hanami's [HTML builder helper](http://hanamirb.org/guides/1.0/helpers/html5).
