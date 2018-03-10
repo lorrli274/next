@@ -1,8 +1,8 @@
 ## Recursion
 
-**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform its desired operational block. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
+**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform a desired operational block of code. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
 
-The basic idea behind recursion is that a function can implement an operation on a data set that gets it *N-1* steps closer to the desired state. Instead of manually calling the function *N* times, the function can perform the operation on the data set and proceed to make another call to itself on the dataset. 
+The basic idea behind recursion is that a function can implement an operation on a data set that gets it *N-1* steps closer to the desired state. Instead of manually calling the function *N* times, or throwing the function in a loop, the function can perform the operation on the data set and proceed to make another call to itself on the dataset. 
 
 ```Java
 private long factorial(int num) {
@@ -13,7 +13,7 @@ private long factorial(int num) {
 }
 ```
 
-Above is an example of a recursive function computes the factorial of `num`. If the `num` is equal to `1`, the recursive function returns `1` as that is the last logical case in a factorial operation. If `num` does not equal `1`, it will perform the operation of `num * num - 1!`. 
+Above is an example of a recursive function computes the factorial of `num`. If the `num` is equal to `1`, the recursive function returns `1` as that is the last logical case in a factorial operation. If `num` does not equal `1`, it will perform the operation of `num * num - 1!` (the `!` being the factorial of `n - 1`). 
 
 Let's use **5!** as our factorial example. 
 
@@ -24,9 +24,9 @@ Let's use **5!** as our factorial example.
 			2 * factorial(1); // 2 * 1 = 2
 ```
 
-In the above example you can see that the same operation is performed over and over in this case 5 times. Once the recursive function is equal to 1, the recursive functions starts its chain of return statements back to the original calling point. 
+In the above example you can see that the same operation is performed over and over, in this case 5 times. Once the recursive function is equal to 1, the recursive functions starts its chain of return statements back to the original calling point. 
 
-Recursion depends on the idea that a base case condition can be met for the recursion to break. Otherwise, in similar fashion to infinite loop, the recursive function will run continuously. In the factorial example above, that condition is that `n == 1`. 
+Recursion depends on the idea that a base case condition can be met for the recursion to break. Otherwise it will run endlessly, like a <u>infinite loop</u>. In the factorial example above, that condition is that `n == 1`. 
 
 ## Towers of Hanoi
 
@@ -42,7 +42,7 @@ Below is a common example of recursive problem. The **Towers of Hanoi** is a pro
 555555555 	 _______	 _______
 ```
 
-**Figure 1**
+***Figure 1***
 
 ```java
 // End 	
@@ -54,9 +54,9 @@ Below is a common example of recursive problem. The **Towers of Hanoi** is a pro
  _______ 	 _______	555555555
 ```
 
-**Figure 2**
+***Figure 2***
 
-The snippet below contains the one recursive solution to solving the towers of hanoi. Run the code, and observe the output. Try removing the code alltogether and attempting another solution from scratch. There is more than one way to complete this problem. 
+The snippet below contains the one recursive solution to solving the Towers of Hanoi. Run the code, and observe the output. Try removing the code alltogether and attempting another solution from scratch. There is more than one way to complete this problem. 
 
 ```java
 // Towers of Hanoi
