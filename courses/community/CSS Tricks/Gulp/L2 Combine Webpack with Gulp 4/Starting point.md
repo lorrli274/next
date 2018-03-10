@@ -1,8 +1,8 @@
 Create a `tasks` folder in your project root with three files: *index.js*, *webpack.js* and *server.js*. We have less clutter in our project root since the index file acts like *gulpfile.js* and the webpack file as *webpack.config.js*.
 
 The `site` folder holds all your site's assets:
-​    
-```node.js
+
+```
 ╔ site
 ║   ╚═══ main.js
 ╠ tasks
@@ -13,7 +13,7 @@ The `site` folder holds all your site's assets:
 ```
 
 To tell gulp where the tasks are located, we need to add flags in our *Package.json*:
-​    
+  
 ```package.jason   
 "scripts": {
   "dev": "gulp --require babel-register --gulpfile tasks",
