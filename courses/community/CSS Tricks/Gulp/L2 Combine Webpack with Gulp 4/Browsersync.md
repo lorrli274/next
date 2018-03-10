@@ -1,7 +1,8 @@
-Now a `Browsersync` task setup:
-​    
+Now a `BrowserSync` task setup:    
 
-```node.js    
+```javascript
+//server.js
+
 import gulp from 'gulp'
 import Browser from 'browser-sync'
 import webpack from 'webpack'
@@ -29,6 +30,6 @@ export function server() {
 }
 ```
 
-The **Dev Middleware** enables BrowserSync to process what was defined as entry in *Webpack.js*. To give it this information we import the config module. Hot Middlware on the other hand checks for changes in app components like `.vue` files for Vue.js to inject.
+The **Dev Middleware** enables BrowserSync to process what was defined as entry in *webpack.js*. To give it this information we import the config module. **Hot Middlware**, on the other hand, checks for changes in app components like `.vue` files for Vue.js to inject.
 
-Since we cannot hot reload files like *Main.js*, we watch them and reload the window on change. Again, if you don't need HMR, remove *webpackHotMiddleware.*
+Since we cannot hot reload files like *main.js*, we **watch** them and reload the window on change. Again, if you don't need HMR, remove *webpackHotMiddleware*.
