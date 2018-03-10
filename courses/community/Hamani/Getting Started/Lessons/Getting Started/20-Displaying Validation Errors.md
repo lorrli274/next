@@ -86,7 +86,7 @@ Finished in 0.188950s, 89.9707 runs/s, 179.9413 assertions/s.
 You have skipped tests. Run with --verbose for details.
 ```    
 
-### [ ][40]Improving Our Use Of The Router
+### [ ](http://hanamirb.org#improving-our-use-of-the-router)Improving Our Use Of The Router
 
 The last improvement we are going to make, is in the use of our router. Open up the routes file for the "web" application:
     
