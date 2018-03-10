@@ -11,8 +11,8 @@ For this course, we will use the structure of a generic webapp:
 ║   ╠═══ js/ 
 ║   ╚═══ scss/
 ╠═ dist/
-╠═ gulpfile.js
 ╠═ node_modules/
+╠═ gulpfile.js
 ╚═ package.json
 ```
 In this structure, we'll use the `app` folder for development purposes, while the `dist` (as in "distribution") folder is used to contain optimized files for the production site. 
