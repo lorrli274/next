@@ -2,9 +2,9 @@ Now you can imagine how easy it is to **expand** and write more tasks. Export a 
 
 To give you an idea of how to set up your project folder, here's an example setup:   
 ```    
-╔ build
-╠ src
-╠ tasks
+╔═ build
+╠═ src
+╠═ tasks
 ║   ╠═══ config.js => project wide
 ║   ╠═══ icons.js  => optimize/concat SVG
 ║   ╠═══ images.js => optimize images
@@ -13,5 +13,5 @@ To give you an idea of how to set up your project folder, here's an example setu
 ║   ╠═══ server.js => start dev server
 ║   ╠═══ styles.js => CSS + preprocessor
 ║   ╚═══ webpack.js
-╚ package.json
+╚═ package.json
 ```
