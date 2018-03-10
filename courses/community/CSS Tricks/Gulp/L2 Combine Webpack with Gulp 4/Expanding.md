@@ -1,8 +1,7 @@
-Now you can imagine how easy it is to **expand** and write more tasks. Export a task in one file and import it in `index.js`. Clean and easy to maintain!
+Now you can imagine how easy it is to **expand** and write more tasks. Export a task in one file and import it in *index.js*. Clean and easy to maintain!
 
-To give you an idea of how to set up your project folder, here's an example setup:
-​    
-```node.js    
+To give you an idea of how to set up your project folder, here's an example setup:   
+```    
 ╔ build
 ╠ src
 ╠ tasks
