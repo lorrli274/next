@@ -1,10 +1,10 @@
 #### Static File Handling
 
-Gulp can handle **static assets** better than Webpack. The Copy Webpack can also copy files from your source to your build folder but when it comes to watching file deletion or changes like overriding an image, `gulp.watch` is a safer bet.
+Gulp can handle **static assets** better than Webpack. The [Copy Webpack Plugin](https://github.com/kevlened/copy-webpack-plugin) can also copy files from your source to your build folder but when it comes to watching file deletion or changes like overriding an image, `gulp.watch` is a safer bet.
 
 #### Server Environment
 
-Webpack also comes with a local **server environment** via Webpack Dev Server, but using BrowserSync has some features you might not want to miss:
+Webpack also comes with a local **server environment** via [Webpack Dev Server](https://github.com/webpack/webpack-dev-server), but using BrowserSync has some features you might not want to miss:
 
 * CSS/HTML/image injection for non-app projects
 * multiple device testing out of the box
