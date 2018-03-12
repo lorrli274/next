@@ -9,7 +9,7 @@ All `JOIN`s are not created equal! The differences between each type are illustr
 
 ## `INNER JOIN`
 
-![](../assets/SQL.innerJoin.jpg)
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/original/Database%20Fundamentals/Lessons/assets/SQL.innerJoin.jpg)
 
 By default, a `JOIN` in a query is an **`INNER JOIN`**. This `JOIN` limits the data returned to records that have results in both tables.
 
