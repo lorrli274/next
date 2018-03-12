@@ -28,7 +28,7 @@ However, the new project is not shown! This is because there are not job orders 
 
 ## `LEFT JOIN`
 
-> DEV: TODO diagram
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/original/Database%20Fundamentals/Lessons/assets/SQL.leftJoin.jpg)
 
 To include all the data from the **left** table (_projects_) regardless of whether or not it has records in the **right** table (*job_orders*) a `LEFT JOIN` can be used:
 
@@ -45,7 +45,7 @@ Now, the new project is shown along with its count of job orders.
 
 ##`RIGHT JOIN`
 
->  DEV: TODO diagram
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/original/Database%20Fundamentals/Lessons/assets/SQL.rightJoin.jpg)
 
 A **`RIGHT JOIN`** is similar to a `LEFT JOIN`, however the right table's data (*job_orders*) is used as the starting point. Here the tables are swapped in the query, but the same result is returned because a `RIGHT JOIN` is used:
 
@@ -59,6 +59,8 @@ GROUP  BY 1;
 ```
 
 ### `FULL JOIN`
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/original/Database%20Fundamentals/Lessons/assets/SQL.fullOuterJoin.jpg)
+
 A **`FULL JOIN`** returns records for both tables, regardless of whether not a relationship exists between them. However, MySQL does not support `FULL JOIN`s, so instead this is covered in more depth in the next section on `UNION`s.
 
 This is the equivelant query in MySQL using a `UNION ALL`:
