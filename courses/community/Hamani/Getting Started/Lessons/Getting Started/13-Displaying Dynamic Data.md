@@ -107,7 +107,7 @@ There are no books yet.
     <% end %>
 ```    
 
-If we run our feature test now, we'll see it fails — because our controller action does not actually [_expose_][29] the books to our view. We can write a test for that change:
+If we run our feature test now, we'll see it fails — because our controller action does not actually [_expose_](http://hanamirb.org/guides/1.0/actions/exposures) the books to our view. We can write a test for that change:
     
 ```rb            
 # spec/web/controllers/books/index_spec.rb
