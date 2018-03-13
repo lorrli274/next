@@ -2,7 +2,7 @@ One of the last remaining steps is to make it possible to add new books to the s
 
 When the user submits the form, we build a new entity, save it, and redirect the user back to the book listing. Here's that story expressed in a test:
     
-```rb    
+```ruby    
 # spec/web/features/add_book_spec.rb
 require 'features_helper'
 

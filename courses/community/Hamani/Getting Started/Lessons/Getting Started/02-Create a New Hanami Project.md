@@ -3,9 +3,9 @@ To create a new Hanami project, we need to install the Hanami gem from Rubygems.
  ```sh   
 $ gem install hanami
 $ hanami new bookshelf
- ```   
+```
 
-By default, the project will be setup to use a SQLite database. For real-world projects, you can specify your engine: ` % hanami new bookshelf --database=postgres  `
+By default, the project will be setup to use a SQLite database. For real-world projects, you can specify your engine: `$ hanami new bookshelf --database=postgres`.
 
 This will create a new directory `bookshelf` in our current location. Let's see what it contains:
     
@@ -24,7 +24,7 @@ $ tree -L 1
 └── spec
 
 6 directories, 3 files
-```    
+```
 
 Here's what we need to know:
 
@@ -39,14 +39,12 @@ Here's what we need to know:
 * **`spec`** contains our tests.
 
 Go ahead and install our gem dependency with Bundler; then we can launch a development server:
-    
-```sh    
+
+```sh
 $ bundle install
 $ bundle exec hanami server
-```    
+```
 
-danger> http://localhost:2300 needs to work in codevolve?
-
-And... bask in the glory of your first Hanami project at http://localhost:2300! We should see a screen similar to this:
+And... bask in the glory of your first Hanami project at [http://localhost:2300]({{localhost:2300}})! We should see a screen similar to this:
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Hanami/welcome-page.png)

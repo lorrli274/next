@@ -2,15 +2,15 @@ An entity is something really close to a plain Ruby object. We should focus on t
 
 For now, we keep the generated entity class:
     
-```rb    
+```ruby    
 # lib/bookshelf/entities/book.rb
 class Book < Hanami::Entity
 end
-```    
+```
 
 This class will generate getters and setters for each attribute which we pass to initialize params. We can verify it all works as expected with a unit test:
     
-```rb   
+```ruby   
 # spec/bookshelf/entities/book_spec.rb
 require_relative '../../spec_helper'
 

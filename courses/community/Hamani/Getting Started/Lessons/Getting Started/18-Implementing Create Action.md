@@ -1,6 +1,6 @@
 Our `books#create` action needs to do two things. Let's express them as unit tests:
     
-```rb    
+```ruby    
 # spec/web/controllers/books/create_spec.rb
 require_relative '../../../spec_helper'
 
@@ -28,11 +28,11 @@ describe Web::Controllers::Books::Create do
     response[1]['Location'].must_equal '/books'
   end
 end
-```    
+```
 
 Let's make these tests pass! We've already seen how we can write entities to our database, and we can use `redirect_to` to implement our redirection:
     
-```rb    
+```ruby    
 # apps/web/controllers/books/create.rb
 module Web::Controllers::Books
   class Create
@@ -45,7 +45,7 @@ module Web::Controllers::Books
     end
   end
 end
-```    
+```
 
 This minimal implementation should suffice to make our tests pass.
     
@@ -62,6 +62,6 @@ Finished in 0.081961s, 183.0142 runs/s, 305.0236 assertions/s.
 15 runs, 23 assertions, 0 failures, 0 errors, 2 skips
 
 You have skipped tests. Run with --verbose for details.
-```    
+```
 
 Congratulations!

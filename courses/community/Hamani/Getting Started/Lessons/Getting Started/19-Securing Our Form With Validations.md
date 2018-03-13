@@ -4,7 +4,7 @@ We could fill our database with bad data or see an exception for data integrity 
 
 To express our validations in a test, we need to wonder: what would happen if our validations failed? One option would be to re-render the `books#new` form, so we can give our users another shot at completing it correctly. Let's specify this behaviour as unit tests:
     
-```rb    
+```ruby    
 # spec/web/controllers/books/create_spec.rb
 require_relative '../../../spec_helper'
 
@@ -52,7 +52,7 @@ describe Web::Controllers::Books::Create do
     end
   end
 end
-```    
+```
 
 Now our tests specify two alternative scenarios: our original happy path, and a new scenario in which validations fail. To make our tests pass, we need to implement validations.
 
@@ -62,7 +62,7 @@ This approach both whitelists what params are used (others are discarded to prev
 
 With our validations in place, we can limit our entity creation and redirection to cases where the incoming params are valid:
     
-```rb    
+```ruby    
 # apps/web/controllers/books/create.rb
 module Web::Controllers::Books
   class Create
@@ -88,13 +88,13 @@ module Web::Controllers::Books
     end
   end
 end
-```    
+```
 
 When the params are valid, the Book is created and the action redirects to a different URL. But when the params are not valid, what happens?
 
 First, the HTTP status code is set to [422 (Unprocessable Entity)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#422). Then the control will pass to the corresponding view, which needs to know which template to render. In this case `apps/web/templates/books/new.html.erb` will be used to render the form again.
     
-```rb    
+```ruby    
 # apps/web/views/books/create.rb
 module Web::Views::Books
   class Create
@@ -102,7 +102,7 @@ module Web::Views::Books
     template 'books/new'
   end
 end
-```    
+```
 
 This approach will work nicely because Hanami's form builder is smart enough to inspect the `params` in this action and populate the form fields with values found in the params. If the user fills in only one field before submitting, they are presented with their original input, saving them the frustration of typing it again.
 

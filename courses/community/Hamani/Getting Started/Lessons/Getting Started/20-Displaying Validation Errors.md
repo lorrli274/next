@@ -2,7 +2,7 @@ Rather than just shoving the user a form under their nose when something has gon
 
 First, we expect a list of errors to be included in the page when `params` contains errors:
     
-```rb    
+```ruby    
 # spec/web/views/books/new_spec.rb
 require_relative '../../../spec_helper'
 
@@ -19,11 +19,11 @@ describe Web::Views::Books::New do
     rendered.must_include('Author must be filled')
   end
 end
-```    
+```
 
 We should also update our feature spec to reflect this new behavior:
     
-```rb    
+```ruby    
 # spec/web/features/add_book_spec.rb
 require 'features_helper'
 
@@ -44,30 +44,22 @@ describe 'Add a book' do
     assert page.has_content?('Author must be filled')
   end
 end
-```    
+```
 
 In our template we can loop over `params.errors` (if there are any) and display a friendly message. Open up `apps/web/templates/books/new.html.erb` and add the following at the top of the file:
-    
-```    
+
+```erb
 <% unless params.valid? %>
-```     
-
-        
-There was a problem with your submission
-
-```        
-
-          <% params.error_messages.each do |message| %>
-            
-<%= message %>
-
-          <% end %>
-        
-
-      
-
-    <% end %>
-```    
+  <div class="errors">
+    <h3>There was a problem with your submission</h3>
+    <ul>
+      <% params.error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+```
 
 Run your tests again and see they are all passing again!
     
@@ -84,4 +76,4 @@ Finished in 0.188950s, 89.9707 runs/s, 179.9413 assertions/s.
 17 runs, 34 assertions, 0 failures, 0 errors, 1 skips
 
 You have skipped tests. Run with --verbose for details.
-```    
+```
