@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="268px" viewBox="0 0 600 268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="ro" sketch:type="MSArtboardGroup" transform="translate(-40.000000, -40.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(40.000000, 40.000000)">
+                <g id="Group-3">
+                    <rect id="Rectangle-1" opacity="0.4" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="34" width="600" height="30" rx="4"></rect>
+                    <text id="root" opacity="0.4" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="51">root</tspan>
+                    </text>
+                    <text id="crypto" opacity="0.4" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="51">crypto</tspan>
+                    </text>
+                    <text id="82" opacity="0.2" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="51">82</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="102" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="119">root</tspan>
+                    </text>
+                    <text id="unicorn-worker_1" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="119">unicorn worker_1</tspan>
+                    </text>
+                    <text id="133" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="119">133</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="136" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="153">root</tspan>
+                    </text>
+                    <text id="unicorn-worker_2" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="153">unicorn worker_2</tspan>
+                    </text>
+                    <text id="134" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="153">134</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="170" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="187">root</tspan>
+                    </text>
+                    <text id="unicorn-worker_3" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="187">unicorn worker_3</tspan>
+                    </text>
+                    <text id="135" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="187">135</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="204" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="221">root</tspan>
+                    </text>
+                    <text id="unicorn-worker_4" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="221">unicorn worker_4</tspan>
+                    </text>
+                    <text id="136" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="221">136</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="238" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="255">root</tspan>
+                    </text>
+                    <text id="unicorn-worker_5" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="255">unicorn worker_5</tspan>
+                    </text>
+                    <text id="137" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="255">137</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.5" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="68" width="600" height="30" rx="4"></rect>
+                    <text id="root" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="85">root</tspan>
+                    </text>
+                    <text id="unicorn-master" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="85">unicorn master</tspan>
+                    </text>
+                    <text id="132" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="85">132</tspan>
+                    </text>
+                    <rect id="Rectangle-1" opacity="0.2" fill="#ECF0F2" sketch:type="MSShapeGroup" x="0" y="0" width="600" height="30" rx="4"></rect>
+                    <text id="root" opacity="0.2" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="18" y="17">root</tspan>
+                    </text>
+                    <text id="ecryptfs-kthrea" opacity="0.2" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#262626">
+                        <tspan x="198" y="17">ecryptfs-kthrea</tspan>
+                    </text>
+                    <text id="81" opacity="0.2" sketch:type="MSTextLayer" font-family="Monaco, Courier" font-size="13" font-weight="normal" line-spacing="10" fill="#000000">
+                        <tspan x="118" y="17">81</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
