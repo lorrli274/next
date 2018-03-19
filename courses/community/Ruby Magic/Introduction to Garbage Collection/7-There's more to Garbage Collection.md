@@ -1,0 +1,1 @@
+This was only our introduction to Garbage Collection. In a future article we'll look at how exactly this works in Ruby, and how you can measure and tune GC to improve the performance of your application.
