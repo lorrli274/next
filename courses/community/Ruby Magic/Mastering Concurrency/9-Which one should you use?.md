@@ -1,0 +1,1 @@
+We hope this article has given you a better understanding of the different concurrency models. It's some of the more difficult subject matter to grasp as a developer, but understanding it will give you the tools to experiment and use the right setup for your app.
