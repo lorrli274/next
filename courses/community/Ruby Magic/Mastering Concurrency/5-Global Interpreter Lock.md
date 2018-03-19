@@ -1,0 +1,3 @@
+This brings us to the global interpreter lock (GIL) in MRI. The GIL is a lock around the execution of all Ruby code. Even though our threads appear to run in parallel, only one thread is active at a time.
+
+IO operates outside of the GIL. When you execute a database query waiting for the result to come back, it won't lock. Another thread will have a chance to do some work in the meantime. If you do a lot of math and operations on hashes or arrays in threads, you will only utilize a single core if you use MRI. In most cases you still need multiple processes to fully utilize your machine. Or you could use Rubinius or jRuby, which don't have a GIL.
