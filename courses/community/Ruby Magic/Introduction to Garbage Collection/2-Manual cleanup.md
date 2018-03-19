@@ -1,0 +1,1 @@
+This looks a little something like the following mock Ruby code. It declares a variable and uses the method `free` –this method does not actually exist in Ruby– to clean up the memory we've used after we're done with the variable.
