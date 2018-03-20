@@ -6,7 +6,7 @@ Two exceptions that most applications won't want to rescue are are SignalExcepti
 
 > [SignalException][5] is used when an outside source is telling the application to stop. This can be the Operating System when it wants to shut down, or a system administrator that wants to stop the application. [Example][6]
 > 
-> [SystemExit][7] is used when `exit` is being called from the Ruby application. When this is raised the developer wants the application to stop. [Example][8]
+> [SystemExit][7] is used when `exit` is being called from the Ruby application. When this is raised the developer wants the application to stop. [Example]8]
 > 
 > If we rescue Exception and these exceptions are raised while an application is currently running the `begin ... rescue ... end` block it cannot exit.
 
