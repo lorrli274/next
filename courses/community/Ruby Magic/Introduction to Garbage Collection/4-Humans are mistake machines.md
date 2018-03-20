@@ -1,1 +1,0 @@
-Humans are notoriously bad at not making these kinds of mistakes all of the time. Hence the need for a way to automatically clean up memory. The most popular way to do this –also used in Ruby– is Garbage Collection (GC).
