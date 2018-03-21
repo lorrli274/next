@@ -1,18 +1,16 @@
-A computer has two types of memory: Stack and Heap. The stack is very fast and is local to the context of a function call. This means that every variable that is declared in the stack is immediately freed once the function is done. The stack is very limited in size, so you cannot store larger objects that contain an image or file's data, for example.
+A computer has two types of memory: **Stack** and **Heap**. The stack is very fast and is local to the context of a function call. This means that every variable that is declared in the stack is immediately freed once the function is done. The stack is very limited in size, so you cannot store larger objects that contain an image or file's data, for example.
 
 This is a bad fit for storing Ruby objects. These objects very often stick around for longer than a method call. Also, it's almost impossible to predict whether an object will be too big for the stack.
 
 Therefore Ruby uses the other type of memory: the heap. On the heap a program can claim some memory and is then responsible for cleanup once it's done with that memory. Ruby uses this by claiming a single slab of memory to use to store Ruby objects. This is referred to as Ruby's heap.
 
-|  Stack and Heap summary |  
-| ----  |
-|  Stack memory |  Very fast   
-
-Used memory is freed automatically when the function call ends   
-Very limited in size  |  
-|  Heap memory |  Slightly slower than stack   
-No automatic cleanup   
-Size is only limited by the available memory of the computer  | 
+Stack and Heap summary
+Stack memory	Very fast 
+Used memory is freed automatically when the function call ends 
+Very limited in size
+Heap memory	Slightly slower than stack 
+No automatic cleanup 
+Size is only limited by the available memory of the computer
 
 So Ruby objects are always allocated on Ruby's heap. If they're smaller than 40 bytes their content can be directly embedded in the object. Otherwise the object points to a separate segment of memory on Ruby's heap. So your Ruby object is often stored in two completely different locations in memory. Once Ruby's heap is full it will create a new heap, which is used for new objects.
 
