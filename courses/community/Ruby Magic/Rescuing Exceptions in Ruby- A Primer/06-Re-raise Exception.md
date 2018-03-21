@@ -2,33 +2,15 @@ An application should only capture exceptions as high up in the chain as the Exc
 
 One recommendation for when you absolutely have to rescue Exception, re-raise it after you're done handling the error. This way the Ruby exception handling can decide the fate of the process afterward.
 
-| ----- |
-| 
-    
-    
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
+ ```ruby    
+File.open("/tmp/my_app.status", "w") { |f| "running" }
 
- | 
-    
-    
-    File.open("/tmp/my_app.status", "w") { |f| "running" }
 
-    
-    begin
-      foo
-    rescue Exception => e
-      Appsignal.add_error e
-      File.open("/tmp/my_app.status", "w") { |f| "stopped" }
-      raise e
-    end
-    
-
- | 
+begin
+  foo
+rescue Exception => e
+  Appsignal.add_error e
+  File.open("/tmp/my_app.status", "w") { |f| "stopped" }
+  raise e
+end
+```
