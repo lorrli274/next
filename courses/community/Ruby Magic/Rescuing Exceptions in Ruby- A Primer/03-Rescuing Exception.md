@@ -1,4 +1,4 @@
-It might still be tempting to rescue high up in the exception chain. Rescuing all errors an application can raise will prevent it from crashing. (100% uptime here we come!) However, it can cause a lot of problems.
+It might still be tempting to **rescue** high up in the exception chain. Rescuing all errors an application can raise will prevent it from crashing. (100% uptime here we come!) However, it can cause a lot of problems.
 
 The [Exception](http://ruby-doc.org/core-2.3.1/Exception.html) class is the main exception class in Ruby. All other exceptions are subclasses of this class; if Exception is rescued all errors will be caught.
 
