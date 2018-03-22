@@ -10,6 +10,8 @@ The process you start with is called the master process, and the processes that 
 
 Since these newly forked worker processes are truly separate processes, we cannot share memory between them and the master process. We need something to communicate between them.
 
+info> To communicate between processes we will use Unix pipes. A Unix pipe sets up a two-way stream of bytes between two processes, and you can use it to to send data from one process to the other. Luckily, Ruby offers a nice wrapper around these pipes so we don’t need to re-invent the wheel.
+
 In the following example we set up a pipe in Ruby –with a reading and a writing end– and we `fork` the master process. The code within the block that's passed to `fork` is running in the forked process. The original process continues after this block. We then write a message to the original process from the forked one.
 
 ```ruby
