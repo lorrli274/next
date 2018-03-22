@@ -29,4 +29,4 @@ Like before, it closes the connection after sending the message. We're not readi
 
 If you start the server and open http://localhost:5678 in your browser, you should see the "Hello world! …"-line with the current time, like we received from our TCP client earlier. 🎉
 
-![] (https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/http_server.png)
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/http_server.png)
