@@ -1,4 +1,4 @@
-Enough talk. Now that we know how to create a TCP server in Ruby and what some HTTP requests and responses look like, we can build a really simple HTTP server. You'll notice that the web server looks mostly the same as the TCP server we discussed earlier. The general idea is the same, we're just using the HTTP protocol to format our message. Also, because we'll use a browser to send requests and parse responses, we won't have to implement a client this time.
+Enough talk. Now that we know how to create a **TCP** server in Ruby and what some HTTP requests and responses look like, we can build a really simple HTTP server. You'll notice that the web server looks mostly the same as the TCP server we discussed earlier. The general idea is the same, we're just using the HTTP protocol to format our message. Also, because we'll use a browser to send requests and parse responses, we won't have to implement a client this time.
 
 ```ruby
 # http_server.rb
