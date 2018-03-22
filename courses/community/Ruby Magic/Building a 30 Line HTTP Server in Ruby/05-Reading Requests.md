@@ -74,12 +74,12 @@ To parse the request and send the request parameters to the Rack app, we'll spli
 
 For example, a request like `GET /?flip=left HTTP/1.1rn` will be passed to the app like this:
 
-```ruby    
-    {
-      'REQUEST_METHOD' => 'GET',
-      'PATH_INFO' => '/',
-      'QUERY_STRING' => '?flip=left'
-    }
+```    
+{
+  'REQUEST_METHOD' => 'GET',
+  'PATH_INFO' => '/',
+  'QUERY_STRING' => '?flip=left'
+}
 ```
 
 Restarting our server, visiting http://localhost:5678, and clicking the "flip!"-link will now flip the lobster, and clicking the "crash!" link will crash our web server.
