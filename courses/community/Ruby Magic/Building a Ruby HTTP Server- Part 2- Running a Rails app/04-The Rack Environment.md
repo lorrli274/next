@@ -14,7 +14,7 @@ server = TCPServer.new 5678
 # ...
 ```    
 
-`Rack::Lint` will throw an exception when a variable in the environment is missing or invalid. Right now, starting our server again and opening http://localhost:5678 will crash the server and `Rack::Lint` will notify us of the first error: the `SERVER_NAME` variable wasn't set.
+`Rack::Lint` will throw an exception when a variable in the environment is missing or invalid. Right now, starting our server again and opening [http://localhost:5678]({{localhost:5678}}) will crash the server and `Rack::Lint` will notify us of the first error: the `SERVER_NAME` variable wasn't set.
 
 ```ruby
 ~/Appsignal/http-server (master) $ ruby http_server.rb
@@ -105,7 +105,7 @@ Besides conforming to the Rack environment specification, Rails needs the `REMOT
     # ...
 ```
 
-Restarting the server one more time and visiting  http://localhost:5678 again, we'll be greeted with Rails' "You're on Rails!"-page, meaning we're now running an actual Rails application on our home made server!
+Restarting the server one more time and visiting [http://localhost:5678]({{localhost:5678}}) again, we'll be greeted with Rails' "You're on Rails!"-page, meaning we're now running an actual Rails application on our home made server!
 
 ![](https://github.com/Codevolve/next/blob/master/courses/community/Ruby%20Magic/assets/youre-on-rails.png?raw=true)
 
