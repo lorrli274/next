@@ -15,7 +15,7 @@ If you're using ZSH, you may get `zsh: no matches found: books#index`. In that c
 To make our test pass, we need to edit our newly generated template file in `apps/web/templates/books/index.html.erb`:
     
     
-```html
+```erb
 <h1>Bookshelf</h1>
 <h2>All books</h2>
 
