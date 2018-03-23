@@ -1,0 +1,1 @@
+Welcome to the last lesson in our series about concurrency. In the previous editions we implemented a chat server using multiple processes and multiple threads. This time we’re going to do the same thing using an **event loop**.
