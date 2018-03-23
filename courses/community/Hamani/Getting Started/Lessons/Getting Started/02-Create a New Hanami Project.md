@@ -1,8 +1,7 @@
-To create a new Hanami project, you would need to install the Hanami gem from Rubygems (`gem install hanami`). This has already been done for you in this lab environment.
-
-So, we can jump right into using the `hanami` executable to generate a new project:
+To create a new Hanami project, we need to install the Hanami gem from Rubygems. Then we can use the new `hanami` executable to generate a new project:
     
  ```sh   
+$ gem install hanami
 $ hanami new bookshelf
 ```
 
