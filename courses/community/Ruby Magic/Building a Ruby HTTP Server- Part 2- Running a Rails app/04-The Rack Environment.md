@@ -76,7 +76,7 @@ When there's no query string in the request, we'll now pass `nil` as the `QUERY_
     # ...
 ```   
 
-Restarting our server and reloading http://localhost:5678, we're greeted with another error. This time, however, it's Rails' "something went wrong"-page, confirming that we're one step further.
+Restarting our server and reloading [http://localhost:5678]({{localhost:5678}}), we're greeted with another error. This time, however, it's Rails' "something went wrong"-page, confirming that we're one step further.
 
 ![](https://github.com/Codevolve/next/blob/master/courses/community/Ruby%20Magic/assets/something-went-wrong.png?raw=true)
 
