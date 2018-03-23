@@ -27,6 +27,6 @@ After the server receives a request, like before, it uses `session.print` to sen
 
 Like before, it closes the connection after sending the message. We're not reading the request yet, so it just prints it to the console for now.
 
-If you start the server and open http://localhost:5678 in your browser, you should see the "Hello world! …"-line with the current time, like we received from our TCP client earlier. 🎉
+If you start the server and open (http://localhost:5678)({{localhost:3000}}) in your browser, you should see the "Hello world! …"-line with the current time, like we received from our TCP client earlier. 🎉
 
 ![](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/http_server.png)
