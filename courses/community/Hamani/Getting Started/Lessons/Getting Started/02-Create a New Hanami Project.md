@@ -47,6 +47,6 @@ $ bundle exec hanami server --host=0.0.0.0
 
 info> You don't typically need the `--host=0.0.0.0`, but your server is running in a cloud box (not your local machine), so this enables remote connections (like the ones made from this page!).
 
-And... bask in the glory of your first Hanami project at [http://localhost:2300]({{localhost:2300}})! We should see a screen similar to this:
+And... bask in the glory of your first Hanami project at [localhost:2300]({{localhost:2300}})! We should see a screen similar to this:
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Hanami/welcome-page.png)
