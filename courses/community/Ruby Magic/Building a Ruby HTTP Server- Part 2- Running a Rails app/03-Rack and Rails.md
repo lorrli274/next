@@ -29,7 +29,7 @@ server = TCPServer.new 5678
 # ...
 ```
 
-Starting the server (`ruby http_server.rb`) and opening  http://localhost:5678 shows us we're not quite there yet. The server doesn't crash, but we're greeted with an internal server error in the browser.
+Starting the server (`ruby http_server.rb`) and opening  [http://localhost:5678]({{localhost:5678}}) shows us we're not quite there yet. The server doesn't crash, but we're greeted with an internal server error in the browser.
 
 ![](https://github.com/Codevolve/next/blob/master/courses/community/Ruby%20Magic/assets/500.png?raw=true)
 
