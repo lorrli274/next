@@ -70,7 +70,7 @@ To parse the request and send the request parameters to the Rack app, we'll spli
 
 1. Split the request string into a method and a full path
 2. Split the full path into a path and a query
-3. Pass those to our app in a [Rack environment hash][8].
+3. Pass those to an app in a [Rack environment hash](http://www.rubydoc.info/github/rack/rack/file/SPEC#The_Environment).
 
 For example, a request like `GET /?flip=left HTTP/1.1rn` will be passed to the app like this:
 
@@ -82,6 +82,6 @@ For example, a request like `GET /?flip=left HTTP/1.1rn` will be passed to the a
 }
 ```
 
-Restarting our server, visiting http://localhost:5678, and clicking the "flip!"-link will now flip the lobster, and clicking the "crash!" link will crash our web server.
+Restarting our server, visiting [http://localhost:5678]({{localhost:5678}}), and clicking the "flip!"-link will now flip the lobster, and clicking the "crash!" link will crash our web server.
 
 We've just scratched the surface of implementing a HTTP server, and ours is only 30 lines of code, but it explains the basic idea. It accepts GET requests, passes the request's attributes to a Rack app, and sends back responses to the browser. Although it doesn't handle things like request streaming and POST requests, our server could theoretically be used to serve other Rack apps too.
