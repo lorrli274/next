@@ -1,4 +1,4 @@
-This application is more than just that index page. Visiting http://localhost:5678/posts will display an empty list of posts. If we try to create a new post by filling in the new post form and pressing "Create post", we're once again greeted by an exception. This time, it's `ActionController::InvalidAuthenticityToken`.
+This application is more than just that index page. Visiting [http://localhost:5678/posts]({{localhost:5678}}) will display an empty list of posts. If we try to create a new post by filling in the new post form and pressing "Create post", we're once again greeted by an exception. This time, it's `ActionController::InvalidAuthenticityToken`.
 
 The authenticity token is sent along when posting a form and is used to check if the request came from a trusted source. Our server is completely ignoring POST data right now, so the token isn't sent, and the request can't be verified.
 
