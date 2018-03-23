@@ -4,11 +4,11 @@ Below you'll see a very simple event loop written in Ruby. The loop will take th
 
 ```ruby
 loop do
-if event_queue.any?
-  handle_event(event_queue.pop)
-else
-  sleep 0.1
-end
+  if event_queue.any?
+    handle_event(event_queue.pop)
+  else
+    sleep 0.1
+  end
 end
 ```
 
