@@ -13,7 +13,7 @@ end
 
 Every time you come across a new exception, add specific rescue cases for those exceptions or its relevant parent class. It's better to be specific in what to rescue than to rescue too many exceptions.
 
-```python
+```ruby
 begin
   file = '/tmp/appsignal.log'
   File.open(file, 'a') { |f| f.write("AppSignal started!") }
