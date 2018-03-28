@@ -1,4 +1,4 @@
-Hello! If you're reading this page, it's very likely that you want to learn more about [Hanami](http://hanamirb.org/). That's great, congrats! If you're looking for new ways to build maintainable, secure, faster and testable web applications, you're in good hands.
+Hello! If you're reading this page, it's very likely that you want to learn more about [Hanami](https://c.next.xyz/hanami). That's great, congrats! If you're looking for new ways to build maintainable, secure, faster and testable web applications, you're in good hands.
 
 **Hanami is built for people like you.**
 
