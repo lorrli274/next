@@ -1,4 +1,4 @@
-An entity is something really close to a plain Ruby object. We should focus on the behaviors that we want from it and only then, how to save it.
+An **entity** is something really close to a plain Ruby object. We should focus on the behaviors that we want from it and only then, how to save it.
 
 For now, we keep the generated entity class:
     
