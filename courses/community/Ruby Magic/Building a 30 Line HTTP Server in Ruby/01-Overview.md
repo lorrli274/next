@@ -29,7 +29,7 @@ To connect to our server, we'll need a simple TCP client. This example client co
 
 When you start the server server is running (`$ ruby tcp_server.rb`), you can start the client in a separate tab to receive the server's message.
 
-```sh
+```
 $ ruby tcp_client.rb
 Hello world! The time is 2016-11-23 15:17:11 +0100
 $
