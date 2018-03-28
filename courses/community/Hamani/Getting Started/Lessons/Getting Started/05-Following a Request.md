@@ -1,6 +1,6 @@
 Now we have a test, we can see it fail:
 
-```
+```sh
 $ bundle exec rake test
 Run options: --seed 44759
 
@@ -60,7 +60,7 @@ end
 
 Run your test again with `$ bundle exec rake test` and it now passes. Great!
 
-```
+```sh
 Run options: --seed 19286
 
 # Running:

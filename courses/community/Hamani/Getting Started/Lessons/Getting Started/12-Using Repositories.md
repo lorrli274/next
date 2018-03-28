@@ -1,6 +1,6 @@
 Now we are ready to play around with our repository. We can use Hanami's `console` command to launch IRb with our application pre-loaded, so we can use our objects:
     
-```    
+```sh    
 $ bundle exec hanami console
 >> repository = BookRepository.new
 => => #<BookRepository relations=[:books]>

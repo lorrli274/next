@@ -1,6 +1,6 @@
 To submit our form, we need yet another action. Let's create a `Books::Create` action:
     
-```    
+```sh    
 $ bundle exec hanami generate action web books#create
 ```
 

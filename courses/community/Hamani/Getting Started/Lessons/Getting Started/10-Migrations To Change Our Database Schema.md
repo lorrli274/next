@@ -22,7 +22,7 @@ Hanami provides a DSL to describe changes to our database schema. You can read m
 
 In this case, we define a new table with columns for each of our entities' attributes. Let's prepare our database for the development and test environments:
     
-```    
+```sh    
 $ bundle exec hanami db prepare
 $ HANAMI_ENV=test bundle exec hanami db prepare
 ```

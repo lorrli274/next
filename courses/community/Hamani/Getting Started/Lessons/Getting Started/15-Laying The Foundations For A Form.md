@@ -2,7 +2,7 @@ By now, we should be familiar with the working of actions, views and templates.
 
 We'll speed things up a little, so we can quickly get to the good parts. First, create a new action for our "New Book" page:
     
-```    
+```sh    
 $ bundle exec hanami generate action web books#new
 ```
 

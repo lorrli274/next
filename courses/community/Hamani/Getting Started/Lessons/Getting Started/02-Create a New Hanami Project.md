@@ -1,6 +1,6 @@
 To create a new Hanami project, we need to install the Hanami gem from Rubygems. Then we can use the new `hanami` executable to generate a new project:
     
- ```   
+ ```sh   
 $ gem install hanami
 $ hanami new bookshelf
 ```
@@ -9,7 +9,7 @@ By default, the project will be setup to use a SQLite database. For real-world p
 
 This will create a new directory `bookshelf` in our current location. Let's see what it contains:
     
-```    
+```sh    
 $ cd bookshelf
 $ tree -L 1
 .
@@ -40,7 +40,7 @@ Here's what we need to know:
 
 Go ahead and install our gem dependency with Bundler; then we can launch a development server:
 
-```
+```sh
 $ bundle install
 $ bundle exec hanami server --host=0.0.0.0
 ```
