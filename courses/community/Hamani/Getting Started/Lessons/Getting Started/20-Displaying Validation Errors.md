@@ -63,7 +63,7 @@ In our template we can loop over `params.errors` (if there are any) and display 
 
 Run your tests again and see they are all passing again!
     
-```sh    
+```    
 % bundle exec rake
 Run options: --seed 59940
 

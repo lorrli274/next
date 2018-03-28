@@ -23,7 +23,7 @@ Please check _.env.test_ in case you need to tweak the database URL.
 
 We have to migrate our schema in the test database by running:
 
-```sh
+```
 $ HANAMI_ENV=test bundle exec hanami db prepare
 ```
 

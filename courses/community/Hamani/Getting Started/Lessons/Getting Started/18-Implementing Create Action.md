@@ -49,7 +49,7 @@ end
 
 This minimal implementation should suffice to make our tests pass.
     
-```sh    
+```    
 $ bundle exec rake
 Run options: --seed 63592
 

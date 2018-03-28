@@ -17,7 +17,7 @@ resources :books, only: [:index, :new, :create]
 
 To get a sense of what routes are defined, now we've made this change, you can run `bundle exec hanami routes` on your command-line to inspect the end result:
     
-```sh    
+```    
 $ bundle exec hanami routes
      Name Method     Path                           Action
 

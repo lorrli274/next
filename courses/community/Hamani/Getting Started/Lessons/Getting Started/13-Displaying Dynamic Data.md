@@ -135,7 +135,7 @@ end
 
 By using the `expose` method in our action class, we can expose the contents of our `@books` instance variable to the outside world, so that Hanami can pass it to the view. That's enough to make all our tests pass again!
     
-```sh    
+```    
 $ bundle exec rake
 Run options: --seed 59133
 

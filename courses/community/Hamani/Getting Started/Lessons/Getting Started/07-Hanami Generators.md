@@ -1,6 +1,6 @@
 Hanami ships with various **generators** to save on typing some of the code involved in adding new functionality. In our terminal, enter:
     
-```sh    
+```    
 $ bundle exec hanami generate action web books#index
 ```
 
