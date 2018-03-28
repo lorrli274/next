@@ -10,8 +10,6 @@ This will generate a new action index in the books controller of the web applica
 get '/books', to: 'books#index'
 ```
 
-If you're using ZSH, you may get `zsh: no matches found: books#index`. In that case, you can use: ` % hanami generate action web books/index `
-
 To make our test pass, we need to edit our newly generated template file in `apps/web/templates/books/index.html.erb`:
     
     
