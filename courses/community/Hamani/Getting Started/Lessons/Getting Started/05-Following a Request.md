@@ -58,7 +58,7 @@ end
 <h1>Bookshelf</h1>
 ```
 
-Run your test again with `$ bundle exec rake test' and it now passes. Great!
+Run your test again with `$ bundle exec rake test` and it now passes. Great!
 
 ```sh
 Run options: --seed 19286
