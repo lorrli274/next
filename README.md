@@ -38,6 +38,6 @@ All courses will ideally include at least several hands-on activities, projects,
 * **Just learn more about this:** You can get in touch with us [here](mailto:next@codevolve.com).
 
 ## License
-Unless otherwise noted, all content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. You are free to use, modify and distribute content in this repository for non-commerical purposes, provided you link back to this repository using the appropriate URL from [this list](attribution-shortlinks.md) and release it under the same license.
+Unless otherwise noted, all content in this repository is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. You are free to use, modify and distribute content in this repository for non-commerical purposes, provided that you link back to the corresponding issue in this repository.
 
 If you would like to use the content in this repository for commercial purposes or are not sure if your use would be considered commercial, please [contact us](mailto:next@codevolve.com).
