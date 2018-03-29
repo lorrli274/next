@@ -7,7 +7,7 @@ The Request-Line consists of four parts:
 * The protocol version (`HTTP/1.1`)
 * A CRLF (a carriage return: `r`, followed by line feed: `n`) to indicate the end of the line
 
-The server will respond with an [HTTP response][4], which may look like this:
+The server will respond with an HTTP response, which may look like this:
 
 ```ruby
 HTTP/1.1 200rnContent-Type: text/htmlrnrnHello world!
