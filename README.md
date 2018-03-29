@@ -30,7 +30,7 @@ All courses will ideally include at least several hands-on activities, projects,
 
 ## I Want To...
 
-* **See a specific course built:** Open an issue for the course with as much detail as possible.
+* **See a specific course built:** Submit a request [here](http://feedback.codevolve.com/nextdotxyz).
 * **Build a course:** Open an issue and assign yourself to it, then fork this repo and get started!
 * **Contribute to a course:** Check out the Issues or browse the courses to find courses related to your area of expertise.
 * **See the courses you have built already:** Check out [the website](https://www.next.xyz).
