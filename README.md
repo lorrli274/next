@@ -12,9 +12,10 @@ Our goal is to release a number of courses in the coming months by working with 
 
 ## How This Works
 
-This repository will be used to track all Next.xyz courses, enabling us to share course development progress (via Issues) and get feedback from the community on what each course should contain (via a course Issue).
+This repository will be used to track the development of all Next.xyz courses, allowing us to share course development progress (via Issues) and get feedback from the community on what each course should contain.
 
-Our hope is that together we can decide what courses are most valuable and work together to make sure those courses cover the right subject matter.
+Feel free to browse this repo, create PRs for edits, and comment on issues. If you'd like to offer suggestions for new courses or vote on existing ideas, please visit [this page](http://feedback.codevolve.com/nextdotxyz). If you'd like to build a course of your own, just open an issue!
+
 
 ## Lesson Types
 Throughout the issues, you will see several lesson types referenced. They are listed below:
