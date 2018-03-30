@@ -1,8 +1,8 @@
 ## Recursion
 
-**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform a desired block of code. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
+**Recursion** is a conept in computer programming, not just in Java, where a function is designed to call itself *N* number of times to perform a desired block of code, until a **base case** evaluates to `true`. Recursion can be a bit confusing, but it is an important concept to understand and its important to know how to implement it effectively and efficiently. 
 
-The basic idea behind recursion is that a function can implement an operation on a data set that gets it *N-1* steps closer to the desired state. Instead of manually calling the function *N* times, or throwing the function in a loop, the function can perform the operation on the data set and proceed to make another call to itself on the dataset. 
+The basic idea behind recursion is that a function can implement an operation on a data set that gets it *N-1* steps closer to the base case. Instead of manually calling the function *N* times, or throwing the function in a loop, the function can perform the operation on the data set and proceed to make another call to itself on the dataset. 
 
 ```Java
 private long factorial(int num) {
@@ -13,7 +13,7 @@ private long factorial(int num) {
 }
 ```
 
-Above is an example of a recursive function computes the factorial of `num`. If the `num` is equal to `1`, the recursive function returns `1` as that is the last logical case in a factorial operation. If `num` does not equal `1`, it will perform the operation of `num * num - 1!` (the `!` being the factorial of `n - 1`). 
+Above is an example of a recursive function computes the factorial of `num`. If the `num` is equal to `1`, the recursive function returns `1` as that is the last logical case in a factorial operation. If `num` does not equal `1`, it will perform the operation of `num * num - 1!` (the `!` being the factorial of `n - 1`). In the above snippet, `if (num == 1) {}` is the base case. Once this evaluates to `true`, the recursive function begins to return and no longer calls itself recursively. 
 
 Let's use **5!** as our factorial example. 
 
@@ -26,11 +26,11 @@ Let's use **5!** as our factorial example.
 
 In the above example you can see that the same operation is performed over and over, in this case 5 times. Once the recursive function is equal to 1, the recursive functions starts its chain of return statements back to the original calling point. 
 
-Recursion depends on the idea that a base case condition can be met for the recursion to break. Otherwise it will run endlessly, like a <u>infinite loop</u>. In the factorial example above, that condition is that `n == 1`. 
+Recursion depends on the idea that a base case condition can be met for the recursion to break. Otherwise it will run endlessly, like a <u>infinite loop</u>. In the factorial example above, that base case condition is  `n == 1`. 
 
 ## Towers of Hanoi
 
-Below is a common example of recursive problem. The **Towers of Hanoi** is a problem commonly used when demonstrating and testing recursion. The goal of the towers of hanoi is to move circular disks of descending sizes from a board with three pegs, from the first peg to the third peg. The rules are that a larger disk cannot be placed on top of a smaller disk. 
+Below is a common example of recursive problem. The **Towers of Hanoi** is a problem commonly used when demonstrating and testing recursion. The goal of the towers of hanoi is to move circular disks of descending sizes from a board with three pegs, from the first peg to the third peg. The rules are that a larger disk cannot be placed on top of a smaller disk.
 
 ```Java
 // Start

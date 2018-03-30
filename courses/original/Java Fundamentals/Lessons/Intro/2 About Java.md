@@ -12,7 +12,7 @@ Why do you need to know about OOP? The four pillars of OOP are what make up the 
 
 ### Encapsulation
 
-Encapsulation is the concept that keeps data and methods that manipulate that data enclosed within an object. Encapsulation can be thought of as taking an object and encapsulating it within a class. Let's say that you look out your window and see a vehicle. You can encapsulate this car into the `class` `Vehicle` , which can be instantiated at various points in your program's runtime. This helps classes enforce access restrictions to an object's data and methods within a program.  Encapsulation can hide data and methods from other areas of the program, this is done using the `private` and `public` keywords, which you will learn about later. Encapsulation also helps code reuse, code readability, and organized and clean code. 
+Encapsulation is the concept that keeps data and methods that manipulate that data enclosed within an object. Encapsulation can be thought of as taking an object and encapsulating it within a class. Let's say that you look out your window and see a car. You can encapsulate this car  into the `class` `Vehicle` , which can be instantiated at various points in your program's runtime. This helps classes enforce access restrictions to an object's data and methods within a program.  Encapsulation can hide data and methods from other areas of the program, this is done using the `private` and `public` keywords, which you will learn about later. Encapsulation also helps code reuse, code readability, and organized and clean code. 
 
 ### Inheritance
 
