@@ -2,7 +2,7 @@ Bugsnag’s handler can integrate with Django’s **logging configuration** by a
 
 For example, to send any logs that are `ERRO`R and above to Bugsnag (in addition to the existing logging behaviour) the configuration would look like:
 
-```django
+```python
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
