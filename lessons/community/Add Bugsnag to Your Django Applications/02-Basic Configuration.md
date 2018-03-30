@@ -1,4 +1,4 @@
-Configure the library in your Django settings.py:
+Configure the library in your Django *Settings.py*:
 
 ```python
 BUGSNAG = {
@@ -14,4 +14,3 @@ MIDDLEWARE = (
     ...
 )
 ```
-Note: For versions of Django less than 1.10, use MIDDLEWARE_CLASSES instead of MIDDLEWARE.
