@@ -19,5 +19,5 @@ This chapter will cover:
 2. Classes
 2. Inheritence
 3. Interfaces
-4. Protocols
+4. Abstract Classes
 
