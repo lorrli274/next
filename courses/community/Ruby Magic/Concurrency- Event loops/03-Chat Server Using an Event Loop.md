@@ -17,8 +17,8 @@ The code that takes care of everything related to a connection is implemented as
 Like in the threaded and multi-process examples from the previous posts, we need some storage to keep track of the clients and the messages that are sent. We don't need a `Mutex` this time. Our event loop is running in a single thread, so there is no risk of objects being mutated at the same time by different threads.
 
 ```ruby
-    client_handlers = {}
-    messages = []
+client_handlers = {}
+messages = []
 ```
 
 The client handler is implemented in the following `Fiber`. When the socket can be read from or written to, an event is triggered to which the `Fiber` responds. When the state is `:readable` it reads a line from the socket and pushes this onto the `messages` array. When the state is `:writable` it writes any messages that have been received from other clients since the last write to the client. After handling an event it calls `Fiber.yield`, so it will pause and wait for the next event.
