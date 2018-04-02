@@ -2,6 +2,7 @@ In this illustration, we're taking it a step further. The event loop now does a 
 
 ![](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/event-loops.svg?sanitize=true)
 
+Here's a breakdown of that image:
 1. The OS keeps track of network and disk availability.
 2. When the OS sees the I/O is ready, it sends an event to the queue.
 3. The queue is a list of events from which the event loop takes the top one.
