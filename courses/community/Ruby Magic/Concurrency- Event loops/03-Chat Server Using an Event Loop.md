@@ -6,7 +6,7 @@ An event loop used by EventMachine or NodeJS for example works as follows. We st
 
 When something happens on this IO object, the operating system sends an event to our program. We put these events on a queue. The event loop keeps popping events off the list and handles them one by one.
 
-![](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/event-loops%20(1).svg?sanitize=true)
+![](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/event-loops.svg?sanitize=true)
 
 In a sense an event loop is not truly concurrent. It works sequentially in very small batches to simulate the effect.
 
