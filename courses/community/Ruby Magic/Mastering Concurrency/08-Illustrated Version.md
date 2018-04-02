@@ -13,10 +13,13 @@ Here's a breakdown of that image:
 
 Event-loop summary: 
 
-Use case: When using a lot of concurrent connections to your users. Think of services like Slack. Chrome notifications.
+Use case:
+* When using a lot of concurrent connections to your users. Think of services like Slack. Chrome notifications.
 
-Pros: Almost no memory overhead per connection. 
-Scales to a huge number of parallel connections.
+Pros: 
+* Almost no memory overhead per connection. 
+* Scales to a huge number of parallel connections.
 
-Cons: It's a difficult mental model to understand. 
-Batch sizes must be small and predictable to avoid queues building up.
+Cons: 
+* It's a difficult mental model to understand. 
+* Batch sizes must be small and predictable to avoid queues building up.
