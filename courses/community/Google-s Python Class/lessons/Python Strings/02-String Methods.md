@@ -9,6 +9,6 @@ Here are some of the most common string methods. A method is like a function, bu
 * s.split('delim') -- returns a list of substrings separated by the given delimiter. The delimiter is not a regular expression, it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc']. As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
 * s.join(list) -- opposite of split(), joins the elements in the given list together using the string as the delimiter. e.g. '---'.join(['aaa', 'bbb', 'ccc']) -> aaa---bbb---ccc
 
-A google search for "python str" should lead you to the official [python.org string methods][1] which lists all the str methods.
+A google search for "python str" should lead you to the official [python.org string methods](http://docs.python.org/library/stdtypes.html#string-methods) which lists all the str methods.
 
 Python does not have a separate character type. Instead an expression like s[8] returns a string-length-1 containing the character. With that string-length-1, the operators ==, 
