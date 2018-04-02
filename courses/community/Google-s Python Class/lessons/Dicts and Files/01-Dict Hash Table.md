@@ -19,10 +19,8 @@ Looking up or setting a value in a dict uses square brackets, e.g. dict['foo'] l
       ## print dict['z']                  ## Throws KeyError
       if 'z' in dict: print dict['z']     ## Avoid KeyError
       print dict.get('z')  ## None (instead of KeyError)
-
-![dict with keys 'a' 'o' 'g'][1]
-![dict with keys 'a' 'o' 'g'][1]
 ```
+![dict with keys 'a' 'o' 'g'](https://developers.google.com/edu/python/images/dict.png)
 
 A for loop on a dictionary iterates over its keys by default. The keys will appear in an arbitrary order. The methods dict.keys() and dict.values() return lists of the keys or values explicitly. There's also an items() which returns a list of (key, value) tuples, which is the most efficient way to examine all the key value data in the dictionary. All of these lists can be passed to the sorted() function.
     
