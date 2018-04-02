@@ -6,4 +6,5 @@ readable, writable = IO.select(
   $client_handlers.keys,
   $client_handlers.keys,
   0.01
+)
 ```
