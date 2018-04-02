@@ -1,6 +1,6 @@
 If you use multiple threads you have to be careful to write all code that manipulates shared data in a thread safe way. You can do this for example by using a **[Mutex](http://ruby-doc.org/core-2.2.0/Mutex.html)** to lock shared data structures before you manipulate them. This will ensure that other threads are not basing their work on stale data while you're changing the data.
 
-Multi-threaded summary
+Multi-threaded summary:
 
 Use case:
 * This is the "middle of the road" option. Used for a lot of standard web applications which should handle loads of short requests (such as a busy web application).
