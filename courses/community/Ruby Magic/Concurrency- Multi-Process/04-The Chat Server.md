@@ -2,7 +2,6 @@ In this step a client connects to a chat server in order to communicate with oth
 
 ```ruby    
 # server_processes.rb
-# $ ruby server_processes.rb
 require 'socket'
 
 puts 'Starting server on port 2000'
