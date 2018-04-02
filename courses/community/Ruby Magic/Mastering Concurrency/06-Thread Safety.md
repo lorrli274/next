@@ -2,13 +2,15 @@ If you use multiple threads you have to be careful to write all code that manipu
 
 Multi-threaded summary
 
-Use case: This is the "middle of the road" option. Used for a lot of standard web applications which should handle loads of short requests (such as a busy web application).
+Use case:
+* This is the "middle of the road" option. Used for a lot of standard web applications which should handle loads of short requests (such as a busy web application).
 
-Pros: Uses less memory than multi-process.
+Pros: 
+* Uses less memory than multi-process.
 
-Cons: You have to make sure your code is thread safe. 
-If a thread causes a a crash, it can potentially take down your process. 
-The GIL locks all operations except I/O. 
-
-If a thread causes a a crash, it can potentially take down your process.   
+Cons: 
+* You have to make sure your code is thread safe. 
+* If a thread causes a a crash, it can potentially take down your process. 
+* The GIL locks all operations except I/O. 
+* If a thread causes a a crash, it can potentially take down your process.   
 The GIL locks all operations except I/O.  | 
