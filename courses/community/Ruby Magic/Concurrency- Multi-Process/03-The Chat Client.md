@@ -2,7 +2,6 @@ This step focuses on the chat server, but to communicate with it we'll need a ch
 
 ```ruby
 # client.rb
-# $ ruby client.rb
 require 'socket'
 client = TCPSocket.open(ARGV[0], 2000)
 
