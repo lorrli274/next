@@ -2,7 +2,7 @@ Ruby frameworks like **Rails** and **Sinatra** are built on top of the **Rack** 
 
 To test that, here's a prepared simple Rails application. Let's clone that into the same directory as our server.
 
-```ruby
+```sh
 $ ls
 http_server.rb
 $ git clone https://github.com/jeffkreeftmeijer/wups.git blog
