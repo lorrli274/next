@@ -37,7 +37,7 @@ For each header line, we'll split on the first colon. Everything before the colo
 
 To know how many bytes we need to read from the request to get the body, we use the "Content-Length" header, which the browser automatically includes when sending a request.
 
-```  
+```ruby
 # http_server.rb
 # ...
   headers = {}
