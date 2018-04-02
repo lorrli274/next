@@ -6,9 +6,14 @@ Each worker process has the full codebase in memory. This makes this method pret
 
 **Multi-Process** summary:
 
-Use case: One non-ruby example you probably know is the [Chrome browser](https://www.google.com/googlebooks/chrome/small_04.html). It uses multi-process concurrency to give each tab their own process. It allows a single tab to crash without taking the full application down. In their case, it also helps to isolate exploits to a single tab 
+Use case:
+* One non-ruby example you probably know is the [Chrome browser](https://www.google.com/googlebooks/chrome/small_04.html). It uses multi-process concurrency to give each tab their own process. It allows a single tab to crash without taking the full application down. In their case, it also helps to isolate exploits to a single tab 
 
-Pros: Most simple to implement.Ignores difficulties with thread safety. Each worker can crash without damaging the rest of the system. 
+Pros:
+* Most simple to implement. 
+* Ignores difficulties with thread safety. 
+* Each worker can crash without damaging the rest of the system.
 
-Cons: Each process loads the full codebase in memory. This makes it memory-intensive.   
-Hence, it does not scale to large amounts of concurrent connections.
+Cons: 
+* Each process loads the full codebase in memory. This makes it memory-intensive.   
+* It does not scale to large amounts of concurrent connections.
