@@ -35,7 +35,7 @@ Starting the server (`ruby http_server.rb`) and opening  [http://localhost:5678]
 
 Checking our server's logs, we can see that we're missing something called `rack.input`. It turns out that we've been lazy while implementing our server last time, so there's more work to do before we can get this Rails application to work.
 
-```ruby 
+```sh
 $ ruby http_server.rb
 GET / HTTP/1.1
 Error during failsafe response: Missing rack.input
