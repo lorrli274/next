@@ -1,6 +1,6 @@
 To remind you quickly: this is what our chat system looks like:
 
-![Chat example](https://github.com/Codevolve/next/blob/master/courses/community/Ruby%20Magic/assets/chat_example%20(1).png?raw=true)
+![Chat example](https://raw.githubusercontent.com/Codevolve/next/master/courses/community/Ruby%20Magic/assets/chat_example%20(1).png)
 
 We're using the same client we used earlier:
 
