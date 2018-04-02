@@ -7,7 +7,7 @@ strs = ['ccc', 'aaaa', 'd', 'bb']
 print sorted(strs, key=len)  ## ['d', 'bb', 'ccc', 'aaaa']
 ```
 
-![calling sorted with key=len][1]
+![calling sorted with key=len](https://developers.google.com/edu/python/images/sorted-key.png)
 
 As another example, specifying "str.lower" as the key function is a way to force the sorting to treat uppercase and lowercase the same:
     
