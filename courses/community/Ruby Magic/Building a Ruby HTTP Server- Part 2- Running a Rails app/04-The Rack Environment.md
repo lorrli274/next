@@ -16,8 +16,8 @@ server = TCPServer.new 5678
 
 `Rack::Lint` will throw an exception when a variable in the environment is missing or invalid. Right now, starting our server again and opening [http://localhost:5678]({{localhost:5678}}) will crash the server and `Rack::Lint` will notify us of the first error: the `SERVER_NAME` variable wasn't set.
 
-```ruby
-~/Appsignal/http-server (master) $ ruby http_server.rb
+```sh
+$ ruby http_server.rb
 GET / HTTP/1.1
 /Users/jeff/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rack-2.0.1/lib/rack/lint.rb:20:in `assert': env missing required key SERVER_NAME (Rack::Lint::LintError)
         ...
@@ -38,7 +38,7 @@ By fixing each error that is thrown at us, we can keep adding variables until `R
 
 After adding all missing variables, `Rack::Lint` will notify us of one more problem in our environment.
 
-```ruby    
+```sh  
 $ ruby http_server.rb
 GET / HTTP/1.1
 /Users/jeff/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rack-2.0.1/lib/rack/lint.rb:20:in `assert': env variable QUERY_STRING has non-string value nil (Rack::Lint::LintError)
@@ -82,7 +82,7 @@ Restarting our server and reloading [http://localhost:5678]({{localhost:5678}}),
 
 Looking through the Rails logs in blog/log/development.log, we'll find the exception that's causing the error:
 
-```ruby
+```sh
 Started GET "/" for  at 2017-01-23 08:00:26 +0100
 
 IPAddr::InvalidAddressError: invalid address
