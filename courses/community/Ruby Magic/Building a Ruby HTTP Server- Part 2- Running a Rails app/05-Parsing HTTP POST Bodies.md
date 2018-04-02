@@ -6,7 +6,7 @@ Back when we first implemented our HTTP server, we used `session.gets` to get th
 
 To be able to extract the POST data, we'll first need to understand how an HTTP request is structured. Looking at an example, we can see that the structure resembles an HTTP response:
 
-```ruby    
+```sh 
 POST /posts HTTP/1.1rn
 Host: localhost:5678rn
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8rn
