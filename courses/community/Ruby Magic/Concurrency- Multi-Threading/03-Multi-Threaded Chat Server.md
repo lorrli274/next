@@ -40,7 +40,7 @@ end
 
 Finally, a `Thread` is spawned that runs continuously in a loop, to make sure all the new messages that have been received by the server are being sent to the client. Again it gets a lock so it knows that other threads are not interfering. After it's done with a tick of the loop it sleeps for a bit and then continues.
 
-```    
+```ruby   
 # Send incoming message
 Thread.new do
   sent_until = Time.now
