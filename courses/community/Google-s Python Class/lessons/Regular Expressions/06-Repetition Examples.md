@@ -1,4 +1,4 @@
-```
+```python
 ## i+ = one or more i's, as many as possible.
 match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
 
