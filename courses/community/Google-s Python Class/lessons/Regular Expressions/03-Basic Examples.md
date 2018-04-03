@@ -3,10 +3,12 @@ Joke: what do you call a pig with three eyes? piiig!
 The basic rules of regular expression search for a pattern within a string are:
 
 * The search proceeds through the string from start to end, stopping at the first match found 
-* All of the pattern must be matched, but not all of the string 
-* If `match = re.search(pat, str)` is successful, match is not None and in particular match.group() is the matching text 
 
-```
+* All of the pattern must be matched, but not all of the string 
+
+* If `match = re.search(pat, str)` is successful, match is not None and in particular `match.group()` is the matching text 
+
+```python
 ## Search for pattern 'iii' in string 'piiig'.
 ## All of the pattern must match, but it may appear anywhere.
 ## On success, match.group() is matched text.
