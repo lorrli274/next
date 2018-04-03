@@ -13,7 +13,7 @@ Here are some other common list methods.
 
 Notice that these are *methods* on a list object, while len() is a function that takes the list (or string or whatever) as an argument.
     
-```    
+```python    
 list = ['larry', 'curly', 'moe']
 list.append('shemp')         ## append elem at end
 list.insert(0, 'xxx')        ## insert elem at index 0
@@ -29,7 +29,7 @@ print list  ## ['xxx', 'moe', 'shemp', 'yyy', 'zzz']
 Common error: note that the above methods do not *return* the modified list, they just modify the original list.
 Common error: note that the above methods do not *return* the modified list, they just modify the original list.
     
-```    
+```python    
 list = [1, 2, 3]
 print list.append(4)   ## NO, does not work, append() returns None
 ## Correct pattern:
