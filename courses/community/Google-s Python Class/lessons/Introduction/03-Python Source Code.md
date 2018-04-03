@@ -2,7 +2,7 @@ Python source files use the ".py" extension and are called "modules." With a Pyt
 
 Here's a very simple `hello.py` program (notice that blocks of code are delimited strictly using indentation rather than curly braces — more on this later!):
     
-```    
+```python    
 #!/usr/bin/env python
 
 # import modules used here -- sys is a very standard one
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
 Running this program from the command line looks like:
     
-```    
+```python    
 $ python hello.py Guido
 Hello there Guido
 $ ./hello.py Alice  ## without needing 'python' first (Unix)
