@@ -1,6 +1,6 @@
 Functions in Python are defined like this:
     
-```    
+```python    
 # Defines a "repeat" function that takes 2 arguments.
 def repeat(s, exclaim):
     """
@@ -20,7 +20,7 @@ The `def` keyword defines the function with its parameters within parentheses an
 
 Here is code that calls the above repeat() function, printing what it returns:
     
-```    
+```python    
 def main():
     print repeat('Yay', False)      ## YayYayYay
     print repeat('Woo Hoo', True)   ## Woo HooWoo HooWoo Hoo!!!
