@@ -17,4 +17,4 @@ There are many modules and packages which are bundled with a standard installati
 * re — regular expressions 
 * os — operating system interface, file system 
 
-You can find the documentation of all the Standard Library modules and packages at .
+You can find the documentation of all the Standard Library modules and packages at [here](https://docs.python.org/3/library/).
