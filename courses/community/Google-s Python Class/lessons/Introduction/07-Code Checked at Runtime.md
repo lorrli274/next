@@ -1,6 +1,6 @@
 Python does very little checking at compile time, deferring almost all type, name, etc. checks on each line until that line runs. Suppose the above main() calls repeat() like this:
     
-```    
+```python   
 def main():
     if name == 'Guido':
         print repeeeet(name) + '!!!'
