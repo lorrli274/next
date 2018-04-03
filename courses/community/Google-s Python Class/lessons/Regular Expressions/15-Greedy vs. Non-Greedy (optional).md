@@ -6,7 +6,7 @@ Suppose you are trying to match each tag with the pattern `(<.*>)` -- what does 
 
 The result is a little surprising, but the greedy aspect of the `.*` causes it to match the whole 'foo and so on' as one big match. The problem is that the .* goes as far as is it can, instead of stopping at the first > (aka it is "greedy").
 
-There is an extension to regular expression where you add a ? at the end, such as .*? or .+?, changing them to be non-greedy. Now they stop as soon as they can. So the pattern `(<.*?>)` will get just '' as the first match, and '' as the second match, and so on getting each <..> pair in turn. The style is typically that you use a .*?, and then immediately its right look for some concrete marker (> in this case) that forces the end of the .*? run.
+There is an extension to regular expression where you add a `?` at the end, such as `.*?` or `.+?`, changing them to be non-greedy. Now they stop as soon as they can. So the pattern `(<.*?>)` will get just '' as the first match, and '' as the second match, and so on getting each <..> pair in turn. The style is typically that you use a `.*?`, and then immediately its right look for some concrete marker (> in this case) that forces the end of the `.*?` run.
 
 The `*?` extension originated in Perl, and regular expressions that include Perl's extensions are known as Perl Compatible Regular Expressions -- pcre. Python includes pcre support. Many command line utils etc. have a flag where they accept pcre patterns. 
 
