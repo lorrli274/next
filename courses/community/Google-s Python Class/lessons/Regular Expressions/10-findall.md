@@ -1,6 +1,6 @@
-findall() is probably the single most powerful function in the re module. Above we used re.search() to find the first match for a pattern. findall() finds *all* the matches and returns them as a list of strings, with each string representing one match. 
+`findall()` is probably the single most powerful function in the re module. Above we used `re.search()` to find the first match for a pattern. `findall()` finds *all* the matches and returns them as a list of strings, with each string representing one match. 
     
-```    
+```python    
 ## Suppose we have a text with many email addresses
 str = 'purple alice@google.com, blah monkey bob@abc.com blah dishwasher'
 
