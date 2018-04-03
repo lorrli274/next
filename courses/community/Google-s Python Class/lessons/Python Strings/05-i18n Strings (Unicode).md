@@ -18,9 +18,7 @@ To convert a unicode string to bytes with an encoding such as 'utf-8', call the 
 'A unicode xc6x8e string xc3xb1'  ## bytes of utf-8 encoding
 > t = unicode(s, 'utf-8')             ## Convert bytes back to a unicode string
 > t == ustring                      ## It's the same as the original, yay!
-```    
 
-```python
 True
 ```    
 
