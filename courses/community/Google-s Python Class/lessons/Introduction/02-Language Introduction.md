@@ -2,7 +2,7 @@ Python is a dynamic, interpreted (bytecode-compiled) language. There are no type
 
 An excellent way to see how Python code works is to run the Python interpreter and type code right into it. If you ever have a question like, "What happens if I add an `int` to a `list`?" Just typing it into the Python interpreter is a fast and likely the best way to see what happens. (See below to see what really happens!)
     
-```    
+```python    
 $ python        ## Run the Python interpreter
 Python 2.7.9 (default, Dec 30 2014, 03:41:42) 
 [GCC 4.1.2 20080704 (Red Hat 4.1.2-55)] on linux2
