@@ -14,7 +14,7 @@ print s + ' there'  ## hi there
 Unlike Java, the '+' does not automatically convert numbers or other types to string form. The str() function converts values to a string form so they can be combined with other strings.
 Unlike Java, the '+' does not automatically convert numbers or other types to string form. The str() function converts values to a string form so they can be combined with other strings.
     
-```   
+```python   
 pi = 3.14
 ##text = 'The value of pi is ' + pi      ## NO, does not work
 text = 'The value of pi is '  + str(pi)  ## yes
