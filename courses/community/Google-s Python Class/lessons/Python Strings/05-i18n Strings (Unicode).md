@@ -1,4 +1,4 @@
-Regular Python strings are *not* unicode, they are just plain bytes. To create a unicode string, use the 'u' prefix on the string literal:
+Regular Python strings are not unicode, they are just plain bytes. To create a unicode string, use the 'u' prefix on the string literal:
     
 ```    
 > ustring = u'A unicode u018e string xf1'
