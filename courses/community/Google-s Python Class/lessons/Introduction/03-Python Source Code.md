@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
 Running this program from the command line looks like:
     
-```python    
+```bash    
 $ python hello.py Guido
 Hello there Guido
 $ ./hello.py Alice  ## without needing 'python' first (Unix)
