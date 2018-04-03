@@ -1,4 +1,4 @@
-Functions in Python are defined like this:
+**Functions** in Python are defined like this:
     
 ```python    
 # Defines a "repeat" function that takes 2 arguments.
