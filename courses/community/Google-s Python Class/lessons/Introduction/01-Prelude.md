@@ -1,4 +1,4 @@
-Welsome! This course is bassed off [Google's Python course](https://developers.google.com/edu/python/). In this course, you will get to learn about:
+Welsome! This course is bassed off [Google's Python Course](https://developers.google.com/edu/python/). In this course, you will get to learn about:
 * Strings
 * Lists
 * Sorting
