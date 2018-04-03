@@ -1,6 +1,6 @@
-Python's *for* and *in* constructs are extremely useful, and the first use of them we'll see is with lists. The *for* construct -- `for **var** in **list**` \-- is an easy way to look at each element in a list (or other collection). Do not add or remove from the list during iteration.
+Python's **for** and **in** constructs are extremely useful, and the first use of them we'll see is with lists. The for construct -- `for **var** in **list**` \-- is an easy way to look at each element in a list (or other collection). Do not add or remove from the list during iteration.
     
-```    
+```python    
 squares = [1, 4, 9, 16]
 sum = 0
 for num in squares:
@@ -13,7 +13,7 @@ If you know what sort of thing is in the list, use a variable name in the loop t
 
 The *in* construct on its own is an easy way to test if an element appears in a list (or other collection) -- `**value** in **collection**` \-- tests if the value is in the collection, returning True/False.
     
-```    
+```python    
 list = ['larry', 'curly', 'moe']
 if 'curly' in list:
   print 'yay'
