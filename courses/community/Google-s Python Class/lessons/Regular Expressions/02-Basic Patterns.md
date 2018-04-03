@@ -1,4 +1,4 @@
-The power of regular expressions is that they can specify patterns, not just fixed characters. Here are the most basic patterns which match single chars:
+The power of regular expressions is that they can specify **patterns**, not just fixed characters. Here are the most basic patterns which match single chars:
 
 * `a, X, 9, < \`-- ordinary characters just match themselves exactly. The meta-characters which do not match themselves because they have special meanings are: . ^ $ * + ? { [ ] | ( ) (details below) 
 
