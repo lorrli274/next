@@ -2,7 +2,7 @@ Suppose you've got a module "binky.py" which contains a "def foo()". The fully q
 
 For example, we have the standard "sys" module that contains some standard system facilities, like the argv list, and exit() function. With the statement "import sys" you can then access the definitions in the sys module and make them available by their fully-qualified name, e.g. sys.exit(). (Yes, 'sys' has a namespace too!)
     
-```    
+```python    
 import sys
 
 # Now can refer to sys.xxx facilities
