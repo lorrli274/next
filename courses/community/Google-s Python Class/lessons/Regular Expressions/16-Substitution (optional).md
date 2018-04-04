@@ -1,3 +1,5 @@
+NOT USED IN NEXT.XYZ COURSE
+
 The `re.sub`(pat, replacement, str) function searches for all the instances of pattern in the given string, and replaces them. The replacement string can include '1', '2' which refer to the text from `group(1)`, `group(2)`, and so on from the original matching text.
 
 Here's an example which searches for all the email addresses, and changes them to keep the `user(\1)` but have yo-yo-dyne.com as the host.
