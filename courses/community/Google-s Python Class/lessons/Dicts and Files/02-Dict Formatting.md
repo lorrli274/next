@@ -1,4 +1,4 @@
-The % operator works conveniently to substitute values from a dict into a string by name:
+The `%` operator works conveniently to substitute values from a dict into a string by name:
     
 ```python    
 hash = {}
