@@ -21,7 +21,7 @@ if 'z' in dict: print dict['z']     ## Avoid KeyError
 print dict.get('z')  ## None (instead of KeyError)
 ```
 
-![dict with keys 'a' 'o' 'g'](https://developers.google.com/edu/python/images/dict.png)
+![](https://github.com/Codevolve/next/blob/master/courses/community/Google-s%20Python%20Class/Assets/dict.png?raw=true)
 
 A for loop on a dictionary iterates over its keys by default. The keys will appear in an arbitrary order. The methods `dict.keys()` and `dict.values()` return lists of the keys or values explicitly. There's also an `items()` which returns a list of (key, value) tuples, which is the most efficient way to examine all the key value data in the dictionary. All of these lists can be passed to the `sorted()` function.
     
@@ -57,5 +57,5 @@ for k, v in dict.items(): print k, '>', v
 
 There are "`iter`" variants of these methods called `iterkeys()`, `itervalues()` and `iteritems()` which avoid the cost of constructing the whole list -- a performance win if the data is huge. However, I generally prefer the plain `keys()` and `values()` methods with their sensible names. In Python 3000 revision, the need for the `iterkeys()` variants is going away.
 
-> Note: from a performance point of view, the dictionary is one of your greatest tools, and you should use it where you can as an easy way to organize data. For example, you might read a log file where each line begins with an IP address, and store the data into a dict using the IP address as the key, and the list of lines where it appears as the value. Once you've read in the whole file, you can look up any IP address and instantly see its list of lines. The dictionary takes in scattered data and makes it into something coherent.
+>Info from a performance point of view, the dictionary is one of your greatest tools, and you should use it where you can as an easy way to organize data. For example, you might read a log file where each line begins with an IP address, and store the data into a dict using the IP address as the key, and the list of lines where it appears as the value. Once you've read in the whole file, you can look up any IP address and instantly see its list of lines. The dictionary takes in scattered data and makes it into something coherent.
 
