@@ -6,7 +6,7 @@ The slice urls are hidden inside apache log files (the open source [apache](http
 
 Here is what a single line from the log file looks like (this really is what apache log files look like):
     
-```    
+```bash    
 10.254.254.28 - - [06/Aug/2007:00:14:08 -0700] "GET /foo/talks/ HTTP/1.1"
 200 5910 "-" "Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.8.1.4) Gecko/20070515 Firefox/2.0.0.4"
 ```
