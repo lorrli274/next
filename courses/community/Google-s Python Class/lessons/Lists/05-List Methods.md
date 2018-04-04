@@ -31,7 +31,7 @@ list.pop(1)                  ## removes and returns 'larry'
 print list  ## ['xxx', 'moe', 'shemp', 'yyy', 'zzz']
 ```
 
-Common error: note that the above methods do not return the modified list, they just modify the original list.
+> Note: The above methods do not return the modified list, they just modify the original list.
     
 ```python    
 list = [1, 2, 3]
