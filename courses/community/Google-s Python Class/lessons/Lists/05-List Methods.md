@@ -16,7 +16,7 @@ Here are some other common list methods.
 
 * `list.pop(index)` -- removes and returns the element at the given index. Returns the rightmost element if index is omitted (roughly the opposite of `append()`).
 
-Notice that these are *methods* on a list object, while `len()` is a function that takes the list (or string or whatever) as an argument.
+Notice that these are methods on a list object, while `len()` is a function that takes the list (or string or whatever) as an argument.
     
 ```python    
 list = ['larry', 'curly', 'moe']
