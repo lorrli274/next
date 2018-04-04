@@ -15,5 +15,5 @@ except IOError:
 ## In any case, the code then continues with the line after the try/except
 ```
 
-The try: section includes the code which might throw an exception. The except: section holds the code to run if there is an exception. If there is no exception, the except: section is skipped (that is, that code is for error handling only, not the "normal" case for the code). You can get a pointer to the exception object itself with syntax "except IOError as e: .." (e points to the exception object). 
+The try: section includes the code which might throw an exception. The except: section holds the code to run if there is an exception. If there is no exception, the except: section is skipped (that is, that code is for error handling only, not the "normal" case for the code). You can get a pointer to the exception object itself with syntax "except `IOError` as e: .." (e points to the exception object). 
 
