@@ -1,3 +1,5 @@
+NOT USED IN NEXT.XYZ COURSE 
+
 This is optional section which shows a more advanced regular expression technique not needed for the exercises.
 
 Suppose you have text with tags in it: `<b>foo</b> and <i>so on</i>`
