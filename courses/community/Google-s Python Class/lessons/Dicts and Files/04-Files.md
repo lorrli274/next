@@ -11,6 +11,8 @@ for line in f:   ## iterates over the lines of the file
 f.close()
 ```
 
-Reading one line at a time has the nice quality that not all the file needs to fit in memory at one time -- handy if you want to look at every line in a 10 gigabyte file without using 10 gigabytes of memory. The `f.readlines()` method reads the whole file into memory and returns its contents as a list of its lines. The `f.read()` method reads the whole file into a single string, which can be a handy way to deal with the text all at once, such as with regular expressions we'll see later.
+Reading one line at a time has the nice quality that not all the file needs to fit in memory at one time -- handy if you want to look at every line in a 10 gigabyte file without using 10 gigabytes of memory. 
+
+The `f.readlines()` method reads the whole file into memory and returns its contents as a list of its lines. The `f.read()` method reads the whole file into a single string, which can be a handy way to deal with the text all at once, such as with regular expressions we'll see later.
 
 For writing, `f.write`(string) method is the easiest way to write data to an open output file. Or you can use "print" with an open file, but the syntax is nasty: `"print >> f, string"`. In python 3000, the print syntax will be fixed to be a regular function call with a file= optional argument: `"print(string, file=f)"`.
