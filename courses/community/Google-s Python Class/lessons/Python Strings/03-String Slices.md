@@ -1,6 +1,6 @@
 The **slice** syntax is a handy way to refer to sub-parts of sequences -- typically strings and lists. The slice s[start:end] is the elements beginning at start and extending up to but not including end. Suppose we have s = "Hello"
 
-![the string 'hello' with letter indexes 0 1 2 3 4](https://developers.google.com/edu/python/images/hello.png)
+![](https://github.com/Codevolve/next/blob/master/courses/community/Google-s%20Python%20Class/Assets/hello.png?raw=true)
 
 * `s[1:4]` is 'ell' -- chars starting at index 1 and extending up to but not including index 4 
 
