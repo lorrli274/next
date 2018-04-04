@@ -55,7 +55,7 @@ for k, v in dict.items(): print k, '>', v
 ## a > alpha    o > omega     g > gamma
 ```
 
-There are "iter" variants of these methods called `iterkeys()`, `itervalues()` and `iteritems()` which avoid the cost of constructing the whole list -- a performance win if the data is huge. However, I generally prefer the plain `keys()` and `values()` methods with their sensible names. In Python 3000 revision, the need for the `iterkeys()` variants is going away.
+There are "`iter`" variants of these methods called `iterkeys()`, `itervalues()` and `iteritems()` which avoid the cost of constructing the whole list -- a performance win if the data is huge. However, I generally prefer the plain `keys()` and `values()` methods with their sensible names. In Python 3000 revision, the need for the `iterkeys()` variants is going away.
 
->Strategy Note: from a performance point of view, the dictionary is one of your greatest tools, and you should use it where you can as an easy way to organize data. For example, you might read a log file where each line begins with an IP address, and store the data into a dict using the IP address as the key, and the list of lines where it appears as the value. Once you've read in the whole file, you can look up any IP address and instantly see its list of lines. The dictionary takes in scattered data and makes it into something coherent.
+> Note: from a performance point of view, the dictionary is one of your greatest tools, and you should use it where you can as an easy way to organize data. For example, you might read a log file where each line begins with an IP address, and store the data into a dict using the IP address as the key, and the list of lines where it appears as the value. Once you've read in the whole file, you can look up any IP address and instantly see its list of lines. The dictionary takes in scattered data and makes it into something coherent.
 
