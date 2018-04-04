@@ -4,9 +4,9 @@ The module `urllib` provides url fetching -- making a url look like a file you c
 
 * ufile = `urllib.urlopen`(url) -- returns a file like object for that url 
 
-* text = `ufile.read()` -- can read from it, like a file (readlines() etc. also work) 
+* text = `ufile.read()` -- can read from it, like a file (`readlines()` etc. also work) 
 
-* info = `ufile.info()` -- the meta info for that request. info.gettype() is the mime type, e.g. 'text/html' 
+* info = `ufile.info()` -- the meta info for that request. `info.gettype()` is the mime type, e.g. 'text/html' 
 
 * baseurl = `ufile.geturl()` -- gets the "base" url for the request, which may be different from the original because of redirects 
 
