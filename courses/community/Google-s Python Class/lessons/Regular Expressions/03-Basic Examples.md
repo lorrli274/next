@@ -1,5 +1,3 @@
-Joke: what do you call a pig with three eyes? piiig!
-
 The basic rules of regular expression search for a pattern within a string are:
 
 * The search proceeds through the string from start to end, stopping at the first match found 
