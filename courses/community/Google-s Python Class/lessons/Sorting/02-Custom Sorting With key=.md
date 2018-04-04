@@ -16,7 +16,7 @@ As another example, specifying "str.lower" as the key function is a way to force
 print sorted(strs, key=str.lower)  ## ['aa', 'BB', 'CC', 'zz']
 ```
 
-You can also pass in your own MyFn as the key function, like this:
+You can also pass in your own `MyFn` as the key function, like this:
     
 ```python    
 ## Say we have a list of strings we want to sort by the last letter of the string.
@@ -31,4 +31,4 @@ def MyFn(s):
 print sorted(strs, key=MyFn)  ## ['wa', 'zb', 'xc', 'yd']
 ```
 
-To use key= custom sorting, remember that you provide a function that takes one value and returns the proxy value to guide the sorting. There is also an optional argument "cmp=cmpFn" to `sorted()` that specifies a traditional two-argument comparison function that takes two values from the list and returns negative/0/positive to indicate their ordering. The built in comparison function for strings, ints, ... is cmp(a, b), so often you want to call `cmp()` in your custom comparator. The newer one argument key= sorting is generally preferable.
+To use `key=` custom sorting, remember that you provide a function that takes one value and returns the proxy value to guide the sorting. There is also an optional argument "`cmp=cmpFn`" to `sorted()` that specifies a traditional two-argument comparison function that takes two values from the list and returns negative/0/positive to indicate their ordering. The built in comparison function for `strings`, `ints`, ... is `cmp(a, b)`, so often you want to call `cmp()` in your custom comparator. The newer one argument `key=` sorting is generally preferable.
