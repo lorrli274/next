@@ -1,1 +1,1 @@
-Combining all the basic Python material -- strings, lists, dicts, tuples, files -- try the summary **wordcount.py** exercise in the [Basic Exercises](https://developers.google.com/edu/python/exercises/basic).
+Combining all the basic Python material -- strings, lists, dicts, tuples, files -- try the summary *wordcount.py* exercise in the [Basic Exercises](https://developers.google.com/edu/python/exercises/basic).
