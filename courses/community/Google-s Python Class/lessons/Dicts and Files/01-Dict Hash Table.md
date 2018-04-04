@@ -1,6 +1,6 @@
 Python's efficient **key/value** hash table structure is called a "dict". The contents of a dict can be written as a series of key:value pairs within braces { }, e.g. dict = {key1:value1, key2:value2, ... }. The "empty dict" is just an empty pair of curly braces {}.
 
-Looking up or setting a value in a dict uses square brackets, e.g. dict['foo'] looks up the value under the key 'foo'. Strings, numbers, and tuples work as keys, and any type can be a value. Other types may or may not work correctly as keys (strings and tuples work cleanly since they are immutable). Looking up a value which is not in the dict throws a KeyError -- use "in" to check if the key is in the dict, or use dict.get(key) which returns the value or None if the key is not present (or get(key, not-found) allows you to specify what value to return in the not-found case).
+Looking up or setting a value in a dict uses square brackets, e.g. `dict`['foo'] looks up the value under the key 'foo'. Strings, numbers, and tuples work as keys, and any type can be a value. Other types may or may not work correctly as keys (strings and tuples work cleanly since they are immutable). Looking up a value which is not in the dict throws a `KeyError` -- use "in" to check if the key is in the dict, or use `dict.get`(key) which returns the value or None if the key is not present (or get(key, not-found) allows you to specify what value to return in the not-found case).
     
 ```python    
 ## Can build up a dict by starting with the the empty dict {}
@@ -23,7 +23,7 @@ print dict.get('z')  ## None (instead of KeyError)
 
 ![dict with keys 'a' 'o' 'g'](https://developers.google.com/edu/python/images/dict.png)
 
-A for loop on a dictionary iterates over its keys by default. The keys will appear in an arbitrary order. The methods `dict.keys()` and `dict.values()` return lists of the keys or values explicitly. There's also an `items()` which returns a list of (key, value) tuples, which is the most efficient way to examine all the key value data in the dictionary. All of these lists can be passed to the sorted() function.
+A for loop on a dictionary iterates over its keys by default. The keys will appear in an arbitrary order. The methods `dict.keys()` and `dict.values()` return lists of the keys or values explicitly. There's also an `items()` which returns a list of (key, value) tuples, which is the most efficient way to examine all the key value data in the dictionary. All of these lists can be passed to the `sorted()` function.
     
 ```python    
 ## By default, iterating over a dict iterates over its keys.
@@ -54,8 +54,6 @@ print dict.items()  ##  [('a', 'alpha'), ('o', 'omega'), ('g', 'gamma')]
 for k, v in dict.items(): print k, '>', v
 ## a > alpha    o > omega     g > gamma
 ```
-
-There are "iter" variants of these methods called `iterkeys()`, `itervalues()` and `iteritems()` which avoid the cost of constructing the whole list -- a performance win if the data is huge. However, I generally prefer the plain `keys()` and `values()` methods with their sensible names. In Python 3000 revision, the need for the `iterkeys()` variants is going away.
 
 There are "iter" variants of these methods called `iterkeys()`, `itervalues()` and `iteritems()` which avoid the cost of constructing the whole list -- a performance win if the data is huge. However, I generally prefer the plain `keys()` and `values()` methods with their sensible names. In Python 3000 revision, the need for the `iterkeys()` variants is going away.
 
