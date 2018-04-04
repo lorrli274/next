@@ -1,1 +1,0 @@
-To practice the file system and external-commands material, see the [Copy Special Exercise](https://developers.google.com/edu/python/exercises/copy-special). To practice the `urllib` material, see the [Log Puzzle Exercise](https://developers.google.com/edu/python/exercises/log-puzzle).
