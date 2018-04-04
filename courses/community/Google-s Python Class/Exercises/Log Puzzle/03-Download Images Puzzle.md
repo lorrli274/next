@@ -2,7 +2,7 @@ Complete the download_images() function which takes a sorted list of urls and a 
 
 The download_images() function should also create an **Index.html** file in the directory with an "img" tag to show each local image file. The img tags should all be on one line together without separation. In this way, the browser displays all the slices together seamlessly. You do not need knowledge of HTML to do this; just create an index.html file that looks like this:
 
-```bash
+```html
 <verbatim>
 <html>
 <body>
