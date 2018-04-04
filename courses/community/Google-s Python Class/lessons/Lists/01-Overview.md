@@ -7,7 +7,7 @@ print colors[2]    ## green
 print len(colors)  ## 3
 ```
 
-![list of strings 'red' 'blue 'green'](https://developers.google.com/edu/python/images/list1.png)
+![](https://github.com/Codevolve/next/blob/master/courses/community/Google-s%20Python%20Class/Assets/list02.png?raw=true)
 
 Assignment with an = on lists does not make a copy. Instead, assignment makes the two variables point to the one list in memory. 
     
@@ -15,7 +15,7 @@ Assignment with an = on lists does not make a copy. Instead, assignment makes th
 b = colors   ## Does not copy the list
 ```
 
-![both colors and b point to the one list](https://developers.google.com/edu/python/images/list2.png)
+![](https://github.com/Codevolve/next/blob/master/courses/community/Google-s%20Python%20Class/Assets/list03.png?raw=true)
 
 The "empty list" is just an empty pair of brackets [ ]. The '+' works to append two lists, so [1, 2] + [3, 4] yields [1, 2, 3, 4] (this is just like + with strings).
 
