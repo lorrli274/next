@@ -1,4 +1,4 @@
-The re functions take options to modify the behavior of the pattern match. The option flag is added as an extra argument to the `search()` or `findall()` etc., e.g. re.search(pat, str, re.IGNORECASE).
+The **re functions** take options to modify the behavior of the pattern match. The option flag is added as an extra argument to the `search()` or `findall()` etc., e.g. re.search(pat, str, re.IGNORECASE).
 
 * `IGNORECASE` -- ignore upper/lowercase differences for matching, so 'a' matches both 'a' and 'A'. 
 
