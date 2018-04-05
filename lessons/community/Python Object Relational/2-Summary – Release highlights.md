@@ -25,3 +25,11 @@ Security improvements:
 * The [`hashlib`][20] and [`ssl`][21] modules now support OpenSSL 1.1.0.
 * The default settings and feature set of the [`ssl`][21] module have been improved.
 * The [`hashlib`][20] module received support for the BLAKE2, SHA-3 and SHAKE hash algorithms and the [`scrypt()`][22] key derivation function.
+
+Windows improvements:
+
+* [PEP 528][23] and [PEP 529][23], Windows filesystem and console encoding changed to UTF-8.
+* The `py.exe` launcher, when used interactively, no longer prefers Python 2 over Python 3 when the user doesn't specify a version (via command line arguments or a config file). Handling of shebang lines remains unchanged - "python" refers to Python 2 in that case.
+* `python.exe` and `pythonw.exe` have been marked as long-path aware, which means that the 260 character path limit may no longer apply. See [removing the MAX_PATH limitation][24] for details.
+* A `._pth` file can be added to force isolated mode and fully specify all search paths to avoid registry and environment lookup. See [the documentation][25] for more information.
+* A `python36.zip` file now works as a landmark to infer [`PYTHONHOME`][26]. See [the documentation][25] for more information.
