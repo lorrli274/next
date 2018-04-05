@@ -1,0 +1,1 @@
+This article explains the new features in Python 3.6, compared to 3.5. Python 3.6 was released on December 23, 2016. For full details, see the [changelog][1].
