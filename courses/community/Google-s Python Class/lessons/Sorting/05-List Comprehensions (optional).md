@@ -6,7 +6,7 @@ nums = [1, 2, 3, 4]
 squares = [ n * n for n in nums ]   ## [1, 4, 9, 16]
 ```
 
-The syntax is `[ expr for var in list ]`-- the `for var in list` looks like a regular for-loop, but without the colon (:). The `expr` to its left is evaluated once for each element to give the values for the new list. Here is an example with strings, where each string is changed to upper case with '!!!' appended:
+The syntax is `[ expr for var in list ]`-- the `for var in list` looks like a regular for-loop, but without the colon (:). The `expr` to its left is evaluated once for each element to give the values for the new list. Here is an example with strings, where each string is changed to upper case with `!!!` appended:
 
     
 ```python    
