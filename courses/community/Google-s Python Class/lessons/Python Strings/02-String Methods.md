@@ -1,4 +1,4 @@
-Here are some of the most common string methods. A method is like a function, but it runs "on" an object. If the variable s is a string, then the code `s.lower()` runs the `lower()` method on that string object and returns the result (this idea of a method running on an object is one of the basic ideas that make up Object Oriented Programming, OOP). Here are some of the most common string methods:
+Here are some of the most common string methods. A method is like a function, but it runs "on" an object. If the variable "s" is a string, then the code `s.lower()` runs the `lower()` method on that string object and returns the result (this idea of a method running on an object is one of the basic ideas that make up Object Oriented Programming, OOP). Here are some of the most common string methods:
 
 * `s.lower()`, `s.upper()` -- returns the lowercase or uppercase version of the string
 
