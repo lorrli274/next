@@ -1,0 +1,1 @@
+Private and special attribute names now are omitted unless the prefix starts with underscores. A space or a colon is added after some completed keywords. (Contributed by Serhiy Storchaka in [bpo-25011][220] and [bpo-25209][221].)
