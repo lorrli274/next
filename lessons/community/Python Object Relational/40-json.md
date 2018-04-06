@@ -1,0 +1,1 @@
+`[json.load()`][191] and `[json.loads()`][192] now support binary input. Encoded JSON should be represented using either UTF-8, UTF-16, or UTF-32. (Contributed by Serhiy Storchaka in [bpo-17909][193].)
