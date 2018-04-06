@@ -1,0 +1,1 @@
+`[venv`][277] accepts a new parameter `\--prompt`. This parameter provides an alternative prefix for the virtual environment. (Proposed by Łukasz Balcerzak and ported to 3.6 by Stéphane Wirtel in [bpo-22829][278].)
