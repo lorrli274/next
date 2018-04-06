@@ -20,7 +20,7 @@ query.filter(User.name.like('%ed%'))
 
 > Note: `ColumnOperators.like()` renders the LIKE operator, which is case insensitive on some backends, and case sensitive on others. For guaranteed case-insensitive comparisons, use `ColumnOperators.ilike()`.
 
-* [`ILIKE`][] (case-insensitive LIKE):
+* [`ILIKE`]() (case-insensitive LIKE):
 
 ```sql
 query.filter(User.name.ilike('%ed%'))
