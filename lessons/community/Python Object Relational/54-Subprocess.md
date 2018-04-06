@@ -1,0 +1,3 @@
+`[subprocess.Popen`][245] destructor now emits a `[ResourceWarning`][15] warning if the child process is still running. Use the context manager protocol (`with proc: ...`) or explicitly call the `[wait()`][246] method to read the exit status of the child process. (Contributed by Victor Stinner in [bpo-26741][247].)
+
+The `[subprocess.Popen`][245] constructor and all functions that pass arguments through to it now accept _encoding_ and _errors_ arguments. Specifying either of these will enable text mode for the _stdin_, _stdout_ and _stderr_ streams. (Contributed by Steve Dower in [bpo-6135][248].)
