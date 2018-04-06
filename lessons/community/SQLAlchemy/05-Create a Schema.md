@@ -32,7 +32,7 @@ COMMIT
 
 Minimal Table Descriptions vs. Full Descriptions
 
-Users familiar with the syntax of CREATE TABLE may notice that the VARCHAR columns were generated without a length; on SQLite and PostgreSQL, this is a valid datatype, but on others, it's not allowed. So if running this tutorial on one of those databases, and you wish to use SQLAlchemy to issue CREATE TABLE, a "length" may be provided to the `[String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String") type as below:
+Users familiar with the syntax of CREATE TABLE may notice that the VARCHAR columns were generated without a length; on SQLite and PostgreSQL, this is a valid datatype, but on others, it's not allowed. So if running this tutorial on one of those databases, and you wish to use SQLAlchemy to issue CREATE TABLE, a "length" may be provided to the [`String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String") type as below:
 
 ```sql
 Column(String(50))
