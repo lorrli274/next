@@ -1,4 +1,4 @@
-Literal strings can be used flexibly with [`Query`][27], by specifying their use with the [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, which is accepted by most applicable methods. For example, `[filter()`][40] and [`order_by()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.order_by "sqlalchemy.orm.query.Query.order_by"):
+Literal strings can be used flexibly with [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query"), by specifying their use with the [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, which is accepted by most applicable methods. For example, [`filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter") and [`order_by()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.order_by "sqlalchemy.orm.query.Query.order_by"):
     
 ```sql    
 >>> from sqlalchemy import text
@@ -12,7 +12,7 @@ mary
 fred
 ```
 
-Bind parameters can be specified with string-based SQL, using a colon. To specify the values, use the `[params()`][59] method:
+Bind parameters can be specified with string-based SQL, using a colon. To specify the values, use the [`params()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.params "sqlalchemy.orm.query.Query.params") method:
     
 ```sql    
 [sql][28]>>> session.query(User).filter(text("id<:value and name=:name")).
