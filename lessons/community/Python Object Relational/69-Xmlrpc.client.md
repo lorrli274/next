@@ -1,0 +1,1 @@
+The `[xmlrpc.client`][285] module now supports unmarshalling additional data types used by the Apache XML-RPC implementation for numerics and `None`. (Contributed by Serhiy Storchaka in [bpo-26885][286].)
