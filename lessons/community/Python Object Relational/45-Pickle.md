@@ -1,0 +1,1 @@
+Objects that need `__new__` called with keyword arguments can now be pickled using [pickle protocols][206] older than protocol version 4. Protocol version 4 already supports this case. (Contributed by Serhiy Storchaka in [bpo-24164][207].)
