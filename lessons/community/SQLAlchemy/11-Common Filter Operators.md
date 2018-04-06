@@ -1,36 +1,36 @@
-Here's a rundown of some of the most common operators used in `[filter()`][40]:
+Here's a rundown of some of the most common operators used in [`filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter"):
 
-* `[equals`][41]:
+* [`equals`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__eq__ "sqlalchemy.sql.operators.ColumnOperators.__eq__"):
 
-```
+```sql
 query.filter(User.name == 'ed')
 ```
 
-* `[not equals`][42]:
+* [`not equals`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__ne__ "sqlalchemy.sql.operators.ColumnOperators.__ne__"):
 
-```
+```sql
 query.filter(User.name != 'ed')
 ```
 
-* `[LIKE`][43]:
+* [`LIKE`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.like "sqlalchemy.sql.operators.ColumnOperators.like"):
 
-```
+```sql
 query.filter(User.name.like('%ed%'))
 ```
 
-> Note: ColumnOperators.like() renders the LIKE operator, which is case insensitive on some backends, and case sensitive on others. For guaranteed case-insensitive comparisons, use ColumnOperators.ilike().
+> Note: `ColumnOperators.like()` renders the LIKE operator, which is case insensitive on some backends, and case sensitive on others. For guaranteed case-insensitive comparisons, use `ColumnOperators.ilike()`.
 
 * ILIKE (case-insensitive LIKE):
 
-```
+```sql
 query.filter(User.name.ilike('%ed%'))
 ```
 
-> Note: most backends don't support ILIKE directly. For those, the `[ColumnOperators.ilike()`][44] operator renders an expression combining LIKE with the LOWER SQL function applied to each operand.
+> Note: most backends don't support ILIKE directly. For those, the [`ColumnOperators.ilike()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.ilike "sqlalchemy.sql.operators.ColumnOperators.ilike") operator renders an expression combining LIKE with the LOWER SQL function applied to each operand.
 
-* `[IN`][45]:
+* [`IN`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.in_ "sqlalchemy.sql.operators.ColumnOperators.in_"):
 
-```
+```sql
     query.filter(User.name.in_(['ed', 'wendy', 'jack']))
 
 # works with query objects too:
@@ -39,32 +39,32 @@ query.filter(User.name.in_(
 ))
 ```
 
-* `[NOT IN`][46]:
+* [`NOT IN`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.notin_ "sqlalchemy.sql.operators.ColumnOperators.notin_"):
 
-```
+```sql
 query.filter(~User.name.in_(['ed', 'wendy', 'jack']))
 ```
 
-* `[IS NULL`][47]:
+* [`IS NULL`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.is_ "sqlalchemy.sql.operators.ColumnOperators.is_"):
 
-```
+```sql
     query.filter(User.name == None)
 
 # alternatively, if pep8/linters are a concern
 query.filter(User.name.is_(None))
 ```
-* `[IS NOT NULL`][48]:
+* [`IS NOT NULL`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.isnot "sqlalchemy.sql.operators.ColumnOperators.isnot"):
 
-```
+```sql
     query.filter(User.name != None)
 
 # alternatively, if pep8/linters are a concern
 query.filter(User.name.isnot(None))
 ```
 
-* `[AND`][49]:
+* [`AND`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.and_ "sqlalchemy.sql.expression.and_"):
 
-```
+```sql
     # use and_()
 from sqlalchemy import and_
 query.filter(and_(User.name == 'ed', User.fullname == 'Ed Jones'))
@@ -76,21 +76,21 @@ query.filter(User.name == 'ed', User.fullname == 'Ed Jones')
 query.filter(User.name == 'ed').filter(User.fullname == 'Ed Jones')
 ```
 
-> Note: Make sure you use `[and_()`][49] and **not** the Python `and` operator!
+> Note: Make sure you use [`and_()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.and_ "sqlalchemy.sql.expression.and_") and **not** the Python `and` operator!
 
-* `[OR`][50]:
+* [`OR`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.or_ "sqlalchemy.sql.expression.or_"):
 
-```
+```sql
     from sqlalchemy import or_
 query.filter(or_(User.name == 'ed', User.name == 'wendy'))
 ```
 
-> Note: Make sure you use `[or_()`][50] and **not** the Python `or` operator!
+> Note: Make sure you use [`or_()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.or_ "sqlalchemy.sql.expression.or_") and **not** the Python `or` operator!
 
-* `[MATCH`][51]:
+* [`MATCH`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.match "sqlalchemy.sql.operators.ColumnOperators.match"):
 
-```
+```sql
 query.filter(User.name.match('wendy'))
 ```
 
-> Note: `[match()`][51] uses a database-specific `MATCH` or `CONTAINS` function; its behavior will vary by backend and is not available on some backends such as SQLite.
+> Note: [`match()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.match "sqlalchemy.sql.operators.ColumnOperators.match") uses a database-specific `MATCH` or `CONTAINS` function; its behavior will vary by backend and is not available on some backends such as SQLite.
