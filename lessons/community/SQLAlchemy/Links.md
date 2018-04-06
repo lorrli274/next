@@ -128,7 +128,6 @@
 
 [65]: http://docs.sqlalchemy.org/core/constraints.html#sqlalchemy.schema.ForeignKey "sqlalchemy.schema.ForeignKey"
 
-
 [66]: http://docs.sqlalchemy.org/glossary.html#term-constrained
 
 [67]: http://docs.sqlalchemy.org/relationship_api.html#sqlalchemy.orm.relationship "sqlalchemy.orm.relationship"
