@@ -13,7 +13,7 @@ When we declared our class, Declarative used a Python metaclass in order to perf
 
 The [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") object is a member of a larger collection known as [`MetaData`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData "sqlalchemy.schema.MetaData"). When using Declarative, this object is available using the `.metadata` attribute of our declarative base class.
 
-The [`MetaData`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData "sqlalchemy.schema.MetaData") is a registry which includes the ability to emit a limited set of schema generation commands to the database. As our SQLite database does not actually have a `users` table present, we can use `[MetaData`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData "sqlalchemy.schema.MetaData") to issue CREATE TABLE statements to the database for all tables that don't yet exist. Below, we call the [`MetaData.create_all()`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData.create_all "sqlalchemy.schema.MetaData.create_all") method, passing in our `[Engine]`(http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine") as a source of database connectivity. We will see that special commands are first emitted to check for the presence of the `users` table, and following that the actual `CREATE TABLE` statement:
+The [`MetaData`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData "sqlalchemy.schema.MetaData") is a registry which includes the ability to emit a limited set of schema generation commands to the database. As our SQLite database does not actually have a `users` table present, we can use [`MetaData`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData "sqlalchemy.schema.MetaData") to issue CREATE TABLE statements to the database for all tables that don't yet exist. Below, we call the [`MetaData.create_all()`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.MetaData.create_all "sqlalchemy.schema.MetaData.create_all") method, passing in our [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine") as a source of database connectivity. We will see that special commands are first emitted to check for the presence of the `users` table, and following that the actual `CREATE TABLE` statement:
     
 ```sql    
 >>> Base.metadata.create_all(engine)
@@ -38,16 +38,16 @@ Users familiar with the syntax of CREATE TABLE may notice that the VARCHAR colum
 Column(String(50))
 ```
 
-The length field on `[String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String"), as well as similar precision/scale fields available on `[Integer`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.Integer "sqlalchemy.types.Integer"), `[Numeric`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.Numeric "sqlalchemy.types.Numeric"), etc. are not referenced by SQLAlchemy other than when creating tables.
+The length field on [`String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String"), as well as similar precision/scale fields available on [`Integer`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.Integer "sqlalchemy.types.Integer"), [`Numeric`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.Numeric "sqlalchemy.types.Numeric"), etc. are not referenced by SQLAlchemy other than when creating tables.
 
-Additionally, Firebird and Oracle require sequences to generate new primary key identifiers, and SQLAlchemy doesn't generate or assume these without being instructed. For that, you use the `[Sequence`](http://docs.sqlalchemy.org/core/defaults.html#sqlalchemy.schema.Sequence "sqlalchemy.schema.Sequence") construct:
+Additionally, Firebird and Oracle require sequences to generate new primary key identifiers, and SQLAlchemy doesn't generate or assume these without being instructed. For that, you use the [`Sequence`](http://docs.sqlalchemy.org/core/defaults.html#sqlalchemy.schema.Sequence "sqlalchemy.schema.Sequence") construct:
     
 ```sql    
 from sqlalchemy import Sequence
 Column(Integer, Sequence('user_id_seq'), primary_key=True)
 ```
 
-A full, foolproof `[Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") generated via our declarative mapping is therefore:
+A full, foolproof [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") generated via our declarative mapping is therefore:
     
 ```sql   
 class User(Base):
