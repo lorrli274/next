@@ -11,6 +11,7 @@ For writing regex, it's nice to include a copy of the target
 text for inspiration.
 
 Here's what the html looks like in the baby.html files:
+```html
 ...
 <h3 align="center">Popularity in 1990</h3>
 ....
@@ -18,7 +19,7 @@ Here's what the html looks like in the baby.html files:
 <tr align="right"><td>2</td><td>Christopher</td><td>Ashley</td>
 <tr align="right"><td>3</td><td>Matthew</td><td>Brittany</td>
 ...
-
+```
 Suggested milestones for incremental development:
  -Extract the year and print it
  -Extract the names and rank numbers and just print them
