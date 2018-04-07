@@ -1,6 +1,6 @@
-In the *Babynames.py* file, implement the extract_names(filename) function which takes the filename of a baby1990.html file and returns the data from the file as a single list -- the year string at the start of the list followed by the name-rank strings in alphabetical order. ['2006', 'Aaliyah 91', 'Abagail 895', 'Aaron 57', ...]. 
+In the *Babynames.py* file, implement the `extract_names(filename)` function which takes the filename of a baby1990.html file and returns the data from the file as a single list -- the year string at the start of the list followed by the name-rank strings in alphabetical order. ['2006', 'Aaliyah 91', 'Abagail 895', 'Aaron 57', ...]. 
 
-Modify main() so it calls your extract_names() function and prints what it returns (main already has the code for the command line argument parsing). If you get stuck working out the regular expressions for the year and each name, solution regular expression patterns are shown at the end of this document. Note that for parsing webpages in general, regular expressions don't do a good job, but these webpages have a simple and consistent format.
+Modify `main()` so it calls your `extract_names()` function and prints what it returns (main already has the code for the command line argument parsing). If you get stuck working out the regular expressions for the year and each name, solution regular expression patterns are shown at the end of this document. Note that for parsing webpages in general, regular expressions don't do a good job, but these webpages have a simple and consistent format.
 
 Rather than treat the boy and girl names separately, we'll just lump them all together. In some years, a name appears more than once in the html, but we'll just use one number per name. Optional: make the algorithm smart about this case and choose whichever number is smaller.
 
@@ -13,11 +13,11 @@ Printing the data you have at the end of one milestone helps you think about how
 * Extract the names and rank numbers and print them 
 * Get the names data into a dict and print it 
 * Build the [year, 'name rank', ... ] list and print it 
-* Fix main() to use the ExtractNames list 
+* Fix `main()` to use the ExtractNames list 
 
 Earlier we have had functions just print to standard out. It's more re-usable to have the function **return** the extracted data, so then the caller has the choice to print it or do something else with it. (You can still print directly from inside your functions for your little experiments during development.)
 
-Have main() call extract_names() for each command line arg and print a text summary. To make the list into a reasonable looking summary text, here's a clever use of join: `text = 'n'.join(mylist) + 'n'`
+Have `main()` call `extract_names()` for each command line arg and print a text summary. To make the list into a reasonable looking summary text, here's a clever use of join: `text = 'n'.join(mylist) + 'n'`
 
 The summary text should look like this for each file:
     
