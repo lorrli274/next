@@ -2,14 +2,14 @@ Let's try to delete `jack` and see how that goes. We'll mark the object as delet
     
 ```sql    
 >>> session.delete(jack)
-[sql][28]>>> session.query(User).filter_by(name='jack').count()
+>>> session.query(User).filter_by(name='jack').count()
 0
 ```
 
 So far, so good. How about Jack's `Address` objects ?
     
 ```sql    
-[sql][28]>>> session.query(Address).filter(
+>>> session.query(Address).filter(
 ...     Address.email_address.in_(['jack@google.com', 'j25@yahoo.com'])
 ...  ).count()
 2
