@@ -1,4 +1,4 @@
-Literal strings can be used flexibly with [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query"), by specifying their use with the [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, which is accepted by most applicable methods. For example, [`filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter") and [`order_by()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.order_by "sqlalchemy.orm.query.Query.order_by"):
+**Literal strings** can be used flexibly with [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query"), by specifying their use with the [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, which is accepted by most applicable methods. For example, [`filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter") and [`order_by()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.order_by "sqlalchemy.orm.query.Query.order_by"):
     
 ```sql    
 >>> from sqlalchemy import text
@@ -12,7 +12,7 @@ mary
 fred
 ```
 
-Bind parameters can be specified with string-based SQL, using a colon. To specify the values, use the [`params()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.params "sqlalchemy.orm.query.Query.params") method:
+**Bind parameters** can be specified with string-based SQL, using a colon. To specify the values, use the [`params()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.params "sqlalchemy.orm.query.Query.params") method:
     
 ```sql    
 >>> session.query(User).filter(text("id<:value and name=:name")).
@@ -37,6 +37,7 @@ Matching columns on name works for simple cases but can become unwieldy when dea
 >>> session.query(User).from_statement(stmt).params(name='ed').all()
 []
 ```
+
 New in version 1.1: The [`TextClause.columns()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.textClause.columns "sqlalchemy.sql.expression.TextClause.columns") method now accepts column expressions which will be matched positionally to a plain text SQL result set, eliminating the need for column names to match or even be unique in the SQL statement.
 
 When selecting from a [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, the [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") may still specify what columns and entities are to be returned; instead of `query(User)` we can also ask for the columns individually, as in any other case:
