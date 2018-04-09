@@ -1,7 +1,7 @@
 [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") includes a convenience method for counting called [`count()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.count "sqlalchemy.orm.query.Query.count"):
     
 ```sql    
-[sql][28]>>> session.query(User).filter(User.name.like('%ed')).count()
+>>> session.query(User).filter(User.name.like('%ed')).count()
 2
 ```
 
@@ -11,20 +11,20 @@ For situations where the "thing to be counted" needs to be indicated specificall
     
 ```sql    
 >>> from sqlalchemy import func
-[sql][28]>>> session.query(func.count(User.name), User.name).group_by(User.name).all()
+>>> session.query(func.count(User.name), User.name).group_by(User.name).all()
 [(1, u'ed'), (1, u'fred'), (1, u'mary'), (1, u'wendy')]
 ```
 
 To achieve our simple `SELECT count(*) FROM table`, we can apply it as:
     
 ```sql    
-[sql][28]>>> session.query(func.count('*')).select_from(User).scalar()
+>>> session.query(func.count('*')).select_from(User).scalar()
 4
 ```
 
 The usage of [`select_from()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.select_from "sqlalchemy.orm.query.Query.select_from") can be removed if we express the count in terms of the `User` primary key directly:
     
 ```sql    
-[sql][28]>>> session.query(func.count(User.id)).scalar()
+>>> session.query(func.count(User.id)).scalar()
 4
 ```
