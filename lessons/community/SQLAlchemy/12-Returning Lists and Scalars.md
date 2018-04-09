@@ -3,7 +3,7 @@ A number of methods on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchem
 * [`all()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.all "sqlalchemy.orm.query.Query.all") returns a list:
 
 ```sql
-    >>> query = session.query(User).filter(User.name.like('%ed')).order_by(User.id)
+>>> query = session.query(User).filter(User.name.like('%ed')).order_by(User.id)
 >>> query.all()
 [,
       ]
