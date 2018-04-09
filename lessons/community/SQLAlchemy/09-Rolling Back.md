@@ -29,7 +29,7 @@ u'ed'
 False
 ```
 
-issuing a SELECT illustrates the changes made to the database:
+Issuing a SELECT illustrates the changes made to the database:
     
 ```sql    
 >>> session.query(User).filter(User.name.in_(['ed', 'fakeuser'])).all()
