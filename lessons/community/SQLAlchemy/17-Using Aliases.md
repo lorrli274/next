@@ -4,7 +4,7 @@ When querying across multiple tables, if the same table needs to be referenced m
 >>> from sqlalchemy.orm import aliased
 >>> adalias1 = aliased(Address)
 >>> adalias2 = aliased(Address)
-[sql][28]>>> for username, email1, email2 in 
+>>> for username, email1, email2 in 
 ...     session.query(User.name, adalias1.email_address, adalias2.email_address).
 ...     join(adalias1, User.addresses).
 ...     join(adalias2, User.addresses).
