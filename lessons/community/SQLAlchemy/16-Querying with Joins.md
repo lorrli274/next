@@ -40,7 +40,7 @@ The reference documentation for [`join()`](http://docs.sqlalchemy.org/query.html
 
 What does [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") select from if there's multiple entities?
 
-The [`Query.join()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.join "sqlalchemy.orm.query.Query.join") method will **typically join from the leftmost item** in the list of entities, when the ON clause is omitted, or if the ON clause is a plain SQL expression. To control the first entity in the list of JOINs, use the [`Query.select_from()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.select_from "sqlalchemy.orm.query.Query.select_from") method:
+The [`Query.join()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.join "sqlalchemy.orm.query.Query.join") method will typically join from the leftmost item in the list of entities, when the `ON` clause is omitted, or if the ON clause is a plain SQL expression. To control the first entity in the list of JOINs, use the [`Query.select_from()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.select_from "sqlalchemy.orm.query.Query.select_from") method:
     
 ```sql    
 query = session.query(User, Address).select_from(Address).join(User)
