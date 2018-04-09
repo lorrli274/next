@@ -65,13 +65,13 @@ We would also like our `BlogPost` class to have an `author` field. We will add t
 Create new tables:
     
 ```sql    
-[sql][28]>>> Base.metadata.create_all(engine)
+>>> Base.metadata.create_all(engine)
 ```    
 
 Usage is not too different from what we've been doing. Let's give Wendy some blog posts:
     
 ```sql    
-[sql][28]>>> wendy = session.query(User).
+>>> wendy = session.query(User).
 ...                 filter_by(name='wendy').
 ...                 one()
 >>> post = BlogPost("Wendy's Blog Post", "This is a test", wendy)
@@ -88,7 +88,7 @@ We're storing keywords uniquely in the database, but we know that we don't have 
 We can now look up all blog posts with the keyword 'firstpost'. We'll use the `any` operator to locate "blog posts where any of its keywords has the keyword string 'firstpost'":
     
 ```sql    
-[sql][28]>>> session.query(BlogPost).
+>>> session.query(BlogPost).
 ...             filter(BlogPost.keywords.any(keyword='firstpost')).
 ...             all()
 [BlogPost("Wendy's Blog Post", 'This is a test', )]
@@ -97,7 +97,7 @@ We can now look up all blog posts with the keyword 'firstpost'. We'll use the `a
 If we want to look up posts owned by the user `wendy`, we can tell the query to narrow down to that `User` object as a parent:
     
 ```sql    
-[sql][28]>>> session.query(BlogPost).
+>>> session.query(BlogPost).
 ...             filter(BlogPost.author==wendy).
 ...             filter(BlogPost.keywords.any(keyword='firstpost')).
 ...             all()
@@ -107,7 +107,7 @@ If we want to look up posts owned by the user `wendy`, we can tell the query to 
 Or we can use Wendy's own `posts` relationship, which is a "dynamic" relationship, to query straight from there:
     
 ```sql    
-[sql][28]>>> wendy.posts.
+>>> wendy.posts.
 ...         filter(BlogPost.keywords.any(keyword='firstpost')).
 ...         all()
 [BlogPost("Wendy's Blog Post", 'This is a test', )]
