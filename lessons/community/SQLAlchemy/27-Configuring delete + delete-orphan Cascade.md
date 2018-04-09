@@ -1,19 +1,19 @@
-We will configure **cascade** options on the `User.addresses` relationship to change the behavior. While SQLAlchemy allows you to add new attributes and relationships to mappings at any point in time, in this case the existing relationship needs to be removed, so we need to tear down the mappings completely and start again - we'll close the `[Session`][23]:
+We will configure **cascade** options on the `User.addresses` relationship to change the behavior. While SQLAlchemy allows you to add new attributes and relationships to mappings at any point in time, in this case the existing relationship needs to be removed, so we need to tear down the mappings completely and start again - we'll close the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session"):
     
-```    
+```sql    
 >>> session.close()
 ROLLBACK
 ```
 
-and use a new `[declarative_base()`][10]:
+and use a new [`declarative_base()`](http://docs.sqlalchemy.org/extensions/declarative/api.html#sqlalchemy.ext.declarative.declarative_base "sqlalchemy.ext.declarative.declarative_base"):
     
-```    
+```sql    
 >>> Base = declarative_base()
 ```
 
 Next we'll declare the `User` class, adding in the `addresses` relationship including the cascade configuration (we'll leave the constructor out too):
     
-```    
+```sql    
 >>> class User(Base):
 ...     __tablename__ = 'users'
 ...
@@ -32,7 +32,7 @@ Next we'll declare the `User` class, adding in the `addresses` relationship incl
 
 Then we recreate `Address`, noting that in this case we've created the `Address.user` relationship via the `User` class already:
     
-```    
+```sql    
 >>> class Address(Base):
 ...     __tablename__ = 'addresses'
 ...     id = Column(Integer, primary_key=True)
@@ -44,9 +44,9 @@ Then we recreate `Address`, noting that in this case we've created the `Address.
 ...         return "" % self.email_address
 ```
 
-Now when we load the user `jack` (below using `[get()`][92], which loads by primary key), removing an address from the corresponding `addresses` collection will result in that `Address` being deleted:
+Now when we load the user `jack` (below using [`get()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.get "sqlalchemy.orm.query.Query.get"), which loads by primary key), removing an address from the corresponding `addresses` collection will result in that `Address` being deleted:
     
-```    
+```sql    
 # load Jack by primary key
 [sql][28]>>> jack = session.query(User).get(5)
 
@@ -62,7 +62,7 @@ Now when we load the user `jack` (below using `[get()`][92], which loads by prim
 
 Deleting Jack will delete both Jack and the remaining `Address` associated with the user:
     
-```    
+```sql    
 >>> session.delete(jack)
 
 [sql][28]>>> session.query(User).filter_by(name='jack').count()
@@ -76,4 +76,4 @@ Deleting Jack will delete both Jack and the remaining `Address` associated with 
 
 More on Cascades
 
-Further detail on configuration of cascades is at [Cascades][93]. The cascade functionality can also integrate smoothly with the `ON DELETE CASCADE` functionality of the relational database. See [Using Passive Deletes][94] for details.
+Further detail on configuration of cascades is at [Cascades](http://docs.sqlalchemy.org/cascades.html#unitofwork-cascades). The cascade functionality can also integrate smoothly with the `ON DELETE CASCADE` functionality of the relational database. See [Using Passive Deletes](http://docs.sqlalchemy.org/collections.html#passive-deletes) for details.
