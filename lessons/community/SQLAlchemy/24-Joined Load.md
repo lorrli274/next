@@ -3,7 +3,7 @@ The other automatic eager loading function is more well known and is called [`or
 ```sql    
 >>> from sqlalchemy.orm import joinedload
 
-[sql][28]>>> jack = session.query(User).
+>>> jack = session.query(User).
 ...                        options(joinedload(User.addresses)).
 ...                        filter_by(name='jack').one()
 >>> jack
