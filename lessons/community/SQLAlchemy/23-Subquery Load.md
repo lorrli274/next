@@ -2,7 +2,7 @@ In this case we'd like to indicate that `User.addresses` should load eagerly. A 
     
 ```sql    
 >>> from sqlalchemy.orm import subqueryload
-[sql][28]>>> jack = session.query(User).
+>>> jack = session.query(User).
 ...                 options(subqueryload(User.addresses)).
 ...                 filter_by(name='jack').one()
 >>> jack
