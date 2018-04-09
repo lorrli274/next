@@ -6,4 +6,4 @@ While there is overlap among the usage patterns of the ORM and the Expression La
 
 A successful application may be constructed using the Object Relational Mapper exclusively. In advanced situations, an application constructed with the ORM may make occasional usage of the Expression Language directly in certain areas where specific database interactions are required.
 
-THis course is in doctest format, meaning each `>>>` line represents something you can type at a Python command prompt, and the following text represents the expected return value.
+This course is in doctest format, meaning each `>>>` line represents something you can type at a Python command prompt, and the following text represents the expected return value.
