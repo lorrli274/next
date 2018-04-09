@@ -2,7 +2,7 @@ A third style of eager loading is when we are constructing a JOIN explicitly in 
     
 ```sql    
 >>> from sqlalchemy.orm import contains_eager
-[sql][28]>>> jacks_addresses = session.query(Address).
+>>> jacks_addresses = session.query(Address).
 ...                             join(Address.user).
 ...                             filter(User.name=='jack').
 ...                             options(contains_eager(Address.user)).
