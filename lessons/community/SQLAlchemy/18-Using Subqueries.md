@@ -21,7 +21,7 @@ The `func` keyword generates SQL functions, and the `subquery()` method on [`Que
 Once we have our statement, it behaves like a [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") construct, such as the one we created for `users` at the start of this tutorial. The columns on the statement are accessible through an attribute called `c`:
     
 ```sql    
-[sql][28]>>> for u, count in session.query(User, stmt.c.address_count).
+>>> for u, count in session.query(User, stmt.c.address_count).
 ...     outerjoin(stmt, User.id==stmt.c.user_id).order_by(User.id):
 ...     print(u, count)
  None
