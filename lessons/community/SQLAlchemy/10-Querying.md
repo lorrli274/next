@@ -20,7 +20,7 @@ mary Mary Contrary
 fred Fred Flinstone
 ```
 
-The tuples returned by [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") are _named_ tuples, supplied by the [`KeyedTuple`](http://docs.sqlalchemy.org/query.html#sqlalchemy.util.KeyedTuple "sqlalchemy.util.KeyedTuple") class, and can be treated much like an ordinary Python object. The names are the same as the attribute's name for an attribute, and the class name for a class:
+The tuples returned by [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") are named tuples, supplied by the [`KeyedTuple`](http://docs.sqlalchemy.org/query.html#sqlalchemy.util.KeyedTuple "sqlalchemy.util.KeyedTuple") class, and can be treated much like an ordinary Python object. The names are the same as the attribute's name for an attribute, and the class name for a class:
     
 ```sql    
 >>> for row in session.query(User, User.name).all():
@@ -70,7 +70,7 @@ ed
 
 …or [`filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter"), which uses more flexible SQL expression language constructs. These allow you to use regular Python operators with the class-level attributes on your mapped class:
     
-```    
+```sql    
 >>> for name, in session.query(User.name).
 ...             filter(User.fullname=='Ed Jones'):
 ...    print(name)
