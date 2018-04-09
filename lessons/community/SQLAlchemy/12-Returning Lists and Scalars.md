@@ -4,7 +4,7 @@ A number of methods on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchem
 
 ```sql
     >>> query = session.query(User).filter(User.name.like('%ed')).order_by(User.id)
-[sql][28]>>> query.all()
+>>> query.all()
 [,
       ]
 ```
@@ -12,7 +12,7 @@ A number of methods on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchem
 * [`first()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.first "sqlalchemy.orm.query.Query.first") applies a limit of one and returns the first result as a scalar:
 
 ```sql
-[sql][28]>>> query.first()
+>>> query.first()
 ```    
 
 * [`one()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.one "sqlalchemy.orm.query.Query.one") fully fetches all rows, and if not exactly one object identity or composite row is present in the result, raises an error. With multiple rows found:
@@ -42,6 +42,6 @@ The [`one()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.o
 ```sql
     >>> query = session.query(User.id).filter(User.name == 'ed').
 ...    order_by(User.id)
-[sql][28]>>> query.scalar()
+>>> query.scalar()
 1
 ```
