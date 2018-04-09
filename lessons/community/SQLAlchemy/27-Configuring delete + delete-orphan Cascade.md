@@ -48,13 +48,13 @@ Now when we load the user `jack` (below using [`get()`](http://docs.sqlalchemy.o
     
 ```sql    
 # load Jack by primary key
-[sql][28]>>> jack = session.query(User).get(5)
+>>> jack = session.query(User).get(5)
 
 # remove one Address (lazy load fires off)
-[sql][28]>>> del jack.addresses[1]
+>>> del jack.addresses[1]
 
 # only one address remains
-[sql][28]>>> session.query(Address).filter(
+>>> session.query(Address).filter(
 ...     Address.email_address.in_(['jack@google.com', 'j25@yahoo.com'])
 ... ).count()
 1
@@ -65,10 +65,10 @@ Deleting Jack will delete both Jack and the remaining `Address` associated with 
 ```sql    
 >>> session.delete(jack)
 
-[sql][28]>>> session.query(User).filter_by(name='jack').count()
+>>> session.query(User).filter_by(name='jack').count()
 0
 
-[sql][28]>>> session.query(Address).filter(
+>>> session.query(Address).filter(
 ...    Address.email_address.in_(['jack@google.com', 'j25@yahoo.com'])
 ... ).count()
 0
