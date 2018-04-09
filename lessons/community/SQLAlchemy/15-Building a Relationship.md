@@ -33,17 +33,17 @@ See the docstring for [`relationship()`](http://docs.sqlalchemy.org/relationship
 
 Did you know ?
 
-* a FOREIGN KEY constraint in most (though not all) relational databases can only link to a primary key column, or a column that has a UNIQUE constraint.
+* a `FOREIGN KEY` constraint in most (though not all) relational databases can only link to a primary key column, or a column that has a UNIQUE constraint.
 
-* a FOREIGN KEY constraint that refers to a multiple column primary key, and itself has multiple columns, is known as a "composite foreign key". It can also reference a subset of those columns.
+* a `FOREIGN KEY` constraint that refers to a multiple column primary key, and itself has multiple columns, is known as a "composite foreign key". It can also reference a subset of those columns.
 
-* FOREIGN KEY columns can automatically update themselves, in response to a change in the referenced column or row. This is known as the CASCADE _referential action_, and is a built in function of the relational database.
+* `FOREIGN KEY` columns can automatically update themselves, in response to a change in the referenced column or row. This is known as the **CASCADE** referential action, and is a built in function of the relational database.
 
-* FOREIGN KEY can refer to its own table. This is referred to as a "self-referential" foreign key.
+* `FOREIGN KEY` can refer to its own table. This is referred to as a "self-referential" foreign key.
 
 * Read more about foreign keys at [Foreign Key - Wikipedia](http://en.wikipedia.org/wiki/Foreign_key).
 
-We'll need to create the `addresses` table in the database, so we will issue another CREATE from our metadata, which will skip over tables which have already been created:
+We'll need to create the `addresses` table in the database, so we will issue another `CREATE` from our metadata, which will skip over tables which have already been created:
     
 ```sql    
 >>> Base.metadata.create_all(engine)
