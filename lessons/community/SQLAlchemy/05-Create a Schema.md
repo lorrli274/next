@@ -1,4 +1,4 @@
-With our `User` class constructed via the Declarative system, we have defined information about our table, known as table metadata. The object used by SQLAlchemy to represent this information for a specific table is called the [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") object, and here Declarative has made one for us. We can see this object by inspecting the `__table__` attribute:
+With our `User` class constructed via the Declarative system, we have defined information about our table, known as **table metadata**. The object used by SQLAlchemy to represent this information for a specific table is called the [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") object, and here Declarative has made one for us. We can see this object by inspecting the `__table__` attribute:
     
 ```sql    
 >>> User.__table__ 
@@ -30,9 +30,9 @@ CREATE TABLE users (
 COMMIT
 ```
 
-Minimal Table Descriptions vs. Full Descriptions
+##Minimal Table Descriptions vs. Full Descriptions
 
-Users familiar with the syntax of CREATE TABLE may notice that the VARCHAR columns were generated without a length; on SQLite and PostgreSQL, this is a valid datatype, but on others, it's not allowed. So if running this tutorial on one of those databases, and you wish to use SQLAlchemy to issue CREATE TABLE, a "length" may be provided to the [`String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String") type as below:
+Users familiar with the syntax of `CREATE TABLE` may notice that the `VARCHAR` columns were generated without a length; on SQLite and PostgreSQL, this is a valid datatype, but on others, it's not allowed. So if running this tutorial on one of those databases, and you wish to use SQLAlchemy to issue `CREATE TABLE`, a "length" may be provided to the [`String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String") type as below:
 
 ```sql
 Column(String(50))
