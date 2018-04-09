@@ -46,5 +46,5 @@ Did you know ?
 We'll need to create the `addresses` table in the database, so we will issue another CREATE from our metadata, which will skip over tables which have already been created:
     
 ```sql    
-[sql][28]>>> Base.metadata.create_all(engine)
+>>> Base.metadata.create_all(engine)
 ```    
