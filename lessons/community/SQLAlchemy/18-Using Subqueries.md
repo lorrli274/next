@@ -18,7 +18,7 @@ Using the [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Q
 
 The `func` keyword generates SQL functions, and the `subquery()` method on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") produces a SQL expression construct representing a SELECT statement embedded within an alias (it's actually shorthand for `query.statement.alias()`).
 
-Once we have our statement, it behaves like a [`Table`])http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") construct, such as the one we created for `users` at the start of this tutorial. The columns on the statement are accessible through an attribute called `c`:
+Once we have our statement, it behaves like a [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") construct, such as the one we created for `users` at the start of this tutorial. The columns on the statement are accessible through an attribute called `c`:
     
 ```sql    
 [sql][28]>>> for u, count in session.query(User, stmt.c.address_count).
