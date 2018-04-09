@@ -3,7 +3,7 @@ Now that we have two tables, we can show some more features of [`Query`](http://
 To construct a simple implicit join between `User` and `Address`, we can use [`Query.filter()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.filter "sqlalchemy.orm.query.Query.filter") to equate their related columns together. Below we load the `User` and `Address` entities at once using this method:
     
 ```sql    
-[sql][28]>>> for u, a in session.query(User, Address).
+>>> for u, a in session.query(User, Address).
 ...                     filter(User.id==Address.user_id).
 ...                     filter(Address.email_address=='jack@google.com').
 ...                     all():
@@ -15,7 +15,7 @@ To construct a simple implicit join between `User` and `Address`, we can use [`Q
 The actual SQL JOIN syntax, on the other hand, is most easily achieved using the [`Query.join()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.join "sqlalchemy.orm.query.Query.join") method:
     
 ```sql    
-[sql][28]>>> session.query(User).join(Address).
+>>> session.query(User).join(Address).
 ...         filter(Address.email_address=='jack@google.com').
 ...         all()
 []
