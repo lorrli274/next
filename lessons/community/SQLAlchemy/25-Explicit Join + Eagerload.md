@@ -12,5 +12,3 @@ A third style of eager loading is when we are constructing a **JOIN** explicitly
 
 >>> jacks_addresses[0].user
 ```    
-
-For more information on eager loading, including how to configure various forms of loading by default, see the section [Relationship Loading Techniques](http://docs.sqlalchemy.org/loading_relationships.html).
