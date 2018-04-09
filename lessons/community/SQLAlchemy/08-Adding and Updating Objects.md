@@ -10,7 +10,7 @@ At this point, we say that the instance is **pending**; no SQL has yet been issu
 For example, below we create a new [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") object which loads instances of `User`. We "filter by" the `name` attribute of `ed`, and indicate that we'd like only the first result in the full list of rows. A `User` instance is returned which is equivalent to that which we've added:
     
 ```    
-[sql][28]>>> our_user = session.query(User).filter_by(name='ed').first() 
+>>> our_user = session.query(User).filter_by(name='ed').first() 
 >>> our_user
 ```    
 
