@@ -2,7 +2,7 @@ The EXISTS keyword in SQL is a boolean operator which returns True if the given 
 
 There is an explicit EXISTS construct, which looks like this:
     
-```    
+```sql    
 >>> from sqlalchemy.sql import exists
 >>> stmt = exists().where(Address.user_id==User.id)
 [sql][28]>>> for name, in session.query(User.name).filter(stmt):
@@ -10,27 +10,27 @@ There is an explicit EXISTS construct, which looks like this:
 jack
 ```
 
-The `[Query`][27] features several operators which make usage of EXISTS automatically. Above, the statement can be expressed along the `User.addresses` relationship using `[any()`][79]:
+The [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") features several operators which make usage of EXISTS automatically. Above, the statement can be expressed along the `User.addresses` relationship using [`any()`](http://docs.sqlalchemy.org/internals.html#sqlalchemy.orm.properties.RelationshipProperty.Comparator.any "sqlalchemy.orm.properties.RelationshipProperty.Comparator.any"):
     
-```    
+```sql    
 [sql][28]>>> for name, in session.query(User.name).
 ...         filter(User.addresses.any()):
 ...     print(name)
 jack
 ```
 
-`[any()`][79] takes criterion as well, to limit the rows matched:
+[`any()`](http://docs.sqlalchemy.org/internals.html#sqlalchemy.orm.properties.RelationshipProperty.Comparator.any "sqlalchemy.orm.properties.RelationshipProperty.Comparator.any") takes criterion as well, to limit the rows matched:
     
-```    
+```sql    
 [sql][28]>>> for name, in session.query(User.name).
 ...     filter(User.addresses.any(Address.email_address.like('%google%'))):
 ...     print(name)
 jack
 ```
 
-`[has()`][80] is the same operator as `[any()`][79] for many-to-one relationships (note the `~` operator here too, which means "NOT"):
+[`has()`](http://docs.sqlalchemy.org/internals.html#sqlalchemy.orm.properties.RelationshipProperty.Comparator.has "sqlalchemy.orm.properties.RelationshipProperty.Comparator.has") is the same operator as [`any()`](http://docs.sqlalchemy.org/internals.html#sqlalchemy.orm.properties.RelationshipProperty.Comparator.any "sqlalchemy.orm.properties.RelationshipProperty.Comparator.any") for many-to-one relationships (note the `~` operator here too, which means "NOT"):
     
-```    
+```sql    
 [sql][28]>>> session.query(Address).
 ...         filter(~Address.user.has(User.name=='jack')).all()
 []
