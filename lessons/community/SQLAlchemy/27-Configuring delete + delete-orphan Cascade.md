@@ -73,7 +73,3 @@ Deleting Jack will delete both Jack and the remaining `Address` associated with 
 ... ).count()
 0
 ```
-
-More on Cascades
-
-Further detail on configuration of cascades is at [Cascades](http://docs.sqlalchemy.org/cascades.html#unitofwork-cascades). The cascade functionality can also integrate smoothly with the `ON DELETE CASCADE` functionality of the relational database. See [Using Passive Deletes](http://docs.sqlalchemy.org/collections.html#passive-deletes) for details.
