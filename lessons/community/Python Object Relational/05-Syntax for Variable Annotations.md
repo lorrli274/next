@@ -18,4 +18,4 @@ See also
 **[PEP 526**](https://www.python.org/dev/peps/pep-0526) – Syntax for variable annotations.
 : PEP written by Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach, and Guido van Rossum. Implemented by Ivan Levkivskyi.
 
-Tools that use or will use the new syntax: [mypy][33], [pytype][34], PyCharm, etc.
+Tools that use or will use the new syntax: [mypy](http://github.com/python/mypy), [pytype](http://github.com/google/pytype), PyCharm, etc.
