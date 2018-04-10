@@ -1,6 +1,6 @@
 [**PEP 498**](https://www.python.org/dev/peps/pep-0498) introduces a new kind of string literals: **f-strings**, or [**formatted string literals**](https://docs.python.org/reference/lexical_analysis.html#f-strings).
 
-Formatted string literals are prefixed with `'f'` and are similar to the format strings accepted by [`str.format()`](https://docs.python.org/library/stdtypes.html#str.format "str.format"). They contain replacement fields surrounded by curly braces. The replacement fields are expressions, which are evaluated at run time, and then formatted using the `[format()`][30] protocol:
+Formatted string literals are prefixed with `'f'` and are similar to the format strings accepted by [`str.format()`](https://docs.python.org/library/stdtypes.html#str.format "str.format"). They contain replacement fields surrounded by curly braces. The replacement fields are expressions, which are evaluated at run time, and then formatted using the `[format()`](https://docs.python.org/library/functions.html#format "format") protocol:
     
 ```python    
 >>> name = "Fred"
