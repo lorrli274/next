@@ -1,4 +1,4 @@
-**[PEP 530**](https://www.python.org/dev/peps/pep-0530) adds support for using `async for` in list, set, dict ***comprehensions*** and generator expressions:
+**[PEP 530**](https://www.python.org/dev/peps/pep-0530) adds support for using `async for` in list, set, dict **comprehensions** and generator expressions:
     
 ```python     
 result = [i async for i in aiter() if i % 2]
