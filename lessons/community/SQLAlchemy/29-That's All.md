@@ -1,1 +1,1 @@
-FINISH 
+That's it! Thanks for taking this lesson, we hope you enjoyed it and are able to us what you've learned. In case you're curious, here's where you can find the original tutorial that this lesson was created from. Please feel free to leave us any feedback you feel is necessary. 
