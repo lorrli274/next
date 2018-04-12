@@ -51,7 +51,7 @@ Next we define `BlogPost` and `Keyword`, using complementary [`relationship()`](
 ...         self.keyword = keyword
 ```
 
-> Note: The above class declarations illustrate explicit `__init__()` methods. Remember, when using Declarative, it's optional!
+info> Note: The above class declarations illustrate explicit `__init__()` methods. Remember, when using Declarative, it's optional!
 
 Above, the many-to-many relationship is `BlogPost.keywords`. The defining feature of a many-to-many relationship is the `secondary` keyword argument which references a [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") object representing the association table. This table only contains columns which reference the two sides of the relationship; if it has _any_ other columns, such as its own primary key, or foreign keys to other tables, SQLAlchemy requires a different usage pattern called the "association object", described at [Association Object](http://docs.sqlalchemy.org/basic_relationships.html#association-pattern).
 
@@ -71,8 +71,8 @@ Create new tables:
 Usage is not too different from what we've been doing. Let's give Wendy some blog posts:
     
 ```python    
->>> wendy = session.query(User).
-...                 filter_by(name='wendy').
+>>> wendy = session.query(User).\
+...                 filter_by(name='wendy').\
 ...                 one()
 >>> post = BlogPost("Wendy's Blog Post", "This is a test", wendy)
 >>> session.add(post)
@@ -88,27 +88,27 @@ We're storing keywords uniquely in the database, but we know that we don't have 
 We can now look up all blog posts with the keyword 'firstpost'. We'll use the `any` operator to locate "blog posts where any of its keywords has the keyword string 'firstpost'":
     
 ```python    
->>> session.query(BlogPost).
-...             filter(BlogPost.keywords.any(keyword='firstpost')).
+>>> session.query(BlogPost).\
+...             filter(BlogPost.keywords.any(keyword='firstpost')).\
 ...             all()
-[BlogPost("Wendy's Blog Post", 'This is a test', )]
+[BlogPost("Wendy's Blog Post", 'This is a test', <User(name='wendy', fullname='Wendy Williams', password='foobar')>)]
 ```
 
 If we want to look up posts owned by the user `wendy`, we can tell the query to narrow down to that `User` object as a parent:
     
 ```python    
->>> session.query(BlogPost).
-...             filter(BlogPost.author==wendy).
-...             filter(BlogPost.keywords.any(keyword='firstpost')).
+>>> session.query(BlogPost).\
+...             filter(BlogPost.author==wendy).\
+...             filter(BlogPost.keywords.any(keyword='firstpost')).\
 ...             all()
-[BlogPost("Wendy's Blog Post", 'This is a test', )]
+[BlogPost("Wendy's Blog Post", 'This is a test', <User(name='wendy', fullname='Wendy Williams', password='foobar')>)]
 ```
 
 Or we can use Wendy's own `posts` relationship, which is a "dynamic" relationship, to query straight from there:
     
 ```python    
->>> wendy.posts.
-...         filter(BlogPost.keywords.any(keyword='firstpost')).
+>>> wendy.posts.\
+...         filter(BlogPost.keywords.any(keyword='firstpost')).\
 ...         all()
-[BlogPost("Wendy's Blog Post", 'This is a test', )]
+[BlogPost("Wendy's Blog Post", 'This is a test', <User(name='wendy', fullname='Wendy Williams', password='foobar')>)]
 ```    
