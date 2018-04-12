@@ -27,7 +27,7 @@ query.filter(User.addresses.contains(someaddress))
 * [`any()`](http://docs.sqlalchemy.org/internals.html#sqlalchemy.orm.properties.RelationshipProperty.Comparator.any "sqlalchemy.orm.properties.RelationshipProperty.Comparator.any") (used for collections):
 
 ```python    
-    query.filter(User.addresses.any(Address.email_address == 'bar'))
+query.filter(User.addresses.any(Address.email_address == 'bar'))
 
 # also takes keyword arguments:
 query.filter(User.addresses.any(email_address='bar'))
