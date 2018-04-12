@@ -26,7 +26,7 @@ Next we'll declare the `User` class, adding in the `addresses` relationship incl
 ...                     cascade="all, delete, delete-orphan")
 ...
 ...     def __repr__(self):
-...        return "" % (
+...        return "<User(name='%s', fullname='%s', password='%s')>" % (
 ...                                self.name, self.fullname, self.password)
 ```
 
@@ -42,6 +42,20 @@ Then we recreate `Address`, noting that in this case we've created the `Address.
 ...
 ...     def __repr__(self):
 ...         return "" % self.email_address
+```
+
+Then we recreate `Address`, noting that in this case we’ve created the `Address.user` relationship via the User class already:
+
+```python
+>>> class Address(Base):
+...     __tablename__ = 'addresses'
+...     id = Column(Integer, primary_key=True)
+...     email_address = Column(String, nullable=False)
+...     user_id = Column(Integer, ForeignKey('users.id'))
+...     user = relationship("User", back_populates="addresses")
+...
+...     def __repr__(self):
+...         return "<Address(email_address='%s')>" % self.email_address
 ```
 
 Now when we load the user `jack` (below using [`get()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.get "sqlalchemy.orm.query.Query.get"), which loads by primary key), removing an address from the corresponding `addresses` collection will result in that `Address` being deleted:
@@ -73,3 +87,6 @@ Deleting Jack will delete both Jack and the remaining `Address` associated with 
 ... ).count()
 0
 ```
+
+info> More on Cascades:
+Further detail on configuration of cascades is at [Cascades]. The cascade functionality can also integrate smoothly with the ON DELETE CASCADE functionality of the relational database.
