@@ -15,7 +15,7 @@ Querying the session, we can see that they're flushed into the current transacti
     
 ```python    
 >>> session.query(User).filter(User.name.in_(['Edwardo', 'fakeuser'])).all()
-[, ]
+[<User(name='Edwardo', fullname='Ed Jones', password='f8s7ccs')>, <User(name='fakeuser', fullname='Invalid', password='12345')>]
 ```
 
 Rolling back, we can see that `ed_user`'s name is back to `ed`, and `fake_user` has been kicked out of the session:
@@ -33,5 +33,5 @@ Issuing a SELECT illustrates the changes made to the database:
     
 ```python    
 >>> session.query(User).filter(User.name.in_(['ed', 'fakeuser'])).all()
-[]
+[<User(name='ed', fullname='Ed Jones', password='f8s7ccs')>]
 ```
