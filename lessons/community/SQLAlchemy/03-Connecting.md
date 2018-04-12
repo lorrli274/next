@@ -11,5 +11,5 @@ The return value of [`create_engine()`](http://docs.sqlalchemy.org/core/engines.
 
 The first time a method like [`Engine.execute()`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine.execute "sqlalchemy.engine.Engine.execute") or [`Engine.connect()`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine.connect "sqlalchemy.engine.Engine.connect") is called, the [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine") establishes a real [DBAPI](http://docs.sqlalchemy.org/glossary.html#term-dbapi) connection to the database, which is then used to emit the SQL. When using the ORM, we typically don't use the [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine") directly once created; instead, it's used behind the scenes by the ORM as we'll see shortly.
 
-> Info Lazy Connecting:
+info> Lazy Connecting:
 The [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine"), when first returned by [`create_engine()`](http://docs.sqlalchemy.org/core/engines.html#sqlalchemy.create_engine "sqlalchemy.create_engine"), has not actually tried to connect to the database yet; that happens only the first time it is asked to perform a task against the database.
