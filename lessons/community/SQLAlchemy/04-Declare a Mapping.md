@@ -21,11 +21,14 @@ Now that we have a "base", we can define any number of mapped classes in terms o
 ...     password = Column(String)
 ...
 ...     def __repr__(self):
-...        return "" % (
+...        return "<User(name='%s', fullname='%s', password='%s')>" % (
 ...                             self.name, self.fullname, self.password)
 ```
 
-A class using Declarative at a minimum needs a `__tablename__` attribute, and at least one [`Column`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Column "sqlalchemy.schema.Column") which is part of a primary key . SQLAlchemy never makes any assumptions by itself about the table to which a class refers, including that it has no built-in conventions for names, datatypes, or constraints. But this doesn't mean boilerplate is required; instead, you're encouraged to create your own automated conventions using helper functions and mixin classes, which is described in detail at [Mixin and Custom Base Classes](http://docs.sqlalchemy.org/extensions/declarative/mixins.html#declarative-mixins).
+A class using Declarative at a minimum needs a `__tablename__` attribute, and at least one [`Column`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Column "sqlalchemy.schema.Column") which is part of a primary key. SQLAlchemy never makes any assumptions by itself about the table to which a class refers, including that it has no built-in conventions for names, datatypes, or constraints. But this doesn't mean boilerplate is required; instead, you're encouraged to create your own automated conventions using helper functions and mixin classes, which is described in detail at [Mixin and Custom Base Classes](http://docs.sqlalchemy.org/extensions/declarative/mixins.html#declarative-mixins).
+
+>Tip:
+The [`User`] class defines a [`__repr__()`] method, but note that is optional; we only implement it in this tutorial so that our examples show nicely formatted User objects.
 
 When our class is constructed, Declarative replaces all the [`Column`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Column "sqlalchemy.schema.Column") objects with special Python accessors known as [descriptors](http://docs.sqlalchemy.org/glossary.html#term-descriptors); this is a process known as [instrumentation](http://docs.sqlalchemy.org/glossary.html#term-instrumentation). The "instrumented" mapped class will provide us with the means to refer to our table in a SQL context as well as to persist and load the values of columns from the database.
 
