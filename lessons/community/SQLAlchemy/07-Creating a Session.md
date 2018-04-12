@@ -19,6 +19,10 @@ Later, when you create your engine with [`create_engine()`](http://docs.sqlalche
 
 This custom-made [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") class will create new [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") objects which are bound to our database. Other transactional characteristics may be defined when calling [`sessionmaker`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Sessionmaker "sqlalchemy.orm.session.sessionmaker") as well; these are described in a later chapter. Then, whenever you need to have a conversation with the database, you instantiate a [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session"):
 
+```python
+>>> session = Session()
+```
+
 The above [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") is associated with our SQLite-enabled [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine"), but it hasn't opened any connections yet. When it's first used, it retrieves a connection from a pool of connections maintained by the [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine"), and holds onto it until we commit all changes and/or close the session object.
 
 > Note Session Lifecycle Patterns: 
