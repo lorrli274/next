@@ -11,8 +11,8 @@ Using the [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Q
     
 ```python    
 >>> from sqlalchemy.sql import func
->>> stmt = session.query(Address.user_id, func.count('*').
-...         label('address_count')).
+>>> stmt = session.query(Address.user_id, func.count('*').\
+...         label('address_count')).\
 ...         group_by(Address.user_id).subquery()
 ```
 
@@ -21,12 +21,12 @@ The `func` keyword generates SQL functions, and the `subquery()` method on [`Que
 Once we have our statement, it behaves like a [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") construct, such as the one we created for `users` at the start of this lesson. The columns on the statement are accessible through an attribute called `c`:
     
 ```python    
->>> for u, count in session.query(User, stmt.c.address_count).
+>>> for u, count in session.query(User, stmt.c.address_count).\
 ...     outerjoin(stmt, User.id==stmt.c.user_id).order_by(User.id):
 ...     print(u, count)
- None
- None
- None
- None
- 2
+<User(name='ed', fullname='Ed Jones', password='f8s7ccs')> None
+<User(name='wendy', fullname='Wendy Williams', password='foobar')> None
+<User(name='mary', fullname='Mary Contrary', password='xxg527')> None
+<User(name='fred', fullname='Fred Flinstone', password='blah')> None
+<User(name='jack', fullname='Jack Bean', password='gjffdd')> 2
 ```
