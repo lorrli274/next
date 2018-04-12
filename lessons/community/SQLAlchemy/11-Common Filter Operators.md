@@ -93,4 +93,4 @@ query.filter(or_(User.name == 'ed', User.name == 'wendy'))
 query.filter(User.name.match('wendy'))
 ```
 
-info> Note: [`match()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.match "sqlalchemy.sql.operators.ColumnOperators.match") uses a database-specific `MATCH` or `CONTAINS` function; its behavior will vary by backend and is not available on some backends such as SQLite.
+info> [`match()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.match "sqlalchemy.sql.operators.ColumnOperators.match") uses a database-specific `MATCH` or `CONTAINS` function; its behavior will vary by backend and is not available on some backends such as SQLite.
