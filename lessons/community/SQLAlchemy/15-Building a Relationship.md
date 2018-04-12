@@ -1,6 +1,6 @@
 Let's consider how a second table, related to `User`, can be mapped and queried. Users in our system can store any number of email addresses associated with their username. This implies a basic one to many association from the `users` to a new table which stores email addresses, which we will call `addresses`. Using declarative, we define this table along with its mapped class, `Address`:
     
-```sql    
+```python    
 >>> from sqlalchemy import ForeignKey
 >>> from sqlalchemy.orm import relationship
 
@@ -45,6 +45,6 @@ Did you know ?
 
 We'll need to create the `addresses` table in the database, so we will issue another `CREATE` from our metadata, which will skip over tables which have already been created:
     
-```sql    
+```python    
 >>> Base.metadata.create_all(engine)
 ```    

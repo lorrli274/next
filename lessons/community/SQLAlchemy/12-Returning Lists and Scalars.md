@@ -2,7 +2,7 @@ A number of methods on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchem
 
 * [`all()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.all "sqlalchemy.orm.query.Query.all") returns a list:
 
-```sql
+```python
 >>> query = session.query(User).filter(User.name.like('%ed')).order_by(User.id)
 >>> query.all()
 [,
@@ -11,13 +11,13 @@ A number of methods on [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchem
 
 * [`first()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.first "sqlalchemy.orm.query.Query.first") applies a limit of one and returns the first result as a scalar:
 
-```sql
+```python
 >>> query.first()
 ```    
 
 * [`one()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.one "sqlalchemy.orm.query.Query.one") fully fetches all rows, and if not exactly one object identity or composite row is present in the result, raises an error. With multiple rows found:
 
-```sql
+```python
     >>> user = query.one()
 Traceback (most recent call last):
 ...
@@ -26,7 +26,7 @@ MultipleResultsFound: Multiple rows were found for one()
 
 With no rows found:
 
-```sql    
+```python    
     >>> user = query.filter(User.id == 99).one()
 Traceback (most recent call last):
 ...
@@ -39,7 +39,7 @@ The [`one()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.o
 
 * [`scalar()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.scalar "sqlalchemy.orm.query.Query.scalar") invokes the [`one()`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query.one "sqlalchemy.orm.query.Query.one") method, and upon success returns the first column of the row:
 
-```sql
+```python
     >>> query = session.query(User.id).filter(User.name == 'ed').
 ...    order_by(User.id)
 >>> query.scalar()

@@ -1,6 +1,6 @@
 To persist our `User` object, we [`add()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session.add "sqlalchemy.orm.session.Session.add") it to our [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session"):
     
-```sql    
+```python    
 >>> ed_user = User(name='ed', fullname='Ed Jones', password='edspassword')
 >>> session.add(ed_user)
 ```
@@ -9,14 +9,14 @@ At this point, we say that the instance is **pending**; no SQL has yet been issu
 
 For example, below we create a new [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") object which loads instances of `User`. We "filter by" the `name` attribute of `ed`, and indicate that we'd like only the first result in the full list of rows. A `User` instance is returned which is equivalent to that which we've added:
     
-```sql    
+```python    
 >>> our_user = session.query(User).filter_by(name='ed').first() 
 >>> our_user
 ```    
 
 In fact, the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") has identified that the row returned is the **same** row as one already represented within its internal map of objects, so we actually got back the identical instance as that which we just added:
     
-```sql    
+```python    
 >>> ed_user is our_user
 True
 ```
@@ -25,7 +25,7 @@ The ORM concept at work here is known as an [identity map](http://docs.sqlalchem
 
 We can add more `User` objects at once using [`add_all()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session.add_all "sqlalchemy.orm.session.Session.add_all"):
     
-```sql    
+```python    
 >>> session.add_all([
 ...     User(name='wendy', fullname='Wendy Williams', password='foobar'),
 ...     User(name='mary', fullname='Mary Contrary', password='xxg527'),
@@ -34,20 +34,20 @@ We can add more `User` objects at once using [`add_all()`](http://docs.sqlalchem
 
 Also, we've decided the password for Ed isn't too secure, so lets change it:
     
-```sql    
+```python    
 >>> ed_user.password = 'f8s7ccs'
 ```
 
 The [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") is paying attention. It knows, for example, that `Ed Jones` has been modified:
     
-```sql    
+```python    
 >>> session.dirty
 IdentitySet([])
 ```
 
 and that three new `User` objects are pending:
     
-```sql    
+```python    
 >>> session.new  
 IdentitySet([,
 ,

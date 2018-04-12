@@ -1,6 +1,6 @@
 With mappings complete, let's now create and inspect a `User` object:
     
-```sql
+```python
 >>> ed_user = User(name='ed', fullname='Ed Jones', password='edspassword')
 >>> ed_user.name
 'ed'

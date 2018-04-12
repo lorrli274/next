@@ -1,19 +1,19 @@
 We're now ready to start talking to the database. The ORM's "handle" to the database is the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session"). When we first set up the application, at the same level as our [`create_engine()`](http://docs.sqlalchemy.org/core/engines.html#sqlalchemy.create_engine "sqlalchemy.create_engine") statement, we define a [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") class which will serve as a factory for new [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") objects:
     
-```sql    
+```python    
 >>> from sqlalchemy.orm import sessionmaker
 >>> Session = sessionmaker(bind=engine)
 ```
 
 In the case where your application does not yet have an [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine") when you define your module-level objects, just set it up like this:
     
-```sql    
+```python    
 >>> Session = sessionmaker()
 ```
 
 Later, when you create your engine with [`create_engine()`](http://docs.sqlalchemy.org/core/engines.html#sqlalchemy.create_engine "sqlalchemy.create_engine"), connect it to the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") using [`configure()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Sessionmaker.configure "sqlalchemy.orm.session.sessionmaker.configure"):
     
-```sql    
+```python    
 >>> Session.configure(bind=engine)  # once engine is available
 ```
 

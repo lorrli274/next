@@ -2,19 +2,19 @@ Here's a rundown of some of the most common operators used in [`filter()`](http:
 
 * [`equals`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__eq__ "sqlalchemy.sql.operators.ColumnOperators.__eq__"):
 
-```sql
+```python
 query.filter(User.name == 'ed')
 ```
 
 * [`not equals`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__ne__ "sqlalchemy.sql.operators.ColumnOperators.__ne__"):
 
-```sql
+```python
 query.filter(User.name != 'ed')
 ```
 
 * [`LIKE`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.like "sqlalchemy.sql.operators.ColumnOperators.like"):
 
-```sql
+```python
 query.filter(User.name.like('%ed%'))
 ```
 
@@ -22,7 +22,7 @@ query.filter(User.name.like('%ed%'))
 
 * [`ILIKE`]() (case-insensitive LIKE):
 
-```sql
+```python
 query.filter(User.name.ilike('%ed%'))
 ```
 
@@ -30,7 +30,7 @@ query.filter(User.name.ilike('%ed%'))
 
 * [`IN`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.in_ "sqlalchemy.sql.operators.ColumnOperators.in_"):
 
-```sql
+```python
     query.filter(User.name.in_(['ed', 'wendy', 'jack']))
 
 # works with query objects too:
@@ -41,13 +41,13 @@ query.filter(User.name.in_(
 
 * [`NOT IN`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.notin_ "sqlalchemy.sql.operators.ColumnOperators.notin_"):
 
-```sql
+```python
 query.filter(~User.name.in_(['ed', 'wendy', 'jack']))
 ```
 
 * [`IS NULL`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.is_ "sqlalchemy.sql.operators.ColumnOperators.is_"):
 
-```sql
+```python
     query.filter(User.name == None)
 
 # alternatively, if pep8/linters are a concern
@@ -55,7 +55,7 @@ query.filter(User.name.is_(None))
 ```
 * [`IS NOT NULL`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.isnot "sqlalchemy.sql.operators.ColumnOperators.isnot"):
 
-```sql
+```python
     query.filter(User.name != None)
 
 # alternatively, if pep8/linters are a concern
@@ -64,7 +64,7 @@ query.filter(User.name.isnot(None))
 
 * [`AND`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.and_ "sqlalchemy.sql.expression.and_"):
 
-```sql
+```python
     # use and_()
 from sqlalchemy import and_
 query.filter(and_(User.name == 'ed', User.fullname == 'Ed Jones'))
@@ -80,7 +80,7 @@ query.filter(User.name == 'ed').filter(User.fullname == 'Ed Jones')
 
 * [`OR`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.or_ "sqlalchemy.sql.expression.or_"):
 
-```sql
+```python
     from sqlalchemy import or_
 query.filter(or_(User.name == 'ed', User.name == 'wendy'))
 ```
@@ -89,7 +89,7 @@ query.filter(or_(User.name == 'ed', User.name == 'wendy'))
 
 * [`MATCH`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.match "sqlalchemy.sql.operators.ColumnOperators.match"):
 
-```sql
+```python
 query.filter(User.name.match('wendy'))
 ```
 

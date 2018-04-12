@@ -1,6 +1,6 @@
 The other automatic eager loading function is more well known and is called [`orm.joinedload()`](http://docs.sqlalchemy.org/loading_relationships.html#sqlalchemy.orm.joinedload "sqlalchemy.orm.joinedload"). This style of loading emits a `JOIN`, by default a `LEFT OUTER JOIN`, so that the lead object as well as the related object or collection is loaded in one step. We illustrate loading the same `addresses` collection in this way - note that even though the `User.addresses` collection on `jack` is actually populated right now, the query will emit the extra join regardless:
     
-```sql    
+```python    
 >>> from sqlalchemy.orm import joinedload
 
 >>> jack = session.query(User).

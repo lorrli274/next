@@ -2,7 +2,7 @@ We're moving into the bonus round here, but lets show off a **many-to-many** rel
 
 For a plain many-to-many, we need to create an un-mapped [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") construct to serve as the association table. This looks like the following:
     
-```sql    
+```python    
 >>> from sqlalchemy import Table, Text
 >>> # association table
 >>> post_keywords = Table('post_keywords', Base.metadata,
@@ -15,7 +15,7 @@ Above, we can see declaring a [`Table`](http://docs.sqlalchemy.org/core/metadata
 
 Next we define `BlogPost` and `Keyword`, using complementary [`relationship()`](http://docs.sqlalchemy.org/relationship_api.html#sqlalchemy.orm.relationship "sqlalchemy.orm.relationship") constructs, each referring to the `post_keywords` table as an association table:
     
-```sql    
+```python    
 >>> class BlogPost(Base):
 ...     __tablename__ = 'posts'
 ...
@@ -57,20 +57,20 @@ Above, the many-to-many relationship is `BlogPost.keywords`. The defining featur
 
 We would also like our `BlogPost` class to have an `author` field. We will add this as another bidirectional relationship, except one issue we'll have is that a single user might have lots of blog posts. When we access `User.posts`, we'd like to be able to filter results further so as not to load the entire collection. For this we use a setting accepted by [`relationship()`](http://docs.sqlalchemy.org/relationship_api.html#sqlalchemy.orm.relationship "sqlalchemy.orm.relationship") called `lazy='dynamic'`, which configures an alternate **loader strategy** on the attribute:
     
-```sql    
+```python    
 >>> BlogPost.author = relationship(User, back_populates="posts")
 >>> User.posts = relationship(BlogPost, back_populates="author", lazy="dynamic")
 ```
 
 Create new tables:
     
-```sql    
+```python    
 >>> Base.metadata.create_all(engine)
 ```    
 
 Usage is not too different from what we've been doing. Let's give Wendy some blog posts:
     
-```sql    
+```python    
 >>> wendy = session.query(User).
 ...                 filter_by(name='wendy').
 ...                 one()
@@ -80,14 +80,14 @@ Usage is not too different from what we've been doing. Let's give Wendy some blo
 
 We're storing keywords uniquely in the database, but we know that we don't have any yet, so we can just create them:
     
-```sql    
+```python    
 >>> post.keywords.append(Keyword('wendy'))
 >>> post.keywords.append(Keyword('firstpost'))
 ```
 
 We can now look up all blog posts with the keyword 'firstpost'. We'll use the `any` operator to locate "blog posts where any of its keywords has the keyword string 'firstpost'":
     
-```sql    
+```python    
 >>> session.query(BlogPost).
 ...             filter(BlogPost.keywords.any(keyword='firstpost')).
 ...             all()
@@ -96,7 +96,7 @@ We can now look up all blog posts with the keyword 'firstpost'. We'll use the `a
 
 If we want to look up posts owned by the user `wendy`, we can tell the query to narrow down to that `User` object as a parent:
     
-```sql    
+```python    
 >>> session.query(BlogPost).
 ...             filter(BlogPost.author==wendy).
 ...             filter(BlogPost.keywords.any(keyword='firstpost')).
@@ -106,7 +106,7 @@ If we want to look up posts owned by the user `wendy`, we can tell the query to 
 
 Or we can use Wendy's own `posts` relationship, which is a "dynamic" relationship, to query straight from there:
     
-```sql    
+```python    
 >>> wendy.posts.
 ...         filter(BlogPost.keywords.any(keyword='firstpost')).
 ...         all()

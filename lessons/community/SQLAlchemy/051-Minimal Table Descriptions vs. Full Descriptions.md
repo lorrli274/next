@@ -1,6 +1,6 @@
 Users familiar with the syntax of `CREATE TABLE` may notice that the `VARCHAR` columns were generated without a length; on SQLite and PostgreSQL, this is a valid datatype, but on others, it's not allowed. So if running this course on one of those databases, and you wish to use SQLAlchemy to issue `CREATE TABLE`, a "length" may be provided to the [`String`](http://docs.sqlalchemy.org/core/type_basics.html#sqlalchemy.types.String "sqlalchemy.types.String") type as below:
 
-```sql
+```python
 Column(String(50))
 ```
 
@@ -8,14 +8,14 @@ The length field on [`String`](http://docs.sqlalchemy.org/core/type_basics.html#
 
 Additionally, Firebird and Oracle require sequences to generate new primary key identifiers, and SQLAlchemy doesn't generate or assume these without being instructed. For that, you use the [`Sequence`](http://docs.sqlalchemy.org/core/defaults.html#sqlalchemy.schema.Sequence "sqlalchemy.schema.Sequence") construct:
     
-```sql    
+```python    
 from sqlalchemy import Sequence
 Column(Integer, Sequence('user_id_seq'), primary_key=True)
 ```
 
 A full, foolproof [`Table`](http://docs.sqlalchemy.org/core/metadata.html#sqlalchemy.schema.Table "sqlalchemy.schema.Table") generated via our declarative mapping is therefore:
     
-```sql   
+```python   
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)

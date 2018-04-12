@@ -2,7 +2,7 @@ When using the ORM, the configurational process starts by describing the databas
 
 Classes mapped using the Declarative system are defined in terms of a base class which maintains a catalog of classes and tables relative to that base - this is known as the **declarative base class**. Our application will usually have just one instance of this base in a commonly imported module. We create the base class using the [`declarative_base()`](http://docs.sqlalchemy.org/extensions/declarative/api.html#sqlalchemy.ext.declarative.declarative_base "sqlalchemy.ext.declarative.declarative_base") function, as follows:
     
-```sql    
+```python    
 >>> from sqlalchemy.ext.declarative import declarative_base
 
 >>> Base = declarative_base()
@@ -10,7 +10,7 @@ Classes mapped using the Declarative system are defined in terms of a base class
 
 Now that we have a "base", we can define any number of mapped classes in terms of it. We will start with just a single table called `users`, which will store records for the end-users using our application. A new class called `User` will be the class to which we map this table. Within the class, we define details about the table to which we'll be mapping, primarily the table name, and names and datatypes of columns:
     
-```sql    
+```python    
 >>> from sqlalchemy import Column, Integer, String
 >>> class User(Base):
 ...     __tablename__ = 'users'

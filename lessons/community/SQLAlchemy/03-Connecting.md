@@ -1,6 +1,6 @@
 For this course we will use an in-memory-only SQLite database. To connect we use [`create_engine()`](http://docs.sqlalchemy.org/core/engines.html#sqlalchemy.create_engine "sqlalchemy.create_engine"):
     
-```sql    
+```python    
 >>> from sqlalchemy import create_engine
 >>> engine = create_engine('sqlite:///:memory:', echo=True)
 ```
