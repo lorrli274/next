@@ -2,12 +2,14 @@ In this case we'd like to indicate that `User.addresses` should load eagerly. A 
     
 ```python    
 >>> from sqlalchemy.orm import subqueryload
->>> jack = session.query(User).
-...                 options(subqueryload(User.addresses)).
+>>> jack = session.query(User).\
+...                 options(subqueryload(User.addresses)).\
 ...                 filter_by(name='jack').one()
 >>> jack
-
+<User(name='jack', fullname='Jack Bean', password='gjffdd')>
 
 >>> jack.addresses
-[, ]
+[<Address(email_address='jack@google.com')>, <Address(email_address='j25@yahoo.com')>]
 ```
+
+info> `subqueryload()` when used in conjunction with limiting such as `Query.first()`, `Query.limit()` or `Query.offset()` should also include `Query.order_by()` on a unique column in order to ensure correct results.
