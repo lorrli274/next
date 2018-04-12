@@ -12,6 +12,7 @@ For example, below we create a new [`Query`](http://docs.sqlalchemy.org/query.ht
 ```python    
 >>> our_user = session.query(User).filter_by(name='ed').first() 
 >>> our_user
+<User(name='ed', fullname='Ed Jones', password='edspassword')>
 ```    
 
 In fact, the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") has identified that the row returned is the **same** row as one already represented within its internal map of objects, so we actually got back the identical instance as that which we just added:
@@ -42,26 +43,34 @@ The [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.sessi
     
 ```python    
 >>> session.dirty
-IdentitySet([])
+IdentitySet([<User(name='ed', fullname='Ed Jones', password='f8s7ccs')>])
 ```
 
 and that three new `User` objects are pending:
     
 ```python    
 >>> session.new  
-IdentitySet([,
-,
-])
+IdentitySet([<User(name='wendy', fullname='Wendy Williams', password='foobar')>,
+<User(name='mary', fullname='Mary Contrary', password='xxg527')>,
+<User(name='fred', fullname='Fred Flinstone', password='blah')>])
 ```
 
 We tell the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") that we'd like to issue all remaining changes to the database and commit the transaction, which has been in progress throughout. We do this via [`commit()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session.commit "sqlalchemy.orm.session.Session.commit"). The [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") emits the `UPDATE` statement for the password change on "ed", as well as `INSERT` statements for the three new `User` objects we've added:
+
+```python
+>>> session.commit()
+```
 
 [`commit()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session.commit "sqlalchemy.orm.session.Session.commit") flushes the remaining changes to the database, and commits the transaction. The connection resources referenced by the session are now returned to the connection pool. Subsequent operations with this session will occur in a **new** transaction, which will again re-acquire connection resources when first needed.
 
 If we look at Ed's `id` attribute, which earlier was `None`, it now has a value:
 
+```python
+>>> ed_user.id 
+1
+```
+
 After the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") inserts new rows in the database, all newly generated identifiers and database-generated defaults become available on the instance, either immediately or via load-on-first-access. In this case, the entire row was re-loaded on access because a new transaction was begun after we issued [`commit()`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session.commit "sqlalchemy.orm.session.Session.commit"). SQLAlchemy by default refreshes data from a previous transaction the first time it's accessed within a new transaction, so that the most recent state is available. The level of reloading is configurable as is described in [Using the Session](http://docs.sqlalchemy.org/session.html).
 
-###Session Object States
-
+> Note Session Object States:
 As our `User` object moved from being outside the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session"), to inside the [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") without a primary key, to actually being inserted, it moved between three out of four available "object states" - **transient**, **pending**, and **persistent**. Being aware of these states and what they mean is always a good idea - be sure to read [Quickie Intro to Object States](http://docs.sqlalchemy.org/session_state_management.html#session-object-states) for a quick overview.
