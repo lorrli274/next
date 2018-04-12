@@ -39,7 +39,7 @@ Matching columns on name works for simple cases but can become unwieldy when dea
 [<User(name='ed', fullname='Ed Jones', password='f8s7ccs')>]
 ```
 
-> Info New in version 1.1: The [`TextClause.columns()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.textClause.columns "sqlalchemy.sql.expression.TextClause.columns") method now accepts column expressions which will be matched positionally to a plain text SQL result set, eliminating the need for column names to match or even be unique in the SQL statement.
+info>  New in version 1.1: The [`TextClause.columns()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.textClause.columns "sqlalchemy.sql.expression.TextClause.columns") method now accepts column expressions which will be matched positionally to a plain text SQL result set, eliminating the need for column names to match or even be unique in the SQL statement.
 
 When selecting from a [`text()`](http://docs.sqlalchemy.org/core/sqlelement.html#sqlalchemy.sql.expression.text "sqlalchemy.sql.expression.text") construct, the [`Query`](http://docs.sqlalchemy.org/query.html#sqlalchemy.orm.query.Query "sqlalchemy.orm.query.Query") may still specify what columns and entities are to be returned; instead of `query(User)` we can also ask for the columns individually, as in any other case:
     
