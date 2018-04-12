@@ -24,7 +24,7 @@ class User(Base):
     password = Column(String(12))
 
     def __repr__(self):
-        return "" % (
+        return "<User(name='%s', fullname='%s', password='%s')>" % (
                                 self.name, self.fullname, self.password)
 ```
 
