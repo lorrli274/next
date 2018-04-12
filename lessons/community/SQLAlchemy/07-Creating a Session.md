@@ -25,5 +25,5 @@ This custom-made [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalch
 
 The above [`Session`](http://docs.sqlalchemy.org/session_api.html#sqlalchemy.orm.session.Session "sqlalchemy.orm.session.Session") is associated with our SQLite-enabled [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine"), but it hasn't opened any connections yet. When it's first used, it retrieves a connection from a pool of connections maintained by the [`Engine`](http://docs.sqlalchemy.org/core/connections.html#sqlalchemy.engine.Engine "sqlalchemy.engine.Engine"), and holds onto it until we commit all changes and/or close the session object.
 
-> Note Session Lifecycle Patterns: 
+info> Session Lifecycle Patterns: 
 The question of when to make a [`Session`](http://docs.sqlalchemy.org/en/latest/orm/session_api.html#sqlalchemy.orm.session.Session) depends a lot on what kind of application is being built. Keep in mind, the [`Session`](http://docs.sqlalchemy.org/en/latest/orm/session_api.html#sqlalchemy.orm.session.Session) is just a workspace for your objects, local to a particular database connection - if you think of an application thread as a guest at a dinner party, the Session is the guest’s plate and the objects it holds are the food (and the database…the kitchen?)!
