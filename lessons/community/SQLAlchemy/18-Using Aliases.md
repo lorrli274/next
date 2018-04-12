@@ -4,11 +4,11 @@ When querying across multiple tables, if the same table needs to be referenced m
 >>> from sqlalchemy.orm import aliased
 >>> adalias1 = aliased(Address)
 >>> adalias2 = aliased(Address)
->>> for username, email1, email2 in 
-...     session.query(User.name, adalias1.email_address, adalias2.email_address).
-...     join(adalias1, User.addresses).
-...     join(adalias2, User.addresses).
-...     filter(adalias1.email_address=='jack@google.com').
+>>> for username, email1, email2 in \
+...     session.query(User.name, adalias1.email_address, adalias2.email_address).\
+...     join(adalias1, User.addresses).\
+...     join(adalias2, User.addresses).\
+...     filter(adalias1.email_address=='jack@google.com').\
 ...     filter(adalias2.email_address=='j25@yahoo.com'):
 ...     print(username, email1, email2)
 jack jack@google.com j25@yahoo.com
