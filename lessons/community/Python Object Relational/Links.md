@@ -1,3 +1,4 @@
+[1]: https://docs.python.org/3/whatsnew/changelog.html#changelog
 [9]: https://docs.python.org/glossary.html#term-path-like-object
 [10]: https://docs.python.org/library/datetime.html#module-datetime "datetime: Basic date and time types."
 [11]: https://docs.python.org#whatsnew36-pep495
