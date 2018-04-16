@@ -1,4 +1,11 @@
 [1]: https://docs.python.org/3/whatsnew/changelog.html#changelog
+[2]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498
+[3]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep515
+[4]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep526
+[5]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep525
+[6]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep530
+[7]: https://docs.python.org/3/library/asyncio.html#module-asyncio
+[8]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep519
 [9]: https://docs.python.org/glossary.html#term-path-like-object
 [10]: https://docs.python.org/library/datetime.html#module-datetime "datetime: Basic date and time types."
 [11]: https://docs.python.org#whatsnew36-pep495
@@ -54,3 +61,15 @@
 [61]: https://docs.python.org/library/datetime.html#datetime.datetime "datetime.datetime"
 [62]: https://docs.python.org/library/datetime.html#datetime.time "datetime.time"
 [63]: https://docs.python.org/library/datetime.html#datetime.datetime.fold "datetime.datetime.fold"
+[64]: https://docs.python.org/3/library/secrets.html#module-secrets
+[65]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep506
+[66]: https://docs.python.org/3/library/stdtypes.html#typesmapping
+[67]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-compactdict
+[68]: https://mail.python.org/pipermail/python-dev/2012-December/123028.html
+[69]: https://morepypy.blogspot.com/2015/01/faster-more-memory-efficient-and-more.html
+[70]: https://morepypy.blogspot.com/2015/01/faster-more-memory-efficient-and-more.html
+[71]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep487
+[72]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep520
+[73]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep468
+[74]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-tracing
+[75]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pythonmalloc
