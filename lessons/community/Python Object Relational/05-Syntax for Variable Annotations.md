@@ -1,4 +1,4 @@
-**[PEP 484]**(https://www.python.org/dev/peps/pep-0484) introduced the standard for type **annotations** of function parameters, a.k.a. type hints. This PEP adds syntax to Python for annotating the types of variables including class variables and instance variables:
+[PEP 484](https://www.python.org/dev/peps/pep-0484) introduced the standard for type **annotations** of function parameters, a.k.a. type hints. This PEP adds syntax to Python for annotating the types of variables including class variables and instance variables:
     
 ```python   
 primes: List[int] = []
