@@ -1,6 +1,6 @@
 In most world locations, there have been and will be times when local clocks are moved back. In those times, intervals are introduced in which local clocks show the same time twice in the same day. In these situations, the information displayed on a local clock (or stored in a Python datetime instance) is insufficient to identify a particular moment in time.
 
-[PEP 495](https://www.python.org/dev/peps/pep-0495) adds the new _fold_ attribute to instances of [`datetime.datetime`](https://docs.python.org/library/datetime.html#datetime.datetime "datetime.datetime") and [`datetime.time`](https://docs.python.org/library/datetime.html#datetime.time "datetime.time") classes to differentiate between two moments in time for which local times are the same:
+[PEP 495](https://www.python.org/dev/peps/pep-0495) adds the new **fold** attribute to instances of [`datetime.datetime`](https://docs.python.org/library/datetime.html#datetime.datetime "datetime.datetime") and [`datetime.time`](https://docs.python.org/library/datetime.html#datetime.time "datetime.time") classes to differentiate between two moments in time for which local times are the same:
     
 ```python    
 >>> u0 = datetime(2016, 11, 6, 4, tzinfo=timezone.utc)
