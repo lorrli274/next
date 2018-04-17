@@ -75,3 +75,17 @@
 [75]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pythonmalloc
 [101]: https://docs.python.org/3/library/random.html#module-random
 [103]: https://docs.python.org/3/library/array.html#array.array
+[106]: https://docs.python.org/3/library/asyncio-eventloops.html#asyncio.get_event_loop
+[108]: https://docs.python.org/3/library/asyncio-task.html#asyncio.ensure_future
+[109]: https://docs.python.org/3/glossary.html#term-awaitable
+[110]: https://docs.python.org/3/library/asyncio-task.html#asyncio.run_coroutine_threadsafe
+[111]: https://docs.python.org/3/library/asyncio-protocol.html#asyncio.BaseTransport.is_closing
+[112]: https://github.com/MagicStack/uvloop
+[113]: https://docs.python.org/3/library/asyncio-task.html#asyncio.Future
+[116]: https://docs.python.org/3/library/asyncio-stream.html#asyncio.StreamReader.readuntil
+[117]: https://docs.python.org/3/library/asyncio-stream.html#asyncio.StreamReader.readexactly
+[120]: https://docs.python.org/3/library/exceptions.html#TypeError
+[121]: https://docs.python.org/3/library/exceptions.html#StopIteration
+[123]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.BaseEventLoop.connect_accepted_socket
+[126]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop.shutdown_asyncgens
+[128]: https://docs.python.org/3/library/asyncio-task.html#asyncio.Task
