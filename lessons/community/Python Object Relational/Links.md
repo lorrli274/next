@@ -7,9 +7,9 @@
 [7]: https://docs.python.org/3/library/asyncio.html#module-asyncio
 [8]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep519
 [9]: https://docs.python.org/glossary.html#term-path-like-object
-[10]: https://docs.python.org/library/datetime.html#module-datetime "datetime: Basic date and time types."
-[11]: https://docs.python.org#whatsnew36-pep495
-[12]: https://docs.python.org/library/typing.html#module-typing "typing: Support for type hints (see PEP 484)."
+[10]: https://docs.python.org/3/library/datetime.html#module-datetime
+[11]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep495
+[12]: https://docs.python.org/3/library/typing.html#module-typing
 [13]: https://docs.python.org#whatsnew36-typing
 [14]: https://docs.python.org/library/tracemalloc.html#module-tracemalloc "tracemalloc: Trace memory allocations."
 [15]: https://docs.python.org/library/exceptions.html#ResourceWarning "ResourceWarning"
@@ -58,8 +58,8 @@
 [58]: https://docs.python.org/library/pathlib.html#pathlib.Path "pathlib.Path"
 [59]: https://www.python.org/dev/peps/pep-0519
 [60]: https://www.python.org/dev/peps/pep-0495
-[61]: https://docs.python.org/library/datetime.html#datetime.datetime "datetime.datetime"
-[62]: https://docs.python.org/library/datetime.html#datetime.time "datetime.time"
+[61]: https://docs.python.org/3/library/datetime.html#datetime.datetime
+[62]: https://docs.python.org/3/library/datetime.html#datetime.time
 [63]: https://docs.python.org/library/datetime.html#datetime.datetime.fold "datetime.datetime.fold"
 [64]: https://docs.python.org/3/library/secrets.html#module-secrets
 [65]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep506
@@ -96,3 +96,9 @@
 [138]: https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncGenerator
 [140]: https://docs.python.org/3/library/collections.html#collections.namedtuple
 [143]: https://docs.python.org/3/library/collections.html#collections.deque
+[145]: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor
+[148]: https://docs.python.org/3/library/typing.html#typing.ContextManager
+[151]: https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime
+[152]: https://docs.python.org/3/library/datetime.html#datetime.date.strftime
+[154]: https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
+[156]: https://docs.python.org/3/library/datetime.html#datetime.datetime.combine
