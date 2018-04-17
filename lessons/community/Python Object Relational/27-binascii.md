@@ -1,1 +1,1 @@
-The `[b2a_base64()`][131] function now accepts an optional _newline_ keyword argument to control whether the newline character is appended to the return value. (Contributed by Victor Stinner in [bpo-25357][132].)
+The [`b2a_base64()`](https://docs.python.org/3/library/binascii.html#binascii.b2a_base64) function now accepts an optional _newline_ keyword argument to control whether the newline character is appended to the return value. (Contributed by Victor Stinner in [bpo-25357][132].)
