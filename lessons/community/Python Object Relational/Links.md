@@ -1,5 +1,3 @@
-Links in markdown file are mostly all broken
-
 [1]: https://docs.python.org/3/whatsnew/changelog.html#changelog
 [2]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498
 [3]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep515
