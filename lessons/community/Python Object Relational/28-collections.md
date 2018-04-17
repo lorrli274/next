@@ -1,6 +1,6 @@
 The new [`Collection`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection) abstract base class has been added to represent sized iterable container classes. (Contributed by Ivan Levkivskyi, docs by Neil Girdhar in [bpo-27598][134].)
 
-The new [`Reversible`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Reversible) abstract base class represents iterable classes that also provide the `[__reversed__()`][136] method. (Contributed by Ivan Levkivskyi in [bpo-25987][137].)
+The new [`Reversible`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Reversible) abstract base class represents iterable classes that also provide the [`__reversed__()`](https://docs.python.org/3/reference/datamodel.html#object.__reversed__) method. (Contributed by Ivan Levkivskyi in [bpo-25987][137].)
 
 The new [`AsyncGenerator`](https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncGenerator) abstract base class represents asynchronous generators. (Contributed by Yury Selivanov in [bpo-28720][139].)
 
