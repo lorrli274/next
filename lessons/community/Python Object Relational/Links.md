@@ -89,3 +89,4 @@
 [123]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.BaseEventLoop.connect_accepted_socket
 [126]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop.shutdown_asyncgens
 [128]: https://docs.python.org/3/library/asyncio-task.html#asyncio.Task
+[131]: https://docs.python.org/3/library/binascii.html#binascii.b2a_base64
