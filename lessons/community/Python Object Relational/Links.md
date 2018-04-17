@@ -73,3 +73,4 @@
 [73]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep468
 [74]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-tracing
 [75]: https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pythonmalloc
+[101]: https://docs.python.org/3/library/random.html#module-random
