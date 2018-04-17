@@ -1,4 +1,4 @@
-**[PEP 515**](https://www.python.org/dev/peps/pep-0515) adds the ability to use **underscores** in **numeric literals** for improved readability. For example:
+[PEP 515](https://www.python.org/dev/peps/pep-0515) adds the ability to use **underscores** in **numeric literals** for improved readability. For example:
     
 ```python    
 >>> 1_000_000_000_000_000
@@ -17,8 +17,3 @@ The [string formatting](https://docs.python.org/library/string.html#formatspec) 
 >>> '{:_x}'.format(0xFFFFFFFF)
 'ffff_ffff'
 ```    
-
-See also
-
-**[PEP 515**]( https://www.python.org/dev/peps/pep-0515) – Underscores in Numeric Literals
-: PEP written by Georg Brandl and Serhiy Storchaka.
