@@ -90,3 +90,8 @@
 [126]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop.shutdown_asyncgens
 [128]: https://docs.python.org/3/library/asyncio-task.html#asyncio.Task
 [131]: https://docs.python.org/3/library/binascii.html#binascii.b2a_base64
+[133]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection
+[135]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Reversible
+[138]: https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncGenerator
+[140]: https://docs.python.org/3/library/collections.html#collections.namedtuple
+[143]: https://docs.python.org/3/library/collections.html#collections.deque
