@@ -22,3 +22,5 @@ Here are some examples of how the new interface allows for [`pathlib.Path`](http
 >>> os.fspath(pathlib.Path("some_file.txt"))
 'some_file.txt'
 ```    
+
+(Implemented by Brett Cannon, Ethan Furman, Dusty Phillips, and Jelle Zijlstra.)
