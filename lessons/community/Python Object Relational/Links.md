@@ -15,7 +15,7 @@
 [15]: https://docs.python.org/library/exceptions.html#ResourceWarning "ResourceWarning"
 [16]: https://docs.python.org#whatsnew36-pythonmalloc
 [17]: https://docs.python.org/3/library/secrets.html#module-secrets
-[18]: https://docs.python.org/library/os.html#os.urandom "os.urandom"
+[18]: https://docs.python.org/3/library/os.html#os.urandom
 [19]: https://www.python.org/dev/peps/pep-0524
 [20]: https://docs.python.org/library/hashlib.html#module-hashlib "hashlib: Secure hash and message digest algorithms."
 [21]: https://docs.python.org/library/ssl.html#module-ssl "ssl: TLS/SSL wrapper for socket objects"
