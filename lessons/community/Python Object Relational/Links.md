@@ -92,6 +92,7 @@
 [131]: https://docs.python.org/3/library/binascii.html#binascii.b2a_base64
 [133]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection
 [135]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Reversible
+[136]: https://docs.python.org/3/reference/datamodel.html#object.__reversed__
 [138]: https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncGenerator
 [140]: https://docs.python.org/3/library/collections.html#collections.namedtuple
 [143]: https://docs.python.org/3/library/collections.html#collections.deque
