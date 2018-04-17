@@ -50,12 +50,12 @@ Security improvements:
 
 Windows improvements:
 
-* [PEP 528][23] and [PEP 529][23], Windows filesystem and console encoding changed to UTF-8.
+* [PEP 528][23] and [PEP 529](https://docs.python.org#whatsnew36-pep529), Windows filesystem and console encoding changed to UTF-8.
 
 * The `py.exe` launcher, when used interactively, no longer prefers Python 2 over Python 3 when the user doesn't specify a version (via command line arguments or a config file). Handling of shebang lines remains unchanged - "python" refers to Python 2 in that case.
 
-* `python.exe` and `pythonw.exe` have been marked as long-path aware, which means that the 260 character path limit may no longer apply. See [removing the MAX_PATH limitation][24] for details.
+* `python.exe` and `pythonw.exe` have been marked as long-path aware, which means that the 260 character path limit may no longer apply. See [removing the MAX_PATH limitation](https://docs.python.org/using/windows.html#max-path) for details.
 
-* A `._pth` file can be added to force isolated mode and fully specify all search paths to avoid registry and environment lookup. See [the documentation][25] for more information.
+* A `._pth` file can be added to force isolated mode and fully specify all search paths to avoid registry and environment lookup. See [the documentation](https://docs.python.org/using/windows.html#finding-modules) for more information.
 
 * A `python36.zip` file now works as a landmark to infer [`PYTHONHOME`](https://docs.python.org/using/cmdline.html#envvar-PYTHONHOME). See [the documentation](https://docs.python.org/using/windows.html#finding-modules) for more information.
