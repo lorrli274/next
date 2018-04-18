@@ -6,4 +6,4 @@ info> Make sure to always set your editor to insert spaces instead of TABs for P
 
 A common question asked by those new to programing is: "How many spaces should I indent?" Well, according to [the official Python style guide (PEP 8)](http://python.org/dev/peps/pep-0008/#indentation), you should indent with 4 spaces. 
 
-Info> Fun fact: Google's internal style guideline dictates indenting by 2 spaces!
+info> Fun fact: Google's internal style guideline dictates indenting by 2 spaces!
