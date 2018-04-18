@@ -16,7 +16,7 @@ def repeat(s, exclaim):
 
 Notice how the lines that make up the function or if-statement are grouped by all having the same level of indentation. We also presented 2 different ways to repeat strings, using the `+` operator which is more user-friendly, but `*` also works because it's Python's **repeat** operator. This means that `'-' * 10` gives `'----------'` a neat way to create an onscreen line. 
 
-In the code comment, we hinted that `*` works faster than +, the reason being that `*` calculates the size of the resulting object once. Whereas with `+` that calculation is made each time `+` is called. 
+In the code comment above we hinted that `*` works faster than +, the reason being that `*` calculates the size of the resulting object once. Whereas with `+` that calculation is made each time `+` is called. 
 
 Both `+` and `*` are called **overloaded** operators because they mean different things for numbers vs. for strings (and other data types).
 
