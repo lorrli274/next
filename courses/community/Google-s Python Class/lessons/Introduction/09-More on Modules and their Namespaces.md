@@ -2,8 +2,8 @@ Suppose you've got a module `binky.py` which contains a `def foo()`. The fully q
 
 info> In the Python vocabulary, we'd say that `binky`, `module1`, and `module2` each have their own `namespaces`, which are variable name-to-object bindings.
 
-For example, we have the standard `sys` module that contains some standard system facilities, like the `argv list`, and `exit()` function. With the statement `import sys` you can then access the definitions in the `sys` module and make them available by their fully qualified name. For example `sys.exit()`. (`sys` has a `namespace` too!)
-    
+For example, we have the standard `sys` module that contains some standard system facilities, like the `argv list`, and `exit()` function. With the statement `import sys` you can then access the definitions in the `sys` module and make them available by their fully qualified name. For example `sys.exit()`.
+
 ```python    
 import sys
 
