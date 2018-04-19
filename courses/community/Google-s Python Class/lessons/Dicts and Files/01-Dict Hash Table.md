@@ -1,6 +1,6 @@
 Python's efficient key/value hash table structure is called a **dict**. The contents of a dict can be written as a series of key:value pairs within braces `{ }`. Example: dict = `{key1:value1, key2:value2,...}`. The **empty dict** is just an empty pair of curly braces `{}`.
 
-Looking up or setting a value in a dict uses square brackets. Example: `dict`[`foo`] looks up the value under the key `foo`. Strings, numbers, and tuples work as keys, and any type can be a value. Other types may or may not work correctly as keys (strings and tuples work cleanly since they are immutable). 
+Looking up or setting a value in a dict uses square brackets. Example: `dict`[foo] looks up the value under the key `foo`. Strings, numbers, and tuples work as keys, and any type can be a value. Other types may or may not work correctly as keys (strings and tuples work cleanly since they are immutable). 
 
 Looking up a value which is not in the dict throws a `KeyError`. Use `in` to check if the key is in the dict, or use `dict.get`(key) which returns the value or None if the key is not present (or get (key, not-found) allows you to specify what value to return in the not-found case).
     
