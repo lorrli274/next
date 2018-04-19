@@ -15,4 +15,4 @@ class Plugin2(PluginBase):
     pass
 ```    
 
-In order to allow zero-argument [`super()`](https://docs.python.org/library/functions.html#super "super") calls to work correctly from [`__init_subclass__()`](https://docs.python.org/reference/datamodel.html#object.__init_subclass__ "object.__init_subclass__") implementations, custom metaclasses must ensure that the new `__classcell__` namespace entry is propagated to `type.__new__` (as described in [Creating the class object](https://docs.python.org/reference/datamodel.html#class-object-creation)..
+In order to allow zero-argument [`super()`](https://docs.python.org/library/functions.html#super "super") calls to work correctly from [`__init_subclass__()`](https://docs.python.org/reference/datamodel.html#object.__init_subclass__ "object.__init_subclass__") implementations, custom metaclasses must ensure that the new `__classcell__` namespace entry is propagated to `type.__new__` (as described in [Creating the class object](https://docs.python.org/reference/datamodel.html#class-object-creation).
