@@ -1,6 +1,6 @@
 Python has a built-in string class named **str** with many handy features. There is an older module named **string** which you should not use. String literals can be enclosed by either double or single quotes, although single quotes are more commonly used. **Backslash** escapes work the usual way within both single and double quoted literals -- e.g. `n ' "`. 
 
-A double quoted string literal can contain single quotes without any fuss. Example: "I didn't do it". Single quoted string can contain double quotes. A string literal can span multiple lines, but there must be a backslash at the end of each line to escape the newline. String literals inside triple quotes `""""` or `'''` can span multiple lines of text.
+A double quoted string literal can contain single quotes without any fuss likewise single quoted string can contain double quotes. A string literal can span multiple lines, but there must be a backslash at the end of each line to escape the newline. String literals inside triple quotes `""""` or `'''` can span multiple lines of text.
 
 Python strings are **immutable**, which means they cannot be changed after they are created. Since strings can't be changed, we construct new strings as we go to represent computed values. So for example the expression 'hello' + 'there' takes in the 2 strings 'hello' and 'there' and builds a new string 'hellothere'.
 
@@ -8,7 +8,7 @@ Characters in a string can be accessed using the standard `[]` syntax and uses z
 
 The handy **slice** syntax also works to extract any substring from a string. The len(string) function returns the length of a string. The `[]` syntax and the `len()` function actually work on any sequence type like strings, lists, and so on. 
 
-Python tries to make its operations work consistently across different types. Don't use "len" as a variable name to avoid blocking out the `len()` function. The `+` operator can concatenate two strings. Notice in the code below that variables are not pre-declared, just assign to them and go.
+Python tries to make its operations work consistently across different types. Don't use `len` as a variable name to avoid blocking out the `len()` function. The `+` operator can concatenate two strings. Notice in the code below that variables are not pre-declared, just assign to them and go.
 
 ```python
 s = 'hi'
