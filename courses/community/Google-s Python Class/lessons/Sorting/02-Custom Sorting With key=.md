@@ -1,4 +1,4 @@
-For more complex custom sorting, `sorted()` takes an optional **key=** specifying a **key** function that transforms each element before comparison. The key function takes in 1 value and returns 1 value, and the returned **proxy** value is used for the comparisons within the sort.
+For more complex custom sorting, `sorted()` takes an optional **`key=`** specifying a **`key`** function that transforms each element before comparison. The key function takes in 1 value and returns 1 value, and the returned **proxy** value is used for the comparisons within the sort.
 
 For example: A list of strings, specifying key=len (the built in `len()` function) sorts the strings by length, from shortest to longest. The sort calls `len()` for each string to get the list of proxy length values, and then sorts with those proxy values.
     
