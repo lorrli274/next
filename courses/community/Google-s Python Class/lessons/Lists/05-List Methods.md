@@ -4,13 +4,13 @@ Here are some other common list methods.
 
 * `list.insert(index, elem)`: Inserts the element at the given index, shifting elements to the right.
 
-* `list.extend(list2)`: Adds the elements in list2 to the end of the list. Using + or += on a list is similar to using `extend()`.
+* `list.extend(list2)`: Adds the elements in list2 to the end of the list. Using `+` or `+=` on a list is similar to using `extend()`.
 
 * `list.index(elem)`: Searches for the given element from the start of the list and returns its index. Throws a `ValueError` if the element does not appear (use "in" to check without a `ValueError`).
 
 * `list.remove(elem)`: Searches for the first instance of the given element and removes it (throws `ValueError` if not present)
 
-* `list.sort()`: Sorts the list in place (does not return it). (The `sorted()` function shown below is preferred.)
+* `list.sort()`: Sorts the list in place (does not return it). The `sorted()` function shown below is preferred.
 
 * `list.reverse()`: Reverses the list in place (does not return it)
 
