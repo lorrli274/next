@@ -20,4 +20,4 @@ if 'curly' in list:
 
 The **for** and **in** constructs are very commonly used in Python code and work on data types other than list, so you should just memorize their syntax.
 
-info> You can also use for/in to work on a string. The string acts like a list of its chars, so `for ch in s: print ch` prints all the chars in a string.
+info> You can also use **for** and **in** to work on a string. The string acts like a list of its chars, so `for ch in s: print ch` prints all the chars in a string.
