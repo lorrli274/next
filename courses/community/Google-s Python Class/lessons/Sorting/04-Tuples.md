@@ -1,6 +1,8 @@
 A **tuple** is a fixed size grouping of elements, such as an (x, y) co-ordinate. Tuples are like lists, except they are immutable and do not change size. `tuples` are not strictly immutable since one of the contained elements could be mutable. 
 
-Tuples play a sort of struct role in Python as a convenient way to pass around a little logical, fixed size bundle of values. A function that needs to return multiple values can just return a tuple of the values. For example: If you wanted to have a list of 3-d coordinates, the natural python representation would be a list of tuples, where each tuple is size 3 holding one (x, y, z) group.
+Tuples play a sort of struct role in Python as a convenient way to pass around a little logical, fixed size bundle of values. A function that needs to return multiple values can just return a tuple of the values. 
+
+info> For example: If you wanted to have a list of 3-d coordinates, the natural python representation would be a list of tuples, where each tuple is size 3 holding one (x, y, z) group.
 
 To create a `tuple`, just list the values within parenthesis separated by commas. The empty `tuple` is just an empty pair of parenthesis. Accessing the elements in a `tuple` is just like a list `len()`, `[ ]`, `for`, `in`, etc. all work the same.
     
