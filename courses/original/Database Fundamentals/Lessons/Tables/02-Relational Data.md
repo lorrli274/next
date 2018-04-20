@@ -1,13 +1,13 @@
-The superpower of databases is in the relationships between different types of data. Organizing data in a **relational** manner allows complex questions to be answered easily and while providing a clean and fast way to organize different types of data.
+The superpower of databases is in the relationships between different types of data. Organizing data in a **relational** manner allows complex questions to be answered easily while providing a clean and fast way to organize different types of data.
 
-When describing a database, it's comming to say things like:
+When describing a database, it's common to say things like:
 
 * "A project has many employees."
 * "A job order has one project."
 * "Many job orders belong to one employee."
 * "Many employees have many projects."
 
-In these examples you would be describing a **1-to-many (1:M)**, **1-to-1 (1:1)**, **many-to-1 (M:1)**, and **many-to-many (M:N) relationships**, respectively.
+In these examples you would be describing a **1-to-many (1:M)**, **1-to-1 (1:1)**, **many-to-1 (M:1)**, and **many-to-many (M:M) relationships**, respectively.
 
 There are examples of some of these in the diagram below:
 
@@ -47,4 +47,4 @@ A **foreign key** or **FK** references a primary key in another table. When a ta
 
 A table may contain more than one foreign keys, making it the child of more than one other table.
 
-In the diagrams above, the keys are marked with _PK_ and _FK_.
+In the diagrams above, the keys are marked with *PK* and *FK*.
