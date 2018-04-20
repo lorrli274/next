@@ -2,7 +2,7 @@ The power of regular expressions is that they can specify patterns, not just fix
 
 * `a, X, 9, < \`-- ordinary characters just match themselves exactly. The meta-characters which do not match themselves because they have special meanings are: . `^`, `$`, `*`, `+`, `?`, `{`, `[ ]`, `|` and `( )`
 
-* `. (a period)`: Matches any single character except newline 'n' 
+* `. (a period)`: Matches any single character except newline `n` 
 
 * Lowercase `w`: Matches a `word` character. A letter or digit or underbar `[a-zA-Z0-9_]`. Although `word` is the mnemonic for this, it only matches a single word char, not a whole word. `W` (upper case `W`) matches any non-word character. 
 
