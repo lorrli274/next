@@ -1,8 +1,8 @@
 ##Lesson 1: Basics of Java
 
-### Data Types
+## Data Types
 
-A **Data Type** classification is a way to tell the compiler what type of data will be stored in a variable. This helps the compiler allocate enough memory for the data you intend to store, the functions available to that the data, and the added benefit linting and debugging. (Linting is the process by which an IDE is able to offer suggestions, bug warnings, auto-completion and can help in the development of your program).   Java is an explicit language, not implicit. If you have experience in a language such as Python, or Swift the compiler infers the language of each variable depending on the value you assign it. This is not the case in Java and each type must be explicitly declared. 
+A **Data Type** classification is a way to tell the compiler what type of data will be stored in a variable. This helps the compiler allocate enough memory for the data you intend to store, the functions available to that the data, and the added benefit linting and debugging. (Linting is the process by which an IDE is able to offer suggestions, bug warnings, auto-completion and can help in the development of your program).   Java is an explicit language, not implicit. If you have experience in a language such as Python, or Swift the compiler infers the type of each variable depending on the value you assign it. This is not the case in Java and each type must be explicitly declared. 
 
 There are an assortment of primitive data types available in Java, a few of the most common are  `char`, `int` `short`, `long`, `double`, `float`, `boolean`. 
 
@@ -14,11 +14,11 @@ private boolean myBool = false;
 private static final String MY_STRING = "This is a string";
 ```
 
-Above, you can see the syntax for declaring and initializing variables with their data types. This should look familiar to you. The last constant in the example above is not a primitive data type, it is a `String` and a `String` is an **array** of `char` elements. We will learn more about `Strings` in a later section.  
+Above, you can see the syntax for declaring and initializing variables with their data types. This should look familiar to you. The last constant in the example above is not a primitive data type, it is a `String` and a `String` is an **array** of `char` elements. We will learn more about `Strings` in ***Chapter 4: Strings***.  
 
 
 
-Below is a table that lists out all the 8 different primitive data types in Java with a brief description of the data type. 
+Below is a table that lists out all 8 different primitive data types in Java with a brief description of the data type. 
 
 | Data Type | Description                              |
 | --------- | ---------------------------------------- |

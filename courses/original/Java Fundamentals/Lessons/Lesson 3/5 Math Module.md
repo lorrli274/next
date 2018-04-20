@@ -1,6 +1,6 @@
 ## `Math` Module and Floating Point Math
 
-### `java.lang.math`
+## `java.lang.math`
 
 When wanting to perform more advanced mathematical evaluations in code, using the `+`, `-`, `*`,  and `/` operators will only get you so far. Java comes with a useful module, `java.lang.math` (and many more) that includes methods to perform some more advanced operations, such as exponential, square root, and some trigonemtric functions. To import the `java.lang.math` library, use the `import` statement at the top of your file. 
 

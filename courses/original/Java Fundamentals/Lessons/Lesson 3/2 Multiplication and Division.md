@@ -48,5 +48,5 @@ public class Division {
 
 Run the snippet and maybe add in some `Scanner.out.println()` statements to view the output in the terminal. Change the value of the variables and observe the output. Ensure that you are comfortable with the `/` operator. 
 
-As you can see, you can group portions of the equation in parenthesis to change the order of operations on the equation. It can be common for simple mathematical errors to occur when parenthesis are left out or are grouping the wrong values and it is important to pay careful attention to where they are and the result that they produce (Something we will cover in a later chapter when we discuss **Unit Testing**). 
+As you can see, you can group portions of the equation in parenthesis to change the order of operations on the equation. It can be common for simple mathematical errors to occur when parenthesis are left out or are grouping the wrong values and it is important to pay careful attention to where they are and the result that they produce (Something we will cover in ***Chapter 9: Testing and Debugging*** when we discuss **<u>unit testing</u>**). 
 

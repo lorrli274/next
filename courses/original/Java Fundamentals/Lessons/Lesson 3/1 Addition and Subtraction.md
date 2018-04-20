@@ -4,13 +4,13 @@
 
 Simple addition in Java follows the same rules and structure that you would use to perform addition on paper. 
 
-```
+```java
 answer = value1 + value2
 ```
 
 In the example above we have 3 variables (*Note: `value1` and `value2` are not in all caps or SCREAMING_SNAKE_CASE, this would indicate that they are variables*) and two operators. 
 
-When using the `+` operator, it is important that both values on the right and left (in the example above, `value1` and `value2`) are of the same type. You cannot add a `float` and a `double`, you can only add a `double` and a `double`, or a `float` and a `float`.  
+When using the `+` operator, it is important that both values on the right and left (in the example above, `value1` and `value2`) are of the same type. You cannot add a `float` and a `double`, you can only add a `double` and a `double`, or a `float` and a `float`.  If you found that a an `int` and a `double` need to be included, one would need to be **cast** to the type of the other before performing an operation. 
 
 ```java
 public class Addition {

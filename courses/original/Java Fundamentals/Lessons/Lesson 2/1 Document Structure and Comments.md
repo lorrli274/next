@@ -1,6 +1,6 @@
 ## Activity 3: Document Structure
 
-### Document Structure and Comments
+## Document Structure and Comments
 
 In this section we will briefly touch on the document structure in Java and the importance of comments. 
 
@@ -18,6 +18,8 @@ Comments can be written using three different symbols in Java. The most common i
 Multi-line comments, or comment blocks, are created using a single forward slash and a single asterisk `/*` and end with an single asterisk and a single forward slash `*/`. Comment blocks can be used where using double forward slash `//` would be too tedious and messy. 
 
 Often programmers want to add documentation to their methods, or classes that the IDE can read and display somewhere else during the development cycle or when the source code is being used by another team or project. This is accomplished using a single forward slash and a double asterisk `/**` and closes with a single asterisk and single forward slash `*/`. This indicates to the compiler and the IDE that the comment block is a **Javadoc** and it generates documentation so that it can be accessed elsewhere. 
+
+Below is a snippet that demonstrates the three comment options and their use case. 
 
 ```java
 /**
@@ -54,4 +56,3 @@ public class Example {
 }
 ```
 
-> Should be able to generate a terminal example to access Javadoc generated documentation. 

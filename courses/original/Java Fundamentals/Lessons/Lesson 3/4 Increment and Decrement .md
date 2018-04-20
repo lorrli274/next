@@ -1,6 +1,6 @@
 ## Activity 4: Arithmetic Operations
 
-### Increment and Decrement Operators 
+## Increment and Decrement Operators
 
 By using two `+` operators in succession, `++` , variables can be incremented or decremented by values of 1.
 
