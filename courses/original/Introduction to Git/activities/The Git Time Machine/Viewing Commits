@@ -1,0 +1,27 @@
+As you may have noticed, `git log` provides us a nice summary of the previous commits, but it doesn't let us drill down into what files changed in each commit.
+
+For this, we use the `git show` command.
+
+If we pass this command a commit hash ― for example, `git show 0ab9e7` ― you'll see the following:
+
+```
+commit 0ab9e758166ff6211760dd38f19e5f9db0f0bd5e
+Author: root <root@production-4b30781813cabe94-1507747036168.lxd>
+Date:   Wed Oct 11 23:18:21 2017 +0000
+
+    Added a readme.
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..0679ea5
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,3 @@
++# Readme
++
++You can put information about your project here.
+```
+
+This output contains the same information as `git log`, but also includes the file changes and other information. Each line of your file that begins with a `-` is a line that was removed in that commit. Similarly, lines beginning in `+` were added. The red and dark green output are useful for identifying these changes as well.
+
+If we leave the hash out and just use `git show`, the last commit will be used.
