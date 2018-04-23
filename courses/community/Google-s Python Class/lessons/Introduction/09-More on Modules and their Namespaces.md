@@ -15,10 +15,10 @@ There is another import form that looks like this: `from sys import argv, exit`.
 
 There are many modules and packages which are bundled with a standard installation of the Python interpreter, so you don't have to do anything extra to use them. These are collectively known as the **Python Standard Library**. Commonly used modules/packages include:
 
-* `sys` — access to `exit()`, `argv`, `stdin`, `stdout`, ... 
+* `sys`: Access to `exit()`, `argv`, `stdin`, `stdout`, ... 
 
-* `re` — regular expressions 
+* `re`: Regular expressions 
 
-* `os` — operating system interface, file system 
+* `os`: Operating system interface, file system 
 
 info> You can find the documentation of all the Standard Library modules and packages [here](https://docs.python.org/3/library/).
