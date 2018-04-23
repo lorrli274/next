@@ -1,6 +1,6 @@
 ## `do / while` loop
 
-A `do / while` loop is used to continuously run code until a condition is met. 
+A `do / while` loop is used to continuously run a code block until a condition is met. 
 
 ```Java
 do {
@@ -20,13 +20,11 @@ while (/*expression == false*/) {
 }
 ```
 
-Even though the two loops are similar there is one major difference between the two. A `while` evaluates the condition before running the code in its scope. If this evaluates to false, the code block is never run. In a `do / while` loop, the expression in the `do` block will run at least once before the expression is evaluated. 
-
-
+Even though the two loops are similar there is one major difference between the two. A `while` evaluates the condition before running the code in its scope. If this evaluates to false, the code block is never run. Compare this to  a `do / while` loop, where the code is executed before the expression is evaluated. This ensures that the code will execute at least once before the expression is evaluated.
 
 ## Infinite loop
 
-A common logic error can occur with loops that are not terminated properly called the **infinite loop**. The infinite loop will run continuous (forever), until the program crashes, runs out of resources, or is forced into a hard stop / shutdown manually. An infinite loop can occur when the expression to be evaluated never evaluates to true. 
+A common logic error can occur with loops that are not terminated properly called the **infinite loop**. The infinite loop will run continuous (forever), until the program crashes, the system runs out of resources, or is forced into a hard stop / shutdown manually. An infinite loop can occur when the expression to be evaluated never evaluates to true. 
 
 ```Java
 int x = 2;
@@ -39,7 +37,7 @@ The code above will never evaluate to true since the `x` is already greater than
 
 ## Sentinel Value
 
-One way to run a loop continously without provided an explicit expression to be evaluated with pre determined value is to use a **sentinel value**. A sentinel value is a value that once provided breaks the loop. In the snippet below, a sentinel value is provided to the program by the user. If the value **0** is not entered, the `do / while` loop will continue run. 
+One way to run a loop continously without providing an explicit expression to be evaluated with pre determined values is to use a **sentinel value**. A sentinel value is a value that once provided breaks the loop. In the snippet below, a sentinel value is provided to the program by the user. If the value **0** is not entered, the `do / while` loop will continue to execute. 
 
 Use the snippet below to experiment with the `do / while` loop. Change the `do / while` code block, change the sentinel value, and change the condition inside the `while` expression. 
 

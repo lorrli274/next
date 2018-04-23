@@ -17,7 +17,7 @@ public class SlicingExamples {
 }
 ```
 
-In the above snippet, both methods are implemented. `.substring()` method takes two parameters, a starting index, and a ending index. Remember, since a `String` object is an array of `char` you can treat its characters like you would in an array. The `.substring()` method will return the string between these two indices. In this example it will return the name of the file only. 
+In the above snippet, both the `.substring()` and `.split()` methods are implemented. The`.substring()` method takes two parameters, a starting index, and a ending index. Remember, since a `String` object is an array of `char` you can treat its characters like you would in an array. The `.substring()` method will return the string between these two indices. In this example it will return the name of the file only. 
 
 The second method, `.split()` will return an array of `String` objects based. In this example, we will get an array that contains 4 elements. 
 

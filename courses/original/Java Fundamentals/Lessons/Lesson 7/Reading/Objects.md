@@ -1,6 +1,6 @@
 ## Objects
 
-Objects in programming is the means by which a developers models real world objects into programming languages. Objects form the basis of *Object-Oritented Programming*. When creating programs, developers will often spend the early stages creating lists of objects that a program will need to model. For example, a program will not know what a vehicle is until a programming gives the program an explicit model for what a vehicle is, what it is made of, its size, purpose, name, type, etc. 
+Objects in programming is the means by which a developers models real world objects into programming languages. Objects form the basis of *Object-Oritented Programming* and is the driving force behind *encapsulation*. When creating programs, developers will often spend the early stages creating lists of objects that a program will need to model. For example, a program will not know what a vehicle is until a programming gives the program an explicit model for what a vehicle is, what it is made of, its size, purpose, name, type, etc. 
 
 ## Classes 
 

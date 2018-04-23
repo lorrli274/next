@@ -9,7 +9,7 @@ char char2 = "b";
 char char3 = "c";
 ```
 
-As you can see, it is much easier and cleaner to store "abc" in a `String` than it is to store them in `char` variables, or a `char` array.  A `String` is essential to input and output operations in Java. A `String` that is declared outright, as seen below is called a **string literal**. `String` literals are a fixed length and are immutable once created. Concatenation is supported in Java, so a `String` can be created by adding two strings together using the `+` operator. In the below example, the `"bar"` in the `println()` is a string literal, or an anonymous string. It cannot be reference again in the program without explicitly typing the value again. 
+As you can see, it is much easier and cleaner to store "abc" in a `String` than it is to store them in `char` variables, or a `char` array.  A `String` is essential to input and output operations in Java. A `String` that is declared outright, as seen below is called a **string literal**. `String` literals are a fixed length and are immutable once created. Concatenation is supported in Java, so a `String` can be created by adding two strings together using the `+` operator. In the below example, the `"bar"` in the `println()` is a string literal, or an anonymous string. It cannot be referenced again in the program without explicitly typing the value again. 
 
 ```Java
 public class StringExample {

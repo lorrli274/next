@@ -33,4 +33,4 @@ public class MyFileWriter {
 }
 ````
 
-The above snippet shows two different ways of writing information to a file. 
+The above snippet shows two different ways of writing information to a file. Use the editor on the right to view the contents of the file. Manipulate the `String` s and run the program again to view the changes to the file. Try creating different files to write to.

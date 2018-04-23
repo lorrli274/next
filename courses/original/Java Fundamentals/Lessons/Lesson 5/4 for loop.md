@@ -1,6 +1,6 @@
 ## `for` loop
 
-The `for` loop provides a easy syntax for iterating over ranges.  The `for` loop will continue to iterate until a provided condition is met. 
+The `for` loop provides easy syntax for iterating over ranges.  The `for` loop will continue to iterate until a provided condition is met. 
 
 ```java
 for (/*initialization*/; /*condition*/; /*increment*/) {
@@ -15,7 +15,7 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
-The basic `for` declaration consists of 3 arguments : **initialization**, **condition**, **increment**. Initialization is the initializing of the variable to be used to evaluate the condition and the variable that receives the increment. In the above example it is `i` , a common variable used in `for` loops. The condition is that as long as `i < 5`, the body of the `for` loop will add the value of `x` to `y`. Each time `y += x;` is run, the value of `x` is increased by 1, `x++`. 
+The basic `for` declaration consists of 3 arguments : **initialization**, **condition**, **increment**. Initialization is the initializing of the variable to be used to evaluate the condition and the variable that receives the increment. In the above example it is `i` , a common variable used in `for` loops. The condition states that as long as `i < 5`, the body of the `for` loop will add the value of `x` to `y`. Each time `y += x;` is run, the value of `x` is increased by 1, `x++`. 
 
 `for` loops can be used to iterate over arrays, collections and sets. 
 
@@ -37,7 +37,7 @@ for (int i = 0; i < 100; i++) {
 }
 ```
 
-`for` loops are useful when needing to perform a repetitive task on a data set. However, `for` loops, especially when nested, can become very inefficient and there may be better ways of performing a desired task. `for` loops are also succeptible to becoming an  <u>infinite loop</u> if the increment and the condition are not set carefully. 
+`for` loops are useful when needing to perform a repetitive task on a data set. However, `for` loops, especially when nested, can become very inefficient and there may be a more optimal means of accomplishing as task. `for` loops are also succeptible to becoming  <u>infinite loop</u>s if the increment and the condition are not set carefully. 
 
 Below is a snippet that contains three `for` loops. Look over the snippet and review the code. Alternate between running the snippet and altering the code to observer the change in output. 
 

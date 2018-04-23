@@ -9,9 +9,9 @@ private void foo() {
 }
 ```
 
-Below is a snippet that contains two functions, `foo()` and `bar()`. One thing to note in the below snippet is that the `static` keyword is listed for both functions. Java has a variety of rules that must be followed that over time with experience and practice will become more apparent. One of those rules is that non-static methods cannot be referenced from a `static` context, in this case the`static` method `main` cannot access non static methods. 
+Below is a snippet that contains two functions, `foo()` and `bar()`. One thing to note in the below snippet is that the `static` keyword is listed for both functions. Java has a variety of rules that must be followed that over time and with experience and practice will become more apparent. One of those rules is that non-static methods cannot be referenced from a `static` context, in this case the`static` method `main` cannot access non-static methods. This is becuase non-static methods are tied to distinct instances of their corresponding objects, wheras `static` methods share an instance that can be referenced. 
 
-Manipulate the code within the functions and within the body of the `main` to learn how to write and implement functions. Try removing the `static` keyword to observer the impact it has on the output. 
+Manipulate the code within the functions and within the body of the `main` to learn how to write and implement functions. Try removing the `static` keyword to observe the impact it has on the output. 
 
 ```java
 // Demonstration of calling methods in a program
