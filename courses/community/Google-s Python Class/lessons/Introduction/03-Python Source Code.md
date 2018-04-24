@@ -2,7 +2,7 @@ Python source files use the _.py_ extension and are called **modules**. With a P
 
 info> Incase you're curious, checkout the [official Python docs page](http://docs.python.org/using/cmdline) to see all the different options you have when running Python from the command-line. 
 
-Here's a very simple `hello.py` program:
+Here's a very simple *hello.py* program:
     
 ```python    
 #!/usr/bin/env python
