@@ -6,6 +6,6 @@ $ ./copyspecial.py .
 /Users/nparlante/pycourse/day2/zz__something__.jpg
 ```    
 
-We'll assume that names are not repeated across the directories 
+We'll assume that names are not repeated across the directories. 
 
 info> Optional: Check that assumption and error out if it's violated.
