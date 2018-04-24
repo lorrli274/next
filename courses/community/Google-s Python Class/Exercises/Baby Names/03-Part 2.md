@@ -13,4 +13,4 @@ $ grep 'Miguel ' *.summary
 $ grep 'Emily ' *.summary
 ```    
 
-info> Regular expression hints -- year: r`Popularitysins(dddd)` names: r'`(d+)(w+)(w+)`
+info> Regular expression hints -- year: r`Popularitysins(dddd)` names: r`(d+)(w+)(w+)`
