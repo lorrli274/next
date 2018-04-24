@@ -1,6 +1,8 @@
 In the *Babynames.py* file, implement the `extract_names(filename)` function which takes the filename of a *baby1990.html* file and returns the data from the file as a single list. The year string at the start of the list followed by the name-rank strings in alphabetical order. [`2006`, `Aaliyah 91`, `Abagail 895`, `Aaron 57`, ...]. 
 
-Modify `main()` so it calls your `extract_names()` function and prints what it returns (main already has the code for the command line argument parsing). If you get stuck working out the regular expressions for the year and each name, solution regular expression patterns are shown at the end of this document. Note that for parsing webpages in general, regular expressions don't do a good job, but these webpages have a simple and consistent format.
+Modify `main()` so it calls your `extract_names()` function and prints what it returns (main already has the code for the command line argument parsing). If you get stuck working out the regular expressions for the year and each name, solution regular expression patterns are shown at the end of this document. 
+
+info> For parsing webpages in general, regular expressions don't do a good job, but these webpages have a simple and consistent format.
 
 Rather than treat the boy and girl names separately, we'll just lump them all together. In some years, a name appears more than once in the html, but we'll just use one number per name. Optional: make the algorithm smart about this case and choose whichever number is smaller.
 
