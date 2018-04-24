@@ -2,7 +2,7 @@ It might still be tempting to **rescue** high up in the exception chain. Rescuin
 
 The [Exception](http://ruby-doc.org/core-2.3.1/Exception.html) class is the main exception class in Ruby. All other exceptions are subclasses of this class; if Exception is rescued all errors will be caught.
 
-Two exceptions that most applications won't want to rescue are are SignalException and SystemExit.
+Two exceptions that most applications won't want to rescue are are **SignalException** and **SystemExit**.
 
 [SignalException](http://ruby-doc.org/core-2.3.1/SignalException.html) is used when an outside source is telling the application to stop. This can be the Operating System when it wants to shut down, or a system administrator that wants to stop the application. [Example](https://gist.github.com/tombruijn/a4181e217b8e1c46ebcc2c116223cb6a)
  
