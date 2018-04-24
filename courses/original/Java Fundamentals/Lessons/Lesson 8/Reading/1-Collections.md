@@ -8,4 +8,4 @@ This chapter will cover the basic functionality and use case of the following co
 2. `Map`
 3. `Set`
 
-info> A more indepth conversation and look at the structure of `Collections` is had in the <u>Java Core Concepts</u> course. 
+info> A more indepth conversation and look at the structure of `Collections` is had in the <u>Data Structures in Java Programming</u> course. 
