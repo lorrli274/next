@@ -6,5 +6,5 @@ Suggested functions for your solution:
 
 * get_special_paths(dir): Returns a list of the absolute paths of the special files in the given directory 
 * copy_to(paths, dir): Given a list of paths, copies those files into the given directory 
-* zip_to(paths, zippath); Given a list of paths, zip those files up into the given zipfile 
+* zip_to(paths, zippath): Given a list of paths, zip those files up into the given zipfile 
 
