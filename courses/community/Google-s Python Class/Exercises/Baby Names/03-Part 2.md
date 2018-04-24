@@ -6,7 +6,7 @@ info> The standard behavior of the shell is that it expands the _baby*.html_ pat
 
 With the data organized into summary files, you can see patterns over time with shell commands, like this:
     
-```bash    
+```bash   
 $ grep 'Trinity ' *.summary
 $ grep 'Nick ' *.summary
 $ grep 'Miguel ' *.summary
