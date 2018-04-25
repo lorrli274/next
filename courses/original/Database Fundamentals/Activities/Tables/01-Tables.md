@@ -12,7 +12,7 @@ Each **table** in a database stores a single type of data. Conceptually, it's a 
 | 4    | Ali        | Chandler  |
 | 5    | Lathan     | England   |
 
-In this table, the columns are _id_, *first_name*, and *last_name*, and it contains 5 **records** (or **rows**). A record is a single entry in a database table. Typically a table will contain many records ― sometimes tens of millions or more! Here's an example record from a table storing employee data:
+In this table, the columns are *id*, *first_name*, and *last_name*, and it contains 5 **records** (or **rows**). A record is a single entry in a database table. Typically a table will contain many records ― sometimes tens of millions or more! Here's an example record from a table storing employee data:
 
 | id   | first_name | last_name |
 | ---- | ---------- | --------- |
