@@ -15,15 +15,15 @@ The course components contain a few different learning interfaces:
 1. Activity 
 2. Snippets
 3. Quizzes
-4. Assessments
+4. Challenges
 5. Projects
 
-An **Activity** is the fundamental layout that you will encounter in this course. It consists of short explanations, examples, an interactive IDE, and a terminal. Activities will be used to practice coding concepts and follow along with the lesson. Some activities are reading only, this means that they have no coding IDE and are used to help explain new concepts, or concepts in more detail that would be practical in an activity with an IDE and terminal. 
+An **Activity** is the fundamental layout when interacting with challenges and are used when practiving new concepts in more contextual setting with more strict implementation rules. It consists of short explanations, examples, an interactive IDE, and a terminal and / or console. Activities will be used to practice coding concepts and follow along with the lesson. 
 
-A **Snippet** is similar to an activity except that it is not a complete IDE. Snippets are used to practice and see new concepts in action for the first time. They consist of a concept explanation along with a small snippet of code that can be run and used as practice. Snippets are used to introduce new coding concepts, and provide the reader with a way of seeing the output of the code, and the ability to manipulate the template to experiment. 
+A **Snippet** is similar to an activity and the main medium for teaching new concepts and practicing new concepts in a live environment. A Snippet is not a complete IDE, and cannot be used to created new directories, files, or assests. They consist of a concept explanation along with a small snippet of code that can be run and used as practice. Snippets are used to introduce new coding concepts, and provide the reader with a way of seeing the output of the code, and the ability to manipulate the template to experiment. Some snippets may be reading only, meaning they have no interactive component and are meant for brief explanations. 
 
-**Quizzes** are short multiple choice questions that are used to review the content of contained in a series of chapters. An example of a question would be: *What does OOP stand for*?
+**Quizzes** are short multiple choice and true / false questions that are used to review the content of contained in a series of chapters. An example of a question would be: *What does OOP stand for*?
 
-**Assessments** are used to gauge the coding capacity and skills of the reader at points throughout the course. Assessments provide the reader with a series of tasks to complete in the IDE and runs their implementation against a series of tests to ensure that they have implemented concepts correctly. A final grade at the end of the course will be given based on the accumulation of all assessment grades. 
+**Challenges** are used to gauge the coding capacity and skills of the reader at points throughout the course. Challenges provide the reader with a series of tasks to complete in the IDE and runs their implementation against a series of tests to ensure that they have implemented concepts correctly. A final grade at the end of the course will be given based on the accumulation of all challenge grades. 
 
 **Projects** are programs that are ungraded, but give the reader an opportunity to practice and implement their new coding skills in a manner that they prefer to satisfy the requirements put forth in the instructions with the goal of fullfilling a real world application scenario. 

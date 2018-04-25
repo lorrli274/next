@@ -32,4 +32,4 @@ def main():
     print repeat('Woo Hoo', True)   ## Woo HooWoo HooWoo Hoo!!!
 ```    
 
-At run time, functions must be defined by the execution of a "`def`" before they are called. It's typical to `def` a `main()` function towards the bottom of the file with the functions it calls above it.
+At run time, functions must be defined by the execution of a `def` before they are called. It's typical to `def` a `main()` function towards the bottom of the file with the functions it calls above it.

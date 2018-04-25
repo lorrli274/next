@@ -43,4 +43,4 @@ while session = server.accept
 end
 ```
 
-We'll be continuing with the code we wrote last time. If you want to follow along, [here's](https://gist.github.com/jeffkreeftmeijer/7f08d1f7e381b9c552666750914925eb) the code we ended up with.
+We'll be continuing with the code we wrote last time. You can find it right [here.](https://gist.github.com/jeffkreeftmeijer/7f08d1f7e381b9c552666750914925eb)

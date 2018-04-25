@@ -1,6 +1,6 @@
 Until now, our server has been returning a single response for each request. To make it a little more useful, we could add more responses to our server. Instead of adding these to the server directly, we'll use a **Rack** app. Our server will parse HTTP requests and pass them to the Rack app, which will then return a response for the server to send back to the client.
 
-Rack is an interface between web servers that support Ruby and most Ruby web frameworks like Rails and Sinatra. In its simplest form, a Rack app is an object that responds to `call` and returns a "tiplet", an array with three items: an HTTP response code, a hash of HTTP headers and a body.
+Rack is an interface between web servers that support Ruby and most Ruby web frameworks like Rails and Sinatra. In its simplest form, a Rack app is an object that responds to `call` and returns a **tiplet**, an array with three items: an HTTP response code, a hash of HTTP headers and a body.
 
 ```ruby 
 app = Proc.new do |env|
@@ -9,7 +9,7 @@ app = Proc.new do |env|
 end
 ```
 
-In this example, the response code is "200", we're passing "text/html" as the content type through the headers, and the body is an array with a string.
+In this example, the response code is `200`, we're passing `text/html` as the content type through the headers, and the body is an array with a string.
 
 To allow our server to serve responses from this app, we'll need to turn the returned triplet into a HTTP response string. Instead of always returning a static response, like we did before, we'll now have to build the response from the triplet returned by the Rack app.
 

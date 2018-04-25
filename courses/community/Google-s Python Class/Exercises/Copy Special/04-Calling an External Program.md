@@ -1,4 +1,4 @@
-If the "--tozip zipfile" option is present at the start of the command line, run this command: "zip -j zipfile". This will create a zipfile containing the files.
+If the `--tozip zipfile` option is present at the start of the command line, run this command: `zip -j zipfile`. This will create a zipfile containing the files.
 
 ```bash    
 $ ./copyspecial.py --tozip tmp.zip .

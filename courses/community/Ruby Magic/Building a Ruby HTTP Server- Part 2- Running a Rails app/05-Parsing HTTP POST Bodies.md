@@ -2,7 +2,7 @@ This application is more than just that index page. Visiting [http://localhost:5
 
 The authenticity token is sent along when posting a form and is used to check if the request came from a trusted source. Our server is completely ignoring POST data right now, so the token isn't sent, and the request can't be verified.
 
-Back when we first implemented our HTTP server, we used `session.gets` to get the first line (called the [Request-Line][11]), and parsed the HTTP method and path from that. Besides **parsing** the Request-Line, we ignored the rest of the request.
+Back when we first implemented our HTTP server, we used `session.gets` to get the first line, and parsed the HTTP method and path from that. Besides **parsing** the Request-Line, we ignored the rest of the request.
 
 To be able to extract the POST data, we'll first need to understand how an HTTP request is structured. Looking at an example, we can see that the structure resembles an HTTP response:
 

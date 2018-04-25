@@ -19,8 +19,8 @@ public class TypeCastDemo {
 }
 ```
 
-In the example above, we explicitly and implicit convert `myInt` to a `double` and back to an `int`. When you are casting one object to another using explicit casting you are calling the constructor of the exlicitly declared type, this can help avoid some of the unexpected results from casting using the implicit syntax. Behind the scenes, the compiler In the example above is assigning a new `Integer` object iniitialized via its constructor to the value of the `myDouble`.  
+In the example above, we explicitly and implicit convert `myInt` to a `double` and back to an `int`. When you are casting one object to another using explicit casting you are calling the constructor of the exlicitly declared type, this can help avoid some of the unexpected results from casting using the implicit syntax. Behind the scenes, the compiler in the example above is assigning a new `Integer` object iniitialized via its constructor to the value of the `myDouble`.  
 
 When using implict casting it is import to note that you can only cast types to a larger type (in memory). Review the snippet on <u>Data Types</u> for a refresher on memory allocation. The compiler will not type cast a `double` to a `byte`, or an `int` to a `byte` implicitly. If we want to cast from a smaller type to a larger type, we need to use explicit type casting. 
 
-Casting is an important concept to keep in mind when creating classes that inherit from the same hierrarchy and which type of casting will be needed to when casting among the child classes. 
+Casting is an important concept to keep in mind when creating classes that inherit from the same hierrarchy and which type of casting will be needed when casting among the child classes. 
