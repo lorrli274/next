@@ -6,3 +6,5 @@ You delete a database using a `DROP DATABASE` statement:
 DROP DATABASE a_database;
 ```
 
+DEV ins: Drop your *a_new_database* database
+
