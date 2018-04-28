@@ -32,4 +32,5 @@ DESCRIBE employees;
 Now let's try some of these commands!
 
 DEV ins: show the tables in your database
+
 DEV ins: `DESCRIBE projects`
