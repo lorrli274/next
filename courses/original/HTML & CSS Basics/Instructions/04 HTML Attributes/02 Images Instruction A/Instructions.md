@@ -1,0 +1,1 @@
+Add the image "robot.png" anywhere in the body of your webpage. Remember, you don't need a closing tag!

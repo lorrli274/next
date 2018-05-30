@@ -1,0 +1,1 @@
+Add the bold tag to a line in your lyrics.

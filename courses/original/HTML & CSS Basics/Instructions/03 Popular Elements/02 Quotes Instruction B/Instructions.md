@@ -1,0 +1,1 @@
+Since it's a short quote, it doesn't really need to be a `blockquote`. Change it to a one line quote using the `q` tag inside a paragraph.
