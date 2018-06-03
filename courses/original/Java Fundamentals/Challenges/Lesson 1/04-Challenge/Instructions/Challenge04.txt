@@ -1,0 +1,9 @@
+A partially written program is in the file to the right. Finish writing the program by including:
+1. A constant for the constant gravitation force of 6.67 * 10<sup>-11</sup>
+2. Two variables named `mass1` and `mass2`
+3. A constant to represent the value of the distance between to the two objects. 
+4. A variable to hold the results of the forumula
+
+The formula for F = G((m1 * m2)/r^2)
+
+This program solves for the force of gravity on two objects. 
