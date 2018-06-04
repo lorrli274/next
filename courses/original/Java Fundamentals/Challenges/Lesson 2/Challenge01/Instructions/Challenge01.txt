@@ -1,0 +1,3 @@
+To accept user input using in Java using the standard input method (stdin), the `Scanner` object must be imported from the `java.util` package. 
+The code editor to the right contains a program that has input and output methods, but in order to work properly, they need the proper package
+to be imported. Import the proper package to get the program to run as expected.  

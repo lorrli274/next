@@ -1,0 +1,6 @@
+This challenge will focus on the mathimatical operations of addition and subtraction. There are four forumulas listed below.
+Take the formulas below and perform them programmatically, printing the result using `System.out.println()` to the console. 
+
+1. 8 + 6 + 1
+2. 933 - 132 - 278 - 276
+3. 638 + 49 - 559 + 800 - 15 + 573 + 343 - 297

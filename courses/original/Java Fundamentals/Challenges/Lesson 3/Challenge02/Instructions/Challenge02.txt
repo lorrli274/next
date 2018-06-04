@@ -1,0 +1,4 @@
+The code editor to the right contains a partial written Java program that takes parameters as input, performs either multiplication or division
+and outputs the reuslt to the console.The program has prewritten code for accepting user input. A `while` loop will continually prompt
+the user for numbers to multiple or divide from the total. The program is missng the formula for calculating the result. 
+Write the code that performs the operation mathimatically and output the result to the console. 

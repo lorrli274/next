@@ -1,0 +1,2 @@
+The program in the editor to the right contains some errors regarding its comments that prevent the program from compiling and running properly. 
+Fix the erros in the program in order to get the program to compile and run. 

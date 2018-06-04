@@ -1,0 +1,16 @@
+Create a program that takes prompts and accepts three values from the user. The program should prompt the user for input three times, once for an `int`, once for a `String` and once for a `char`.  
+After all three values have been entered, output each value to the console preceeded by its data type or object.  
+
+An example of the user input:
+```java
+20
+"The Irish national flower is the clover"
+a
+```
+
+and an example of the output: 
+```java
+int: 20
+String: The Irish national flower is the clover
+char: a
+```
