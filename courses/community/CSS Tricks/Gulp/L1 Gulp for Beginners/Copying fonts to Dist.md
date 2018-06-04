@@ -13,6 +13,6 @@ Now gulp will copy `fonts` from `app` to `dist` whenever you run gulp fonts.
 
 ![](https://storage.googleapis.com/codevolve-assets/internal/courses/Gulp/font-copy.png)
 
-We have 6 different tasks in the *gulpfile* now, and each of them has to be called individually with the command line, which is kinda cumbersome so we want to tie everything together into one command.
+We have 6 different tasks in the *gulpfile* now, and each of them has to be called individually with the command line, which is kinda cumbersome. We want to tie everything together into one command.
 
 Before we do that though, let's look at how to clean up generated files automatically.
