@@ -18,5 +18,3 @@ func main() {
     fmt.Println(!true)
 
 }
-
-$ go run values.go
