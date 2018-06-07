@@ -1,6 +1,8 @@
-**Python** is a dynamic, interpreted (bytecode-compiled) language. There are no type declarations of variables, parameters, functions, or methods in source code. This makes the code short and flexible, and you lose the compile-time type checking of the source code. Python tracks the types of all values at runtime and flags code that does not make sense as it runs. 
+**Python** is a dynamic, interpreted (bytecode-compiled) language. There are no type declarations of variables, parameters, functions, or methods in source code. This makes the code short and flexible, and you lose the compile-time type checking of the source code. Python tracks the types of all values at runtime and flags code that does not make sense as it runs.
 
-An excellent way to see how Python code works is to run the Python interpreter and type code right into it. If you ever have a question like, "What happens if I add an `int` to a `list`?" Just typing it into the Python interpreter is a fast and likely the best way to see what happens.
+An excellent way to see how Python code works is to run the Python interpreter and type code right into it. If you ever have a question like, "What happens if I add an `int` to a `list`?" you can just type it into the Python interpreter to quickly see what happens.
+
+Here are some examples for you to try in the terminal on the right:
     
 ```bash    
 $ python        ## Run the Python interpreter
@@ -32,4 +34,4 @@ NameError: name 'foo' is not defined
 
 As you can see above, it's easy to experiment with variables and operators. Also, the interpreter throws, or raises in Python parlance, a runtime error if the code tries to read a variable that has not been assigned a value. 
 
-Like C++ and Java, Python is case sensitive so `a` and `A` are different variables. The end of a line marks the end of a statement, so unlike C++ and Java, Python does not require a semicolon at the end of each statement. Comments begin with a '#' and extend to the end of the line.
+Like C++ and Java, Python is case sensitive so `a` and `A` are different variables. The end of a line marks the end of a statement, so unlike C++ and Java, Python does not require a semicolon at the end of each statement. Comments begin with a `#` and extend to the end of the line.
