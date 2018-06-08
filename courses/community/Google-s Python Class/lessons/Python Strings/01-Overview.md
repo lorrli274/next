@@ -29,11 +29,11 @@ For numbers, the standard operators, `+`, `/`, and `*` work in the usual way. Th
 
 The `print` operator prints out one or more python items followed by a newline. Leave a trailing comma at the end of the items to inhibit the newline. 
 
-A **raw** string literal is prefixed by an `r` and passes all the chars through without special treatment of backslashes, so r`x\nx` evaluates to the length-4 string `xnx`'. A `u` prefix allows you to write a unicode string literal.
+A **raw** string literal is prefixed by an `r` and passes all the chars through without special treatment of backslashes, so `r'x\nx'` evaluates to the length-4 string `x\nx`. A `u` prefix allows you to write a unicode string literal.
 
 ```python
-raw = r'thistn and that'
-print raw     ## thistn and that
+raw = r'this\t\n and that'
+print raw     ## this\t\n and that
 
 multi = """It was the best of times.
 It was the worst of times."""
