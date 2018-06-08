@@ -17,5 +17,5 @@ b = colors   ## Does not copy the list
 
 ![](https://github.com/Codevolve/next/blob/master/courses/community/Google-s%20Python%20Class/Assets/list03.png?raw=true)
 
-The empty list is just an empty pair of brackets `[ ]`. The `+` works to append two lists, so [1, 2] + [3, 4] yields [1, 2, 3, 4]. This is just like `+` with strings.
+The empty list is just an empty pair of brackets `[ ]`. The `+` works to append two lists, so `[1, 2] + [3, 4]` yields `[1, 2, 3, 4]`. This is just like `+` with strings.
 
