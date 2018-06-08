@@ -32,7 +32,7 @@ The ```:= ``` syntax is shorthand for declaring and initializing a variable, e.g
     ```
     f := "short"
     fmt.Println(f)
-}
+    }
     ```
 ```
 $ go run variables.go
