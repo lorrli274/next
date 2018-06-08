@@ -8,9 +8,9 @@ u'A unicode u018e string xf1'
 
 A unicode string is a different type of object from regular `str` string, but the unicode string is compatible. The various libraries such as regular expressions work correctly if passed a unicode string instead of a regular string.
 
-info> A unicode string and the refulat `str` string share a common superclass `basestring`
+info> A unicode string and the `str` string share a common superclass `basestring`.
 
-To convert a unicode string to bytes with an encoding such as `utf-8`, call the `ustring.encode` (`utf-8`) method on the unicode string. Going the other direction, the unicode function converts encoded plain bytes to a unicode string:
+To convert a unicode string to bytes with an encoding such as `utf-8`, call the `ustring.encode('utf-8')` method on the unicode string. Going the other direction, the unicode function converts encoded plain bytes to a unicode string:
     
 ```python    
 ## (ustring from above contains a unicode string)
@@ -23,4 +23,4 @@ To convert a unicode string to bytes with an encoding such as `utf-8`, call the 
 True
 ```    
 
-The built-in print does not work fully with unicode strings. You can `encode()` first to print in `utf-8`.
+The built-in print does not work fully with unicode strings. You can `encode()` first to print in utf-8.
