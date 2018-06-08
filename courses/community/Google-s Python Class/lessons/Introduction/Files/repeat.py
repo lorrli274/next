@@ -12,7 +12,7 @@ def repeat(s, exclaim):
 
 def main():
     print (repeat('Yay', False))      ## YayYayYay
-    print (repeat('Woo Hoo', True))  ## Woo HooWoo HooWoo Hoo!!! 
+    print (repeat('Woo Hoo', True))   ## Woo HooWoo HooWoo Hoo!!! 
 
 if __name__== "__main__":
   main()
