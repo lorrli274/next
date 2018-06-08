@@ -1,4 +1,4 @@
-As an alternative to `sorted()`, the `sort()` method on a list sorts that list into ascending order. Example: `list.sort()`. The `**sort()**` method changes the underlying list and returns None, so use it like this:
+As an alternative to `sorted()`, the `sort()` method on a list sorts that list into ascending order. Example: `list.sort()`. The `sort()` method changes the underlying list and returns `None`, so use it like this:
     
 ```python    
 alist.sort()            ## correct
