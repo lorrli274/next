@@ -33,7 +33,7 @@ A **raw** string literal is prefixed by an `r` and passes all the chars through 
 
 ```python
 raw = r'this\t\n and that'
-print raw     ## this\t\n and that
+print (raw)     ## this\t\n and that
 
 multi = """It was the best of times.
 It was the worst of times."""
