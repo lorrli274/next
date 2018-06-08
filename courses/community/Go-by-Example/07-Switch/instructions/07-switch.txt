@@ -26,7 +26,7 @@ Here’s a basic  ``` switch ```.
     ```
 
 
-    ``` switch ``` without an expression is an alternate way to express ``` if/else ``` logic. Here we also show how the ``` case ``` expressions can be non-constants.
+   A  ``` switch ``` without an expression is an alternate way to express ``` if/else ``` logic. Here we also show how the ``` case ``` expressions can be non-constants.
 
 
     ```
