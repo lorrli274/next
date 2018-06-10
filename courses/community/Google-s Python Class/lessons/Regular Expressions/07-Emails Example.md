@@ -1,4 +1,4 @@
-Suppose you want to find the email address inside the string **xyz alice-b@google.com purple monkey**. We'll use this as a running example to demonstrate more regular expression features. Here's an attempt using the pattern `r'\w+@\w+'`:
+Suppose you want to find the email address inside the string **xyz alice-b<!--- breaking hyperlink --->@google.com purple monkey**. We'll use this as a running example to demonstrate more regular expression features. Here's an attempt using the pattern `r'\w+@\w+'`:
     
 ```python    
 str = 'purple alice-b@google.com monkey dishwasher'
