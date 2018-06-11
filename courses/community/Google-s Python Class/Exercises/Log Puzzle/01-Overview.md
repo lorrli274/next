@@ -11,4 +11,4 @@ Here is what a single line from the log file looks like (this really is what apa
 200 5910 "-" "Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.8.1.4) Gecko/20070515 Firefox/2.0.0.4"
 ```
 
-The first few numbers are the address of the requesting browser. The most interesting part is the "GET _path_ HTTP" showing the path of a web request received by the server. The path itself never contain spaces, and is separated from the GET and HTTP by spaces (regex suggestion: S (upper case S) matches any non-space char). Find the lines in the log where the string "puzzle" appears inside the path, ignoring the many other lines in the log.
+The first few numbers are the address of the requesting browser. The most interesting part is the `GET /path/ HTTP` showing the path of a web request received by the server. The path itself never contain spaces, and is separated from the `GET` and `HTTP` by spaces (regex suggestion: `\S` (upper case S) matches any non-space char). Find the lines in the log where the string **puzzle** appears inside the path, ignoring the many other lines in the log.
