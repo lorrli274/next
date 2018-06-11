@@ -1,4 +1,4 @@
-In the *Babynames.py* file, implement the `extract_names(filename)` function which takes the filename of a *baby1990.html* file and returns the data from the file as a single list. The year string at the start of the list followed by the name-rank strings in alphabetical order. [`2006`, `Aaliyah 91`, `Abagail 895`, `Aaron 57`, ...]. 
+In the *babynames.py* file, implement the `extract_names(filename)` function which takes the filename of a *baby1990.html* file and returns the data from the file as a single list. The year string at the start of the list followed by the name-rank strings in alphabetical order. [`2006`, `Aaliyah 91`, `Abagail 895`, `Aaron 57`, ...]. 
 
 Modify `main()` so it calls your `extract_names()` function and prints what it returns (main already has the code for the command line argument parsing). If you get stuck working out the regular expressions for the year and each name, solution regular expression patterns are shown at the end of this document. 
 
@@ -14,8 +14,8 @@ Printing the data you have at the end of one milestone helps you think about how
 * Find and extract the year and print it 
 * Extract the names and rank numbers and print them 
 * Get the names data into a dict and print it 
-* Build the [year, 'name rank', ... ] list and print it 
-* Fix `main()` to use the ExtractNames list 
+* Build the `[year, 'name rank', ... ]` list and print it 
+* Fix `main()` to use the `ExtractNames` list 
 
 Earlier we have had functions just print to standard out. It's more re-usable to have the function **return** the extracted data, so then the caller has the choice to print it or do something else with it. (You can still print directly from inside your functions for your little experiments during development.)
 
