@@ -17,7 +17,7 @@ This syntax creates a new ``` struct ```.
 func main() {
   fmt.Println(person{"Bob", 20})
 ```
-You can name the fields when initializing a ``` struct ```.
+You can name the fields when ** initializing ** a ``` struct ```.
 ```
     fmt.Println(person{name: "Alice", age: 30})
 ```
@@ -25,7 +25,7 @@ You can name the fields when initializing a ``` struct ```.
 ```
     fmt.Println(person{name: "Fred"})
 ```
-** Ann ** & prefix yields a ** pointer ** to the ``` struct ```.
+** Ann ** & ** prefix ** yields a ** pointer ** to the ``` struct ```.
 ```
     fmt.Println(&person{name: "Ann", age: 40})
 ```
