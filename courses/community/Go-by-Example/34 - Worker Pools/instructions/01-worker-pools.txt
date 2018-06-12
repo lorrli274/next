@@ -1,3 +1,5 @@
+# Lesson 34: Worker Pools
+
 In this example we’ll look at how to implement a worker pool using goroutines and channels.
 
 ```
