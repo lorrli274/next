@@ -8,4 +8,36 @@ The ``` <-timer1.C ``` blocks on the timer’s channel C until it sends a value 
 
 If you just wanted to wait, you could have used ``` time ```.Sleep. One reason a timer may be useful is that you can cancel the timer before it expires. Here’s an example of that.
 
+```
+package main
+
+import "time"
+import "fmt"
+
+func main() {
+
+      timer1 := time.NewTimer(2 * time.Second)
+
+  
+     <-timer1.C
+    fmt.Println("Timer 1 expired")
+  
+   timer2 := time.NewTimer(time.Second)
+    go func() {
+        <-timer2.C
+        fmt.Println("Timer 2 expired")
+    }()
+    stop2 := timer2.Stop()
+    if stop2 {
+        fmt.Println("Timer 2 stopped")
+    }
+}
+```
+
 The first timer will expire ~2s after we start the program, but the second should be stopped before it has a chance to expire.
+
+```
+$ go run timers.go
+Timer 1 expired
+Timer 2 stopped
+```
