@@ -1,4 +1,5 @@
-## Go supports constants of character, string, boolean, and numeric values.
+## Go by Example: Constants 
+Go supports ** constants ** of character, string, boolean, and numeric values.
 ```
 package main
 
