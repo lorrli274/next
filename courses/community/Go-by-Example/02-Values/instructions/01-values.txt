@@ -1,5 +1,5 @@
-### Go by Example: Values
-## Go has various value types including strings, integers, floats, booleans, etc. Here are a few basic examples.
+## Go by Example: Values
+Go has various value types including strings, integers, floats, booleans, etc. Here are a few basic examples.
 ```
 package main
 import "fmt"
@@ -21,6 +21,6 @@ true
 false
 ```
 
-Strings, which can be added together with ``` + ```.
+``` String ``` s, which can be added together with ``` + ```.
 Integers and floats.
 Booleans, with boolean operators as you’d expect.
