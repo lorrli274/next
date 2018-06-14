@@ -1,6 +1,6 @@
 # Lesson 54: SHA1 Hashes
 
-[SHA1 hashes](https://en.wikipedia.org/wiki/SHA-1) are frequently used to compute short identities for binary or text blobs. For example, the [git revision control system](https://git-scm.com/) uses SHA1s extensively to identify versioned files and directories. Here’s how to compute SHA1 hashes in Go.
+[**SHA1 hashes**](https://en.wikipedia.org/wiki/SHA-1) are frequently used to compute short identities for binary or text blobs. For example, the [git revision control system](https://git-scm.com/) uses SHA1s extensively to identify versioned files and directories. Here’s how to compute SHA1 hashes in Go.
 
 
 ```
