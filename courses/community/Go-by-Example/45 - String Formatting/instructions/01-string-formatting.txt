@@ -25,12 +25,12 @@ The `%#v` variant prints a Go syntax representation of the value, i.e. the sourc
 To print the type of a value, use `%T`.
 ```    
     fmt.Printf("%T\n", p)
-``
+```
 
 
 Formatting booleans is straight-forward.
 ``` 
-    fmt.Printf("%t\n", true
+    fmt.Printf("%t\n", true)
 ```
 
 
