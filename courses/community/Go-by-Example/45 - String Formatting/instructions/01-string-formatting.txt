@@ -133,12 +133,12 @@ So far we’ve seen `Printf`, which prints the formatted string to `os.Stdout`. 
 
 
 You can format+print to `io.Writers` other than `os.Stdout` using `Fprintf`.
-```
+```go
     fmt.Fprintf(os.Stderr, "an %s\n", "error")    
 ```
 
 
-```
+```bash
 $ go run string-formatting.go
 {1 2}
 {x:1 y:2}
