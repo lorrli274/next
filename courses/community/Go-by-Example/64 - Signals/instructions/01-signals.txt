@@ -1,6 +1,6 @@
 # Lesson 64: Signals
 
-Sometimes we’d like our Go programs to intelligently handle [Unix signals](https://en.wikipedia.org/wiki/Signal_/IPC\)). For example, we might want a server to gracefully shutdown when it receives a `SIGTERM`, or a command-line tool to stop processing input if it receives a `SIGINT`. Here’s how to handle signals in Go with channels.
+Sometimes we’d like our Go programs to intelligently handle [Unix signals](https://en.wikipedia.org/wiki/Signal_/IPC)\). For example, we might want a server to gracefully shutdown when it receives a `SIGTERM`, or a command-line tool to stop processing input if it receives a `SIGINT`. Here’s how to handle signals in Go with channels.
 
 
 Go signal notification works by sending `os.Signal` values on a channel. We’ll create a channel to receive these notifications (we’ll also make one to notify us when the program can exit).
