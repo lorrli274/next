@@ -3,7 +3,7 @@
 Rate limiting is an important mechanism for controlling resource utilization and maintaining quality of service. Go elegantly supports rate limiting with goroutines, channels, and `tickers`.
 
 First we’ll look at basic rate limiting. Suppose we want to limit our handling of incoming requests. We’ll serve these requests off a channel of the same name.
-```
+```go
     requests := make(chan int, 5)
     for i := 1; i <= 5; i++ {
         requests <- i
