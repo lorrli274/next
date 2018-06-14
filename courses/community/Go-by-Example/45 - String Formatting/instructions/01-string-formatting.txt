@@ -133,7 +133,7 @@ So far we’ve seen `Printf`, which prints the formatted string to `os.Stdout`. 
 
 
 You can format+print to `io.Writers` other than `os.Stdout` using `Fprintf`.
-```go
+```golang
     fmt.Fprintf(os.Stderr, "an %s\n", "error")    
 ```
 
