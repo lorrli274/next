@@ -1,0 +1,45 @@
+# Lesson 54: SHA1 Hashes
+
+SHA1 hashes[https://en.wikipedia.org/wiki/SHA-1] are frequently used to compute short identities for binary or text blobs. For example, the git revision control system[https://git-scm.com/] uses SHA1s extensively to identify versioned files and directories. Here’s how to compute SHA1 hashes in Go.
+
+```
+package main
+
+import "crypto/sha1"
+import "fmt"
+
+func main() {
+    s := "sha1 this string"
+    
+    h := sha1.New()
+
+    h.Write([]byte(s))
+
+    bs := h.Sum(nil)
+
+    fmt.Println(s)
+    fmt.Printf("%x\n", bs)
+}
+```
+
+Go implements several hash functions in various crypto/* packages.
+
+The pattern for generating a hash is sha1.New(), sha1.Write(bytes), then sha1.Sum([]byte{}). Here we start with a new hash.
+
+Write expects bytes. If you have a string s, use []byte(s) to coerce it to bytes.
+
+This gets the finalized hash result as a byte slice. The argument to Sum can be used to append to an existing byte slice: it usually isn’t needed.
+
+SHA1 values are often printed in hex, for example in git commits. Use the %x format verb to convert a hash results to a hex string.
+
+Running the program computes the hash and prints it in a human-readable hex format.
+
+```
+$ go run sha1-hashes.go
+sha1 this string
+cf23df2207d99a74fbe169e3eba035e633b65d94
+```
+
+You can compute other hashes using a similar pattern to the one shown above. For example, to compute MD5 hashes import crypto/md5 and use md5.New().
+
+Note that if you need cryptographically secure hashes, you should carefully research hash strength[https://en.wikipedia.org/wiki/Cryptographic_hash_function]!
