@@ -164,5 +164,3 @@ true
 a string
 an error
 ```
-
-You can format+print to io.Writers other than os.Stdout using Fprintf.
