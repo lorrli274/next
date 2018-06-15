@@ -3,8 +3,8 @@ Welcome! This course is based off [Google's Python Course](https://developers.go
 * Strings
 * Lists
 * Sorting
-* Dicts and files
+* Dictonaries and Files
 * Regular Expressions
 * Utilities
 
-Lets get started in the next step with a brief introduction to what Python is. Enjoy!
+Let's get started in the next step with a brief introduction to what Python is. Enjoy!

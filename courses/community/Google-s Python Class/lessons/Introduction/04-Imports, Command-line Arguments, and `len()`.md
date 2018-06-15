@@ -4,4 +4,4 @@ A Python module can be run directly, or it can be imported and used by some othe
 
 In a standard Python program, the list `sys.argv` contains the command-line arguments in the standard way with `sys.argv[0]` being the program itself, `sys.argv[1]` being the first argument, and so on. 
 
-If you know about `argc`, or the number of arguments, you can simply request this value from Python with `len(sys.argv)`, just like we did in the interactive interpreter code above when requesting the length of a string. In general, `len()` can tell you how long a string is, the number of elements in lists and tuples, and the number of key-value pairs in a dictionary.
+If you know about `argc`, or the number of arguments, you can simply request this value from Python with `len(sys.argv)`, just like we did in the interactive interpreter code in the last step when requesting the length of a string. In general, `len()` can tell you how long a string is, the number of elements in lists and tuples, and the number of key-value pairs in a dictionary.
