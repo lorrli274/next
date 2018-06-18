@@ -1,11 +1,6 @@
 ## Go by Example: Recursion
 Go supports ** recursive functions **. Here’s a classic factorial example.
-```
-package main
-
-import "fmt"
-```
-This ``` fact ``` function calls itself until it reaches the base case of ``` fact(0) ```.
+This ``` fact ``` function calls itself until it reaches the ** base case ** of ``` fact(0) ```.
 ```
 func fact(n int) int {
     if n == 0 {
@@ -18,8 +13,9 @@ func main() {
     fmt.Println(fact(7))
 }
 ```
+Below is an example of the program output:
 ```
 $ go run recursion.go 
 5040
 ```
-Next example: ** Pointers **. 
+Next example: * Pointers *. 
