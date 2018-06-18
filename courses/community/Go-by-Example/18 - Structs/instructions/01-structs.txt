@@ -29,7 +29,7 @@ Access ``` struct ``` fields with a  dot ```.```
     s := person{name: "Sean", age: 50}
     fmt.Println(s.name)
 ```
-You can also use ** dots ** with ** struct pointers ** - the pointers are automatically ** dereferenced **.
+You can also use dots with struct pointers - the pointers are automatically  dereferenced.
 ```
     sp := &s
     fmt.Println(sp.age)
