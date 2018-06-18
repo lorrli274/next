@@ -1,13 +1,5 @@
 ## Go by Example: For
 ``` for ``` is Go’s only looping construct. Here are three basic types of ``` for  ```loops.
-```
-package main
-
-import "fmt"
-
-func main() {
-```
-
 The most basic type, with a single condition.
 ```
 i := 1
@@ -37,13 +29,10 @@ You can also ``` continue ``` to the next iteration of the loop.
         }
         fmt.Println(n)
     }
-}
 ```
-
 We’ll see some other for forms later when we look at range statements, channels, and other data structures.
-
+Below is an example of the program output:
 ```
-
 $ go run for.go
 1
 2
