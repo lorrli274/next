@@ -16,5 +16,6 @@ $ ls
 hello-world	hello-world.go
 $ ./hello-world'
 ```
-To run the program, put the code in * hello-world.go * and use go run or press the green "Run Code" button at the bottom of the editor.
+To run the program, put the code in * hello-world.go * and use go < run > or press the green "Run Code" button 
+at the bottom of the editor.
 Now that we can run and build basic Go programs, let’s learn more about the language.
