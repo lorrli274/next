@@ -34,6 +34,7 @@ f := "short"
 fmt.Println(f)
 }
 ```
+Below is an example of the program output:
 ```
 $ go run variables.go
 initial
