@@ -1,22 +1,15 @@
 ## Go by Example: Maps
-** Maps ** are Go’s built-in associative data type (sometimes called hashes or dicts in other languages).
-```
-package main
-
-import "fmt"
-
-func main() {
-```
-To create an empty map, use the builtin make: ``` make(map[key-type]val-type) ```.
+** Maps ** are Go’s built-in associative data type (sometimes called ** hashes ** or ** dicts ** in other languages).
+To create an empty map, use the builtin ``` make: make(map[key-type]val-type) ```.
 ```
  m := make(map[string]int)
- ```
+```
  Set ** key/value pairs ** using typical ``` name[key] = val syntax ```.
  ```
     m["k1"] = 7
     m["k2"] = 13
  ```
- ** Printing ** a map with e.g. ``` fmt.Println ``` will show all of its key/value pairs.
+ Printing a map with e.g. ``` fmt.Println ``` will show all of its key/value pairs.
  ```
     fmt.Println("map:", m)
 ```
@@ -35,7 +28,7 @@ The builtin ``` delete ```removes key/value pairs from a map.
     fmt.Println("map:", m)
 ```
 The optional second return value when getting a value from a map indicates if the key was present in the map. 
-This can be used to disambiguate between missing keys and keys with zero values like** 0 ** or "". 
+This can be used to disambiguate between missing keys and keys with zero values like** 0 ** or ** "" **. 
 Here we didn’t need the value itself, so we ignored it with the blank identifier _.
 ```
     _, prs := m["k2"]
@@ -48,6 +41,7 @@ You can also ** declare and initialize ** a new map in the same line with this s
 }
 ```
 Note that maps appear in the form ** map[k:v k:v] ** when printed with ``` fmt.Println ```.
+Below is an example of the program output:
 ```
 $ go run maps.go 
 map: map[k1:7 k2:13]
