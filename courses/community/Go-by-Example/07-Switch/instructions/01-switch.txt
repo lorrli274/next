@@ -1,5 +1,5 @@
 ## Go by Example: Switch
-Switch statements express conditionals across many branches.
+``` Switch ``` statements express conditionals across many branches.
 
 Here’s a basic  ``` switch ```.
 ```
@@ -24,7 +24,7 @@ Here’s a basic  ``` switch ```.
         fmt.Println("It's a weekday")
     }
 ```
-A  ``` switch ``` without an expression is an alternate way to express ``` if/else ``` logic. Here we also show how the ``` case ``` expressions can be non-constants.
+A  ``` switch ``` without an expression is an alternate way to express ``` if ``` ``` else ``` logic. Here we also show how the ``` case ``` expressions can be non-constants.
 ```
     t := time.Now()
     switch {
@@ -47,6 +47,7 @@ A ``` type switch ``` compares types instead of values. You can use this to disc
         }
     }
  ```
+ Below is an example of the program output:
  ```
 $ go run switch.go 
 Write 2 as two
