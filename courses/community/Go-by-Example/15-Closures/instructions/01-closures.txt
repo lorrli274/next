@@ -1,10 +1,6 @@
 ## Go by Example: Closures
 Go supports ** anonymous functions **, which can form ** closures **. 
 Anonymous functions are useful when you want to define a function inline without having to name it.
-```
-package main
-import "fmt"
-```
 This function ``` intSeq ``` returns another function, which we define anonymously in the body of ``` intSeq ```. 
 The returned function closes over the variable ``` i ``` to form a closure.
 ```
@@ -34,6 +30,7 @@ To confirm that the state is unique to that particular function, create and test
     fmt.Println(newInts())
   }
 ```
+Below is an example of the program output:
 ```
 $ go run closures.go
 1
@@ -41,4 +38,4 @@ $ go run closures.go
 3
 1
 ```
-The last feature of functions we’ll look at for now is ** recursion **.
+The last feature of functions we’ll look at for now is * recursion *.
