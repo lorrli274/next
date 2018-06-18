@@ -1,12 +1,6 @@
 ## Go by Example: Slices
-** Slices ** are a key data type in Go, giving a more powerful interface to sequences than ** arrays **.
-```
-package main
+** Slices ** are a key data type in Go, giving a more powerful interface to sequences than arrays.
 
-import "fmt"
-
-func main() {
-```
 Unlike arrays , slices are typed only by the elements they contain (not the number of elements). To create an empty slice with 
 non-zero length, use the builtin make. 
 Here we make a slice of strings of length ** 3 ** (initially zero-valued).
@@ -34,15 +28,15 @@ Note that we need to accept a return value from ``` append ``` as we may get a n
     s = append(s, "e", "f")
     fmt.Println("apd:", s)
 ```
-Slices can also be ** copy **’d. Here we create an empty slice ``` c ``` of the same length as ``` s ```and
-copy into ``` c``` from ``` s ```.
+Slices can also be copy’d. Here we create an empty slice ``` c ``` of the same length as ``` s ```and
+``` copy ``` into ``` c``` from ``` s ```.
 ```
     c := make([]string, len(s))
     copy(c, s)
     fmt.Println("cpy:", c)
 ```
-Slices support a ** slice ** operator with the syntax ``` slice[low:high] ```. 
-For example, this gets a slice of the elements ``` s[2], s[3], and s[4]```.
+Slices support a ``` slice ``` operator with the syntax ``` slice[low:high] ```. 
+For example, this gets a slice of the elements ``` s[2] ```, ``` s[3] ```, and ``` s[4]```.
 ```
     l := s[2:5]
     fmt.Println("sl1:", l)
@@ -90,6 +84,4 @@ sl3: [c d e f]
 dcl: [g h i]
 2d:  [[0] [1 2] [2 3 4]]
 ```
-Check out this great blog post by the Go team for more details on the design and implementation of slices in Go.
-
-Now that we’ve seen arrays and slices we’ll look at Go’s other key builtin data structure: ** maps **.
+Now that we’ve seen arrays and slices we’ll look at Go’s other key builtin data structure: * maps *.
