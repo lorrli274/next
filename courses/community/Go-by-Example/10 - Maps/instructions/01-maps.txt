@@ -51,3 +51,4 @@ map: map[k1:7]
 prs: false
 map: map[foo:1 bar:2]
 ```
+Next example:* Range *. 
