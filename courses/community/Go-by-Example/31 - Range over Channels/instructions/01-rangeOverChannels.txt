@@ -8,7 +8,7 @@ import "fmt"
 
 func main() {
 ```
-We’ll iterate over ** 2 ** values in the ``` queue ``` channel.
+We’ll iterate over 2 values in the ``` queue ``` channel.
 ```
     queue := make(chan string, 2)
     queue <- "one"
@@ -23,11 +23,11 @@ Because we closed the channel above, the iteration terminates after receiving th
     }
 }
 ```
-Output
+Below is an example of the program output:
 ```
 $ go run range-over-channels.go
 one
 two
 ```
 This example also showed that it’s possible to close a non-empty channel but still have the remaining values be received.
-Next example: ** Timers **. 
+Next example: * Timers *. 
