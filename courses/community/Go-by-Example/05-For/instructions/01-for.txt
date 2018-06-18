@@ -30,7 +30,7 @@ You can also ``` continue ``` to the next iteration of the loop.
         fmt.Println(n)
     }
 ```
-We’ll see some other for forms later when we look at range statements, channels, and other data structures.
+We’ll see some other ``` for ``` forms later when we look at ``` range ``` statements, channels, and other data structures.
 Below is an example of the program output:
 ```
 $ go run for.go
