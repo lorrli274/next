@@ -70,6 +70,7 @@ Slices can be composed into ** multi-dimensional data structures **. The length 
 }
 ```
 Note that while  slices  are different types than arrays, they are rendered similarly by ``` fmt.Println ```.
+Below is an example of the program output:
 ```
 $ go run slices.go
 emp: [  ]
