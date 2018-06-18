@@ -1,19 +1,16 @@
 ## Go by Example: Interfaces
 ** Interfaces ** are named collections of method signatures.
 ```
-package main
-
-import "fmt"
 import "math"
 ```
-Here’s a basic interface for ** geometric shapes **.
+Here’s a basic interface for ``` geometric shapes ```.
 ```
 type geometry interface {
     area() float64
     perim() float64
 }
 ```
-For our example we’ll implement this interface on ** rect ** and ** circle **types.
+For our example we’ll implement this interface on ``` rect ``` and ``` circle ``` types.
 ```
 type rect struct {
     width, height float64
@@ -22,7 +19,7 @@ type circle struct {
     radius float64
 }
 ```
-To ** implement ** an interface in Go, we just need to implement all the methods in the interface.
+To implement an interface in Go, we just need to implement all the methods in the interface.
 Here we implement  ``` geometry ``` on ``` rects```.
 ```
 func (r rect) area() float64 {
@@ -60,6 +57,7 @@ func main() {
     measure(c)
 }
 ```
+Below is an example of the program output:
 ```
 $ go run interfaces.go
 {3 4}
@@ -69,5 +67,4 @@ $ go run interfaces.go
 78.53981633974483
 31.41592653589793
 ```
-To learn more about Go’s interfaces, check out this great blog post.
-Next example: ** Errors **. 
+Next example: * Errors *. 
