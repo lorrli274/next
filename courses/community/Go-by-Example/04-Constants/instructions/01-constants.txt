@@ -32,7 +32,7 @@ or function call. For example, here ``` math.Sin ``` expects a ``` float64 ```.
   fmt.Println(math.Sin(n))
 }
 ```
-
+Below is an example of the program output.
 ```
 $ go run constant.go 
 constant
