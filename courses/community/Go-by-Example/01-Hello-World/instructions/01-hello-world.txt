@@ -6,6 +6,9 @@ import "fmt"
 func main() {
     fmt.Println("hello world")
 }
+```
+The Output:
+```
 $ go run hello-world.go
 hello world
 $ go build hello-world.go
