@@ -1,39 +1,31 @@
 ## Go by Example: Constants 
 Go supports ** constants ** of character, string, boolean, and numeric values.
-```
-package main
-
-import "fmt"
-import "math"
-```
 ``` const ``` declares a constant value.
-
-```
+```go
 const s string = "constant"
 func main() {
 fmt.Println(s)
 ```
 A ``` const ``` statement can appear anywhere a ``` var ``` statement can.
-```
+```go
 const n = 500000000
 ```
 Constant expressions perform arithmetic with arbitrary precision.
-```
+```go
 const d = 3e20 / n
 fmt.Println(d)
 ```
 A numeric constant has no type until it’s given one, such as by an explicit cast.
-```
+```go
 fmt.Println(int64(d))
 ```
 A number can be given a type by using it in a context that requires one, such as a variable assignment
 or function call. For example, here ``` math.Sin ``` expects a ``` float64 ```.
-```
+```go
   fmt.Println(math.Sin(n))
-}
 ```
 Below is an example of the program output.
-```
+```go
 $ go run constant.go 
 constant
 6e+11
