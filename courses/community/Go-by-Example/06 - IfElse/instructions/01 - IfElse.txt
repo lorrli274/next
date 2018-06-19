@@ -1,7 +1,7 @@
 ## Go by Example: If/Else
 Branching with ``` if ``` and ``` else ``` in Go is straight-forward.
 Here’s a basic example
-```
+```go
    if 7%2 == 0 {
         fmt.Println("7 is even")
     } else {
@@ -9,14 +9,14 @@ Here’s a basic example
     }
 ```
 You can have an ``` if ```statement without an ``` else ```.
-```
+```go
 if 8%4 == 0 {
         fmt.Println("8 is divisible by 4")
     }
-```
+```go
 A statement can precede ** conditionals **; any variables declared in this statement are available in all branches.
 Note that you don’t need parentheses around conditions in Go, but that the braces are required.
-```
+```go
 if num := 9; num < 0 {
         fmt.Println(num, "is negative")
     } else if num < 10 {
@@ -27,7 +27,7 @@ if num := 9; num < 0 {
 }
 ```
 Below is an example of the program output:
-```
+```go
 $ go run if-else.go 
 7 is odd
 8 is divisible by 4
