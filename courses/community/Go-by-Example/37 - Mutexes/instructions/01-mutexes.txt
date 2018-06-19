@@ -1,6 +1,6 @@
-# Lesson 37: Mutexes
+## Go by Example: Mutexes
 
-In the previous example we saw how to manage simple counter state using `atomic operations`. For more complex state we can use a `mutex` to safely access data across multiple goroutines.
+In the previous example we saw how to manage simple counter state using atomic operations. For more complex state we can use a `mutex` to safely access data across multiple goroutines.
 
 For our example the `state` will be a map.
 ```
@@ -87,6 +87,9 @@ readOps: 83285
 writeOps: 8320
 state: map[1:97 4:53 0:33 2:15 3:2]
 ```
-
+Here is a link that further explains the concept:
+http://en.wikipedia.org/wiki/Mutual_exclusion
 
 Next we’ll look at implementing this same state management task using only goroutines and channels.
+
+Next example:* Stateful Goroutines *. 
