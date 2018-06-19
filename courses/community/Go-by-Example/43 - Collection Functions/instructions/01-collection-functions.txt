@@ -1,4 +1,4 @@
-# Lesson 43: Collection Functions
+## Go by Example: Collection Functions
 
 We often need our programs to perform operations on collections of data, like selecting all items that satisfy a given predicate or mapping all items to a new collection with a custom function.
 
@@ -7,8 +7,8 @@ In some languages it’s idiomatic to use [generic](https://en.wikipedia.org/wik
 Here are some example collection functions for slices of `strings`. You can use these examples to build your own functions. Note that in some cases it may be clearest to just inline the collection-manipulating code directly, instead of creating and calling a helper function.
 
 
-Index returns the first index of the target string `t`, or `-1` if no match is found.
-```
+`Index` returns the first index of the target string `t`, or `-1` if no match is found.
+```go
 func Index(vs []string, t string) int {
     for i, v := range vs {
         if v == t {
@@ -20,8 +20,8 @@ func Index(vs []string, t string) int {
 ```
 
 
-Include returns `true` if the target string `t` is in the slice.
-```
+`Include` returns `true` if the target string `t` is in the slice.
+```go
 func Include(vs []string, t string) bool {
     return Index(vs, t) >= 0
 }
@@ -29,7 +29,7 @@ func Include(vs []string, t string) bool {
 
 
 Any returns `true` if one of the strings in the slice satisfies the predicate `f`.
-```
+```go
 func Any(vs []string, f func(string) bool) bool {
     for _, v := range vs {
         if f(v) {
@@ -42,7 +42,7 @@ func Any(vs []string, f func(string) bool) bool {
 
 
 All returns `true` if all of the strings in the slice satisfy the predicate `f`.
-```
+```go
 func All(vs []string, f func(string) bool) bool {
     for _, v := range vs {
         if !f(v) {
@@ -54,8 +54,8 @@ func All(vs []string, f func(string) bool) bool {
 ```
 
 
-Filter returns a new slice containing all strings in the slice that satisfy the predicate `f`.
-```
+`Filter` returns a new slice containing all strings in the slice that satisfy the predicate `f`.
+```go
 func Filter(vs []string, f func(string) bool) []string {
     vsf := make([]string, 0)
     for _, v := range vs {
@@ -69,7 +69,7 @@ func Filter(vs []string, f func(string) bool) []string {
 
 
 `Map` returns a new slice containing the results of applying the function `f` to each string in the original slice.
-```
+```go
 func Map(vs []string, f func(string) string) []string {
     vsm := make([]string, len(vs))
     for i, v := range vs {
@@ -81,7 +81,7 @@ func Map(vs []string, f func(string) string) []string {
 
 
 Here we try out our various collection functions.
-```
+```go
 func main() {
 
 var strs = []string{"peach", "apple", "pear", "plum"}
@@ -107,9 +107,8 @@ var strs = []string{"peach", "apple", "pear", "plum"}
 }
 ```
 The above examples all used anonymous functions, but you can also use named functions of the correct type.
-
-
-```
+Below is an example of the program output:
+```go
 $ go run collection-functions.go 
 2
 false
@@ -118,3 +117,5 @@ false
 [peach apple pear]
 [PEACH APPLE PEAR PLUM]
 ```
+
+Next example: *String Functions*. 
