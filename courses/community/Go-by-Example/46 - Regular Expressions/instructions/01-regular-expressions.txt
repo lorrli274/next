@@ -2,7 +2,6 @@
 
 Go offers built-in support for [regular expressions](https://en.wikipedia.org/wiki/Regular_expression). Here are some examples of common regexp-related tasks in Go.
 
-
 This tests whether a pattern matches a string.
 ```
     match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
