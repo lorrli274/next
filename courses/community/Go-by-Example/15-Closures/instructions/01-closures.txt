@@ -15,7 +15,6 @@ func intSeq() func() int {
 We call ``` intSeq ```, assigning the result (a function) to ``` nextInt ```. 
 This function value captures its own ``` i ``` value, which will be updated each time we call ``` nextInt ```.
 ```go
-func main() {
 nextInt := intSeq()
 ```
 See the effect of the closure by calling ``` nextInt ``` a few times.
@@ -28,7 +27,6 @@ To confirm that the state is unique to that particular function, create and test
 ```go
     newInts := intSeq()
     fmt.Println(newInts())
-  }
 ```
 Below is an example of the program output:
 ```go
