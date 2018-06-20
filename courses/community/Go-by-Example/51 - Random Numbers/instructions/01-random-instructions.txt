@@ -1,6 +1,6 @@
 ## Go by Example: Random Numbers
 
-Go’s math/rand package provides [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) generation.
+Go’s `math`/`rand` package provides [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) generation.
 
 For example, `rand.Intn` returns a random `int` n, 0 <= n < 100.
 ```go
