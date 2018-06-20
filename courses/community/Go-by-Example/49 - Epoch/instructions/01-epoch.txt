@@ -1,10 +1,10 @@
-# Lesson 49: Epoch
+## Go by Example: Epoch
 
 A common requirement in programs is getting the number of seconds, milliseconds, or nanoseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time). Here’s how to do it in Go.
 
 
 Use `time.Now` with Unix or `UnixNano` to get elapsed time since the Unix epoch in seconds or nanoseconds, respectively.
-```
+```go
     now := time.Now()
     secs := now.Unix()
     nanos := now.UnixNano()
@@ -13,7 +13,7 @@ Use `time.Now` with Unix or `UnixNano` to get elapsed time since the Unix epoch 
 
 
 Note that there is no `UnixMillis`, so to get the milliseconds since epoch you’ll need to manually divide from nanoseconds.
-```
+```go
     millis := nanos / 1000000
     fmt.Println(secs)
     fmt.Println(millis)
@@ -22,12 +22,12 @@ Note that there is no `UnixMillis`, so to get the milliseconds since epoch you�
 
 
 You can also convert integer seconds or nanoseconds since the epoch into the corresponding `time`.
-```
+```go
     fmt.Println(time.Unix(secs, 0))
     fmt.Println(time.Unix(0, nanos))
 ```
-
-```
+Below is an example of the program output:
+```go
 $ go run epoch.go 
 2012-10-31 16:13:58.292387 +0000 UTC
 1351700038
@@ -38,3 +38,5 @@ $ go run epoch.go
 ```
 
 Next we’ll look at another time-related task: time parsing and formatting.
+
+Next example: *Time Formatting / Parsing*. 
