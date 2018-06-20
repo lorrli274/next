@@ -1,36 +1,34 @@
-# Lesson 54: SHA1 Hashes
+## Go by Example: SHA1 Hashes
 
 [SHA1 hashes](https://en.wikipedia.org/wiki/SHA-1) are frequently used to compute short identities for binary or text blobs. For example, the [git revision control system](https://git-scm.com/) uses SHA1s extensively to identify versioned files and directories. Here’s how to compute SHA1 hashes in Go.
 
 
-```
+```go
 import "crypto/sha1"
 ```
 Go implements several hash functions in various `crypto/*` packages.
 
 
 The pattern for generating a hash is `sha1.New()`, `sha1.Write(bytes)`, then `sha1.Sum([]byte{})`. Here we start with a new hash.
-```
-    s := "sha1 this string"
-
+```go
     h := sha1.New()
 ```
 
 
 `Write` expects bytes. If you have a string `s`, use `[]byte(s)` to coerce it to bytes.
-```
+```go
     h.Write([]byte(s))
 ```
 
 
 This gets the finalized hash result as a byte slice. The argument to `Sum` can be used to append to an existing byte slice: it usually isn’t needed.
-```
+```go
     bs := h.Sum(nil)
 ```
 
 
 SHA1 values are often printed in hex, for example in git commits. Use the `%x` format verb to convert a hash results to a hex string.
-```
+```go
     fmt.Println(s)
     fmt.Printf("%x\n", bs)
 ```
@@ -38,7 +36,7 @@ SHA1 values are often printed in hex, for example in git commits. Use the `%x` f
 
 
 Running the program computes the hash and prints it in a human-readable hex format.
-```
+```go
 $ go run sha1-hashes.go
 sha1 this string
 cf23df2207d99a74fbe169e3eba035e633b65d94
