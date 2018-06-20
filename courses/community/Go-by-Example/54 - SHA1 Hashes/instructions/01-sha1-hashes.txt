@@ -2,12 +2,10 @@
 
 [SHA1 hashes](https://en.wikipedia.org/wiki/SHA-1) are frequently used to compute short identities for binary or text blobs. For example, the [git revision control system](https://git-scm.com/) uses SHA1s extensively to identify versioned files and directories. Here’s how to compute SHA1 hashes in Go.
 
-
+Go implements several hash functions in various `crypto/*` packages.
 ```go
 import "crypto/sha1"
 ```
-Go implements several hash functions in various `crypto/*` packages.
-
 
 The pattern for generating a hash is `sha1.New()`, `sha1.Write(bytes)`, then `sha1.Sum([]byte{})`. Here we start with a new hash.
 ```go
