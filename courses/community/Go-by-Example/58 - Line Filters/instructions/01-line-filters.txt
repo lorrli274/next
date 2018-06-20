@@ -39,8 +39,8 @@ Check for errors during `Scan`. End of file is expected and not reported by `Sca
 
 To try out our line filter, first make a file with a few lowercase lines.
 ```go
-$ echo 'hello'   > /tmp/lines
-$ echo 'filter' >> /tmp/lines
+$ echo 'hello'   >  /root/sandbox/dat.txt
+$ echo 'filter' >>  /root/sandbox/dat.txt
 ```
 
 Then use the line filter to get uppercase lines.
