@@ -69,7 +69,7 @@ wrote 9 bytes
 ```
 
 Then check the contents of the written files.
-```
+```go
 $ cat /tmp/dat1
 hello
 go
