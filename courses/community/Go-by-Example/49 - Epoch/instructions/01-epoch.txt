@@ -3,7 +3,7 @@
 A common requirement in programs is getting the number of seconds, milliseconds, or nanoseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time). Here’s how to do it in Go.
 
 
-Use `time.Now` with Unix or `UnixNano` to get elapsed time since the Unix epoch in seconds or nanoseconds, respectively.
+Use `time.Now` with `Unix` or `UnixNano` to get elapsed time since the Unix epoch in seconds or nanoseconds, respectively.
 ```go
     now := time.Now()
     secs := now.Unix()
