@@ -1,10 +1,10 @@
-# Lesson 47: JSON
+## Go by Example: JSON
 
 Go offers built-in support for JSON encoding and decoding, including to and from built-in and custom data types.
 
 
 We’ll use these two structs to demonstrate encoding and decoding of custom types below.
-```
+```go
 type response1 struct {
     Page   int
     Fruits []string
@@ -17,7 +17,7 @@ type response2 struct {
 
 
 First we’ll look at encoding basic data types to JSON strings. Here are some examples for atomic values.
-```
+```go
 func main() {
 
     bolB, _ := json.Marshal(true)
@@ -35,7 +35,7 @@ func main() {
 
 
 And here are some for slices and maps, which encode to JSON arrays and objects as you’d expect.
-```    
+```go    
     slcD := []string{"apple", "peach", "pear"}
     slcB, _ := json.Marshal(slcD)
     fmt.Println(string(slcB))
@@ -47,7 +47,7 @@ And here are some for slices and maps, which encode to JSON arrays and objects a
     
     
 The JSON package can automatically encode your custom data types. It will only include exported fields in the encoded output and will by default use those names as the JSON keys.
-```
+```go
     res1D := &response1{
         Page:   1,
         Fruits: []string{"apple", "peach", "pear"}}
@@ -57,7 +57,7 @@ The JSON package can automatically encode your custom data types. It will only i
 
 
 You can use tags on struct field declarations to customize the encoded JSON key names. Check the definition of `response2` above to see an example of such tags.
-```    
+```go    
         res2D := &response2{
         Page:   1,
         Fruits: []string{"apple", "peach", "pear"}}
@@ -67,19 +67,19 @@ You can use tags on struct field declarations to customize the encoded JSON key 
 
 
 Now let’s look at decoding JSON data into Go values. Here’s an example for a generic data structure.
-```
+```go
     byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
 ```
 
 
 We need to provide a variable where the JSON package can put the decoded data. This `map[string]interface{}` will hold a map of strings to arbitrary data types.
-```
+```go
     var dat map[string]interface{}
 ```
 
 
 Here’s the actual decoding, and a check for associated errors.
-```
+```go
     if err := json.Unmarshal(byt, &dat); err != nil {
         panic(err)
     }
@@ -88,14 +88,14 @@ Here’s the actual decoding, and a check for associated errors.
 
 
 In order to use the values in the decoded map, we’ll need to cast them to their appropriate type. For example here we cast the value in `num` to the expected `float64` type.
-```
+```go
     num := dat["num"].(float64)
     fmt.Println(num)   
 ```
 
 
 Accessing nested data requires a series of casts.
-```
+```go
     strs := dat["strs"].([]interface{})
     str1 := strs[0].(string)
     fmt.Println(str1)
@@ -103,7 +103,7 @@ Accessing nested data requires a series of casts.
 
 
 We can also decode JSON into custom data types. This has the advantages of adding additional type-safety to our programs and eliminating the need for type assertions when accessing the decoded data.
-```    
+```go    
     str := `{"page": 1, "fruits": ["apple", "peach"]}`
     res := response2{}
     json.Unmarshal([]byte(str), &res)
@@ -113,15 +113,15 @@ We can also decode JSON into custom data types. This has the advantages of addin
    
    
 In the examples above we always used bytes and strings as intermediates between the data and JSON representation on standard out. We can also stream JSON encodings directly to `os.Writers` like `os.Stdout` or even HTTP response bodies.
-```
+```go
     enc := json.NewEncoder(os.Stdout)
     d := map[string]int{"apple": 5, "lettuce": 7}
     enc.Encode(d)
 ```
 
 
-
-```
+Below is an example of the program output:
+```go
 $ go run json.go
 true
 1
@@ -140,3 +140,5 @@ apple
 ```
 
 We’ve covered the basic of JSON in Go here, but check out the [JSON and Go](https://blog.golang.org/json-and-go) blog post and [JSON package docs](https://golang.org/pkg/encoding/json/) for more.
+
+Next example: *Time*. 
