@@ -15,7 +15,7 @@ func check(e error) {
 
 Perhaps the most basic file reading task is slurping a file’s entire contents into memory.
 ```go
-    dat, err := ioutil.ReadFile("/tmp/dat")
+    dat, err := ioutil.ReadFile("/root/sandbox/dat.txt")
     check(err)
     fmt.Print(string(dat))
 ```
@@ -23,7 +23,7 @@ Perhaps the most basic file reading task is slurping a file’s entire contents 
 
 You’ll often want more control over how and what parts of a file are read. For these tasks, start by `Open`ing a file to obtain an `os.File` value.
 ```go
-    f, err := os.Open("/tmp/dat")
+    f, err := os.Open("/root/sandbox/dat.txt")
     check(err)
 ```
 
