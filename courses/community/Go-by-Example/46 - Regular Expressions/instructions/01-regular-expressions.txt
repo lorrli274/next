@@ -108,3 +108,5 @@ a PEACH
 ```
 
 For a complete reference on Go regular expressions check the [regexp](https://golang.org/pkg/regexp/) package docs.
+
+Next example: *JSON*. 
