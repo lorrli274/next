@@ -2,7 +2,7 @@
 
 Go’s `math`/`rand` package provides [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) generation.
 
-For example, `rand.Intn` returns a random `int` n, 0 <= n < 100.
+For example, `rand.Intn` returns a random `int` n, `0 <= n < 100`.
 ```go
     fmt.Print(rand.Intn(100), ",")
     fmt.Print(rand.Intn(100))
@@ -10,7 +10,7 @@ For example, `rand.Intn` returns a random `int` n, 0 <= n < 100.
 ```
 
 
-`rand.Float64` returns a `float64` f, 0.0 <= f < 1.0.
+`rand.Float64` returns a `float64` f, `0.0 <= f < 1.0`.
 ```go
     fmt.Println(rand.Float64())
 
