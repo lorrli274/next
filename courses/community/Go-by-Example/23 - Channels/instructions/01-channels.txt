@@ -1,35 +1,29 @@
 ## Go by Example: Channels
 ** Channels ** are the pipes that connect concurrent goroutines. 
 You can send values into channels from one goroutine and receive those values into another goroutine.
-```
-package main
-
-import "fmt"
-
-func main() {
-```
 Create a new channel with ``` make(chan val-type) ```. Channels are typed by the values they convey.
-```
+```go
     messages := make(chan string)
 ```
 Send a value into a channel using the channel ``` <- syntax ```.
-Here we send ** ping ** to the ``` messages ``` channel we made above, from a new goroutine.
-```
+Here we send ``` ping ``` to the ``` messages ``` channel we made above, from a new goroutine.
+```go
     go func() { messages <- "ping" }()
 ```
 The ``` <-channel ``` syntax receives a value from the channel.
-Here we’ll receive the ** ping ** message we sent above and print it out.
-```
+Here we’ll receive the ``` ping ``` message we sent above and print it out.
+```go
     msg := <-messages
     fmt.Println(msg)
 }
 ```
-When we run the program the ** ping ** message is successfully passed from one goroutine to another via our channel.
-```
+When we run the program the ``` ping ``` message is successfully passed from one goroutine to another via our channel.
+Below is an example of the program output:
+```go
 $ go run channels.go 
 ping
 ```
 By default sends and receives block until both the sender and receiver are ready. 
-This property allowed us to wait at the end of our program for the ** ping ** message without having to use any other synchronization.
+This property allowed us to wait at the end of our program for the ``` ping ``` message without having to use any other synchronization.
 
-Next example: ** Channel Buffering **. 
+Next example: * Channel Buffering *. 

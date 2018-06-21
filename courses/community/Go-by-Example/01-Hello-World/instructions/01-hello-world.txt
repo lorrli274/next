@@ -1,21 +1,30 @@
 ## Go by Example: Hello World
 Our first program will print the classic “hello world” message. Here’s the full source code
 package main:
-```
+```go
 import "fmt"
 func main() {
     fmt.Println("hello world")
 }
+```
+To run the program, put the code in * hello-world.go * and use ``` go run ```.
+```go
 $ go run hello-world.go
 hello world
+```
+Sometimes we’ll want to build our programs into binaries. We can do this using ``` go buildc```.
+```go
 $ go build hello-world.go
 $ ls
 hello-world	hello-world.go
-$ ./hello-world'
 ```
-
-
-To run the program, put the code in *hello-world.go* and use go  ``` run ```.
-Sometimes we’ll want to build our programs into binaries. We can do this using go build
 We can then execute the built binary directly.
+```go
+$ ./hello-world
+hello world 
+```
+To run the program, put the code in * hello-world.go * and use go ``` run ``` or press the green "Run Code" button 
+at the bottom of the editor.
+
 Now that we can run and build basic Go programs, let’s learn more about the language.
+Next example: * Values *. 

@@ -1,34 +1,29 @@
-# Lesson 59: Command-Line Arguments
+## Go by Example: Command-Line Arguments
 
-Command-line arguments[https://en.wikipedia.org/wiki/Command-line_interface#Arguments] are a common way to parameterize execution of programs. For example, go run hello.go uses run and hello.go arguments to the go program.
+[Command-line arguments](https://en.wikipedia.org/wiki/Command-line_interface#Arguments) are a common way to parameterize execution of programs. For example, `go run hello.go` uses `run` and `hello.go` arguments to the go program.
 
-```
-package main
 
-import "os"
-import "fmt"
 
-func main() {
-
+`os.Args` provides access to raw command-line arguments. Note that the first value in this slice is the path to the program, and `os.Args[1:]` holds the arguments to the program.
+```go
     argsWithProg := os.Args
     argsWithoutProg := os.Args[1:]
-    
-    arg := os.Args[3]
+```
+   
+   
+You can get individual args with normal indexing.
+```go    
+arg := os.Args[3]
     
     fmt.Println(argsWithProg)
     fmt.Println(argsWithoutProg)
     fmt.Println(arg)
-}
 ```
 
-os.Args provides access to raw command-line arguments. Note that the first value in this slice is the path to the program, and os.Args[1:] holds the arguments to the program.
-
-You can get individual args with normal indexing.
-
-To experiment with command-line arguments it’s best to build a binary with go build first.
 
 
-```
+To experiment with command-line arguments it’s best to build a binary with `go build` first.
+```go
 $ go build command-line-arguments.go
 $ ./command-line-arguments a b c d
 [./command-line-arguments a b c d]       
@@ -37,3 +32,5 @@ c
 ```
 
 Next we’ll look at more advanced command-line processing with flags.
+
+Next example: *Command-Line Flags*. 

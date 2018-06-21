@@ -18,7 +18,7 @@ func main() {
     
     fmt.Printf("%T\n", p)
     
-    fmt.Printf("%t\n", true
+    fmt.Printf("%t\n", true)
     
     fmt.Printf("%d\n", 123)
     
