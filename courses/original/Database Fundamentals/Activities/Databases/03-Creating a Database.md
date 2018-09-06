@@ -14,6 +14,6 @@ CREATE DATABASE IF NOT EXISTS a_database;
 
 Now you try!
 
-DEV ins: create database named "a_new_database"
+DEV ins: Create a database named "a_new_database".
 
-DEV ins: try to create another database named "a_new_database"
+DEV ins: Try to create another database named "a_new_database" and see what happens. 

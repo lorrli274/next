@@ -7,19 +7,10 @@ In a database, each table contains:
 * Foreign key(s), which reference other tables' primary keys.
 * Indexes, which speed up data retrieval from the table.
 
-Columns and indexes will be covered in the next lesson. For now, take a look at the tables currently in your database:
+Columns and indexes will be covered in the next lesson. For now, take a look at the tables currently in your database and inspect the columns, keys, and indexes of some of them.
 
-```sql
-SHOW TABLES;
-```
+DEV ins: show the tables in your database
 
-Now inspect the columns, keys, and indexes of some of them:
+DEV ins: inspect the *employees* table
 
-```sql
-DESCRIBE employees;
-```
-
-```sql
-DESCRIBE project_employees;
-```
-
+DEV ins: inspect the *project_employees* table

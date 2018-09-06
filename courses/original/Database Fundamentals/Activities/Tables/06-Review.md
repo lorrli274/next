@@ -5,4 +5,4 @@ This lesson covered lots of information on tables, including:
 * How to view the structure of a table
 * How to **design**, **create**, and **delete** a table
 
-You'll use these skills in the next activity to help Johnson's Hardware to implement the first version of their database!
+Now you should know all about databases and tables within databases. Next, we will go one step further and learn about columns in tables! 

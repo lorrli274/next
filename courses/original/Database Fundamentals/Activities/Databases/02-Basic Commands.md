@@ -1,4 +1,4 @@
-There are a number of commmands you can use to explore the schema of your database. Below are some of these commands, and then a list of  tasks for you to complete.
+There are a number of commands you can use to explore the schema of your database. Below are some of these commands, and then a list of  tasks for you to complete.
 
 The command to show the names of the databases you currently have access to is below:
 
@@ -15,9 +15,9 @@ Typically, the next step would be to specify what database you would like to int
 USE a_database;
 ```
 
-However, this environment is already configured to use the `codeys_construction` database, so you don't need to do this!
+However, this environment is already configured to use the *codeys_construction* database, so you don't need to do this!
 
-To explore the schema of the database you are using, you first list the tables in your database:
+To explore the schema of the database you are using, first list the tables in your database:
 
 ```sql
 SHOW TABLES;
@@ -33,4 +33,4 @@ Now let's try some of these commands!
 
 DEV ins: show the tables in your database
 
-DEV ins: `DESCRIBE projects`
+DEV ins: view the structure of the *projects* table 

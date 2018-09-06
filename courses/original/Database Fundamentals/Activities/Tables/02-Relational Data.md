@@ -33,7 +33,7 @@ Deciding what the relationships are in your database requires you to answer ques
 
 and so on.
 
-Anytime a relationship is created between tables, there are two types of keys involved:
+Any time a relationship is created between tables, there are two types of keys involved:
 
 ## Primary Keys
 
@@ -48,3 +48,5 @@ A **foreign key** or **FK** references a primary key in another table. When a ta
 A table may contain more than one foreign keys, making it the child of more than one other table.
 
 In the diagrams above, the keys are marked with *PK* and *FK*.
+
+DEV ins: quiz - "A project has many job orders." What is the relationship, what is the parent table, what is the child table?

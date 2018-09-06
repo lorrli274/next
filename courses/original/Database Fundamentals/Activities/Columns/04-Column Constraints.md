@@ -1,4 +1,4 @@
-Columns can have a number of **constraints** placed on them to ensure that the data they contain is predictable. This helps keep your database normalized. 
+We first mentioned column constraints in the Tables lesson when creating a table asflabjd.... Columns can have a number of **constraints** placed on them to ensure that the data they contain is predictable. This helps keep your database normalized. 
 
 For example, you may want to:
 
@@ -13,6 +13,8 @@ To do this and many other things you use a combination of one or more constraint
 A **`NOT NULL`** constraint ensures that the column does not contain `NULL` values. `NULL` is the default value stored in a column if no data is inserted for it when a record is created.
 
 You can use a `NOT NULL` constraint to force a user of a database to insert data for a column that you expect there to always be data for (like a name, foreign key, or project value).
+
+--> incl an e.g. (removed from the creating a table lesson)
 
 ## `DEFAULT` Constraint
 
@@ -72,3 +74,5 @@ In a *job_orders* table, you may want to add an index to the *employee_id* colum
 However, each index comes with a cost. When a new record is added to a table, updated, or deleted, the index must regenerate. Index data is also stored separately from the rest of the table, so large indexes can bloat the size of a database.
 
 Indexes rely on several different data structures, the most common of which being a [B-tree](https://en.wikipedia.org/wiki/B-tree).
+
+--> unsigned constraint ?? (deleted from create a table lesson)
