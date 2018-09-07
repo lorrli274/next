@@ -32,6 +32,6 @@ This query could be run from the command line, such as the `mysql` prompt. Howev
 
 <div class="caption">The relationships between the tables in a database.</div>
 
-Many databases are **relational**, which means that the data in the database relates to one another. For example, we will be using the relational database *codeys_construction* throughout this course, which contains information for a construction company. It tracks the company's projects, employees, and who is working on what project. A relational database is very structured, but there are also other less structured databases, such as graph databases.
+Many databases are **relational**, which means that the data in the database relates to one another. For example, we will be using the relational database *codeys_construction* throughout this course, which contains information for a construction company called Codey’s Construction. It tracks the company's projects, employees, and who is working on what project. A relational database is very structured, but there are also other less structured databases, such as graph databases.
 
 The structure or **schema** of a database is extremely important. A messy schema will result in a database that is difficult to make changes to, store data in, and request data from. When building a database the majority of time is often spent diagramming the schema versus actually implementing it (which might only take a few minutes!). An example of a schema is shown in the first image above.

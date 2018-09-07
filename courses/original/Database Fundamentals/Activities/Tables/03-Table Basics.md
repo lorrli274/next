@@ -1,6 +1,6 @@
 Now that you've learned what tables are and what they're used for, it's time to jump into some SQL examples!
 
-In a database, each table contains:
+In a database, each table typically contains:
 
 * Columns, which store specific data of a specific type for each record.
 * A primary key, which allows other tables to reference the table.
@@ -11,6 +11,13 @@ Columns and indexes will be covered in the next lesson. For now, take a look at 
 
 DEV ins: show the tables in your database
 
+- SHOW TABLES;
+
 DEV ins: inspect the *employees* table
 
+- DESCRIBE employees;
+
 DEV ins: inspect the *project_employees* table
+
+- DESCRIBE project_employees;
+

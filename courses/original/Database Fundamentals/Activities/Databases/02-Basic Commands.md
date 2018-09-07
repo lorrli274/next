@@ -7,12 +7,18 @@ SHOW DATABASES;
 ```
 Try typing that code into your query editor and clicking **Run Query**. It will return a list of the databases you have access to, which should look like this:
 
-DEV: table of databases
+| Database            |
+| ------------------- |
+| information_schema  |
+| codeys_construction |
+| mysql               |
+| performance_schema  |
+| sys                 |
 
 Typically, the next step would be to specify what database you would like to interact with using a command like this:
 
 ```sql
-USE a_database;
+USE codeys_construction;
 ```
 
 However, this environment is already configured to use the *codeys_construction* database, so you don't need to do this!
@@ -31,6 +37,10 @@ DESCRIBE employees;
 
 Now let's try some of these commands!
 
-DEV ins: show the tables in your database
+DEV ins: show the tables in your database 
 
-DEV ins: view the structure of the *projects* table 
+- SHOW TABLES
+
+DEV ins: view the structure of the *projects* table
+
+- DESCRIBE projects

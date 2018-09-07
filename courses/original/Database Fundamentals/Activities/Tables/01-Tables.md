@@ -2,7 +2,7 @@
 
 <div class="caption">A database table for storing data on employees.</div>
 
-In the previous activity you learned all about databases. Now, let's learn about tables! Databases are made up of one or more tables. Each **table** in a database stores a single type of data. Conceptually, it's a 2D combination of the typical columns and rows you might find in a program like Excel. Here's what a table storing data on employees might look like:
+In the previous activity you learned all about databases. Now, let's learn about **tables**! Databases are made up of one or more tables. Each table in a database stores a single type of data. Conceptually, it's a 2D combination of the typical columns and rows you might find in a program like Excel. Here's what a table storing data on employees might look like:
 
 | id   | first_name | last_name |
 | ---- | ---------- | --------- |

@@ -16,4 +16,9 @@ Now you try!
 
 DEV ins: Create a database named "a_new_database".
 
+- CREATE DATABASE a_new_database
+
 DEV ins: Try to create another database named "a_new_database" and see what happens. 
+
+- CREATE DATABASE a_new_database
+- should see “ERROR 1007 (HY000)” at line 1: Can’t create database ‘a_new_database’; database exists”

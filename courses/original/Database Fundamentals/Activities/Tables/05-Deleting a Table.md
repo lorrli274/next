@@ -18,6 +18,13 @@ Note that you cannot drop a table that is referenced by another table. Attemptin
 
 DEV ins: Delete the *customers* table you created in the previous lesson. 
 
+- DROP TABLE customers;
+
 DEV ins: Try to delete the *customers* table again to see what happens when you attempt to delete a table that does not exist. 
 
+- DROP TABLE customers;
+- Should receive error: “ERROR 1051 (42S02) at line 1: Unknown table 'codeys_construction.customers'”
+
 DEV ins: The *employees* table is referenced by the *job_orders* and *project_employees* tables. Try to delete the *employees* table. 
+
+- DROP TABLE employees;

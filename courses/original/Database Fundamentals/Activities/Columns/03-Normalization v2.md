@@ -4,16 +4,16 @@ Normalization is a technique of organizing data in a database to minimize redund
 
 The rules to satisfy the three normal forms are: 
 
-* **First Normal Form (1NF)**:
-  * Data is stored in tables with rows uniquely identified by a primary key
-  * Data within each table is stored in individual columns in its most reduced form
-  * There are no repeating columns
-* **Second Normal Form (2NF)**:
-  * Everything from 1NF
-  * Only data that relates to a tables primary key is stored in each table
-* **Third Normal Form (3NF)**:
-  * Everything from 2NF
-  * There are no in-table dependencies between the columns in each table
+- **First Normal Form (1NF)**:
+  - Data is stored in tables with rows uniquely identified by a primary key
+  - Data within each table is stored in individual columns in its most reduced form
+  - There are no repeating columns
+- **Second Normal Form (2NF)**:
+  - Everything from 1NF
+  - Only data that relates to a tables primary key is stored in each table
+- **Third Normal Form (3NF)**:
+  - Everything from 2NF
+  - There are no in-table dependencies between the columns in each table
 
 This was a lot to take in, so let's jump into some examples to break it down!
 
@@ -21,40 +21,46 @@ This was a lot to take in, so let's jump into some examples to break it down!
 
 ## First Normal Form
 
-1NF relates to the duplication and over-grouping of data in tables and columns. Take, for example, the following table *contractors*:
+1NF relates to the duplication and over-grouping of data in tables and columns. Take, for example, the following table *customers*:
 
-| *first_name* | *last_name* | *hourly_wage* | *project1_name_and_hours* | *project2_name_and_hours* |
-| ------------ | ----------- | ------------- | ------------------------- | ------------------------- |
-| Bob          | Builder     | 18.75         | Xyz; 42.30                | Abc; 75.04                |
-| Wendy        | Builder     | 21.00         | Xyz; 83.86                |                           |
-| Bernard      | Bentley     | 28.60         |                           | Abc; 35.08                |
+| *name*          | *industry* | *project1_name_and_startdate* | *project2_name_and_startdate* | *projects* | *total_invoiced* | *phone_number* | *address*     | *city*  | *zip* |
+| --------------- | ---------- | ----------------------------- | ----------------------------- | ---------- | ---------------- | -------------- | ------------- | ------- | ----- |
+| Next University | Education  | Gymnasium 06/19/2016          | Classroom 08/21/2018          | 2          | 800,000          | 555-111-0000   | 1 Coding Lane | Oakland | 99999 |
+|                 |            |                               |                               |            |                  |                |               |         |       |
+|                 |            |                               |                               |            |                  |                |               |         |       |
 
 This table violates all three rules of 1NF. 
 
-1. There is no primary key! So a user of the database would be forced to look up contractors by their name, which is not guaranteed to be unique.
-2. The data is not in its most reduced form. The columns *project1_name_and_hours* and *project2_name_and_hours* contain data that can be subdivided into separate columns.
-3. There's data in the table for 2 different projects. This is in violation because of the repetition of similar columns. 
-
-To address this, we would need to:
-
-1. Add a primary key to the table.
-2. Split the project data into separate columns i.e. *project1_name_and_hours* should be divided into two columns *project1_name*, and *project1_hours*.
-3. Move the project data to a separate table that has a foreign key pointing to the associated _contractor_ record.
+1. There is no primary key! So a user of the database would be forced to look up companies by their name, which is not guaranteed to be unique (since names are registered on a state-by-state basis).
+2. The data is not in its most reduced form. The columns *project1_name_and_startdate* and *project2_name_and_startdate* contain data that can be subdivided into separate columns.
+3. There's data in the table for 2 different projects. This is in violation because of the repetition of similar columns.
 
 Let's redesign our original table to satisfy 1NF! 
 
-Dev: The following snippet creates the original table *contractors*. Rewrite this snippet to create a table *contractors_normalized* that satisfies the rules of 1NF. Note that this table should not have any project data (we will be creating a table to store this in the next task!)
+Dev: The following snippet creates the original table *customers*. We will use this snippet as our base to create a table  that satisfies the rules of 1NF. 
 
 ```sql
-CREATE TABLE contractors
+CREATE TABLE customers
 	(
-        first_name 				VARCHAR(255), 
-        last_name				VARCHAR(255), 
-        hourly_wage				DOUBLE, 
-        project1_name_and_hours	 VARCHAR(255),
-        project2_name_and_hours	 VARCHAR(255)
+        name 						VARCHAR(255), 
+        industry					VARCHAR(255), 
+        project1_name_and_startdate VARCHAR(255),
+        project2_name_and_startdate	VARCHAR(255),
+        projects					INT,
+        total_invoiced				DOUBLE(10, 2),
+        phone_number				VARCHAR(12),
+        address						VARCHAR(255),
+        city						VARCHAR(255),
+        zip							VARCHAR(5)
     );
 ```
+
+1. First, copy the above snippet into your code editor. Rename the table *contractors_normalized*. 
+2. To satisfy 1NF: create a primary key column called ‘id’ which auto-increments. 
+3. To satisfy 2NF: split the project data into separate columns i.e. *project1_name_and_startdate* should be divided into two columns *project1_name*, and *project1_startdate*.
+4. To satisfy 3NF: Move the project data to a separate table that has a foreign key pointing to the associated _contractor_ record.
+
+Note that this table should not have any project data (we will be creating a table to store this in the next task!)
 
 Dev: We will also have to create a table for each of the projects to satisfy the third rule. For this activity, we will only create a table for project 1 called  *project1_contractors*. The tables should contain the project's name, the contractors who work on this project, and the hours they worked. It should follow this structure:
 
