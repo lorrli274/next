@@ -6,4 +6,4 @@ A lot was covered in this lesson! Here's a summary:
 * Column **constraints** to ensure the database is always in the expected state
 * **Adding**, **changing**, and **deleting** columns
 
-That's quite a list! Next up, you'll learn how to modify the data in the tables you’ve created!
+That's quite a list! Next up, you'll learn how to add, update, or delete data in the database you've created!

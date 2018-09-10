@@ -14,9 +14,9 @@ For example, the following would change the name of all projects for banks to "A
 ```sql
 UPDATE projects
 SET
-	name = 'A Construction Project'
+	name = 'A Bank Construction Project'
 WHERE
-	name ILIKE '%bank%';
+	name LIKE '%bank%';
 ```
 
 You can select the data to see what has changed:
@@ -44,8 +44,11 @@ SET
 	price = price * 2
 WHERE
 	project_id = 2 AND
-	description ILIKE '%Tool Kit%';
+	description LIKE '%Tool Kit%';
 ```
 
 info> Changes to the data in a table cannot be undone, so it's good to `SELECT` the data before running an `UPDATE` (using the same conditions) to ensure the records that will be updated are what you expect!
 
+DEV - Codey’s Construction has decided to give a pay raise to employees that have been with the company for a long time. Update the hourly wage of employees hired on or before 2010-01-01 by a flat rate of $2/hr. 
+
+ANSWER: UPDATE employees SET hourly_wage = hourly_wage + 2.00 WHERE hire_date <= '2010-01-01';
