@@ -29,11 +29,11 @@ CREATE TABLE projects
 
 Each of the five attributes specified in the table structure is a column in the table, and each attribute is defined by a data type. We will learn about data types in more detail in the next lesson, but for now all you need to know is that the name of each column is followed by the column's data type when creating a table.
 
-Note that the *id* column has the keywords `auto_increment` and `PRIMARY KEY` following the data type. These are called **column constraints.**
+Note that the *id* column has the keywords `auto_increment` and `PRIMARY KEY` following the data type.
 
 The`auto_increment` keyword is used to automatically generate a unique number when a new record is created in the table. In this case, every time data for a new project is recorded in the table, this `auto_increment` keyword will create a new unique project ID for the project. By default, the increment is by 1.
 
-Since we specified that projects have a 1:M relationship with job orders and project employees, we would like the project ID to be easily referenced by the *job_orders* and *project_employees* tables.Therefore we use the `PRIMARY KEY` keyword to turn the ID column into a PK.
+The `PRIMARY KEY` keyword is a type of **column constraint**. Since we specified that projects have a 1:M relationship with job orders and project employees, we would like the project ID to be easily referenced by the *job_orders* and *project_employees* tables.Therefore we use the `PRIMARY KEY` keyword to turn the ID column into a PK.
 
 Now that you have seen how tables are created, it's your turn! 
 
