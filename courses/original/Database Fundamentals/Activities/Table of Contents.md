@@ -10,22 +10,29 @@ NB: Writing w/ quiz at end
 
 ## Databases
 * What is a Database?
+* Basic Commands
 * Creating a Database
 * Deleting a Database
-* Wrapping Up
 
 ## Tables
 * What is a Table?
+* Relational Data
+* Table Basics
 * Creating a Table
 * Deleting a Table
 
 ## Columns
 * What are columns?
-* Creating a Column
-* Changing a Column
-* Deleting a Column
+* Data types
+* Normalization
+  * First Normal Form
+  * Second Normal Form
+  * Third Normal Form
+* Column Constraints
+* Modifying Columns
 
 ## Modifying Data
+
 * `INSERT`
 * `UPDATE`
 * `DELETE`
