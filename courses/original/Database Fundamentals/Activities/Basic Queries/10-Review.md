@@ -7,4 +7,4 @@ That was quite a lesson! As a refresher, here's what was covered:
 * How to order results with **`ORDER BY`**
 * How to limit results with **`LIMIT`**
 
-You'll put all of this to use in the next activity, helping Johnson's Hardware write lots of queries to extract valuable information from the database you built for them.
+In our next lesson, we will continue to build on our knowledge of queries!

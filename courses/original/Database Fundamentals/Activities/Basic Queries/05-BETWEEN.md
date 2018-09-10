@@ -23,5 +23,12 @@ WHERE  value >= 50000
        AND value <= 100000; 
 ```
 
+DEV: Write a query to pull all the records from the *job_orders* table where quantity is between 100 and 200, price is between $1,000.00 and \$1,500.00, and the description contains the word “drill”.
 
+ANSWER: 
 
+SELECT * 
+FROM job_orders
+WHERE quantity BETWEEN 100 AND 200
+AND price BETWEEN 1000 AND 1500
+AND lower(description) LIKE '%drill%';

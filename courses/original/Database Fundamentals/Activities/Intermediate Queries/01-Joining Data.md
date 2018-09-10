@@ -104,3 +104,4 @@ FROM   projects p
 ORDER  BY 1;
 ```
 
+DEV: go back to basic query-in example

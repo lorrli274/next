@@ -33,13 +33,14 @@ NB: Writing w/ quiz at end
 
 ## Modifying Data
 
-* `INSERT`
-* `UPDATE`
-* `DELETE`
+* Inserting data
+* Updating data
+* Deleting data
 
 ## Basic Queries
 * Basic `SELECT` Statements
 * `WHERE` Clauses
+* `LIKE`, `IN`, `BETWEEN`, AND `NOT` Operators
 * `ORDER BY`
 * `LIMIT`
 

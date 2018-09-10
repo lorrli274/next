@@ -39,7 +39,7 @@ info> There is no reversing the deletion of data. Instead, many developers choos
 
 DEV: 
 
-1. A new employee, Maria Phelps, is going to join the Codey’s Construction team today! Let’s add her record to the *employees* table using an `INSERT` statement. Her hourly wage is $38.25/hr. You can insert today’s date as the hire date using the function `CURDATE()`.
+1. A new employee, Maria Phelps, is going to join the Codey’s Construction team today! Let’s add her record to the *employees* table using an `INSERT` statement. Her hourly wage is $38.25/hr. You can insert today’s date as the hire date using the function `CURDATE()`, which returns the current date in ‘YYYY-MM-DD’ format.
 2. Oh no! Maria called in the morning to say she would not be joining the team after all. Using a `DELETE` statement, remove her record from the *employees* table. 
 
 ANSWERS:

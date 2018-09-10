@@ -1,8 +1,10 @@
 In a database, a **query** is a set of structured statements designed to extract specific records from a database. They can be used to answer a wide range of questions and power dynamic websites.
 
-Queries all use a **`SELECT`** statement to indicate that data is to be retrieved and displayed. There are a variaty of ways that the data returned can be **filtered**, **joined**, **grouped**, and **aggregated** to make the returned data more useful.
+We first introduced the `SELECT` statement in the Modifying Data lesson as a way to verify that our modifications were done correctly. However, there are many more ways `SELECT` can be used. 
 
-In a database used by a construction company, a query might be used to:
+Queries all use a `SELECT` statement to indicate that data is to be retrieved and displayed. There are a variety of ways that the data returned can be **filtered**, **joined**, **grouped**, and **aggregated** to make the returned data more useful.
+
+In our Codey’s Construction database, a query might be used to:
 
 * Find a list of employees who are working on a specific project
 * Determine the total costs of a particular project
@@ -16,7 +18,7 @@ SELECT column1, column2
 FROM table_name;
 ```
 
-To start, here's a query that simply returns all the data from a table:
+To start, here's a query that simply returns all the data from the table *employees*:
 
 ```sql
 SELECT *
@@ -48,3 +50,9 @@ Finally, a query doesn't necessarily need to return data in a table. The followi
 ```sql
 SELECT 150, 'Databases are fun!', NOW(), CURRENT_USER; 
 ```
+
+Let’s give `SELECT`ing a go!
+
+DEV: Your boss wants to know the name and start date of all of Codey’s Construction’s projects. Write a query to pull this information. Give your column names aliases to make your results more readable.
+
+ANSWER: SELECT name AS “Project Name”, start_date AS “Start Date” FROM projects;
