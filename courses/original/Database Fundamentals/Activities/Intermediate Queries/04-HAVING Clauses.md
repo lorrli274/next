@@ -41,4 +41,23 @@ ORDER  BY 2 DESC
 LIMIT  1; 
 ```
 
-DEV: s
+DEV: In the previous step, you found the cost per project. Looking at your results, you realize the Central Valley Hospital project and the Big Money Bank project cost much more than you thought it would. Let’s take a look at how much each employee is spending on these two projects - specifically those who are spending over $10,000,000 on either project.
+
+Write a query to return the projects name, employee’s first name, employee’s last name, and cost of their job orders. Remember cost is calculated by multiplying the sum of quantity by sum of price. Order your results by highest cost to lowest. 
+
+Answer: 
+
+```sql
+SELECT p.name AS "Project Name", 
+       e.first_name AS "First Name", 
+       e.last_name AS "Last Name",
+       SUM(jo.quantity) * SUM(jo.price) AS "Cost"
+FROM employees e
+JOIN job_orders jo ON e.id = jo.employee_id
+JOIN projects p ON p.id = jo.project_id
+WHERE p.name IN ( "Big Money Bank", "Central Valley Hospital")
+GROUP BY 1, 2, 3
+HAVING Cost > 10000000
+ORDER BY 4 DESC;
+```
+
