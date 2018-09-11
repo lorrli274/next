@@ -1,0 +1,1 @@
+Write "I love coding!" as a comment inside the `<body>` of your HTML.

@@ -1,4 +1,4 @@
-The **codecs** module provides support for reading a **unicode** file.
+The `codecs` module provides support for reading a unicode file.
     
 ```python    
 import codecs

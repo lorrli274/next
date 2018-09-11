@@ -13,7 +13,7 @@ print tuple[2]    ## hi
 tuple[2] = 'bye'  ## NO, tuples cannot be changed
 tuple = (1, 2, 'bye')  ## this works
 ```
-To create a `size-1 tuple`, the lone element must be followed by a comma.
+To create a size-1 tuple, the lone element must be followed by a comma.
     
 ``` python   
 tuple = ('hi',)   ## size-1 tuple

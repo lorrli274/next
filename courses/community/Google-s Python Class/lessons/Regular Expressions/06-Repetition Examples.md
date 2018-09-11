@@ -7,14 +7,14 @@ match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
 ## In this example, note that it does not get to the second set of i's.
 match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"
 
-## s* = zero or more whitespace chars
+## \s* = zero or more whitespace chars
 ## Here look for 3 digits, possibly separated by whitespace.
-match = re.search(r'ds*ds*d', 'xx1 2   3xx') =>  found, match.group() == "1 2   3"
-match = re.search(r'ds*ds*d', 'xx12  3xx') =>  found, match.group() == "12  3"
-match = re.search(r'ds*ds*d', 'xx123xx') =>  found, match.group() == "123"
+match = re.search(r'\d\s*\d\s*\d', 'xx1 2   3xx') =>  found, match.group() == "1 2   3"
+match = re.search(r'\d\s*\d\s*\d', 'xx12  3xx') =>  found, match.group() == "12  3"
+match = re.search(r'\d\s*\d\s*\d', 'xx123xx') =>  found, match.group() == "123"
 
 ## ^ = matches the start of string, so this fails:
-match = re.search(r'^bw+', 'foobar') =>  not found, match == None
+match = re.search(r'^b\w+', 'foobar') =>  not found, match == None
 ## but without the ^ it succeeds:
-match = re.search(r'bw+', 'foobar') =>  found, match.group() == "bar"
+match = re.search(r'b\w+', 'foobar') =>  found, match.group() == "bar"
 ```

@@ -15,4 +15,4 @@ Reading one line at a time has the nice quality that not all the file needs to f
 
 The `f.readlines()` method reads the whole file into memory and returns its contents as a list of its lines. The `f.read()` method reads the whole file into a single string, which can be a handy way to deal with the text all at once, such as with regular expressions we'll see later.
 
-info> For writing, `f.write`(string) method is the easiest way to write data to an open output file. Or you can use `print` with an open file, but the syntax is nasty: `"print >> f, string"`.
+info> For writing, `f.write(string)` method is the easiest way to write data to an open output file. Or you can use `print` with an open file, but the syntax is nasty: `"print >> f, string"`.

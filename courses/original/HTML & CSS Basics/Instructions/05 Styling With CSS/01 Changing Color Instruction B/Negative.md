@@ -1,0 +1,1 @@
+Make sure you're adding the proper symbols like `:` and `;` or the CSS won't work.

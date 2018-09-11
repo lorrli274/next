@@ -6,7 +6,7 @@ Mongoose is installed in your project (*Package.json*) like any other dependency
 npm install mongoose
 ```    
 
-danger> Need to work on content below 
+danger> Need to work on wording below. Needs to be edited to fit our use case (or just deleted)  
 
 Installing Mongoose adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can download installers from here for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 

@@ -1,0 +1,47 @@
+## Go by Example: For
+``` for ``` is Go’s only looping construct. Here are three basic types of ``` for  ```loops.
+The most basic type, with a single condition.
+```go
+i := 1
+for i <= 3 {
+fmt.Println(i)
+i = i + 1
+}
+```
+A classic initial/condition/after ``` for ```loop.
+```go
+for j := 7; j <= 9; j++ {
+fmt.Println(j)
+}
+```
+``` for ``` without a condition will loop repeatedly until you break out of the loop or return from the enclosing function.
+```go
+for {
+fmt.Println("loop")
+break
+}
+```
+You can also ``` continue ``` to the next iteration of the loop.
+```go
+  for n := 0; n <= 5; n++ {
+        if n%2 == 0 {
+            continue
+        }
+        fmt.Println(n)
+    }
+```
+We’ll see some other ``` for ``` forms later when we look at ``` range ``` statements, channels, and other data structures.
+Below is an example of the program output:
+```go
+$ go run for.go
+1
+2
+3
+7
+8
+9
+loop
+1
+3
+5
+```

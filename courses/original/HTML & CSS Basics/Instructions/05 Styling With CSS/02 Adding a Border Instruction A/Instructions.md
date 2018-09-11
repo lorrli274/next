@@ -1,0 +1,1 @@
+After the closing `}` for your `h1` styles, create a new style for the `p` tag to add `dashed`, `Crimson` border of any size around the paragraph.

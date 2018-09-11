@@ -1,0 +1,1 @@
+The opening body tag should look like `<body>` and the closing tag should look like `</body>`.

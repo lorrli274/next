@@ -1,0 +1,45 @@
+### Go by Example: Variables
+In Go, variables are explicitly declared and used by the compiler to e.g. check type-correctness of function calls.
+```go
+package main
+
+import "fmt"
+
+func main() {
+```
+
+``` var ``` declares 1 or more variables.
+```go
+ var a = "initial"
+ fmt.Println(a)
+```
+You can declare multiple variables at once.
+```go
+var b, c int = 1, 2
+fmt.Println(b, c)
+```
+Go will infer the type of initialized variables.
+```go
+var d = true
+fmt.Println(d)
+```
+Variables declared without a corresponding initialization are ** zero-valued **. For example, the zero value for an ``` int ``` is ** 0 **.
+```go
+var e int
+fmt.Println(e)
+```
+The ```:= ``` syntax is shorthand for declaring and initializing a variable, e.g. for ``` var f string = "short" ``` in this case.  
+```go
+f := "short"
+fmt.Println(f)
+}
+```
+Below is an example of the program output:
+```go
+$ go run variables.go
+initial
+1 2
+true
+0
+short
+```

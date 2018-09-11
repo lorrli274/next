@@ -1,6 +1,6 @@
 **List comprehensions** are a more advanced feature which is nice for some cases but is not needed for the exercises and is not something you need to learn at first, but we're going to run through it anyways. A list comprehension is a compact way to write an expression that expands to a whole list. 
 
-Suppose we have a list nums `[1, 2, 3, 4]`, here is the list comprehension to compute a list of their squares `[1, 4, 9, 16]`:
+Suppose we have a list `nums` `[1, 2, 3, 4]`, here is the list comprehension to compute a list of their squares `[1, 4, 9, 16]`:
     
 ```python    
 nums = [1, 2, 3, 4]

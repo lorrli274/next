@@ -1,4 +1,4 @@
-Python has a `printf()`like facility to put together a string. The `%` operator takes a printf-type format string on the left (`%d int`, `%s string`, `%f/%g floating point`), and the matching values in a tuple on the right (a tuple is made of values separated by commas, typically grouped inside parentheses):
+Python has a `printf()`like facility to put together a string. The `%` operator takes a `printf`-type format string on the left (`%d int`, `%s string`, `%f/%g floating point`), and the matching values in a tuple on the right (a tuple is made of values separated by commas, typically grouped inside parentheses):
     
 ```python               
 # % operator
@@ -12,5 +12,5 @@ To fix this, enclose the whole expression in an outer set of parenthesis, then t
 ```python    
 # add parens to make the long-line work:
 text = ("%d little pigs come out or I'll %s and %s and %s" %
-  (3, 'huff', 'puff', 'blow down'))
-```        
+    (3, 'huff', 'puff', 'blow down'))
+```

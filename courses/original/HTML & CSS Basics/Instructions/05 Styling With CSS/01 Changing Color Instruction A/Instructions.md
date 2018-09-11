@@ -1,0 +1,1 @@
+Add some CSS to change the `h1` text color to `SandyBrown`. For this, the CSS selector should be `h1`, the property should be `color`, and the value should be `SandyBrown`.
