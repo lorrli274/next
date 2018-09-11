@@ -65,4 +65,3 @@ JOIN projects p ON jo.project_id = p.id
 GROUP BY 1
 ORDER BY 4 DESC;
 ```
-

@@ -1,4 +1,4 @@
-A useful feature of some databases is the **`HAVING`** clause. It is similar to a `WHERE` clause, but it allows the results to be filtered on a column that has already been selected.
+A useful feature of some databases is the **`HAVING`** clause. It is similar to a `WHERE` clause, but it allows the results to be filtered on a aggregated column.
 
 For example, the following query will not work:
 
@@ -13,7 +13,7 @@ GROUP  BY 1
 ORDER  BY 2 DESC; 
 ```
 
-This is because the column _project_hours_ doesn't actually exist until the query is run. To handle this, a `HAVING` clause is used after the `GROUP BY` statement:
+This is because the column _project_hours_ is an aggregate of the column *hours* - i.e. it doesn't actually exist until the query is run. To handle this, a `HAVING` clause is used after the `GROUP BY` statement:
 
 ```sql
 SELECT p.name,
@@ -41,3 +41,4 @@ ORDER  BY 2 DESC
 LIMIT  1; 
 ```
 
+DEV: s
