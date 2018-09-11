@@ -1,4 +1,4 @@
-A powerful facet of querying is the ability to aggregate data on the fly to answer questions without having to manually do the calculations. There are a number of different built-in aggregation functions, a complete list of which can be found [here](https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html). The common ones are explained below!
+Another powerful facet of querying is the ability to aggregate data on the fly to answer questions without having to manually do the calculations. There are a number of different built-in aggregation functions, a complete list of which can be found [here](https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html). The common ones are explained below!
 
 ## `COUNT`
 
@@ -66,3 +66,24 @@ SELECT MIN(value) FROM projects;
 SELECT MAX(value) FROM projects;
 ```
 
+DEV: Let’s practice each of these!
+
+1. Find the number of employees who have an hourly wage of greater than or equal to $50.00/hr 
+
+   SELECT COUNT(*) FROM employees WHERE hourly_wage > 50;
+
+2. Find the sum of the price of all job_orders placed after 2018-01-01 00:00:00.
+
+   SELECT SUM(price) FROM job_orders WHERE order_datetime > '2018-01-01 00:00:00';
+
+3. Find the average number of hours worked on the Washington Avenue Barber project (you will need to use a join for this one!).
+
+   SELECT avg(hours) FROM projects p JOIN project_employees pe ON p.id = pe.project_id WHERE name = "Washington Avenue Barber";
+
+4.  When was Codey’s Construction’s first employee hired?
+
+   SELECT min(hire_date) FROM employees;
+
+5. When was Codey’s Construction’s latest employee hired?
+
+   SELECT max(hire_date) FROM employees;

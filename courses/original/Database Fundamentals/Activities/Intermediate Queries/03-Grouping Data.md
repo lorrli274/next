@@ -1,6 +1,6 @@
-Grouping data in a query allows for aggregations to be run within a specific scope. A **`GROUP BY`** expression is used to define these scopes.
+The `COUNT`, `SUM`, `AVG`, `MAX`, and `MIN` aggregations we just learned aggregate over the entire table. However you can run aggregations over specific scopes by **grouping** data. A **`GROUP BY`** expression is used to define these scopes.
 
-For example, determining the total number of hours worked by all employees on a project requires a `GROUP BY`. Without it could result in a query like:
+For example, determining the total number of hours worked by all employees on a project requires a `GROUP BY`. The following snippet shows a query without a `GROUP BY`. 
 
 ```sql
 SELECT SUM(pe.hours)
@@ -9,7 +9,7 @@ FROM   project_employees pe
          ON p.id = pe.project_id; 
 ```
 
-That returns the number of hours for all projects and doesn't display which project had how many hours. This will:
+It returns the number of hours for all projects and doesn't display which project had how many hours. However, this query will:
 
 ```sql
 SELECT p.name,
@@ -20,7 +20,7 @@ FROM   project_employees pe
 GROUP  BY p.name; 
 ```
 
-Like an `ORDER BY`, a `GROUP BY` can use a column alias instead of a column name:
+Like `ORDER BY`, `GROUP BY` can use a column alias instead of a column name:
 
 ```sql
 SELECT p.name,
@@ -50,3 +50,19 @@ ORDER BY 1,
 ```
 
 This displays each project ordered by name A-Z and then the employees who have spent the most on that project.
+
+DEV: You would like to find out the cost of all job orders by project name. Write a query to return project name, sum of quantity, sum of price, and cost. To create the *cost* column, you can use the arithmetic operator “*“ to multiply the sum of quantity and sum of price. You should order your results by the highest to lowest cost.
+
+ANSWER: 
+
+```sql
+SELECT p.name AS "Project Name", 
+       sum(jo.quantity) AS "Quantity",
+       sum(jo.price) AS "Price",
+       sum(jo.quantity) * sum(jo.price) AS "Cost"
+FROM job_orders jo
+JOIN projects p ON jo.project_id = p.id
+GROUP BY 1
+ORDER BY 4 DESC;
+```
+
